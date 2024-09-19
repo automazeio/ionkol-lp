@@ -1,0 +1,73 @@
+---
+---
+
+<div
+  class="w-[204px] h-8 justify-start items-center gap-3.5 inline-flex cursor-pointer"
+  onclick="toggleSwitcher()">
+  <!-- Monthly Label -->
+  <div
+    id="monthlyLabel"
+    class="w-[68px] text-sm font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight text-[#0d0c22]">
+    Monthly
+  </div>
+
+  <!-- Switcher Button -->
+  <div class="w-14 h-8 relative bg-[#c6c8cc] rounded-[32px]">
+    <div
+      id="switcher"
+      class="w-7 h-7 left-[2px] top-[2px] absolute bg-white rounded-[50px] transition-all duration-300">
+    </div>
+  </div>
+
+  <!-- Yearly Label -->
+  <div
+    id="yearlyLabel"
+    class="w-[52px] text-sm font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight text-[#736d6d]">
+    Yearly
+  </div>
+</div>
+
+<script is:inline>
+  let isMonthly = true;
+
+  // Function to toggle the switcher state
+  function toggleSwitcher() {
+    const switcher = document.getElementById("switcher");
+    const monthlyLabel = document.getElementById("monthlyLabel");
+    const yearlyLabel = document.getElementById("yearlyLabel");
+    const monthlyPrice = document.querySelectorAll(".monthlyPrice");
+    const yearlyPrice = document.querySelectorAll(".yearlyPrice");
+    const monthlyPriceLabel = document.querySelectorAll(".monthlyPriceLabel");
+    const yearlyPriceLabel = document.querySelectorAll(".yearlyPriceLabel");
+
+    const setDisplay = (elements, displayValue) => {
+      elements.forEach((node) => {
+        node.style.display = displayValue;
+      });
+    };
+    if (isMonthly) {
+      console.log("toyearly");
+      // Switch to Yearly
+      switcher.style.left = "calc(100% - 30px)";
+      monthlyLabel.style.color = "#736d6d";
+      yearlyLabel.style.color = "#0d0c22";
+
+      setDisplay(monthlyPrice, "none");
+      setDisplay(yearlyPrice, "block");
+      setDisplay(monthlyPriceLabel, "none");
+      setDisplay(yearlyPriceLabel, "block");
+    } else {
+      console.log("tomonthly");
+      // Switch to Monthly
+      switcher.style.left = "2px";
+      monthlyLabel.style.color = "#0d0c22";
+      yearlyLabel.style.color = "#736d6d";
+      setDisplay(monthlyPrice, "block");
+      setDisplay(yearlyPrice, "none");
+      setDisplay(monthlyPriceLabel, "block");
+      setDisplay(yearlyPriceLabel, "none");
+    }
+
+    isMonthly = !isMonthly; // Toggle state
+  }
+</script>

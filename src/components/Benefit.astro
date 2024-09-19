@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  title: string;
+  description: string;
+  imageUrl: string;
+}
+
+const { title, description, imageUrl } = Astro.props;
+---
+
+<div
+  class="flex flex-col gap-7 justify-center items-center max-w-md py-7 px-8">
+  
+  <div
+    class="w-24 h-24 p-6 bg-[#fdf4f5] rounded-full flex justify-center items-center">
+    <Image
+      width="48"
+      height="48"
+      alt={title}
+      src={imageUrl}
+    />
+  </div>
+
+  <h3
+    class="text-center text-[#0d0c22] text-3xl font-medium font-['Urbanist'] leading-10 tracking-wide">
+    {title}
+  </h3>
+
+  <p
+    class="text-center text-[#0d0c22] text-lg font-normal font-['Mulish'] leading-7 tracking-tight">
+    {description}
+  </p>
+</div>

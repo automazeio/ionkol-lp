@@ -1,0 +1,28 @@
+---
+import Button from "./ui/Button.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  miniCard: string;
+}
+
+const { title, description} = Astro.props;
+---
+
+<div class="bg-[#fff7f8] rounded-[40px] p-32 relative">
+  <h6
+    class="text-[#0d0c22] text-[40px] font-semibold font-['Urbanist'] tracking-wide mb-[18px]">
+    {title}
+  </h6>
+  <p
+    class="text-[#0d0c22] text-base font-normal font-['Mulish'] leading-7 tracking-tight mb-9">
+    {description}
+  </p>
+  <Button text="Learn more" type="fill" />
+  <div class="h-12"></div>
+  <div
+    class="absolute right-1/2 translate-x-1/2 -bottom-[] h-fit w-fit p-6 bg-white rounded-xl shadow flex-col justify-center items-center gap-2 flex">
+    <div><slot /></div>
+  </div>
+</div>

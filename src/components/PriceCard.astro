@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import Button from "./ui/Button.astro";
+
+interface Props {
+  id: number;
+  name: string;
+  price_yearly: number;
+  price_monthly: number;
+  cta_text: string;
+  description: string[];
+  subheader: string;
+}
+
+const {
+  name,
+  price_yearly,
+  price_monthly,
+  cta_text,
+  description,
+  subheader,
+} = Astro.props;
+---
+
+<div
+  class="w-[318px] py-7 px-6 bg-white rounded-[32px] shadow flex flex-col justify-start items-center gap-6">
+  <div class="flex flex-col justify-center items-center">
+    <h3
+      class="text-center text-[#0d0c22] text-3xl font-semibold font-['Urbanist'] leading-[42px] tracking-wide mb-6">
+      {name}
+    </h3>
+
+    <div class="flex justify-center items-center mb-2">
+      <span
+        class="text-center text-[#0d0c22] text-3xl font-semibold font-['Urbanist'] leading-[42px] tracking-wide">
+        $
+      </span>
+      <span
+        class="monthlyPrice text-center text-[#0d0c22] text-6xl font-semibold font-['Urbanist'] tracking-wide">
+        {price_monthly}
+      </span>
+      <span
+        class="yearlyPrice hidden text-center text-[#0d0c22] text-6xl font-semibold font-['Urbanist'] tracking-wide">
+        {price_yearly}
+      </span>
+    </div>
+
+    <div
+      class="monthlyPriceLabel text-center text-[#0d0c22] text-base font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight mb-3">
+      PER MONTH
+    </div>
+    <div
+      class="yearlyPriceLabel hidden text-center text-[#0d0c22] text-base font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight mb-3">
+      PER YEAR
+    </div>
+
+    <p
+      class="text-center text-[#9e9ea7] text-base font-normal font-['Mulish'] leading-normal tracking-tight mb-7">
+      {subheader}
+    </p>
+
+    <Button text= {cta_text}/>
+     
+
+  </div>
+
+  <div class="w-full flex flex-col gap-4">
+    <p
+      class="self-stretch text-[#0d0c22] text-sm font-semibold font-['Urbanist'] uppercase tracking-tight">
+      Enjoy:
+    </p>
+
+    {
+      description.map((text) => (
+        <div class="flex items-center gap-3">
+          <Image
+            src="/check.svg"
+            alt="check"
+            width="24"
+            height="24"
+            class="flex-shrink-0"
+          />
+          <p class="text-[#0d0c22] text-base font-normal font-['Mulish'] tracking-tight">
+            {text}
+          </p>
+        </div>
+      ))
+    }
+  </div>
+</div>

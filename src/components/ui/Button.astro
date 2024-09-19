@@ -1,0 +1,28 @@
+---
+interface Props {
+  type?: "fill" | "outline";
+  className?: string;
+  text?: string;
+}
+
+const { type = "fill", className = "", text = "" } = Astro.props;
+
+const baseButtonStyle =
+  "h-10 px-10 py-2 rounded-lg justify-center items-center gap-4 inline-flex text-center text-base font-normal font-['Mulish'] leading-normal tracking-wide transition-colors duration-300";
+
+let buttonStyle = className + " " + baseButtonStyle;
+
+if (type === "fill") {
+  buttonStyle +=
+    " bg-[#ed707e] text-white justify-start hover:bg-[#d55e6b] active:bg-[#bb4d58]";
+}
+
+if (type === "outline") {
+  buttonStyle +=
+    " border border-[#ed707e] text-[#ed707e] hover:bg-[#ed707e] hover:text-white active:bg-[#d55e6b] active:border-[#d55e6b]";
+}
+---
+
+<button class={buttonStyle}>
+  {text}
+</button>
