@@ -1,5 +1,4 @@
 ---
-// Import necessary components
 import Button from "./ui/Button.astro";
 
 const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
@@ -8,10 +7,11 @@ const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
 <header
   id="navbar"
   class="w-full z-50 fixed top-0 left-0 h-[84px] px-[65px] py-[22px] bg-white justify-between items-center inline-flex transition-colors duration-300">
-  <div
+  <a
+    href="#explore"
     class="text-center text-[#0d0c22] text-[28px] font-bold font-['Urbanist'] tracking-wide">
     iON
-  </div>
+  </a>
 
   <!-- Burger Menu Icon for mobile -->
   <div class="lg:hidden">
@@ -44,8 +44,12 @@ const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
 
   <!-- Sign-up and Login buttons -->
   <div class="hidden lg:flex gap-4">
-    <Button text="Sign-up" type="outline" />
-    <Button text="Login" />
+    <a href="https://o0gkwgc.88.198.20.118.sslip.io/sign-up">
+      <Button text="Sign-up" type="outline" /></a
+    >
+    <a href="https://o0gkwgc.88.198.20.118.sslip.io/sign-in">
+      <Button text="Login" /></a
+    >
   </div>
 </header>
 
