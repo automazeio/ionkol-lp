@@ -87,10 +87,10 @@ const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
   document.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");
     if (window.scrollY > 0) {
-      navbar.classList.add("bg-[#FFF8F8]", "text-white");
+      navbar.classList.add("bg-[#FFF8F8]", "text-white", 'shadow');
       navbar.classList.remove("bg-white", "text-[#0d0c22]");
     } else {
-      navbar.classList.remove("bg-[#FFF8F8]", "text-white");
+      navbar.classList.remove("bg-[#FFF8F8]", "text-white", 'shadow');
       navbar.classList.add("bg-white", "text-[#0d0c22]");
     }
   });
