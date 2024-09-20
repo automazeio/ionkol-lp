@@ -10,19 +10,19 @@ interface Props {
 const { title, description} = Astro.props;
 ---
 
-<div class="bg-[#fff7f8] rounded-[40px] p-32 relative">
+<div class="bg-[#fff7f8] rounded-[40px] p-6 md:p-12 lg:p-24 xl:p-32 relative">
   <h6
-    class="text-[#0d0c22] text-[40px] font-semibold font-['Urbanist'] tracking-wide mb-[18px]">
+    class="text-[#0d0c22] text-2xl md:text-3xl lg:text-[40px] font-semibold font-['Urbanist'] tracking-wide mb-[18px]">
     {title}
   </h6>
   <p
-    class="text-[#0d0c22] text-base font-normal font-['Mulish'] leading-7 tracking-tight mb-9">
+    class="text-[#0d0c22] text-base md:text-lg lg:text-base font-normal font-['Mulish'] leading-7 tracking-tight mb-9">
     {description}
   </p>
   <Button text="Learn more" type="fill" />
   <div class="h-12"></div>
   <div
-    class="absolute right-1/2 translate-x-1/2 -bottom-[] h-fit w-fit p-6 bg-white rounded-xl shadow flex-col justify-center items-center gap-2 flex">
-    <div><slot /></div>
-  </div>
+  class="absolute scale-75 md:scale-100 md:right-1/2 md:translate-x-1/2 h-fit w-fit p-6 bg-white rounded-xl shadow flex-col justify-center items-center gap-2 flex transition-transform duration-300 transform-gpu">
+  <div><slot /></div>
+</div>
 </div>

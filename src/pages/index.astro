@@ -152,14 +152,36 @@ const whyIonkol = [
   });
 </script>
 
+<!-- Scrolling with offset to sections -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e: Event) {
+      e.preventDefault();
+
+      const targetID = (e.target as HTMLAnchorElement).getAttribute('href');
+      const targetElement = document.querySelector(targetID!);
+
+      if (targetElement) {
+        const offset = 100;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+</script>
+
 <Layout title={"iON"}>
   <Navbar />
   <main class="px-8 relative">
 
     <!-- Ion explore section -->
-    <section class="min-h-screen flex justify-center items-center relative bg-white">
+    <section id="explore" class="min-h-screen flex justify-center items-center relative bg-white">
       <!-- Background Circle -->
-      <div class="absolute z-0 w-[405px] h-[405px] bg-[#feeff1] rounded-full right-[10%] top-[15%] flex justify-center items-center">
+      <div class="hidden sm:flex absolute z-0 w-[202px] h-[202px] lg:w-[405px] lg:h-[405px] bg-[#feeff1] rounded-full right-[10%] top-[15%] flex justify-center items-center">
         <div class="h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex-col justify-start items-start">
           <div class="flex gap-3 mb-2">
             <div class="p-2 bg-[#fea598] rounded-full">
@@ -195,13 +217,13 @@ const whyIonkol = [
     
       <!-- Main Content -->
       <div class="flex flex-col items-center justify-center z-10 text-center">
-        <p class="text-[#0d0c22] text-2xl font-medium font-['Mulish'] tracking-tight mb-10">
+        <p class="text-[#0d0c22] text-lg font-medium font-['Mulish'] tracking-tight mb-10 lg:text-2xl">
           Harness the power of social data with
         </p>
-        <h1 class="text-[#ed707e] text-[130px] font-extrabold font-['Urbanist'] tracking-[2.6px] mb-8">
+        <h1 class="text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-[2.6px] mb-8 lg:text-[130px]">
           ION Explore
         </h1>
-        <p class="text-[#9e9ea7] text-lg font-normal font-['Mulish'] tracking-wide mb-14">
+        <p class="text-[#9e9ea7] text-base font-normal font-['Mulish'] tracking-wide mb-14 lg:text-lg">
           Driving business growth with data through influencer marketing
         </p>
         <button class="h-10 px-10 py-2 bg-[#0d0c22] rounded-lg text-white text-base font-medium font-['Urbanist'] leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
@@ -212,16 +234,15 @@ const whyIonkol = [
     
 
     <!-- Featured Solutions section -->
-    <section class="min-h-screen flex justify-center items-start">
+    <section id="Features" class="min-h-screen flex justify-center items-start mb-40 lg:mb-0">
       <div class="w-full mx-auto">
         <h2
           class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
           Featured Solutions
         </h2>
-        <div class="animate-appear flex justify-center gap-4">
+        <div class="animate-appear flex flex-col lg:flex-row justify-center gap-48 lg:gap-4">
           {solutionsCards.map((card) => (
             <FeaturedSolutionsCard {...card}>
-              <!-- Rendering Mini Card Content -->
               <div set:html={card.miniCard} />
             </FeaturedSolutionsCard>
           ))}
@@ -230,7 +251,7 @@ const whyIonkol = [
     </section>
 
     <!-- Benefits section -->
-    <section class="h-screen flex justify-center items-center bg-white">
+    <section id="Benefits"  class="min-h-screen flex justify-center items-center bg-white">
       <div>
         <h2 class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
           Benefits
@@ -255,7 +276,7 @@ const whyIonkol = [
     </section>
 
     <!-- About ionkol section -->
-    <section class="h-screen flex justify-center items-center ">
+    <section id="About" class="h-screen flex justify-center items-center ">
       <div class="animate-appear bg-[#fff7f8] w-full rounded-[40px] p-32 relative">
         <h2 class="text-center text-[#0d0c22] text-5xl font-semibold font-['Urbanist'] tracking-wide mb-5">
           About IonKOL
@@ -322,7 +343,7 @@ const whyIonkol = [
     </section>
 
     <!-- Price section -->
-    <section class="flex justify-center items-start">
+    <section id="Pricing" class="flex justify-center items-center">
       <div class="flex flex-col items-center space-y-14">
         <h2
           class="text-center text-5xl font-extrabold font-['Urbanist'] tracking-wide">
@@ -340,7 +361,7 @@ const whyIonkol = [
     </section>
 
     <!-- Contact us section -->
-    <section class="h-screen flex justify-center items-center">
+    <section id="Contact" class="h-screen flex justify-center items-center">
       <div
         class="animate-appear relative w-full flex justify-center bg-[#fff7f8] transform opacity-0 translate-y-10 rounded-[40px] p-32 relative">
         <!-- Decorative elements -->
