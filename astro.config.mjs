@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
+import sitemapPlugin from '@astrojs/sitemap';
 
 import node from "@astrojs/node";
 
@@ -12,6 +13,7 @@ export default defineConfig({
     tailwind({
       // applyBaseStyles: false,
     }),
+    sitemapPlugin()
   ],
 
   output: "static",
