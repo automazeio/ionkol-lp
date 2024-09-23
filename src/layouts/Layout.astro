@@ -15,10 +15,7 @@ const { title } = Astro.props;
     <meta property="og:title" content="Try IONKOL" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ionkol.com" />
-    <meta
-      property="og:image"
-      content="/favicon.svg"
-    />
+    <meta property="og:image" content="/public/ionkol-logo.jpeg" />
     <meta
       property="og:description"
       content="All in on social media analyzing tool. Explore. Analyze. Discover."
@@ -32,6 +29,10 @@ const { title } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <!-- Favicon -->
+    <link rel="icon" href="/public/favicon.ico" type="image/x-icon" />
+
+    <link rel="apple-touch-icon" href="/public/favicon.ico" />
 
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
