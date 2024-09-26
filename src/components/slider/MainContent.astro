@@ -1,0 +1,25 @@
+---
+interface MainContentProps {
+  title: string;
+  textColor: string;
+  description: string;
+  buttonLabel: string;
+}
+
+const { title, textColor, description, buttonLabel } = Astro.props as MainContentProps;
+---
+
+<div class="flex flex-col relative items-center justify-center z-10 text-center px-4">
+  <p class="text-[#0d0c22] text-lg font-medium font-['Mulish'] tracking-tight mb-10 lg:text-2xl">
+    Harness the power of social data with
+  </p>
+  <h1 class={`text-[${textColor}] text-5xl font-extrabold font-['Urbanist'] tracking-[2.6px] mb-8 lg:text-[130px]`}>
+    {title}
+  </h1>
+  <p class="text-[#9e9ea7] text-base font-normal font-['Mulish'] tracking-wide mb-14 lg:text-lg">
+    {description}
+  </p>
+  <button class="h-10 px-10 py-2 bg-[#0d0c22] rounded-lg text-white text-base font-medium font-['Urbanist'] leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
+    {buttonLabel}
+  </button>
+</div>

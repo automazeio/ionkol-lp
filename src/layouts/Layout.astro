@@ -9,10 +9,11 @@ const { title } = Astro.props;
 <!doctype html>
 <html lang="en">
   <head>
-    <title>{title}</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Social media analyzing tool" />
+    <meta name="description" content="All-in-one social media analytics tool for businesses. Explore. Analyze. Discover new opportunities."/>
     <meta name="viewport" content="width=device-width" />
+
+    <!-- Open graph -->
     <meta property="og:title" content="Try IONKOL" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://ionkol.com" />
@@ -26,16 +27,17 @@ const { title } = Astro.props;
     />
     <meta property="og:site_name" content="IONKOL" />
     <meta property="og:locale" content="en_US" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-
     <link rel="apple-touch-icon" href="/favicon.ico" />
 
     <meta name="generator" content={Astro.generator} />

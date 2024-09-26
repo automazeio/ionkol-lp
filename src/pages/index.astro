@@ -1,6 +1,4 @@
 ---
-title: "The Ultimate Guide to Baking Sourdough Bread"
-description: "Learn the secrets to creating delicious and authentic sourdough bread at home with this comprehensive guide."
 import Layout from "../layouts/Layout.astro";
 import directus from "../../lib/directus";
 import { readItems } from "@directus/sdk";
@@ -14,11 +12,13 @@ import "./_index.css";
 import PriceCard from "../components/PriceCard.astro";
 import Footer from "../components/Footer.astro";
 import Button from "../components/ui/Button.astro";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Swiper from "../components/slider/Swiper.astro";
 
 const priceCards = await directus.request(readItems("priceCards"));
-priceCards.sort(
-  (a, b) => a.price_monthly - b.price_monthly
-);
+priceCards.sort((a, b) => a.price_monthly - b.price_monthly);
 
 const benefits = [
   {
@@ -90,6 +90,33 @@ const whyIonkol = [
 ];
 ---
 
+<!-- Swiper init -->
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+    const { Swiper } = await import("swiper");
+    const { Navigation, Pagination, Autoplay } = await import("swiper/modules");
+    const swiper = new Swiper(".swiper", {
+      modules: [Navigation, Pagination, Autoplay],
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      loop: true,
+      // autoplay: {
+      //   delay: 6000,
+      //   disableOnInteraction: false,
+      // },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+</script>
+<style>
+  :root {
+    --swiper-theme-color: #ed707e;
+  }
+</style>
 
 <!-- Sections appear animation -->
 <script is:inline>
@@ -115,7 +142,7 @@ const whyIonkol = [
 <!-- Numbers count animation -->
 <script is:inline>
   function countUp(element) {
-    const target = +element.getAttribute('data-target');
+    const target = +element.getAttribute("data-target");
     const speed = 150;
 
     const increment = target / speed;
@@ -135,7 +162,7 @@ const whyIonkol = [
   }
 
   function handleIntersection(entries, observer) {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const countElement = entry.target;
         countUp(countElement);
@@ -144,11 +171,13 @@ const whyIonkol = [
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const countElements = document.querySelectorAll('.count');
-    const observer = new IntersectionObserver(handleIntersection, { threshold: 0.5 });
+  document.addEventListener("DOMContentLoaded", () => {
+    const countElements = document.querySelectorAll(".count");
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
 
-    countElements.forEach(element => {
+    countElements.forEach((element) => {
       observer.observe(element);
     });
   });
@@ -156,20 +185,23 @@ const whyIonkol = [
 
 <!-- Scrolling with offset to sections -->
 <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e: Event) {
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (e: Event) {
       e.preventDefault();
 
-      const targetID = (e.target as HTMLAnchorElement).getAttribute('href');
+      const targetID = (e.target as HTMLAnchorElement).getAttribute("href");
       const targetElement = document.querySelector(targetID!);
 
       if (targetElement) {
         const offset = 100;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - offset;
+        const targetPosition =
+          targetElement.getBoundingClientRect().top +
+          window.pageYOffset -
+          offset;
 
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth'
+          behavior: "smooth",
         });
       }
     });
@@ -179,99 +211,54 @@ const whyIonkol = [
 <Layout title={"iON"}>
   <Navbar />
   <main class="px-8 relative">
-
-    <!-- Ion explore section -->
-    <section id="explore" class="min-h-screen flex justify-center items-center relative bg-white">
-      <!-- Background Circle -->
-      <div class="hidden sm:flex absolute z-0 w-[202px] h-[202px] lg:w-[405px] lg:h-[405px] bg-[#feeff1] rounded-full right-[10%] top-[15%] flex justify-center items-center">
-        <div class="h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex-col justify-start items-start">
-          <div class="flex gap-3 mb-2">
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <Image
-                width="16"
-                height="16"
-                alt="Instagram icon"
-                src="/instagram-icon.svg"
-              />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <Image
-                width="16"
-                height="16"
-                alt="TikTok icon"
-                src="/tiktok-icon.svg"
-              />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <Image
-                width="16"
-                height="16"
-                alt="YouTube icon"
-                src="/youtube-icon.svg"
-              />
-            </div>
-          </div>
-          <div class="self-stretch text-center text-black text-sm font-normal font-['Inter'] leading-relaxed tracking-tight">
-            Social Media
-          </div>
-        </div>
-      </div>
-    
-      <!-- Main Content -->
-      <div class="flex flex-col items-center justify-center z-10 text-center">
-        <p class="text-[#0d0c22] text-lg font-medium font-['Mulish'] tracking-tight mb-10 lg:text-2xl">
-          Harness the power of social data with
-        </p>
-        <h1 class="text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-[2.6px] mb-8 lg:text-[130px]">
-          ION Explore
-        </h1>
-        <p class="text-[#9e9ea7] text-base font-normal font-['Mulish'] tracking-wide mb-14 lg:text-lg">
-          Driving business growth with data through influencer marketing
-        </p>
-        <button class="h-10 px-10 py-2 bg-[#0d0c22] rounded-lg text-white text-base font-medium font-['Urbanist'] leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
-          Book a Demo
-        </button>
-      </div>
+    <!-- Slider section -->
+    <section
+      class="min-h-screen flex justify-center items-center bg-white pb-24 lg:pb-48">
+      <Swiper />
     </section>
-    
 
     <!-- Featured Solutions section -->
-    <section id="Features" class="min-h-screen flex justify-center items-start mb-40 lg:mb-0">
+    <section
+      id="Features"
+      class="min-h-screen flex justify-center items-start mb-40 lg:mb-0">
       <div class="w-full mx-auto">
         <h2
           class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
           Featured Solutions
         </h2>
-        <div class="animate-appear flex flex-col lg:flex-row justify-center gap-48 lg:gap-4">
-          {solutionsCards.map((card) => (
-            <FeaturedSolutionsCard {...card}>
-              <div set:html={card.miniCard} />
-            </FeaturedSolutionsCard>
-          ))}
+        <div
+          class="animate-appear flex flex-col lg:flex-row justify-center gap-48 lg:gap-4">
+          {
+            solutionsCards.map((card) => (
+              <FeaturedSolutionsCard {...card}>
+                <div set:html={card.miniCard} />
+              </FeaturedSolutionsCard>
+            ))
+          }
         </div>
       </div>
     </section>
 
     <!-- Benefits section -->
-    <section id="Benefits"  class="min-h-screen flex justify-center items-center bg-white">
+    <section
+      id="Benefits"
+      class="min-h-screen flex justify-center items-center bg-white">
       <div>
-        <h2 class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
+        <h2
+          class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
           Benefits
         </h2>
-    
+
         <div class="animate-appear max-w-6xl mx-auto">
           <!-- First Row (Two Columns) -->
           <div class="flex flex-col md:flex-row gap-6 justify-center">
-            {benefits.slice(0, 2).map((benefit) => (
-              <Benefit {...benefit} />
-            ))}
+            {benefits.slice(0, 2).map((benefit) => <Benefit {...benefit} />)}
           </div>
-    
+
           <!-- Second Row (Three Columns) -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 justify-center">
-            {benefits.slice(2).map((benefit) => (
-              <Benefit {...benefit} />
-            ))}
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 justify-center">
+            {benefits.slice(2).map((benefit) => <Benefit {...benefit} />)}
           </div>
         </div>
       </div>
@@ -279,68 +266,91 @@ const whyIonkol = [
 
     <!-- About ionkol section -->
     <section id="About" class="min-h-screen flex justify-center items-center">
-      <div class="animate-appear bg-[#fff7f8] w-full rounded-[40px] mb-20 p-8 sm:p-16 lg:p-32 relative">
-        <h2 class="text-center text-[#0d0c22] text-3xl sm:text-4xl lg:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-5">
+      <div
+        class="animate-appear bg-[#fff7f8] w-full rounded-[40px] mb-20 p-8 sm:p-16 lg:p-32 relative">
+        <h2
+          class="text-center text-[#0d0c22] text-3xl sm:text-4xl lg:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-5">
           About IonKOL
         </h2>
-        
-        <p class="text-center mx-auto text-[#0d0c22] text-base sm:text-lg font-normal font-['Mulish'] leading-6 sm:leading-7 tracking-tight mb-10 sm:mb-16 lg:mb-20 max-w-[90%] lg:max-w-[875px]">
-          IonKOL takes the guesswork out of influencer marketing. We empower businesses to effortlessly find, evaluate, and partner with the right influencers, driving impactful marketing campaigns that deliver results. With our intuitive platform, starting with Instagram, you get actionable insights at a fraction of the cost, ensuring your brand reaches its full potential.
+
+        <p
+          class="text-center mx-auto text-[#0d0c22] text-base sm:text-lg font-normal font-['Mulish'] leading-6 sm:leading-7 tracking-tight mb-10 sm:mb-16 lg:mb-20 max-w-[90%] lg:max-w-[875px]">
+          IonKOL takes the guesswork out of influencer marketing. We empower
+          businesses to effortlessly find, evaluate, and partner with the right
+          influencers, driving impactful marketing campaigns that deliver
+          results. With our intuitive platform, starting with Instagram, you get
+          actionable insights at a fraction of the cost, ensuring your brand
+          reaches its full potential.
         </p>
-        
+
         <div class="flex flex-col sm:flex-row justify-around gap-8 sm:gap-10">
           <div class="space-y-2">
-            <div class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide" data-target="35">
+            <div
+              class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
+              data-target="35">
               0
             </div>
-            <p class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
+            <p
+              class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
               Metrics for impactful partnership
             </p>
           </div>
-    
+
           <div class="space-y-2">
-            <div class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide" data-target="30">
+            <div
+              class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
+              data-target="30">
               0
             </div>
-            <p class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
+            <p
+              class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
               Advanced filter options
             </p>
           </div>
-    
+
           <div class="space-y-2">
-            <div class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide" data-target="25">
+            <div
+              class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
+              data-target="25">
               0
             </div>
-            <p class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
+            <p
+              class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
               Tools to drive results
             </p>
           </div>
         </div>
       </div>
     </section>
-    
 
     <!-- Why choose ionkol section -->
     <section class="flex flex-col mb-28 px-4">
-      <h2 class="text-[#0d0c22] text-3xl sm:text-4xl md:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-8 sm:mb-10 md:mb-12">
+      <h2
+        class="text-[#0d0c22] text-3xl sm:text-4xl md:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-8 sm:mb-10 md:mb-12">
         Why Choose IonKOL?
       </h2>
-      
+
       <div class="flex flex-wrap justify-center gap-7">
-        {whyIonkol.map((card) => (
-          <div
-            class="animate-appear px-8 sm:px-10 py-10 sm:py-12 md:py-16 bg-white rounded-[32px] shadow flex flex-col justify-start items-start gap-4 sm:gap-6 max-w-full sm:max-w-[45%] md:max-w-[30%]">
-            <Image src={card.imageUrl} alt={card.title} height={48} width={48} />
-            
-            <h3 class="text-[#0d0c22] text-2xl sm:text-3xl font-semibold font-['Urbanist'] leading-[32px] sm:leading-[42px] tracking-wide">
-              {card.title}
-            </h3>
-            
-            <p class="text-[#0d0c22] text-base sm:text-lg font-normal font-['Open Sans'] leading-6 sm:leading-7 tracking-tight">
-              {card.description}
-            </p>
-          </div>
-        ))}
+        {
+          whyIonkol.map((card) => (
+            <div class="animate-appear px-8 sm:px-10 py-10 sm:py-12 md:py-16 bg-white rounded-[32px] shadow flex flex-col justify-start items-start gap-4 sm:gap-6 max-w-full sm:max-w-[45%] md:max-w-[30%]">
+              <Image
+                src={card.imageUrl}
+                alt={card.title}
+                height={48}
+                width={48}
+              />
+
+              <h3 class="text-[#0d0c22] text-2xl sm:text-3xl font-semibold font-['Urbanist'] leading-[32px] sm:leading-[42px] tracking-wide">
+                {card.title}
+              </h3>
+
+              <p class="text-[#0d0c22] text-base sm:text-lg font-normal font-['Open Sans'] leading-6 sm:leading-7 tracking-tight">
+                {card.description}
+              </p>
+            </div>
+          ))
+        }
       </div>
     </section>
 
@@ -367,34 +377,79 @@ const whyIonkol = [
       <div
         class="animate-appear relative w-full flex justify-center bg-[#fff7f8] transform opacity-0 translate-y-10 rounded-[40px] p-32 relative">
         <!-- Decorative elements -->
-         <div class="scale-50 md:scale-75 lg:scale-100 absolute top-0 -translate-y-1/4 right-12 h-fit w-fit p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 flex" style={{"box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)"}}><Image src='/Bars.svg' alt='bars' width={198} height={128}/>
-          <p class="font-inter text-[14px] font-normal leading-[26px] tracking-[0.002em] text-left">Statistics</p>
+        <div
+          class="scale-50 md:scale-75 lg:scale-100 absolute top-0 -translate-y-1/4 right-12 h-fit w-fit p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 flex"
+          style={{
+            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+          }}>
+          <Image src="/Bars.svg" alt="bars" width={198} height={128} />
+          <p
+            class="font-inter text-[14px] font-normal leading-[26px] tracking-[0.002em] text-left">
+            Statistics
+          </p>
         </div>
-         <div class="hidden scale-50 md:scale-75 lg:scale-100 absolute top-0 left-0 translate-x-1/2 translate-y-1/2 -rotate-[7.88deg] h-[110px] w-[110px] p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 md:flex" style={{"box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)"}}>
-          <p class="font-inter text-[16px] text-[#F87217] font-normal leading-[24px] tracking-[0.002em] text-center">
-          8.22k
+        <div
+          class="hidden scale-50 md:scale-75 lg:scale-100 absolute top-0 left-0 translate-x-1/2 translate-y-1/2 -rotate-[7.88deg] h-[110px] w-[110px] p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 md:flex"
+          style={{
+            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+          }}>
+          <p
+            class="font-inter text-[16px] text-[#F87217] font-normal leading-[24px] tracking-[0.002em] text-center">
+            8.22k
           </p>
-          <p class="font-open-sans text-[12px] font-normal leading-[16px] tracking-[0.002em] text-center"> 
-            Eng.</br>Followers
-          </p>
-         </div>
-         <p></p>
-         <div class="scale-50 md:scale-75 lg:scale-100 absolute bottom-0 left-0 translate-y-1/3 translate-x-1/4 rotate-[4.33deg] h-[138px] w-[211px] p-6 bg-white rounded-xl flex-col justify-center items-start gap-2 flex" style={{"box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)"}}>
+          <p
+            class="font-open-sans text-[12px] font-normal leading-[16px] tracking-[0.002em] text-center">
+            Eng.
+          </p>Followers
+        </div>
+
+        <div
+          class="scale-50 md:scale-75 lg:scale-100 absolute bottom-0 left-0 translate-y-1/3 translate-x-1/4 rotate-[4.33deg] h-[138px] w-[211px] p-6 bg-white rounded-xl flex-col justify-center items-start gap-2 flex"
+          style={{
+            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+          }}>
           <div class="flex items-center gap-2">
-            <Image src='/girl-placeholder-2.png' alt='girl' width={32} height={32}/>
-            <div class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">Mikki Adams</div>
+            <Image
+              src="/girl-placeholder-2.png"
+              alt="girl"
+              width={32}
+              height={32}
+            />
+            <div
+              class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">
+              Mikki Adams
+            </div>
           </div>
           <div class="flex items-center gap-2 mb-2">
-            <Image src='/girl-placeholder-3.png' alt='girl' width={32} height={32}/>
-            <div class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">Jakie Town</div>
+            <Image
+              src="/girl-placeholder-3.png"
+              alt="girl"
+              width={32}
+              height={32}
+            />
+            <div
+              class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">
+              Jakie Town
+            </div>
           </div>
-          <div class="font-inter mx-auto text-[14px] font-normal leading-[26px] tracking-[0.002em] text-center">Influencers</div>
-         </div>
-         <div class="hidden scale-50 md:scale-75 lg:scale-100 absolute bottom-0 right-0 translate-y-1/4 -translate-x-1/4 rotate-[2.84deg] h-fit w-fit p-6 bg-white rounded-xl justify-center items-center gap-2 md:flex" style={{"box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)"}}>
-          <Image src='/3-girls.png' alt='girls' width={80} height={34}/>
-          <div><span>Liked by</span> <span class="font-medium">ann_sunny</span> <span>and</span> <span class="font-medium">7 888 others</span></div>
-         </div>
-
+          <div
+            class="font-inter mx-auto text-[14px] font-normal leading-[26px] tracking-[0.002em] text-center">
+            Influencers
+          </div>
+        </div>
+        <div
+          class="hidden scale-50 md:scale-75 lg:scale-100 absolute bottom-0 right-0 translate-y-1/4 -translate-x-1/4 rotate-[2.84deg] h-fit w-fit p-6 bg-white rounded-xl justify-center items-center gap-2 md:flex"
+          style={{
+            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+          }}>
+          <Image src="/3-girls.png" alt="girls" width={80} height={34} />
+          <div>
+            <span>Liked by</span>
+            <span class="font-medium">ann_sunny</span>
+            <span>and</span>
+            <span class="font-medium">7 888 others</span>
+          </div>
+        </div>
 
         <!-- Main content -->
         <div class="max-w-[654px]">
@@ -417,11 +472,11 @@ const whyIonkol = [
               required
               class="flex-1 h-10 px-4 py-2 bg-white rounded-lg border border-[#ffdede] text-base font-medium font-['Urbanist'] leading-normal tracking-wide"
             />
-            <Button text="Learn more"/>
+            <Button text="Learn more" />
           </form>
         </div>
       </div>
     </section>
   </main>
-  <Footer />
 </Layout>
+<Footer />

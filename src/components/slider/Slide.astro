@@ -1,0 +1,17 @@
+---
+import MainContent from './MainContent.astro';
+
+interface SlideProps {
+  title: string;
+  textColor: string;
+  description: string;
+  buttonLabel: string;
+}
+
+const { title, textColor, description, buttonLabel } = Astro.props as SlideProps;
+---
+
+<div class="swiper-slide flex items-center relative">
+  <slot /> 
+  <MainContent title={title} textColor={textColor} description={description} buttonLabel={buttonLabel} />
+</div>

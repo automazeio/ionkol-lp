@@ -1,0 +1,13 @@
+---
+interface CircleProps {
+  backgroundColor: string;
+  topPosition: string;
+}
+
+const { backgroundColor, topPosition } = Astro.props as CircleProps;
+---
+
+<div
+  class={`hidden sm:flex absolute z-0 w-[202px] h-[202px] lg:w-[405px] lg:h-[405px] ${backgroundColor} rounded-full right-[10%] ${topPosition} flex justify-center items-center`}>
+    <slot />
+</div>
