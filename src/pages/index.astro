@@ -94,20 +94,13 @@ const whyIonkol = [
 <script>
   document.addEventListener("DOMContentLoaded", async () => {
     const { Swiper } = await import("swiper");
-    const { Navigation, Pagination, Autoplay } = await import("swiper/modules");
+    const {Autoplay } = await import("swiper/modules");
     const swiper = new Swiper(".swiper", {
-      modules: [Navigation, Pagination, Autoplay],
-      pagination: {
-        el: ".swiper-pagination",
-      },
+      modules: [Autoplay],
       loop: true,
       autoplay: {
-        delay: 6000,
+        delay: 3000,
         disableOnInteraction: false,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
       },
     });
   });
