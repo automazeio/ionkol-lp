@@ -2,6 +2,8 @@
 import Button from "./ui/Button.astro";
 
 const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
+const SIGN_IN_URL = "https://app-dev.ionkol.com//sign-in"
+const SIGN_UP_URL = "https://app-dev.ionkol.com/sign-up"
 ---
 
 <header
@@ -44,10 +46,10 @@ const navItems = ["Features", "Benefits", "About", "Pricing", "Contact"];
 
   <!-- Sign-up and Login buttons -->
   <div class="hidden lg:flex gap-4">
-    <a href="https://o0gkwgc.88.198.20.118.sslip.io/sign-up">
+    <a href={SIGN_UP_URL}>
       <Button text="Sign-up" type="outline" /></a
     >
-    <a href="https://o0gkwgc.88.198.20.118.sslip.io/sign-in">
+    <a href={SIGN_IN_URL}>
       <Button text="Login" /></a
     >
   </div>
