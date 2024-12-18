@@ -1,0 +1,70 @@
+---
+const words = ["Welcome", "to", "our", "website"]; // Array of words
+---
+<style>
+  .animation-box {
+    position: relative;
+    width: 300px; /* Adjust as needed */
+    height: 50px; /* Adjust as needed */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .animated-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px; /* Adjust as needed */
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(-100%);
+    animation: textFade 3s infinite;
+  }
+
+  @keyframes textFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+</style>
+
+<div class="animation-box">
+    <span
+      class="animated-text"
+    >
+      {words[0]}
+    </span>
+</div>
+
+
+<script>
+  let index = 0;
+const words = ["Welcome", "to", "our", "website"];
+  setInterval(() => {
+    index = (index + 1) % words.length;
+    const container =  document.querySelector('.animated-text');
+    if(container) container.innerHTML = words[index];
+  }, 3000);
+</script>
