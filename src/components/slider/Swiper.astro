@@ -9,7 +9,7 @@ const slides = [
     description: 'Data-driven success',
     buttonLabel: 'Book a Demo',
     circleBackgroundColor: 'bg-[#feeff1]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
+    circleTopPosition: '-top-[18%] lg:-top-[20%] left-[65%]',
     circleContent: `
         <div class=" scale-75 lg:scale-100 h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center">
           <div class="flex gap-3 mb-2">
@@ -26,74 +26,6 @@ const slides = [
           <div class="text-center">Social Media</div>
         </div>
     `
-  },
-  {
-    title: 'ION Discover',
-    textColor: 'text-[#FFD572]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FEF5F0]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: 
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-start gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <div class="flex gap-2 items-center">
-          <img src="/girl-placeholder-2.png" alt="Mikki Adams" width="32" height="32" />
-          <span>Mikki Adams</span>
-        </div>
-        <div class="flex gap-2 items-center mb-2">
-          <img src="/girl-placeholder-3.png" alt="Jakie Town" width="32" height="32" />
-          <span>Jakie Town</span>
-        </div>
-        <div class="text-center w-full">Influencers</div>
-      </div>
-    `
-  },
-
-  {
-    title: 'ION Analyze',
-    textColor: 'text-[#F9679A]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FFE9EF]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: (
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <img src="/Bars.svg" alt="Bars chart" width="198" height="128" />
-        </div>
-      `
-    ),
-  },
-  {
-    title: 'ION Connect',
-    textColor: 'text-[#BB6DCF]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FFE9EF]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: (
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <div class="flex justify-center items-center gap-3">
-          <img src='/post.svg' alt='Send icon' width={28} height={28} />
-          <span class='text-sm font-inter whitespace-nowrap'>Contact Influencer</span>
-        </div>
-        </div>
-      `
-    ),
   }
 ];
 ---
@@ -110,7 +42,7 @@ const slides = [
       </div>
 </div> -->
 
-<div class="flex animated-slides justify-center items-center min-h-screen">
+<div class="flex justify-center items-center min-h-screen">
   <Slide title={slides[0].title} textColor={slides[0].textColor} description={slides[0].description} buttonLabel={slides[0].buttonLabel}>
     <Circle backgroundColor={slides[0].circleBackgroundColor} topPosition={slides[0].circleTopPosition}>
         <Fragment set:html={slides[0].circleContent} />
@@ -118,116 +50,3 @@ const slides = [
   </Slide>
 </div>
 
-<script>
-  
-const slides = [
-  {
-    title: 'ION Explore',
-    textColor: 'text-[#ed707e]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#feeff1]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: `
-        <div class=" scale-75 lg:scale-100 h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center">
-          <div class="flex gap-3 mb-2">
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/instagram-icon.svg" alt="Instagram" width="16" height="16" />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/tiktok-icon.svg" alt="TikTok" width="16" height="16" />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/youtube-icon.svg" alt="YouTube" width="16" height="16" />
-            </div>
-          </div>
-          <div class="text-center">Social Media</div>
-        </div>
-    `
-  },
-  {
-    title: 'ION Discover',
-    textColor: 'text-[#FFD572]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FEF5F0]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: 
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-start gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <div class="flex gap-2 items-center">
-          <img src="/girl-placeholder-2.png" alt="Mikki Adams" width="32" height="32" />
-          <span>Mikki Adams</span>
-        </div>
-        <div class="flex gap-2 items-center mb-2">
-          <img src="/girl-placeholder-3.png" alt="Jakie Town" width="32" height="32" />
-          <span>Jakie Town</span>
-        </div>
-        <div class="text-center w-full">Influencers</div>
-      </div>
-    `
-  },
-
-  {
-    title: 'ION Analyze',
-    textColor: 'text-[#F9679A]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FFE9EF]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: (
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <img src="/Bars.svg" alt="Bars chart" width="198" height="128" />
-        </div>
-      `
-    ),
-  },
-  {
-    title: 'ION Connect',
-    textColor: 'text-[#BB6DCF]',
-    description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
-    circleBackgroundColor: 'bg-[#FFE9EF]',
-    circleTopPosition: '-top-[18%] lg:-top-[35%]',
-    circleContent: (
-      `
-       <div
-    class="scale-75 lg:scale-100 rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center gap-3"
-    style={{
-      "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
-    }}>
-        <div class="flex justify-center items-center gap-3">
-          <img src='/post.svg' alt='Send icon' width={28} height={28} />
-          <span class='text-sm font-inter whitespace-nowrap'>Contact Influencer</span>
-        </div>
-        </div>
-      `
-    ),
-  }
-];
-
-  let index = 0;
-    setInterval(() => {
-    index = (index + 1) % slides.length;
-    const container =  document.querySelector('.animated-slides');
-    const slide = slides[index];
-    if (!container) return;
-    container.innerHTML = `
-      <Slide title="${slide.title}" textColor="${slide.textColor}" description="${slide.description}" buttonLabel="${slide.buttonLabel}">
-        <Circle backgroundColor="${slide.circleBackgroundColor}" topPosition="${slide.circleTopPosition}">
-          <Fragment set:html="${slide.circleContent}" />
-        </Circle>
-      </Slide>
-    `;
-    
-  }, 3000);
-</script>

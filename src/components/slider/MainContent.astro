@@ -1,25 +1,96 @@
 ---
-interface MainContentProps {
-  title: string;
-  textColor: string;
-  description: string;
-  buttonLabel: string;
-}
-
-const { title, textColor, description, buttonLabel } = Astro.props as MainContentProps;
+const titles = ["Explore", "Analyse"]
+ const data = {
+    textColor: 'text-[#ed707e]',
+    description: 'Data-driven success',
+    buttonLabel: 'Book a Demo',
+    circleBackgroundColor: 'bg-[#feeff1]',
+    circleTopPosition: '-top-[20%] lg:-top-[200px]',
+    circleContent: `
+        <div class=" scale-75 lg:scale-100 h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center">
+          <div class="flex gap-3 mb-2">
+            <div class="p-2 bg-[#fea598] rounded-full">
+              <img src="/instagram-icon.svg" alt="Instagram" width="16" height="16" />
+            </div>
+            <div class="p-2 bg-[#fea598] rounded-full">
+              <img src="/tiktok-icon.svg" alt="TikTok" width="16" height="16" />
+            </div>
+            <div class="p-2 bg-[#fea598] rounded-full">
+              <img src="/youtube-icon.svg" alt="YouTube" width="16" height="16" />
+            </div>
+          </div>
+          <div class="text-center">Social Media</div>
+        </div>
+    `
+  }
 ---
 
-<div class="flex flex-col relative items-center justify-center z-10 text-center px-4">
-  <p class="text-[#0d0c22] text-lg font-medium font-['Mulish'] tracking-tight mb-10 lg:text-2xl">
+<style>
+
+.animated-box {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .animated-slides {
+    transform: translateY(-25%);
+    animation: textFade 3s infinite;
+  }
+
+  @keyframes textFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-25%);
+    }
+    20% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(25%);
+    }
+  }
+
+</style>
+
+<div class="flex flex-col relative items-center mt-10 justify-center z-10 text-center px-4">
+  <p class="text-[#0d0c22] text-lg absolute top-0 font-medium font-['Mulish'] tracking-tight lg:text-2xl">
     AI influencer analytics platform
   </p>
-  <h1 class={`${textColor} text-5xl font-extrabold font-['Urbanist'] tracking-[2.6px] mb-8 lg:text-[130px]`}>
-    {title}
-  </h1>
+    <div class={`${data.textColor} text-5xl flex mb-8 gap-10 w-screen flex-row items-center justify-center font-extrabold font-['Urbanist'] tracking-[2.6px] lg:text-[130px]`}>
+      ION <div class="animated-box"><span class="animated-slides">{titles[0]}</span></div>
+    </div>
   <p class="text-[#9e9ea7] text-base font-normal font-['Mulish'] tracking-wide mb-14 lg:text-lg">
-    {description}
+    {data.description}
   </p>
   <button class="h-10 px-10 py-2 bg-[#0d0c22] rounded-lg text-white text-base font-medium font-['Urbanist'] leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
-    {buttonLabel}
+    {data.buttonLabel}
   </button>
 </div>
+
+<script>
+  const titles = ["Explore", "Analyse"]
+  let index = 0;
+    setInterval(() => {
+    index = (index + 1) % titles.length;
+    const container =  document.querySelector('.animated-slides');
+    const slide = titles[index];
+    if (!container) return;
+    container.innerHTML = slide;
+    
+  }, 3000);
+</script>
