@@ -1,5 +1,5 @@
 ---
-import Button from "./ui/Button.astro";
+import Button from './ui/Button.astro';
 
 interface Props {
   title: string;
@@ -10,18 +10,16 @@ interface Props {
 const { title, description } = Astro.props;
 ---
 
-<div class="bg-[#fff7f8] rounded-[40px] p-6 md:p-12 lg:p-24 xl:p-32 relative">
+<div class="lg:w-1/2 bg-[#fff7f8] rounded-[40px] p-6 md:p-12 lg:p-24 xl:p-32 relative">
   <h6
     class="text-[#0d0c22] text-2xl md:text-3xl lg:text-[40px] font-semibold font-['Urbanist'] tracking-wide mb-[18px]">
     {title}
   </h6>
   <p
-    class="text-[#0d0c22] text-base md:text-lg lg:text-base font-normal font-['Mulish'] leading-7 tracking-tight mb-9">
+    class="mb-10 text-[#0d0c22] lg:min-h-20 lg:max-h-20 text-base font-normal font-['Mulish'] leading-7 tracking-tight lg:mb-9 lg:text-base md:text-lg">
     {description}
   </p>
-  <a href="https://o0gkwgc.88.198.20.118.sslip.io/sign-up">
-    <Button text="Learn more" type="fill" /></a
-  >
+  <a href="https://app.ionkol.com/sign-up"> <Button text="Learn more" className="" type="fill" /></a>
 
   <div class="h-12"></div>
   <div
