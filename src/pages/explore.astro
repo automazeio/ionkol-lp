@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import { Image } from 'astro:assets';
+import Button from '../components/ui/Button.astro';
+---
+
+<!-- Sections appear animation -->
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    const cards = document.querySelectorAll('.animate-appear');
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+<Layout title={'iON'}>
+  <Navbar />
+
+  <!-- Introduction section -->
+  <div class="w-[90%] mt-44 mx-auto flex flex-col lg:flex-row justify-center items-center gap-8">
+    <div class="w-1/2 flex flex-row-reverse items-right">
+      <Image src="/explore-intro-image.svg" alt="intro-image" width={432} height={432} />
+    </div>
+    <div class="flex flex-col justify-between gap-2 w-1/2">
+      <p class="text-[27px] text-[#0D0C22] font-medium">IONKOL</p>
+      <p class="text-[54px] text-[#ed707e] font-['Urbanist'] font-extrabold">Explore</p>
+      <p class="text-lg font-['Mulish'] mb-4 w-[75%]">
+        Track your own data to see where you are doing well and where you have more potential for
+        growth. Access all our metrics to see where you stand and understand how you can grow.
+      </p>
+      <a href="https://app.ionkol.com/sign-up"> <Button text="Start now" /></a>
+    </div>
+  </div>
+
+  <!-- Main section title -->
+  <div class="w-[85%] mt-60 mx-auto flex flex-col gap-2 items-center justify-center">
+    <p class="text-[#0D0C22] text-[32px] font-['Urbanist']">
+      Explore new and emerging creators to partner with your brand in 3 easy steps
+    </p>
+    <p class="text-[#71717A] text-lg text-center font-['Mulish']">
+      Transform your marketing with effortless access to over <span class="font-semibold text-black"
+        >(x)</span
+      > creators across <span class="font-semibold text-black">(x)</span> countries. Discover, connect,
+      and elevate your brand with our unparalleled database. Discover creators who inspire and engage.
+      Apply over <span class="font-semibold text-black">(x)</span> customizable filters to find the perfect
+      fit for your brand in seconds.
+    </p>
+  </div>
+</Layout>
+<Footer />

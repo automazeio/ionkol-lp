@@ -5,9 +5,10 @@ interface Props {
   title: string;
   description: string;
   miniCard: string;
+  link: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, link } = Astro.props;
 ---
 
 <div class="lg:w-1/2 bg-[#fff7f8] rounded-[40px] p-6 md:p-12 lg:p-24 xl:p-32 relative">
@@ -19,7 +20,7 @@ const { title, description } = Astro.props;
     class="mb-10 text-[#0d0c22] lg:min-h-20 lg:max-h-20 text-base font-normal font-['Mulish'] leading-7 tracking-tight lg:mb-9 lg:text-base md:text-lg">
     {description}
   </p>
-  <a href="https://app.ionkol.com/sign-up"> <Button text="Learn more" className="" type="fill" /></a>
+  <a href={link}> <Button text="Learn more" className="" type="fill" /></a>
 
   <div class="h-12"></div>
   <div
