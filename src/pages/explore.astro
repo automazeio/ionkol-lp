@@ -4,6 +4,28 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import Button from '../components/ui/Button.astro';
+import ExploreInfoCard from '../components/ExploreInfoCard.astro';
+
+const exploreTabsData = [
+  {
+    title: 'Filter',
+    imageLink: '/filterTabImage.svg',
+    contentTitle: 'Filter',
+    text: 'Refine your search by applying advanced filters tailored to your needs.',
+  },
+  {
+    title: 'Search',
+    imageLink: '/searchTabImage.svg',
+    contentTitle: 'Search',
+    text: 'Use keywords to pinpoint influencers matching your goals.',
+  },
+  {
+    title: 'Save',
+    imageLink: '/saveTabImage.svg',
+    contentTitle: 'Save',
+    text: 'Organize your selected creators into custom lists for easy access.',
+  },
+];
 ---
 
 <!-- Sections appear animation -->
@@ -31,27 +53,29 @@ import Button from '../components/ui/Button.astro';
   <Navbar />
 
   <!-- Introduction section -->
-  <div class="w-[90%] mt-44 mx-auto flex flex-col lg:flex-row justify-center items-center gap-8">
+  <div class="lg:w-[90%] mt-44 mx-auto flex flex-col lg:flex-row justify-center items-center gap-8">
     <div class="w-1/2 flex flex-row-reverse items-right">
       <Image src="/explore-intro-image.svg" alt="intro-image" width={432} height={432} />
     </div>
     <div class="flex flex-col justify-between gap-2 w-1/2">
       <p class="text-[27px] text-[#0D0C22] font-medium">IONKOL</p>
       <p class="text-[54px] text-[#ed707e] font-['Urbanist'] font-extrabold">Explore</p>
-      <p class="text-lg font-['Mulish'] mb-4 w-[75%]">
+      <p class="text-lg font-['Mulish'] mb-4 text-left lg:w-[75%]">
         Track your own data to see where you are doing well and where you have more potential for
         growth. Access all our metrics to see where you stand and understand how you can grow.
       </p>
-      <a href="https://app.ionkol.com/sign-up"> <Button text="Start now" /></a>
+      <a class="mx-auto lg:mx-0" href="https://app.ionkol.com/sign-up">
+        <Button text="Start now" /></a
+      >
     </div>
   </div>
 
   <!-- Main section title -->
-  <div class="w-[85%] mt-60 mx-auto flex flex-col gap-2 items-center justify-center">
-    <p class="text-[#0D0C22] text-[32px] font-['Urbanist']">
+  <div class="w-[85%] mt-60 mx-auto flex flex-col gap-2 items-center justify-center animate-appear">
+    <p class="text-[#0D0C22] text-[32px] font-['Urbanist'] text-center animate-appear">
       Explore new and emerging creators to partner with your brand in 3 easy steps
     </p>
-    <p class="text-[#71717A] text-lg text-center font-['Mulish']">
+    <p class="text-[#71717A] text-lg text-center font-['Mulish'] animate-appear">
       Transform your marketing with effortless access to over <span class="font-semibold text-black"
         >(x)</span
       > creators across <span class="font-semibold text-black">(x)</span> countries. Discover, connect,
@@ -59,6 +83,22 @@ import Button from '../components/ui/Button.astro';
       Apply over <span class="font-semibold text-black">(x)</span> customizable filters to find the perfect
       fit for your brand in seconds.
     </p>
+  </div>s
+
+  <!-- Main section title -->
+  <div class="flex flex-col lg:flex-row w-[93%] mx-auto mt-10 gap-6">
+    <div class="w-1/2">
+      <p class="text-[32px] text-[#0D0C22] font-['Urbanist']">ION Explore</p>
+      <ExploreInfoCard
+        tabs={exploreTabsData}
+      />
+    </div>
+    <div class="w-1/2">
+      <p class="text-[32px] text-[#0D0C22] font-['Urbanist']">ION Analyze</p>
+      <ExploreInfoCard
+        tabs={exploreTabsData}
+      />
+    </div>
   </div>
 </Layout>
 <Footer />
