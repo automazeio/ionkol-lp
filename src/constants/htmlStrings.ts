@@ -152,3 +152,45 @@ export const htmlStringTwo = `
                   <div />
                 </div>
 `;
+
+export const filterTabImage = `
+<div class="w-[210px] h-[224px] flex flex-col font-['Urbanist'] gap-6">
+  <div class="flex flex-col gap-4 rotate-[-3deg]">
+    <h1 class="font-semibold text-base">Engagement Rate</h1>
+    <div
+      style={{ boxShadow: '0px 4px 16px 0px #CBBAB040' }}
+      class="rounded-xl bg-white border-1 border-[#F8F7F4] w-[146px] h-[48px] flex flex-row justify-between items-center py-[13px] px-[16px]">
+      <p class="text-sm text-[#9E9EA7]">Any</p>
+      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1.11464 1.70252C1.39183 1.39472 1.86605 1.36991 2.17385 1.6471L6.73961 5.7588L10.8513 1.19304C11.1285 0.885245 11.6027 0.860431 11.9105 1.13762C12.2183 1.41481 12.2431 1.88903 11.966 2.19683L7.35235 7.31991C7.21924 7.46772 7.03286 7.5566 6.83422 7.56699C6.63558 7.57739 6.44095 7.50844 6.29314 7.37533L1.17006 2.76173C0.862263 2.48454 0.837449 2.01032 1.11464 1.70252Z"
+          fill="#0D0C22"></path>
+      </svg>
+    </div>
+  </div>
+  <div class="flex flex-col items-right gap-4 rotate-[1.56deg]">
+    <h1 class="font-semibold text-base text-right">Creator’s Gender</h1>
+    <div
+      style={{ boxShadow: '0px 4px 16px 0px #CBBAB040' }}
+      class="ml-auto rounded-xl bg-white border-1 border-[#F8F7F4] w-[146px] h-[48px] flex flex-row justify-between items-center py-[13px] px-[16px]">
+      <p class="text-sm text-[#9E9EA7]">Any</p>
+      <svg width="13" height="8" viewBox="0 0 13 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+          d="M1.11464 1.70252C1.39183 1.39472 1.86605 1.36991 2.17385 1.6471L6.73961 5.7588L10.8513 1.19304C11.1285 0.885245 11.6027 0.860431 11.9105 1.13762C12.2183 1.41481 12.2431 1.88903 11.966 2.19683L7.35235 7.31991C7.21924 7.46772 7.03286 7.5566 6.83422 7.56699C6.63558 7.57739 6.44095 7.50844 6.29314 7.37533L1.17006 2.76173C0.862263 2.48454 0.837449 2.01032 1.11464 1.70252Z"
+          fill="#0D0C22"></path>
+      </svg>
+    </div>
+  </div>
+</div>
+`;
+
+export const searchTabImage = `
+<img
+  src="/searchTabImage.svg"
+  alt="Content"
+/>
+`;

@@ -4,26 +4,37 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import Button from '../components/ui/Button.astro';
-import ExploreInfoCard from '../components/ExploreInfoCard.astro';
+import ExploreInfoCard from '../components/react/ExploreInfoCard.tsx';
+import { filterTabImage, searchTabImage } from '../constants/htmlStrings';
 
 const exploreTabsData = [
   {
     title: 'Filter',
-    imageLink: '/filterTabImage.svg',
-    contentTitle: 'Filter',
+    visualContent: filterTabImage,
     text: 'Refine your search by applying advanced filters tailored to your needs.',
   },
   {
     title: 'Search',
-    imageLink: '/searchTabImage.svg',
-    contentTitle: 'Search',
+    visualContent: searchTabImage,
     text: 'Use keywords to pinpoint influencers matching your goals.',
   },
   {
     title: 'Save',
-    imageLink: '/saveTabImage.svg',
-    contentTitle: 'Save',
+    visualContent: filterTabImage,
     text: 'Organize your selected creators into custom lists for easy access.',
+  },
+];
+
+const analyzeTabsData = [
+  {
+    title: 'Parameters',
+    visualContent: filterTabImage,
+    text: 'Discover the essence of your audience with advanced analytics: explore follower demographics from location to age and more, to craft bespoke campaigns.',
+  },
+  {
+    title: 'Engagement',
+    visualContent: filterTabImage,
+    text: 'Elevate your influencer evaluation with engagement insights: measure interaction rates, and ensure every creator delivers genuine, impactful engagement.',
   },
 ];
 ---
@@ -83,20 +94,22 @@ const exploreTabsData = [
       Apply over <span class="font-semibold text-black">(x)</span> customizable filters to find the perfect
       fit for your brand in seconds.
     </p>
-  </div>s
+  </div>
 
   <!-- Main section title -->
   <div class="flex flex-col lg:flex-row w-[93%] mx-auto mt-10 gap-6">
     <div class="w-1/2">
-      <p class="text-[32px] text-[#0D0C22] font-['Urbanist']">ION Explore</p>
+      <p class="text-[32px] text-[#0D0C22] font-['Urbanist'] font-medium">ION Explore</p>
       <ExploreInfoCard
+        client:load
         tabs={exploreTabsData}
       />
     </div>
     <div class="w-1/2">
-      <p class="text-[32px] text-[#0D0C22] font-['Urbanist']">ION Analyze</p>
+      <p class="text-[32px] text-[#0D0C22] font-['Urbanist'] font-medium">ION Analyze</p>
       <ExploreInfoCard
-        tabs={exploreTabsData}
+        client:load
+        tabs={analyzeTabsData}
       />
     </div>
   </div>
