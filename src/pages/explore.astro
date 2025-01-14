@@ -5,12 +5,12 @@ import Footer from '../components/Footer.astro';
 import { Image } from 'astro:assets';
 import Button from '../components/ui/Button.astro';
 import ExploreInfoCard from '../components/react/ExploreInfoCard.tsx';
-import { filterTabImage, searchTabImage } from '../constants/htmlStrings';
+import { filterTabImage, searchTabImage, saveTabImage } from '../constants/htmlStrings';
 
 const exploreTabsData = [
   {
     title: 'Filter',
-    visualContent: filterTabImage,
+    visualContent: filterTabImage, 
     text: 'Refine your search by applying advanced filters tailored to your needs.',
   },
   {
@@ -20,7 +20,7 @@ const exploreTabsData = [
   },
   {
     title: 'Save',
-    visualContent: filterTabImage,
+    visualContent: saveTabImage,
     text: 'Organize your selected creators into custom lists for easy access.',
   },
 ];
