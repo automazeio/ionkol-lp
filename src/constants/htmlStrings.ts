@@ -154,7 +154,7 @@ export const htmlStringTwo = `
 `;
 
 export const filterTabImage = `
-<div class="w-[210px] h-[224px] flex flex-col font-['Urbanist'] gap-6">
+<div class="scale-50 md:scale-75 lg:scale-100 w-[210px] h-[224px] flex flex-col font-['Urbanist'] gap-6">
   <div class="flex flex-col gap-4 rotate-[-3deg]">
     <h1 class="font-semibold text-base">Engagement Rate</h1>
     <div
@@ -196,7 +196,7 @@ export const searchTabImage = `
 `;
 
 export const saveTabImage = `
-<div class="w-[291px] h-[233px] relative">
+<div class="scale-50 md:scale-75 lg:scale-100 w-[291px] h-[233px] relative">
     <div
       style="box-shadow: 0px 4px 24px 0px #CBBAB040; top: -12px"
       class="z-30 absolute left-4 w-11 h-11 flex justify-center items-center rounded-xl bg-white rotate-[4.61deg]">
@@ -375,6 +375,133 @@ export const saveTabImage = `
           </svg>
         </div>
       </div>
+    </div>
+  </div>
+`;
+
+export const engagementTabImage = `
+ <div class="scale-50 md:scale-75 lg:scale-100 flex flex-col w-[273px] h-[248px]">
+  <div
+    style="box-shadow: 0px 4px 24px 0px #CBBAB040"
+    class="rounded-xl w-[217px] h-[150px] rotate-[1.3deg] flex flex-col px-6 py-4 bg-white items-center justify-center">
+    <p class="text-xs text-[#71717A]">
+      Followers Reachable Score
+    </p>
+    <h1 class="font-bold text-normal">9,46%</h1>
+    <img alt="progress bar" src="/progress-bar.svg" />
+    <p class="text-xs text-[#9E9EA7]">Account base</p>
+  </div>
+  <div
+    style="box-shadow: 0px 4px 24px 0px #CBBAB040"
+    class="py-4 w-[153px] h-[102px] bg-white rounded-xl flex flex-col items-center justify-center ml-auto rotate-[-2.89deg] z-30">
+    <div class="flex flex-row mb-4">
+      <p class="text-xs text-[#71717A] mr-1">Followers Index</p>
+      <svg
+        class="mt-[2px]"
+        width="13"
+        height="13"
+        viewBox="0 0 13 13"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M1.96181 6.69741C1.99158 7.28761 2.13731 7.86616 2.39067 8.40004C2.64404 8.93392 3.00007 9.41267 3.43846 9.80895C3.87684 10.2052 4.38899 10.5113 4.94565 10.7096C5.50232 10.908 6.0926 10.9948 6.6828 10.965C7.273 10.9352 7.85155 10.7895 8.38543 10.5361C8.91931 10.2828 9.39806 9.92673 9.79434 9.48835C10.1906 9.04996 10.4967 8.53782 10.695 7.98115C10.8934 7.42449 10.9802 6.8342 10.9504 6.24401C10.8903 5.05205 10.3591 3.93279 9.47373 3.13247C8.58838 2.33214 7.42135 1.9163 6.22939 1.97642C5.03743 2.03655 3.91818 2.56771 3.11785 3.45307C2.31753 4.33843 1.90168 5.50545 1.96181 6.69741Z"
+          stroke="#71717A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M6.38037 4.9726L6.38536 4.97234"
+          stroke="#71717A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M5.95654 6.49585L6.45591 6.47066L6.55666 8.46812L7.05603 8.44293"
+          stroke="#71717A"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+    <h1 class="font-bold text-normal">9,20%</h1>
+  </div>
+</div>
+`;
+
+export const parametersTabImage = `
+  <div class="scale-50 md:scale-75 lg:scale-100 relative flex justify-center items-center p-10 h-[250px] w-[300px]">
+    <div
+      style="box-shadow: 0px 4px 16px 0px #CBBAB040"
+      class="border-1 border-[#F8F7F4] absolute top-0 left-0 transform rotate-[-6.27deg] -translate-y-4 -translate-x-6 w-40 bg-white rounded-lg p-4 text-center z-20">
+      <p class="text-sm text-gray-500">Top Country</p>
+      <div class="flex items-center justify-center mt-2">
+        <p class="font-bold text-lg">🇲🇾 Malaysia</p>
+      </div>
+      <p class="text-xl font-semibold text-black mt-2">58,98%</p>
+    </div>
+
+    <div
+      style="box-shadow: 0px 4px 24px 0px #CBBAB040"
+      class="absolute top-2 right-7 transform rotate-[6.46deg] translate-y-6 w-40 bg-white rounded-lg p-4 text-center z-30">
+      <p class="text-sm text-gray-500">Primary Gender</p>
+      <div class="flex items-center justify-center mt-2">
+        <span class="text-2xl text-pink-500 mr-2">♀</span>
+        <p class="font-bold text-lg">Female</p>
+      </div>
+      <p class="text-xl font-semibold text-black mt-2">73,24%</p>
+    </div>
+
+    <div
+      style="box-shadow: 0px 4px 24px 0px #CBBAB040"
+      class="absolute bottom-12 left-0 transform rotate-[5.59deg] translate-x-6 translate-y-16 w-40 bg-white rounded-lg p-4 text-center z-10">
+      <p class="text-sm text-gray-500">Top Language</p>
+      <div class="flex items-center justify-center mt-2">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M6.62939 6.16327L13.5961 6.84542"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M11.8007 4.66004L11.6058 6.65052C11.1752 11.0475 8.59782 14.3943 5.84996 14.1252"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M7.23486 10.2416C7.02593 12.3754 9.79198 14.4187 13.5132 14.8755"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M13.1295 21.8715L17.9876 13.3041L21.0915 22.6511"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M20.3892 20.5727L14.2188 19.9685"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+
+        <p class="font-bold text-lg">English</p>
+      </div>
+      <p class="text-xl font-semibold text-black mt-2">83,75%</p>
     </div>
   </div>
 `;
