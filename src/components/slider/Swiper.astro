@@ -30,18 +30,6 @@ const slides = [
 ];
 ---
 
-<!-- <div class="swiper flex justify-center items-center">
-    <div class="swiper-wrapper min-h-screen flex items-center">
-        {slides.map((slide) => (
-          <Slide title={slide.title} textColor={slide.textColor} description={slide.description} buttonLabel={slide.buttonLabel}>
-            <Circle backgroundColor={slide.circleBackgroundColor} topPosition={slide.circleTopPosition}>
-                <Fragment set:html={slide.circleContent} />
-            </Circle>
-          </Slide>
-        ))}
-      </div>
-</div> -->
-
 <div class="flex justify-center items-center min-h-screen">
   <Slide title={slides[0].title} textColor={slides[0].textColor} description={slides[0].description} buttonLabel={slides[0].buttonLabel}>
     <Circle backgroundColor={slides[0].circleBackgroundColor} topPosition={slides[0].circleTopPosition}>
