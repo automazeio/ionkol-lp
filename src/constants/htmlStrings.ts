@@ -191,12 +191,12 @@ export const filterTabImage = `
 export const searchTabImage = `
 <img
   src="/searchTabImage.svg"
-  alt="Content"
+  alt="Content"s
 />
 `;
 
 export const saveTabImage = `
-<div class="scale-50 md:scale-75 lg:scale-100 w-[291px] h-[233px] relative">
+<div class="scale-100 lg:scale-100 custom-lg-max:scale-[0.85] md:scale-75 sm:scale-50 extra-small:scale-50 w-[291px] h-[233px] relative">
     <div
       style="box-shadow: 0px 4px 24px 0px #CBBAB040; top: -12px"
       class="z-30 absolute left-4 w-11 h-11 flex justify-center items-center rounded-xl bg-white rotate-[4.61deg]">
@@ -380,7 +380,7 @@ export const saveTabImage = `
 `;
 
 export const engagementTabImage = `
- <div class="scale-50 md:scale-75 lg:scale-100 flex flex-col w-[273px] h-[248px]">
+ <div class="scale-50 md:scale-[0.9] sm:scale-[0.6] lg:scale-100 flex flex-col w-[273px] h-[248px]">
   <div
     style="box-shadow: 0px 4px 24px 0px #CBBAB040"
     class="rounded-xl w-[217px] h-[150px] rotate-[1.3deg] flex flex-col px-6 py-4 bg-white items-center justify-center">
@@ -429,7 +429,7 @@ export const engagementTabImage = `
 `;
 
 export const parametersTabImage = `
-  <div class="scale-50 md:scale-75 lg:scale-100 relative flex justify-center items-center p-10 h-[250px] w-[300px]">
+  <div class="scale-100 sm:scale-50 md:scale-75 extra-small:scale-50 relative flex justify-center items-center p-10 h-[250px] w-[300px]">
     <div
       style="box-shadow: 0px 4px 16px 0px #CBBAB040"
       class="border-1 border-[#F8F7F4] absolute top-0 left-0 transform rotate-[-6.27deg] -translate-y-4 -translate-x-6 w-40 bg-white rounded-lg p-4 text-center z-20">
