@@ -1,0 +1,38 @@
+.text-container {
+  display: inline-flex;
+  font-size: 2rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.static-word {
+  margin-right: 8px;
+}
+
+.dynamic-word {
+  display: inline-block;
+  position: relative;
+}
+
+.fade-in-out {
+  animation: fadeInOut 4s ease-in-out forwards;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}

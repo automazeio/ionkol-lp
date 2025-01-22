@@ -1,110 +1,79 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import directus from "../../lib/directus";
-import { readItems } from "@directus/sdk";
-import Benefit from "../components/Benefit.astro";
-import Navbar from "../components/Navbar.astro";
-import Switcher from "../components/Switcher.astro";
-import FeaturedSolutionsCard from "../components/FeaturedSolutionsCard.astro";
-import { Image } from "astro:assets";
-import { htmlStringOne, htmlStringTwo } from "../constants/htmlStrings";
-import "./_index.css";
-import PriceCard from "../components/PriceCard.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Swiper from "../components/slider/Swiper.astro";
+import Layout from '../layouts/Layout.astro';
+import directus from '../../lib/directus';
+import { readItems } from '@directus/sdk';
+import Benefit from '../components/Benefit.astro';
+import Navbar from '../components/Navbar.astro';
+import Switcher from '../components/Switcher.astro';
+import FeaturedSolutionsCard from '../components/FeaturedSolutionsCard.astro';
+import { Image } from 'astro:assets';
+import { htmlStringOne, htmlStringTwo } from '../constants/htmlStrings';
+import './_index.css';
+import PriceCard from '../components/PriceCard.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import Swiper from '../components/slider/Swiper.astro';
 
-const priceCards = await directus.request(readItems("priceCards"));
+const priceCards = await directus.request(readItems('priceCards'));
 priceCards.sort((a, b) => a.price_monthly - b.price_monthly);
+
+const priceCardsBgColors: string[] = ['#FFFFFF', '#FEF5F0', '#FFE2E2', '#FBD4E4'];
 
 const benefits = [
   {
-    imageUrl: "/coins-hand.svg",
-    title: "Competative pricing",
+    imageUrl: '/clock.svg',
+    title: 'Time-Saving',
     description:
-      "Certify Instagram, YouTube, and TikTok creators in seconds with compmrehensive audience insights. Make informed desicions with our tool.",
+      'Streamline your search process and verification to find ideal creators with ION’s efficient tools.',
   },
   {
-    imageUrl: "/globe.svg",
-    title: "Global Network",
+    imageUrl: '/coins-hand.svg',
+    title: 'Competitive pricing',
     description:
-      "Ion Global presence used to provide bussiness owners with local knowledge and expertise",
+      'Access powerful influencer marketing tools at an affordable price with no hidden fees.',
   },
   {
-    imageUrl: "/translate.svg",
-    title: "Multiligual Functionality",
+    imageUrl: '/lightbulb.svg',
+    title: 'Smart Insights',
     description:
-      "Certify Instagram, YouTube, and TikTok creators in seconds with compmrehensive audience insights. Make informed desicions with our tool.",
+      'Proprietary AI-powered analytics to gain creator-specific insights for confident, data-driven decisions.',
   },
   {
-    imageUrl: "/bar-chart.svg",
-    title: "Accurate Data",
+    imageUrl: '/bar-chart.svg',
+    title: 'Actionable Data',
     description:
-      "Certify Instagram, YouTube, and TikTok creators in seconds with compmrehensive audience insights. Make informed desicions with our tool.",
+      'Turn complex data into clear information that empowers smarter decisions to accelerate business growth.',
   },
   {
-    imageUrl: "/bar-chart.svg",
-    title: "Competative pricing",
+    imageUrl: '/globe.svg',
+    title: 'Global Reach',
     description:
-      "Anayize influencers on TikTok, YouTube, and Instagram using the most compmrehensive and updated metrics available.",
+      'Expand your business internationally with localization strategies to connect with foreign audiences.',
   },
 ];
 
 const solutionsCards = [
   {
-    title: "Unlock Precise Influencer Analytics",
+    title: 'ION Analyze',
     description:
-      "Certify Instagram, YouTube, and TikTok creators in seconds with compmrehensive audience insights. Make informed desicions with our tool.",
+      'Evaluate the success of your influencer partnerships with actionable insights into performance metrics and audience engagement.',
     miniCard: htmlStringOne,
+    link: "https://app.ionkol.com/sign-up/",
   },
   {
-    title: "Unlock Precise Influencer Analytics",
+    title: 'ION Explore',
     description:
-      "Certify Instagram, YouTube, and TikTok creators in seconds with compmrehensive audience insights. Make informed desicions with our tool.",
+      'Discover and connect with creators who amplify your brand’s message. Save time with advanced filters to find influencers who align with your goals and deliver real results.',
     miniCard: htmlStringTwo,
+    link: "/explore/",
   },
 ];
 
-const whyIonkol = [
-  {
-    imageUrl: "/lightbulb.svg",
-    title: "Precise Insights",
-    description:
-      "Get accurate, real-time data that helps you make smarter, faster decisions.",
-  },
-  {
-    imageUrl: "/monitor.svg",
-    title: "Precise Insights",
-    description:
-      "Get accurate, real-time data that helps you make smarter, faster decisions.",
-  },
-  {
-    imageUrl: "/piggy-bank.svg",
-    title: "Precise Insights",
-    description:
-      "Get accurate, real-time data that helps you make smarter, faster decisions.",
-  },
-];
 ---
 
-<!-- Swiper init -->
-<script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    const { Swiper } = await import("swiper");
-    const {Autoplay } = await import("swiper/modules");
-    const swiper = new Swiper(".swiper", {
-      modules: [Autoplay],
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-    });
-  });
-</script>
 <style>
   :root {
     --swiper-theme-color: #ed707e;
@@ -113,21 +82,21 @@ const whyIonkol = [
 
 <!-- Sections appear animation -->
 <script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            entry.target.classList.add('visible');
           }
         });
       },
       {
         threshold: 0.1,
-      }
+      },
     );
 
-    const cards = document.querySelectorAll(".animate-appear");
+    const cards = document.querySelectorAll('.animate-appear');
     cards.forEach((card) => observer.observe(card));
   });
 </script>
@@ -135,7 +104,7 @@ const whyIonkol = [
 <!-- Numbers count animation -->
 <script is:inline>
   function countUp(element) {
-    const target = +element.getAttribute("data-target");
+    const target = +element.getAttribute('data-target');
     const speed = 150;
 
     const increment = target / speed;
@@ -164,8 +133,8 @@ const whyIonkol = [
     });
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const countElements = document.querySelectorAll(".count");
+  document.addEventListener('DOMContentLoaded', () => {
+    const countElements = document.querySelectorAll('.count');
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
@@ -179,48 +148,42 @@ const whyIonkol = [
 <!-- Scrolling with offset to sections -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (e: Event) {
+    anchor.addEventListener('click', function (e: Event) {
       e.preventDefault();
 
-      const targetID = (e.target as HTMLAnchorElement).getAttribute("href");
+      const targetID = (e.target as HTMLAnchorElement).getAttribute('href');
       const targetElement = document.querySelector(targetID!);
 
       if (targetElement) {
         const offset = 100;
-        const targetPosition =
-          targetElement.getBoundingClientRect().top +
-          window.pageYOffset -
-          offset;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
         window.scrollTo({
           top: targetPosition,
-          behavior: "smooth",
+          behavior: 'smooth',
         });
       }
     });
   });
 </script>
 
-<Layout title={"iON"}>
+<Layout title={'iON'}>
   <Navbar />
   <main class="px-8 relative">
     <!-- Slider section -->
-    <section
-      class="min-h-screen flex justify-center items-center bg-white pb-24 lg:pb-48">
+    <section class="min-h-screen flex justify-center items-center bg-white pb-24 lg:pb-48">
       <Swiper />
     </section>
 
     <!-- Featured Solutions section -->
-    <section
-      id="Features"
-      class="min-h-screen flex justify-center items-start mb-40 lg:mb-0">
+    <section id="Features" class="min-h-screen flex justify-center items-start mb-40 lg:mb-0">
       <div class="w-full mx-auto">
         <h2
           class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
           Featured Solutions
         </h2>
         <div
-          class="animate-appear flex flex-col lg:flex-row justify-center gap-48 lg:gap-4">
+          class="animate-appear flex flex-col lg:flex-row-reverse justify-center gap-48 lg:gap-4">
           {
             solutionsCards.map((card) => (
               <FeaturedSolutionsCard {...card}>
@@ -233,9 +196,7 @@ const whyIonkol = [
     </section>
 
     <!-- Benefits section -->
-    <section
-      id="Benefits"
-      class="min-h-screen flex justify-center items-center bg-white">
+    <section id="Benefits" class="min-h-screen flex justify-center items-center bg-white">
       <div>
         <h2
           class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-14">
@@ -249,8 +210,7 @@ const whyIonkol = [
           </div>
 
           <!-- Second Row (Three Columns) -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 justify-center">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 justify-center">
             {benefits.slice(2).map((benefit) => <Benefit {...benefit} />)}
           </div>
         </div>
@@ -263,32 +223,22 @@ const whyIonkol = [
         class="animate-appear bg-[#fff7f8] w-full rounded-[40px] mb-20 p-8 sm:p-16 lg:p-32 relative">
         <h2
           class="text-center text-[#0d0c22] text-3xl sm:text-4xl lg:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-5">
-          About IonKOL
+          Harness the power of ION
         </h2>
 
         <p
-          class="text-center mx-auto text-[#0d0c22] text-base sm:text-lg font-normal font-['Mulish'] leading-6 sm:leading-7 tracking-tight mb-10 sm:mb-16 lg:mb-20 max-w-[90%] lg:max-w-[875px]">
-          IonKOL takes the guesswork out of influencer marketing. We empower
-          businesses to effortlessly find, evaluate, and partner with the right
-          influencers, driving impactful marketing campaigns that deliver
-          results. With our intuitive platform, starting with Instagram, you get
-          actionable insights at a fraction of the cost, ensuring your brand
-          reaches its full potential.
+          class="text-center mx-auto text-[#0d0c22] text-base sm:text-lg font-normal font-['Mulish'] leading-6 sm:leading-7 tracking-tight mb-10 max-w-[90%] lg:max-w-[875px]">
+          ION empowers businesses to grow with intuitive tools and actionable insights. By
+          streamlining decision-making and enabling effective influencer partnerships, ION
+          transforms raw data into impactful marketing insights, helping businesses of all sizes
+          drive meaningful results.
         </p>
 
-        <div class="flex flex-col sm:flex-row justify-around gap-8 sm:gap-10">
-          <div class="space-y-2">
-            <div
-              class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
-              data-target="35">
-              0
-            </div>
-            <p
-              class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
-              Metrics for impactful partnership
-            </p>
-          </div>
+        <div class="w-full flex justify-center items-center sm:mb-16 lg:mb-20 mb-10">
+          <a class="mx-auto max-w-min" href="https://app.ionkol.com/sign-up"> <Button className="mx-1000" text="Try now" type="fill" /></a>
+        </div>
 
+        <div class="flex flex-col sm:flex-row justify-around gap-8 sm:gap-10">
           <div class="space-y-2">
             <div
               class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
@@ -298,6 +248,18 @@ const whyIonkol = [
             <p
               class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
               Advanced filter options
+            </p>
+          </div>
+
+          <div class="space-y-2">
+            <div
+              class="count text-center text-[#ed707e] text-[64px] sm:text-[72px] lg:text-[82px] font-bold font-['Urbanist'] leading-tight tracking-wide"
+              data-target="35">
+              0
+            </div>
+            <p
+              class="text-center text-[#0d0c22] text-base sm:text-lg font-medium font-['Urbanist'] leading-[24px] sm:leading-[27px] tracking-tight">
+              Metrics for impactful partnership
             </p>
           </div>
 
@@ -316,50 +278,21 @@ const whyIonkol = [
       </div>
     </section>
 
-    <!-- Why choose ionkol section -->
-    <section class="flex flex-col mb-28 px-4">
-      <h2
-        class="text-[#0d0c22] text-3xl sm:text-4xl md:text-5xl font-semibold font-['Urbanist'] tracking-wide mb-8 sm:mb-10 md:mb-12">
-        Why Choose IonKOL?
-      </h2>
-
-      <div class="flex flex-wrap justify-center gap-7">
-        {
-          whyIonkol.map((card) => (
-            <div class="animate-appear px-8 sm:px-10 py-10 sm:py-12 md:py-16 bg-white rounded-[32px] shadow flex flex-col justify-start items-start gap-4 sm:gap-6 max-w-full sm:max-w-[45%] md:max-w-[30%]">
-              <Image
-                src={card.imageUrl}
-                alt={card.title}
-                height={48}
-                width={48}
-              />
-
-              <h3 class="text-[#0d0c22] text-2xl sm:text-3xl font-semibold font-['Urbanist'] leading-[32px] sm:leading-[42px] tracking-wide">
-                {card.title}
-              </h3>
-
-              <p class="text-[#0d0c22] text-base sm:text-lg font-normal font-['Open Sans'] leading-6 sm:leading-7 tracking-tight">
-                {card.description}
-              </p>
-            </div>
-          ))
-        }
-      </div>
-    </section>
-
     <!-- Price section -->
     <section id="Pricing" class="flex justify-center items-center">
       <div class="flex flex-col items-center space-y-14">
-        <h2
-          class="text-center text-5xl font-extrabold font-['Urbanist'] tracking-wide">
-          <span class="text-[#0d0c22]">Pay only for</span>
-          <span class="text-[#ed707e]">what you need</span>
+        <h2 class="text-center text-5xl font-extrabold font-['Urbanist'] tracking-wide">
+          <span class="text-[#ed707e]">Subscription Plan</span>
         </h2>
 
         <div class="animate-appear flex flex-col items-center space-y-14">
           <Switcher />
           <div class="flex flex-wrap justify-center gap-6">
-            {priceCards?.map((card) => <PriceCard {...card} />)}
+            {
+              priceCards?.map((card, index) => (
+                <PriceCard {...card} cardBgColor={priceCardsBgColors[index]} />
+              ))
+            }
           </div>
         </div>
       </div>
@@ -373,18 +306,17 @@ const whyIonkol = [
         <div
           class="scale-50 md:scale-75 lg:scale-100 absolute top-0 -translate-y-1/4 right-12 h-fit w-fit p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 flex"
           style={{
-            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+            'box-shadow': '0px 4px 16px 0px rgba(203, 186, 176, 0.25)',
           }}>
           <Image src="/Bars.svg" alt="bars" width={198} height={128} />
-          <p
-            class="font-inter text-[14px] font-normal leading-[26px] tracking-[0.002em] text-left">
+          <p class="font-inter text-[14px] font-normal leading-[26px] tracking-[0.002em] text-left">
             Statistics
           </p>
         </div>
         <div
           class="hidden scale-50 md:scale-75 lg:scale-100 absolute top-0 left-0 translate-x-1/2 translate-y-1/2 -rotate-[7.88deg] h-[110px] w-[110px] p-6 bg-white rounded-xl flex-col justify-center items-center gap-2 md:flex"
           style={{
-            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+            'box-shadow': '0px 4px 16px 0px rgba(203, 186, 176, 0.25)',
           }}>
           <p
             class="font-inter text-[16px] text-[#F87217] font-normal leading-[24px] tracking-[0.002em] text-center">
@@ -399,27 +331,17 @@ const whyIonkol = [
         <div
           class="scale-50 md:scale-75 lg:scale-100 absolute bottom-0 left-0 translate-y-1/3 translate-x-1/4 rotate-[4.33deg] h-[138px] w-[211px] p-6 bg-white rounded-xl flex-col justify-center items-start gap-2 flex"
           style={{
-            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+            'box-shadow': '0px 4px 16px 0px rgba(203, 186, 176, 0.25)',
           }}>
           <div class="flex items-center gap-2">
-            <Image
-              src="/girl-placeholder-2.png"
-              alt="girl"
-              width={32}
-              height={32}
-            />
+            <Image src="/girl-placeholder-2.png" alt="girl" width={32} height={32} />
             <div
               class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">
               Mikki Adams
             </div>
           </div>
           <div class="flex items-center gap-2 mb-2">
-            <Image
-              src="/girl-placeholder-3.png"
-              alt="girl"
-              width={32}
-              height={32}
-            />
+            <Image src="/girl-placeholder-3.png" alt="girl" width={32} height={32} />
             <div
               class="font-inter text-[14px] font-medium leading-[26px] tracking-[0.002em] text-left">
               Jakie Town
@@ -433,7 +355,7 @@ const whyIonkol = [
         <div
           class="hidden scale-50 md:scale-75 lg:scale-100 absolute bottom-0 right-0 translate-y-1/4 -translate-x-1/4 rotate-[2.84deg] h-fit w-fit p-6 bg-white rounded-xl justify-center items-center gap-2 md:flex"
           style={{
-            "box-shadow": "0px 4px 16px 0px rgba(203, 186, 176, 0.25)",
+            'box-shadow': '0px 4px 16px 0px rgba(203, 186, 176, 0.25)',
           }}>
           <Image src="/3-girls.png" alt="girls" width={80} height={34} />
           <div>
@@ -448,13 +370,13 @@ const whyIonkol = [
         <div class="max-w-[654px]">
           <h1
             class="text-center text-[#ed707e] text-5xl font-extrabold font-['Urbanist'] tracking-wide mb-4">
-            Get in touch
+            Contact us
           </h1>
           <p
             class="text-center text-[#0d0c22] text-base font-medium font-['Mulish'] leading-7 tracking-tight mb-9">
-            We're working hard to bring you the best possible experience. LonKol
-            will launch soon with powerful tools to enhance your influencer
-            marketing strategy. Stay tuned for updates!
+            We're here to help! IonKol is launching soon with powerful tools to enhance your
+            influencer marketing strategy. Contact us today to explore how IonKol can support to
+            achieve your goals.
           </p>
           <form class="flex gap-3" action="/subscribe" method="POST">
             <input
