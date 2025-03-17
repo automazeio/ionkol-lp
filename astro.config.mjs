@@ -2,8 +2,6 @@
 import { defineConfig } from "astro/config";
 
 import tailwind from "@astrojs/tailwind";
-import sitemapPlugin from "@astrojs/sitemap";
-import image from "@astrojs/image";
 
 import node from "@astrojs/node";
 
@@ -16,9 +14,7 @@ export default defineConfig({
     tailwind({
       // applyBaseStyles: false,
     }),
-    sitemapPlugin(),
     react(),
-    image(),
   ],
 
   output: "static",
