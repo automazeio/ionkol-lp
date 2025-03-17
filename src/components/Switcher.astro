@@ -1,73 +1,74 @@
 ---
 ---
 
-<div
-  class="w-[204px] h-8 justify-start items-center gap-3.5 inline-flex cursor-pointer"
-  onclick="toggleSwitcher()">
-  <!-- Monthly Label -->
-  <div
-    id="monthlyLabel"
-    class="w-[68px] text-sm font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight text-[#0d0c22]">
+<div class="relative inline-flex bg-transparent border-[#ed707e] border-[1px] rounded-full p-[2px]">
+  <button
+    class="relative z-10 text-[20px] px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#ed707e]"
+    data-tab="monthly"
+  >
     Monthly
-  </div>
-
-  <!-- Switcher Button -->
-  <div class="w-14 h-8 relative bg-[#c6c8cc] rounded-[32px]">
-    <div
-      id="switcher"
-      class="w-7 h-7 left-[2px] top-[2px] absolute bg-white rounded-[50px] transition-all duration-300">
-    </div>
-  </div>
-
-  <!-- Yearly Label -->
-  <div
-    id="yearlyLabel"
-    class="w-[52px] text-sm font-semibold font-['Urbanist'] uppercase leading-normal tracking-tight text-[#736d6d]">
-    Yearly
-  </div>
+  </button>
+  <button
+    class="relative z-10 px-12 text-[20px] py-4 text-[#ed707e] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
+    data-tab="annual"
+  >
+    Annual
+    <span class="save-text absolute top-8 left-[1.9rem] whitespace-nowrap text-[12px] transition-colors duration-200 text-[#0d0c22]">Save up to 25%</span>
+  </button>
 </div>
 
-<script is:inline>
-  let isMonthly = true;
+<script>
+  function initializeSwitcher() {
+    const buttons = document.querySelectorAll<HTMLButtonElement>('.tab-button');
+    
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Reset all buttons and save text
+        buttons.forEach(btn => {
+          btn.classList.remove('active', 'bg-[#ed707e]');
+          btn.classList.remove('text-white');
+          btn.classList.add('text-[#ed707e]');
+          const saveText = btn.querySelector('.save-text');
+          if (saveText) {
+            saveText.classList.remove('text-white');
+            saveText.classList.add('text-[#0d0c22]');
+          }
+        });
+        
+        // Add active class and background to clicked button
+        button.classList.add('active', 'bg-[#ed707e]');
+        button.classList.remove('text-[#ed707e]');
+        button.classList.add('text-white');
 
-  // Function to toggle the switcher state
-  function toggleSwitcher() {
-    const switcher = document.getElementById("switcher");
-    const monthlyLabel = document.getElementById("monthlyLabel");
-    const yearlyLabel = document.getElementById("yearlyLabel");
-    const monthlyPrice = document.querySelectorAll(".monthlyPrice");
-    const yearlyPrice = document.querySelectorAll(".yearlyPrice");
-    const monthlyPriceLabel = document.querySelectorAll(".monthlyPriceLabel");
-    const yearlyPriceLabel = document.querySelectorAll(".yearlyPriceLabel");
+        // Update save text color if annual tab is active
+        const saveText = button.querySelector('.save-text');
+        if (saveText && button.dataset.tab === 'annual') {
+          saveText.classList.remove('text-[#0d0c22]');
+          saveText.classList.add('text-white');
+        }
 
-    const setDisplay = (elements, displayValue) => {
-      elements.forEach((node) => {
-        node.style.display = displayValue;
+        // Dispatch custom event for price updates
+        document.dispatchEvent(new CustomEvent('pricingPeriodChange', {
+          detail: { period: button.dataset.tab }
+        }));
       });
-    };
-    if (isMonthly) {
-      console.log("toyearly");
-      // Switch to Yearly
-      switcher.style.left = "calc(100% - 30px)";
-      monthlyLabel.style.color = "#736d6d";
-      yearlyLabel.style.color = "#0d0c22";
-
-      setDisplay(monthlyPrice, "none");
-      setDisplay(yearlyPrice, "block");
-      setDisplay(monthlyPriceLabel, "none");
-      setDisplay(yearlyPriceLabel, "block");
-    } else {
-      console.log("tomonthly");
-      // Switch to Monthly
-      switcher.style.left = "2px";
-      monthlyLabel.style.color = "#0d0c22";
-      yearlyLabel.style.color = "#736d6d";
-      setDisplay(monthlyPrice, "block");
-      setDisplay(yearlyPrice, "none");
-      setDisplay(monthlyPriceLabel, "block");
-      setDisplay(yearlyPriceLabel, "none");
-    }
-
-    isMonthly = !isMonthly; // Toggle state
+    });
   }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initializeSwitcher);
+
+  // Initialize for view transitions
+  document.addEventListener('astro:page-load', initializeSwitcher);
 </script>
+
+<style>
+  .tab-button {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .tab-button:hover:not(.active) {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+</style>

@@ -1,0 +1,90 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import Button from '../components/ui/Button.astro';
+import Switcher from '../components/Switcher.astro';
+import { Image } from 'astro:assets';
+import './_index.css';
+
+const pricingPlans = [
+  {
+    name: 'Basic',
+    monthlyPrice: 29,
+    annualPrice: 261, // 29 * 12 * 0.75 (25% discount)
+    features: ['Feature 1', 'Feature 2', 'Feature 3']
+  },
+  {
+    name: 'Pro',
+    monthlyPrice: 49,
+    annualPrice: 441, // 49 * 12 * 0.75 (25% discount)
+    features: ['All Basic features', 'Feature 4', 'Feature 5']
+  },
+  {
+    name: 'Enterprise',
+    monthlyPrice: 99,
+    annualPrice: 891, // 99 * 12 * 0.75 (25% discount)
+    features: ['All Pro features', 'Feature 6', 'Feature 7']
+  }
+];
+---
+
+<Layout title="Features - iON">
+  <Navbar />
+  <main class="px-8 relative">
+    <!-- Pricing section -->
+    <section class="py-20">
+      <div class="flex flex-col items-center space-y-14">
+        <h2 class="text-center text-5xl font-extrabold">
+          <span class="text-[#ed707e]">Subscription Plan</span>
+        </h2>
+
+        <div class="flex flex-col items-center space-y-14">
+          <Switcher />
+          
+          <!-- Pricing cards -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {pricingPlans.map(plan => (
+              <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-4">{plan.name}</h3>
+                <div class="price-container">
+                  <p class="monthly-price text-4xl font-bold">
+                    ${plan.monthlyPrice}<span class="text-sm">/month</span>
+                  </p>
+                  <p class="annual-price text-4xl font-bold hidden">
+                    ${Math.round(plan.annualPrice / 12)}<span class="text-sm">/month</span>
+                  </p>
+                </div>
+                <ul class="mt-6 space-y-4">
+                  {plan.features.map(feature => (
+                    <li>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script>
+  function handlePriceChange(event: CustomEvent) {
+    const monthlyPrices = document.querySelectorAll('.monthly-price');
+    const annualPrices = document.querySelectorAll('.annual-price');
+    
+    if (event.detail.period === 'annual') {
+      monthlyPrices.forEach(price => price.classList.add('hidden'));
+      annualPrices.forEach(price => price.classList.remove('hidden'));
+    } else {
+      monthlyPrices.forEach(price => price.classList.remove('hidden'));
+      annualPrices.forEach(price => price.classList.add('hidden'));
+    }
+  }
+
+  // Add event listener for price changes
+  document.addEventListener('pricingPeriodChange', handlePriceChange as EventListener);
+</script>
+
+<Footer /> 

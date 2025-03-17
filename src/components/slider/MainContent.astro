@@ -3,7 +3,7 @@ const titles = ["Explore", "Analyse"]
  const data = {
     textColor: 'text-[#ed707e]',
     description: 'Data-driven success',
-    buttonLabel: 'Book a Demo',
+    buttonLabel: 'Start Now',
     circleBackgroundColor: 'bg-[#feeff1]',
     circleTopPosition: '-top-[20%] lg:-top-[200px]',
     circleContent: `
@@ -68,16 +68,16 @@ const titles = ["Explore", "Analyse"]
 </style>
 
 <div class="flex flex-col relative items-center mt-10 justify-center z-10 text-center px-4">
-  <p class="text-[#0d0c22] text-lg absolute top-0 font-medium font-['Mulish'] tracking-tight lg:text-2xl">
+  <p class="text-[#0d0c22] text-lg absolute top-0 font-medium tracking-tight lg:text-2xl">
     AI influencer analytics platform
   </p>
-    <div class={`${data.textColor} text-5xl flex mb-8 lg:gap-10  w-screen lg:ml-0 ml-6 sm:ml-10 flex-row items-center justify-center font-extrabold font-['Urbanist'] tracking-[2.6px] lg:text-[130px]`}>
+    <div class={`${data.textColor} text-5xl flex mb-8 lg:gap-10  w-screen lg:ml-0 ml-6 sm:ml-10 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}>
       ION <div class="animated-box lg:w-[500px] md:w-[250px] sm:w-[220px] w-[210px]"><span class="animated-slides">{titles[0]}</span></div>
     </div>
-  <p class="text-[#9e9ea7] text-base font-normal font-['Mulish'] tracking-wide mb-14 lg:text-lg">
+  <p class="font-normal tracking-wide mb-14 text-[42px]">
     {data.description}
   </p>
-  <button class="h-10 px-10 py-2 bg-[#0d0c22] rounded-lg text-white text-base font-medium font-['Urbanist'] leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
+  <button class="h-10 px-10 py-2 bg-[#ed707e] rounded-3xl text-white text-base font-medium leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
     {data.buttonLabel}
   </button>
 </div>

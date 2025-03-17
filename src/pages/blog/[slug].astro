@@ -1,0 +1,41 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import directus from '../../../lib/directus';
+import { readItems } from '@directus/sdk';
+import '../_index.css';
+
+export async function getStaticPaths() {
+  const articles = await directus.request(readItems('articles'));
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+---
+
+<Layout title={`${article.title} - iON Blog`}>
+  <Navbar />
+  <main class="px-8 relative">
+    <section class="min-h-[60vh] flex flex-col justify-center items-center bg-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[#ed707e] tracking-wide mb-6 ">
+          {article.title}
+        </h1>
+        <p class="text-[#0d0c22] text-lg font-normal mb-8  leading-7 tracking-tight">
+          {article.description}
+        </p>
+      </div>
+    </section>
+
+    <section class="py-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="prose prose-lg max-w-none  prose-headings: prose-headings:text-[#0d0c22] prose-p:text-[#71717A] prose-a:text-[#ed707e] prose-strong:text-[#0d0c22] prose-strong:font-semibold prose-ul:text-[#71717A] prose-ol:text-[#71717A] prose-li:text-[#71717A] prose-blockquote:text-[#71717A] prose-blockquote:border-l-[#ed707e] prose-code:text-[#ed707e] prose-pre:bg-[#fff7f8] prose-pre:text-[#0d0c22]" set:html={article.body} />
+      </div>
+    </section>
+  </main>
+</Layout>
+<Footer /> 

@@ -1,0 +1,40 @@
+@font-face {
+  font-family: "Gill Sans";
+  src: url("/fonts/GillSans.woff2") format("woff2"),
+    url("/fonts/GillSans.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("/fonts/GillSans-Bold.woff2") format("woff2"),
+    url("/fonts/GillSans-Bold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gill Sans";
+  src: url("/fonts/GillSans-Medium.woff2") format("woff2"),
+    url("/fonts/GillSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Remove any font-family declarations from specific elements that might override the default */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div,
+button {
+  font-family: inherit;
+}

@@ -19,7 +19,7 @@ const ExploreInfoCard = ({ tabs }: Props) => {
         {tabs.map((tab, index) => (
           <button
             key={tab.title}
-            className={`text-lg font-['Urbanist'] font-semibold px-2 py-2 rounded-t-lg ${
+            className={`text-lg  font-semibold px-2 py-2 rounded-t-lg ${
               index === activeTabId
                 ? "text-pink-500 border-b-2 border-pink-500"
                 : ""
@@ -33,15 +33,17 @@ const ExploreInfoCard = ({ tabs }: Props) => {
 
       <div className="flex flex-row h-full items-center space-y-4 md:space-y-0 md:space-x-8">
         <div className="w-1/2 items-center flex flex-row justify-center">
-          <div dangerouslySetInnerHTML={{ __html: tabs[activeTabId].visualContent }} />         
+          <div
+            dangerouslySetInnerHTML={{
+              __html: tabs[activeTabId].visualContent,
+            }}
+          />
         </div>
         <div className="w-1/2">
-          <h3
-            id="tab-title"
-            className="text-2xl font-['Urbanist'] font-semibold">
+          <h3 id="tab-title" className="text-2xl  font-semibold">
             {tabs[activeTabId].title}
           </h3>
-          <p id="tab-text" className="mt-2 font-['Mulish']">
+          <p id="tab-text" className="mt-2 ">
             {tabs[activeTabId].text}
           </p>
         </div>

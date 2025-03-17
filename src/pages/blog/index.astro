@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+import directus from '../../../lib/directus';
+import { readItems } from '@directus/sdk';
+import './_index.css';
+
+const articles = await directus.request(readItems('articles'));
+console.log('articles:', articles); 
+---
+
+<Layout title="Blog - iON">
+  <Navbar />
+  <main class="px-8 relative">
+    <section class="min-h-[40vh] flex flex-col justify-center items-center bg-white">
+      <h1 class="text-center text-[#ed707e] text-5xl font-extrabold  tracking-wide mb-6">
+        Our Blog
+      </h1>
+      <p class="text-center text-[#0d0c22] text-lg font-normal  max-w-2xl">
+        Discover insights, tips, and strategies for influencer marketing success. Stay updated with the latest trends and best practices.
+      </p>
+    </section>
+
+    <section class="py-20">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {articles.map((post) => (
+            <article class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <a href={`/blog/${post.slug}`} class="block">
+                <div class="p-6">
+                  <h2 class="text-2xl font-bold text-[#0d0c22] mb-3 ">
+                    {post.title}
+                  </h2>
+                  <p class="text-[#71717A] mb-4 ">
+                    {post.description}
+                  </p>
+                  <div class="flex items-center justify-between text-sm text-[#71717A]">
+                    <span>{post.title}</span>
+                  </div>
+                </div>
+              </a>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+<Footer /> 

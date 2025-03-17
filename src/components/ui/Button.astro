@@ -8,7 +8,7 @@ interface Props {
 const { type = "fill", className = "", text = "" } = Astro.props;
 
 const baseButtonStyle =
-  "h-10 px-10 py-2 rounded-lg justify-center items-center gap-4 inline-flex text-center text-base font-normal font-['Mulish'] leading-normal tracking-wide transition-colors duration-300 whitespace-nowrap";
+  "h-[40px] px-10 rounded-3xl justify-center items-center gap-4 inline-flex text-center transition-colors duration-300 whitespace-nowrap";
 
 let buttonStyle = baseButtonStyle + " " + className;
 

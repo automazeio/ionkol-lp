@@ -154,7 +154,7 @@ export const htmlStringTwo = `
 `;
 
 export const filterTabImage = `
-<div class="scale-50 md:scale-75 lg:scale-100 w-[210px] h-[224px] flex flex-col font-['Urbanist'] gap-6">
+<div class="scale-50 md:scale-75 lg:scale-100 w-[210px] h-[224px] flex flex-col  gap-6">
   <div class="flex flex-col gap-4 rotate-[-3deg]">
     <h1 class="font-semibold text-base">Engagement Rate</h1>
     <div
@@ -235,7 +235,7 @@ export const saveTabImage = `
         <div
           style="background: linear-gradient(119.76deg, #F05053 9.99%, #EF83A1 53.7%, #F05053 98.29%)"
           class="w-24 h-[30px] rounded-md mt-2 flex flex-row justify-center items-center gap-2">
-          <p class="text-white text-xs font-medium mb-[2px] font-['Urbanist']">
+          <p class="text-white text-xs font-medium mb-[2px] ">
             Analyze
           </p>
           <svg

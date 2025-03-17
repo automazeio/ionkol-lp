@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import Button from "./ui/Button.astro";
 
 const navItems = ["Features", "Pricing", "Resource Hub"];
@@ -11,8 +12,8 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
   class="w-full z-50 fixed top-0 left-0 h-[84px] px-[65px] py-[22px] bg-white justify-between items-center inline-flex transition-colors duration-300">
   <a
     href="#explore"
-    class="text-center text-[#0d0c22] text-[28px] font-bold font-['Urbanist'] tracking-wide">
-    iON
+    class="text-center text-[#0d0c22] text-[28px] font-bold  tracking-wide">
+    <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
   </a>
 
   <!-- Burger Menu Icon for mobile -->
@@ -28,30 +29,25 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     </label>
   </div>
 
-  <!-- Navigation links for desktop -->
-  <nav class="hidden lg:flex space-x-4 lg:ml-56">
-    <ul
-      class="flex gap-[2rem] list-none text-[#0d0c22] text-base font-normal font-['Mulish'] leading-normal tracking-tight">
-      {
-        navItems.map((item) => (
-          <a
-            href={`#${item}`}
-            class="cursor-pointer text-[#0d0c22] hover:text-[#ed707e] active:text-[#d55e6b] transition-colors duration-300">
-            {item}
-          </a>
-        ))
-      }
-    </ul>
-  </nav>
 
-  <!-- Sign-up and Login buttons -->
-  <div class="hidden lg:flex gap-4">
+  <div class="hidden items-center lg:flex gap-[2rem]">
+      <ul
+        class="flex gap-[2rem] list-none text-[#0d0c22] text-base font-normal  leading-normal tracking-tight">
+        {
+          navItems.map((item) => (
+            <a
+              href={`#${item}`}
+              class="cursor-pointer text-[#0d0c22] hover:text-[#ed707e] active:text-[#d55e6b] transition-colors duration-300">
+              {item}
+            </a>
+          ))
+        }
+      </ul>
     <a href={SIGN_UP_URL}> <Button text="Sign-up" type="outline" /></a>
     <a href={SIGN_IN_URL}> <Button text="Login" /></a>
   </div>
 </header>
 
-<!-- Mobile Menu -->
 <div
   id="menu"
   class="lg:hidden fixed top-0 left-0 bg-white p-4 space-y-4 shadow-md top-[84px] left-0 w-full hidden z-50">
