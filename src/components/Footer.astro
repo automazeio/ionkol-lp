@@ -1,59 +1,93 @@
+---
+import { Image } from "astro:assets";
+---
+
 <footer
-  class="w-full h-fit bg-[#f9f9f9] flex flex-wrap flex-col md:flex-row justify-between sm:items-center px-8 md:px-16 lg:px-24 py-10"
+  class="w-full bg-[#f9f9f9] flex flex-wrap flex-col md:flex-row justify-between px-8 md:px-16 lg:px-24 pt-10 pb-10 md:pb-0"
   role="contentinfo">
   
-  <div class="flex flex-col mb-8 sm:mb-10 sm:text-center">
-    <h2
-      class="text-[#0d0c22] text-2xl sm:text-3xl font-bold  tracking-tight mb-4 text-left">
-      iON
-    </h2>
+  <div class="flex flex-col gap-2 mb-8 sm:mb-10 sm:text-center">
+    <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
     <p
-      class="max-w-64 text-[#9e9ea7] text-base sm:text-lg font-normal font-['Open Sans Hebrew'] leading-[27px] tracking-tight text-left">
-      Drivings bussiness growth with data thought influencer marketing
+      class="text-lg text-left">
+      Data-driven Success
     </p>
+    <div class="w-56 border-1 border-red-200 border-t mt-2"></div>
+
+    <div class="mt-5">
+      <ul class="text-lg text-left">
+        <li>Japan</li>
+        <li>Korea</li>
+        <li>Malaysia</li>
+        <li>Singapore</li>
+      </ul>
+    </div>
+
+    <div class="mt-5">
+      <Image src="/instagramLogo.png" alt="key" width={24} height={24} />
+
+    </div>
   </div>
 
   <nav aria-label="Footer Navigation" class="flex flex-wrap gap-8 sm:gap-12 justify-center">
+    <div class="flex flex-col h-full relative">
     <div>
       <h3
-        class="text-[#0d0c22] text-lg font-medium  leading-normal tracking-tight mb-4 text-center sm:text-left">
+        class="text-[#0d0c22] text-lg font-semibold  leading-normal tracking-tight mb-2 text-center sm:text-left">
         Services
       </h3>
-      <ul class="flex flex-col gap-3 text-center sm:text-left">
+      <ul class="flex flex-col text-center sm:text-left">
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Ion Explore
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Ion Analyze
           </a>
         </li>
       </ul>
     </div>
 
+    <div class="flex flex-row gap-4 absolute w-64 top-28 md:top-52 left-0">
+      <a
+        href="#"
+        class="text-lg leading-normal tracking-tight">
+        Privacy Policy
+      </a>
+      <span>|</span>
+      <a
+        href="#"
+        class="text-lg leading-normal tracking-tight">
+        Terms of Service
+      </a>
+    </div>
+    
+
+  </div>
+
     <div>
       <h3
-        class="text-[#0d0c22] text-lg font-medium  leading-normal tracking-tight mb-4 text-center sm:text-left">
+        class="text-[#0d0c22] text-lg font-semibold  leading-normal tracking-tight mb-2 text-center sm:text-left">
         Get Started
       </h3>
-      <ul class="flex flex-col gap-3 text-center sm:text-left">
+      <ul class="flex flex-col text-center sm:text-left">
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Book a demo
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Contact us
           </a>
         </li>
@@ -62,52 +96,52 @@
 
     <div>
       <h3
-        class="text-[#0d0c22] text-lg font-medium  leading-normal tracking-tight mb-4 text-center sm:text-left">
+        class="text-[#0d0c22] text-lg font-semibold  leading-normal tracking-tight mb-2 text-center sm:text-left">
         Who We Are
       </h3>
-      <ul class="flex flex-col gap-3 text-center sm:text-left">
+      <ul class="flex flex-col text-center sm:text-left">
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             About us
           </a>
         </li>
         <li>
           <a
             href="/blog"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Blog
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Case study
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             FAQs
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Privacy Policy
           </a>
         </li>
         <li>
           <a
             href="#"
-            class="text-[#9e9ea7] text-base font-normal  leading-normal tracking-tight">
+            class="text-lg leading-normal tracking-tight">
             Terms of Service
           </a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
