@@ -17,10 +17,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Swiper from '../components/slider/Swiper.astro';
 
+export const prerender = false;
+export const revalidate = 60; 
+
 const priceCards = await directus.request(readItems('priceCards'));
 priceCards.sort((a, b) => a.price_monthly - b.price_monthly);
-
-const priceCardsBgColors: string[] = ['#FFFFFF', '#FEF5F0', '#FFE2E2', '#FBD4E4'];
 
 const features = [
   {

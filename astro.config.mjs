@@ -17,7 +17,7 @@ export default defineConfig({
     react(),
   ],
 
-  output: "static",
+  output: "server",
 
   adapter: node({
     mode: "standalone",
