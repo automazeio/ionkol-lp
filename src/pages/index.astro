@@ -16,12 +16,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Swiper from '../components/slider/Swiper.astro';
-
-export const prerender = false;
-export const revalidate = 60; 
-
-const priceCards = await directus.request(readItems('priceCards'));
-priceCards.sort((a, b) => a.price_monthly - b.price_monthly);
+import PriceCardsData from '../components/react/PriceCards';
 
 const features = [
   {
@@ -275,34 +270,7 @@ const stats = [
           
           <!-- Pricing cards -->
           <div class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 w-full">
-            {priceCards.map(price => (
-              <div class="bg-[#FFE2E5] rounded-[220px] px-8 py-12 flex flex-col items-center text-center min-w-[318px] min-h-[612px]">
-                  <h3 class="text-[34px] font-semibold mb-10">{price.name}</h3>
-                  {price.name === "Free" ? (
-                      <p class="free-tier text-[68px] font-bold mb-[44px]">Free</p> 
-                    ) : (
-                    <div class="price-container">
-                      <p class="monthly-price text-[68px] font-bold">{price.price_monthly}<span class="text-3xl">USD</span></p>
-                      <p class="annual-price text-[68px] font-bold hidden">{price.price_monthly_annual}<span class="text-3xl">USD</span></p>
-                    </div>
-                    <p class="text-xl mb-4">Per Month</p>
-                    <div class="yearly-price text-xl mb-6 flex flex-col hidden"> 
-                      <span>$ {price.price_yearly}</span>
-                      <span>(Billed Annually)</span>
-                    </div>
-                  )}
-                  
-                  
-                  <p class="text-xl mb-8">{price.subheader}</p>
-                  <div class="w-full h-[1px] bg-black/30 mb-8"></div>
-                  <ul class="space-y-2 text-center w-full text-[20px]">
-                    {price.description.map(line => (
-                      <li>{line}</li>
-                    ))}
-                  </ul>
-              </div>
-            ))}
-           
+            <PriceCardsData client:load />
           </div>
 
           <Button text='Discover more' />

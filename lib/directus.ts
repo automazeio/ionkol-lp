@@ -1,6 +1,6 @@
 import { createDirectus, rest } from "@directus/sdk";
 
-type PriceCard = {
+export type PriceCard = {
   id: number;
   name: string;
   price_yearly: number;
@@ -11,7 +11,7 @@ type PriceCard = {
   subheader: string;
 };
 
-type Article = {
+export type Article = {
   id: number;
   title: string;
   slug: string;
