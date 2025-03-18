@@ -24,8 +24,6 @@ type Schema = {
   articles: Article[];
 };
 
-const directus = createDirectus<Schema>(
-  "http://directus_8055-fcgocs848w8ssgwc84gk8scs.88.198.20.118.sslip.io"
-).with(rest());
+const directus = createDirectus<Schema>("https://cms.ionkol.com").with(rest());
 
 export default directus;
