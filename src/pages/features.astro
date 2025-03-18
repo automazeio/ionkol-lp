@@ -3,88 +3,135 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Button from '../components/ui/Button.astro';
-import Switcher from '../components/Switcher.astro';
+import FeaturesTabs from '../components/react/FeaturesTabs'
 import { Image } from 'astro:assets';
 import './_index.css';
+import Subscribe from '../components/Subscribe.astro';
 
-const pricingPlans = [
+const exploreTabs = [
   {
-    name: 'Basic',
-    monthlyPrice: 29,
-    annualPrice: 261, // 29 * 12 * 0.75 (25% discount)
-    features: ['Feature 1', 'Feature 2', 'Feature 3']
+    id: 0,
+    title: "Filter",
+    description: "Refine your search by applying advanced filters tailored to your needs.",
+    icon: "/features/exploreFilter.svg"
   },
   {
-    name: 'Pro',
-    monthlyPrice: 49,
-    annualPrice: 441, // 49 * 12 * 0.75 (25% discount)
-    features: ['All Basic features', 'Feature 4', 'Feature 5']
+    id: 1,
+    title: "Search",
+    description: "Use keywords to pinpoint influencers matching your goals.",
+    icon: "/features/exploreSearch.svg"
   },
   {
-    name: 'Enterprise',
-    monthlyPrice: 99,
-    annualPrice: 891, // 99 * 12 * 0.75 (25% discount)
-    features: ['All Pro features', 'Feature 6', 'Feature 7']
-  }
-];
+    id: 2,
+    title: "Save",
+    description: "Organize your selected creators into custom lists for easy access.",
+    icon: "/features/exploreSave.svg"
+  },
+]
+
+const analyseTabs = [
+  {
+    id: 0,
+    title: "Parameters",
+    description: "Transform decisions with insights, validate audiences, measure performance, ensure brand-aligned partnerships with 40+ parameters.",
+    icon: "/features/analyseParameters.svg"
+  },
+  {
+    id: 1,
+    title: "Audience",
+    description: "Discover the essence of your audience with advanced analytics: explore follower demographics from location to age and more, to craft bespoke campaigns.",
+    icon: "/features/analyseAudience.svg"
+  },
+  {
+    id: 2,
+    title: "Save",
+    description: "Elevate your influencer evaluation with engagement insights: measure interaction rates, assess audience quality, and ensure every creator delivers genuine, impactful engagement.",
+    icon: "/features/analyseEngagement.svg"
+  },
+]
+
 ---
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      },
+    );
+
+    const cards = document.querySelectorAll('.animate-appear');
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
 
 <Layout title="Features - iON">
   <Navbar />
-  <main class="px-8 relative">
-    <!-- Pricing section -->
-    <section class="py-20">
-      <div class="flex flex-col items-center space-y-14">
-        <h2 class="text-center text-5xl font-extrabold">
-          <span class="text-[#ed707e]">Subscription Plan</span>
-        </h2>
-
-        <div class="flex flex-col items-center space-y-14">
-          <Switcher />
-          
-          <!-- Pricing cards -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map(plan => (
-              <div class="bg-white rounded-xl p-8 shadow-lg">
-                <h3 class="text-2xl font-bold mb-4">{plan.name}</h3>
-                <div class="price-container">
-                  <p class="monthly-price text-4xl font-bold">
-                    ${plan.monthlyPrice}<span class="text-sm">/month</span>
-                  </p>
-                  <p class="annual-price text-4xl font-bold hidden">
-                    ${Math.round(plan.annualPrice / 12)}<span class="text-sm">/month</span>
-                  </p>
-                </div>
-                <ul class="mt-6 space-y-4">
-                  {plan.features.map(feature => (
-                    <li>{feature}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12">
+      <div class="flex flex-row justify-center gap-8 items-center">
+        <Image class="hidden lg:block" src="/FeaturesImage.png" alt="features" width={432} height={432} />
+        <div class="flex flex-col gap-8 items-center lg:items-start">
+          <Image src="/ionkolLogoNewShort.svg" alt="features" width={225} height={60} />
+          <span class="text-[63px] lg:text-[146px] font-semibold lg:leading-[160px]">Features</span>
+          <Button text='Start Now' className='w-[188px]' />
         </div>
       </div>
     </section>
+
+    <section class="w-full pb-32 px-4 lg:px-12">
+      <div class="text-center">
+        <span class="text-[62px] font-semibold"><span class="text-[#EE7380]">Explore </span>how data can drive your success</span>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20">
+        
+        <div class="flex flex-col gap-6 max-w-2xl">
+          <div class="flex flex-row gap-2">
+            <Image src="/ion.svg" alt="features" width={99} height={50} />
+            <span class="font-semibold text-5xl">Explore</span>
+          </div>
+
+          <p class="text-xl">Transform your marketing with effortless access to thousands of influencers across the globe. Discover, connect, and elevate your brand with our unparalleled database. </p>
+          <p class="text-xl">Discover influencers who inspire and engage. Apply 15 customizable filters to find the 'ideal' fit for your brand in minutes.</p>
+        
+          <Button text='Start Now' className='w-[188px]'/>
+        </div>
+
+        <FeaturesTabs client:load tabs={exploreTabs}></FeaturesTabs>
+      </div>
+    </section>
+
+    <section class="w-full pb-20 px-4 lg:px-12">
+      <div class="text-center">
+        <span class="text-[62px] font-semibold"><span class="text-[#EE7380]">Analyse </span>how data can drive your success</span>
+      </div>
+
+      <div class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20">
+        
+        <div class="flex flex-col gap-6 max-w-2xl">
+          <div class="flex flex-row gap-2">
+            <Image src="/ion.svg" alt="features" width={99} height={50} />
+            <span class="font-semibold text-5xl">Analyse</span>
+          </div>
+
+          <p class="text-xl">Elevate your influencer marketing with cutting-edge reports: gain unparalleled insights into audience demographics, performance metrics, and engagement trends—empowering your brand to take bold, data-driven actions. </p>
+        
+          <Button text='Start Now' className='w-[188px]'/>
+        </div>
+
+        <FeaturesTabs client:load tabs={analyseTabs}></FeaturesTabs>
+      </div>
+    </section>
+
+    <Subscribe />
   </main>
 </Layout>
-
-<script>
-  function handlePriceChange(event: CustomEvent) {
-    const monthlyPrices = document.querySelectorAll('.monthly-price');
-    const annualPrices = document.querySelectorAll('.annual-price');
-    
-    if (event.detail.period === 'annual') {
-      monthlyPrices.forEach(price => price.classList.add('hidden'));
-      annualPrices.forEach(price => price.classList.remove('hidden'));
-    } else {
-      monthlyPrices.forEach(price => price.classList.remove('hidden'));
-      annualPrices.forEach(price => price.classList.add('hidden'));
-    }
-  }
-
-  // Add event listener for price changes
-  document.addEventListener('pricingPeriodChange', handlePriceChange as EventListener);
-</script>
-
 <Footer /> 

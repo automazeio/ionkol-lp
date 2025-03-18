@@ -1,15 +1,12 @@
----
----
-
-<div class="relative inline-flex bg-transparent border-[#ed707e] border-[1px] rounded-full p-[2px]">
+<div class="relative inline-flex bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
   <button
-    class="relative z-10 text-[20px] px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#ed707e]"
+    class="relative z-10 text-[20px] px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#EE7380]"
     data-tab="monthly"
   >
     Monthly
   </button>
   <button
-    class="relative z-10 px-12 text-[20px] py-4 text-[#ed707e] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
+    class="relative z-10 px-12 text-[20px] py-4 text-[#EE7380] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
     data-tab="annual"
   >
     Annual
@@ -25,9 +22,9 @@
       button.addEventListener('click', () => {
         // Reset all buttons and save text
         buttons.forEach(btn => {
-          btn.classList.remove('active', 'bg-[#ed707e]');
+          btn.classList.remove('active', 'bg-[#EE7380]');
           btn.classList.remove('text-white');
-          btn.classList.add('text-[#ed707e]');
+          btn.classList.add('text-[#EE7380]');
           const saveText = btn.querySelector('.save-text');
           if (saveText) {
             saveText.classList.remove('text-white');
@@ -36,8 +33,8 @@
         });
         
         // Add active class and background to clicked button
-        button.classList.add('active', 'bg-[#ed707e]');
-        button.classList.remove('text-[#ed707e]');
+        button.classList.add('active', 'bg-[#EE7380]');
+        button.classList.remove('text-[#EE7380]');
         button.classList.add('text-white');
 
         // Update save text color if annual tab is active

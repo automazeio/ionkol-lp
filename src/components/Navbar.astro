@@ -2,7 +2,20 @@
 import { Image } from "astro:assets";
 import Button from "./ui/Button.astro";
 
-const navItems = ["Features", "Pricing", "Resource Hub"];
+const navItems = [
+  {
+    link: "/features",
+    title: "Features"
+  }, 
+  {
+    link: "/pricing",
+    title: "Pricing"
+  }, 
+  {
+    link: "/resources",
+    title: "Resource Hub"
+  }, 
+];
 const SIGN_IN_URL = "https://app.ionkol.com/sign-in";
 const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
 ---
@@ -11,7 +24,7 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
   id="navbar"
   class="w-full z-50 fixed top-0 left-0 h-[84px] px-[65px] py-[22px] bg-white justify-between items-center inline-flex transition-colors duration-300">
   <a
-    href="#explore"
+    href="/"
     class="text-center text-[#0d0c22] text-[28px] font-bold  tracking-wide">
     <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
   </a>
@@ -36,9 +49,9 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
         {
           navItems.map((item) => (
             <a
-              href={`#${item}`}
-              class="cursor-pointer text-[#0d0c22] hover:text-[#ed707e] active:text-[#d55e6b] transition-colors duration-300">
-              {item}
+              href={`${item.link}`}
+              class="cursor-pointer text-[#0d0c22] hover:text-[#EE7380] active:text-[#d55e6b] transition-colors duration-300">
+              {item.title}
             </a>
           ))
         }
@@ -57,7 +70,7 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
         navItems.map((item) => (
           <a
             href={`#${item}`}
-            class="cursor-pointer py-2 text-center w-full hover:bg-[#fff7f8] text-[#0d0c22] hover:text-[#ed707e] active:text-[#d55e6b] transition-colors duration-300">
+            class="cursor-pointer py-2 text-center w-full hover:bg-[#fff7f8] text-[#0d0c22] hover:text-[#EE7380] active:text-[#d55e6b] transition-colors duration-300">
             {item}
           </a>
         ))

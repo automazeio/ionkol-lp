@@ -41,7 +41,7 @@
 }
 
 .prose a {
-  color: #ed707e;
+  color: #ee7380;
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -51,7 +51,7 @@
 }
 
 .prose blockquote {
-  border-left: 4px solid #ed707e;
+  border-left: 4px solid #ee7380;
   padding-left: 1rem;
   margin-left: 0;
   margin-bottom: 1.5rem;

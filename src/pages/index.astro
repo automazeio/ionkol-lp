@@ -17,6 +17,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Swiper from '../components/slider/Swiper.astro';
 import PriceCardsData from '../components/react/PriceCards';
+import Subscribe from '../components/Subscribe.astro';
 
 const features = [
   {
@@ -66,7 +67,7 @@ const stats = [
 
 <style>
   :root {
-    --swiper-theme-color: #ed707e;
+    --swiper-theme-color: #EE7380;
   }
 </style>
 
@@ -167,7 +168,7 @@ const stats = [
 
     <!-- Featured Solutions section -->
     <section class="pb-24 px-4 lg:px-12">
-      <h1 class="text-center text-[#ed707e] text-[74px] font-extrabold tracking-wide mb-16">
+      <h1 class="text-center text-[#EE7380] text-[74px] font-extrabold tracking-wide mb-16">
         Key Features
       </h1>
 
@@ -175,18 +176,18 @@ const stats = [
         <div class="flex flex-row items-center gap-8 p-2">
             <Image class="hidden lg:block" src="/ionExploreKey.svg" alt="key" width={198} height={128} />
             <div class="flex flex-col gap-6">
-                <div class="text-5xl font-semibold"><span class="text-[#ed707e] mr-2">ION</span>Explore</div>
+                <div class="text-5xl font-semibold"><span class="text-[#EE7380] mr-2">ION</span>Explore</div>
                 <p class="text-xl">Discover and connect with creators who amplify your brand's message. Save time with advanced filters to find influencers who align with your goals and deliver real results.</p>
-                <Button text='Discover more' className='w-[200px]' />
+                <a href="/features"> <Button text='Discover more' className='w-[200px]' /></a>
             </div>
         </div>
 
         <div class="flex flex-row items-center gap-8 p-2">
             <Image class="hidden lg:block" src="/ionAnalyseKey.svg" alt="key" width={198} height={128} />
             <div class="flex flex-col gap-6">
-                <div class="text-5xl font-semibold"><span class="text-[#ed707e] mr-2">ION</span>Analyse</div>
+                <div class="text-5xl font-semibold"><span class="text-[#EE7380] mr-2">ION</span>Analyse</div>
                 <p class="text-xl">Evaluate the success of your influencer partnerships with actionable insights into performance metrics and audience engagement.</p>
-                <Button text='Discover more' className='w-[200px]'/>
+                <a href="/features"><Button text='Discover more' className='w-[200px]'/></a> 
             </div>
         </div>
       </div>
@@ -195,7 +196,7 @@ const stats = [
     <!-- Achieve Goals section -->
     <section class="py-20 relative bg-white px-4 lg:px-12">
       <div class="absolute rotate-180 rounded-full w-full h-[2000px] top-0 left-0 z-100" style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"></div>
-      <h2 class="text-center relative text-[#ed707e] text-[62px] font-semibold tracking-wide mb-16">
+      <h2 class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16">
         Achieve all your goals in one place
       </h2>
 
@@ -247,11 +248,11 @@ const stats = [
           {stats.map(stat => (
            <div class="flex flex-col relative lg:flex-row gap-4 lg:gap-12 justify-center lg:justify-normal items-center">
             <div class="relative">
-              <span data-target={stat.number} class="text-[#ed707e] text-[100px] font-semibold count">{0}</span>
-              {stat.suffix && <span class="text-[32px] font-bold text-[#ed707e] absolute top-20">+</span>}
+              <span data-target={stat.number} class="text-[#EE7380] text-[100px] font-semibold count">{0}</span>
+              {stat.suffix && <span class="text-[32px] font-bold text-[#EE7380] absolute top-20">+</span>}
             </div>
             <span class="text-[34px] font-semibold text-center lg:text-start w-[190px]">{stat.title}</span>
-            <p class="text-[20px] text-center lg:text-start"><span class="text-[#ed707e]">{stat.highlight}</span>{stat.description}</p>
+            <p class="text-[20px] text-center lg:text-start"><span class="text-[#EE7380]">{stat.highlight}</span>{stat.description}</p>
            </div>
           ))}
         </div>
@@ -262,7 +263,7 @@ const stats = [
     <section class="py-20 px-4 lg:px-12">
       <div class="flex flex-col items-center space-y-14">
         <h2 class="text-center text-5xl font-extrabold">
-          <span class="text-[#ed707e]">Subscription Plan</span>
+          <span class="text-[#EE7380]">Subscription Plan</span>
         </h2>
 
         <div class="flex flex-col items-center space-y-14">
@@ -280,33 +281,7 @@ const stats = [
     </section>
 
     <!-- Contact us section -->
-    <section id="Contact" class="h-screen flex justify-center items-center">
-      <div
-        class="animate-appear w-full flex justify-center bg-[#FFE2E5] transform opacity-0 translate-y-10 p-32 relative">
-        <!-- Main content -->
-        <div class="max-w-[654px]">
-          <h1
-            class="text-center text-[#ed707e] text-[62px] font-semibold mb-4">
-            Subscribe
-          </h1>
-          <p
-            class="text-center text-[#0d0c22] text-[20px] mb-9">
-            Join our growing community and get latest case studies, trends, updates, valuable resources, and more to grow your business.
-          </p>
-          <form class="flex gap-3 relative" action="/subscribe" method="POST">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email address"
-              aria-label="Email address"
-              required
-              class="flex-1 h-12 px-4 py-2 bg-white rounded-full border border-[#ed707e] text-base font-medium leading-normal tracking-wide"
-            />
-            <Button text="Subscribe"  className='absolute top-1 right-1'/>
-          </form>
-        </div>
-      </div>
-    </section>
+    <Subscribe />
   </main>
 </Layout>
 <Footer />
