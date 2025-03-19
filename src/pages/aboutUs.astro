@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import FeaturesTabs from "../components/react/FeaturesTabs";
+import { Image } from "astro:assets";
+import "./_index.css";
+import Subscribe from "../components/Subscribe.astro";
+import Switcher from "../components/Switcher.astro";
+import PriceCardsData from "../components/react/PriceCards";
+import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".animate-appear");
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+<script>
+  function handlePriceChange(event: CustomEvent) {
+    const monthlyPrices = document.querySelectorAll(".monthly-price");
+    const annualPrices = document.querySelectorAll(".annual-price");
+    const yearlyPriceContainer = document.querySelectorAll(".yearly-price");
+    const freeTierContainer = document.querySelectorAll(".free-tier");
+
+    if (event.detail.period === "annual") {
+      monthlyPrices.forEach((price) => price.classList.add("hidden"));
+      annualPrices.forEach((price) => price.classList.remove("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.remove("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[44px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[120px]")
+      );
+    } else {
+      monthlyPrices.forEach((price) => price.classList.remove("hidden"));
+      annualPrices.forEach((price) => price.classList.add("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.add("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[120px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[44px]")
+      );
+    }
+  }
+
+  document.addEventListener(
+    "pricingPeriodChange",
+    handlePriceChange as EventListener
+  );
+</script>
+
+<Layout title="Pricing - iON">
+  <Navbar />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12 relative">
+      <div
+        class="hidden md:block absolute rotate-180 rounded-[100%] w-full h-screen top-[-50px] left-0"
+        style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"
+      >
+      </div>
+      <div
+        class="hidden md:block absolute top-0 left-0 w-screen h-screen opacity-60"
+      >
+        <Image
+          class="absolute w-screen h-screen"
+          src="/aboutUsNet.svg"
+          alt="features"
+          width={1500}
+          height={750}
+        />
+      </div>
+      <div
+        class="relative flex flex-row gap-2 justify-center w-full font-semibold text-[62px]"
+      >
+        <Image src="/ion.svg" alt="features" width={133} height={67} />
+        <span>, the Story</span>
+      </div>
+
+      <div class="mt-10 relative flex flex-row justify-center text-xl">
+        <span class="pr-2">just as</span>
+        <Image src="/ion.svg" alt="features" width={60} height={30} />
+        <span>'s</span>
+      </div>
+
+      <div class="flex relative items-center justify-center gap-4 mt-8">
+        <div class="border-t w-24 border-[#EE7380]"></div>
+        <span class="text-[26px] font-semibold text-center"
+          >the the smallest building blocks of creation</span
+        >
+        <div class="w-24 border-t border-[#EE7380]"></div>
+      </div>
+
+      <div class="mt-8 flex justify-center relative">
+        <div class="w-1/2 text-center text-xl">
+          combine to form everything we know, we transform data into actionable
+          insights. By turning the simplest elements into tools for growth, we
+          empower businesses to build extraordinary connections and achieve
+          meaningful transformation.
+        </div>
+      </div>
+    </section>
+
+    <section class="py-[100px] md:py-[300px] px-4 lg:px-12 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
+        <div class="flex flex-col items-center text-center gap-6">
+          <div
+            class="w-fit px-12 py-4 border-b-2 border-[#EE7380] text-[62px] font-semibold"
+          >
+            Our Mission
+          </div>
+          <span class="text-xl w-2/3"
+            >Simplifying decision-making with data-driven insights to enable
+            smarter, more impactful marketing.</span
+          >
+        </div>
+
+        <div class="flex flex-col items-center text-center gap-6">
+          <div
+            class="w-fit px-12 py-4 border-b-2 border-[#EE7380] text-[62px] font-semibold"
+          >
+            Our Vision
+          </div>
+          <span class="text-xl w-2/3"
+            >To empower businesses to unlock their full potential through
+            actionable, data-driven marketing insights.</span
+          >
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+<Footer />
