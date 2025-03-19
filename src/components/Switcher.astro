@@ -1,70 +1,77 @@
-<div class="relative inline-flex bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
+<div
+  class="relative inline-flex bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]"
+>
   <button
-    class="relative z-10 text-[20px] px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#EE7380]"
+    class="relative z-10 px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#EE7380]"
     data-tab="monthly"
   >
     Monthly
   </button>
   <button
-    class="relative z-10 px-12 text-[20px] py-4 text-[#EE7380] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
+    class="relative z-10 px-12 py-4 text-[#EE7380] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
     data-tab="annual"
   >
     Annual
-    <span class="save-text absolute top-8 left-[1.9rem] whitespace-nowrap text-[12px] transition-colors duration-200 text-[#0d0c22]">Save up to 25%</span>
+    <span
+      class="save-text absolute top-10 left-10 whitespace-nowrap text-[12px] transition-colors duration-200 text-[#0d0c22]"
+      >Save up to 25%</span
+    >
   </button>
 </div>
 
 <script>
   function initializeSwitcher() {
-    const buttons = document.querySelectorAll<HTMLButtonElement>('.tab-button');
-    
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".tab-button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
         // Reset all buttons and save text
-        buttons.forEach(btn => {
-          btn.classList.remove('active', 'bg-[#EE7380]');
-          btn.classList.remove('text-white');
-          btn.classList.add('text-[#EE7380]');
-          const saveText = btn.querySelector('.save-text');
+        buttons.forEach((btn) => {
+          btn.classList.remove("active", "bg-[#EE7380]");
+          btn.classList.remove("text-white");
+          btn.classList.add("text-[#EE7380]");
+          const saveText = btn.querySelector(".save-text");
           if (saveText) {
-            saveText.classList.remove('text-white');
-            saveText.classList.add('text-[#0d0c22]');
+            saveText.classList.remove("text-white");
+            saveText.classList.add("text-[#0d0c22]");
           }
         });
-        
+
         // Add active class and background to clicked button
-        button.classList.add('active', 'bg-[#EE7380]');
-        button.classList.remove('text-[#EE7380]');
-        button.classList.add('text-white');
+        button.classList.add("active", "bg-[#EE7380]");
+        button.classList.remove("text-[#EE7380]");
+        button.classList.add("text-white");
 
         // Update save text color if annual tab is active
-        const saveText = button.querySelector('.save-text');
-        if (saveText && button.dataset.tab === 'annual') {
-          saveText.classList.remove('text-[#0d0c22]');
-          saveText.classList.add('text-white');
+        const saveText = button.querySelector(".save-text");
+        if (saveText && button.dataset.tab === "annual") {
+          saveText.classList.remove("text-[#0d0c22]");
+          saveText.classList.add("text-white");
         }
 
         // Dispatch custom event for price updates
-        document.dispatchEvent(new CustomEvent('pricingPeriodChange', {
-          detail: { period: button.dataset.tab }
-        }));
+        document.dispatchEvent(
+          new CustomEvent("pricingPeriodChange", {
+            detail: { period: button.dataset.tab },
+          })
+        );
       });
     });
   }
 
   // Initialize on page load
-  document.addEventListener('DOMContentLoaded', initializeSwitcher);
+  document.addEventListener("DOMContentLoaded", initializeSwitcher);
 
   // Initialize for view transitions
-  document.addEventListener('astro:page-load', initializeSwitcher);
+  document.addEventListener("astro:page-load", initializeSwitcher);
 </script>
 
 <style>
   .tab-button {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 20px;
+    font-weight: 600;
   }
-  
+
   .tab-button:hover:not(.active) {
     background-color: rgba(255, 255, 255, 0.5);
   }

@@ -1,93 +1,98 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import directus from '../../lib/directus';
-import { readItems } from '@directus/sdk';
-import Benefit from '../components/Benefit.astro';
-import Navbar from '../components/Navbar.astro';
-import Switcher from '../components/Switcher.astro';
-import FeaturedSolutionsCard from '../components/FeaturedSolutionsCard.astro';
-import { Image } from 'astro:assets';
-import { htmlStringOne, htmlStringTwo } from '../constants/htmlStrings';
-import './_index.css';
-import PriceCard from '../components/PriceCard.astro';
-import Footer from '../components/Footer.astro';
-import Button from '../components/ui/Button.astro';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import Swiper from '../components/slider/Swiper.astro';
-import PriceCardsData from '../components/react/PriceCards';
-import Subscribe from '../components/Subscribe.astro';
+import Layout from "../layouts/Layout.astro";
+import directus from "../../lib/directus";
+import { readItems } from "@directus/sdk";
+import Benefit from "../components/Benefit.astro";
+import Navbar from "../components/Navbar.astro";
+import Switcher from "../components/Switcher.astro";
+import FeaturedSolutionsCard from "../components/FeaturedSolutionsCard.astro";
+import { Image } from "astro:assets";
+import { htmlStringOne, htmlStringTwo } from "../constants/htmlStrings";
+import "./_index.css";
+import PriceCard from "../components/PriceCard.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import Swiper from "../components/slider/Swiper.astro";
+import PriceCardsData from "../components/react/PriceCards";
+import Subscribe from "../components/Subscribe.astro";
 
 const features = [
   {
-    title: 'Time-saving',
-    description: "Streamline your search and verification process to find your ideal influencer with ION's efficient tools.",
-    icon: '/clock.svg'
+    title: "Time-saving",
+    description:
+      "Streamline your search and verification process to find your ideal influencer with ION's efficient tools.",
+    icon: "/clock.svg",
   },
   {
-    title: 'Competitive Pricing',
-    description: 'Access powerful influencer marketing tools at affordable prices with no hidden costs.',
-    icon: '/coins-hand.svg'
+    title: "Competitive Pricing",
+    description:
+      "Access powerful influencer marketing tools at affordable prices with no hidden costs.",
+    icon: "/coins-hand.svg",
   },
   {
-    title: 'Smart Insights',
-    description: 'Proprietary AI-powered analytics to gain influencer-specific insights for confident, data-driven decisions.',
-    icon: '/lightbulb.svg'
+    title: "Smart Insights",
+    description:
+      "Proprietary AI-powered analytics to gain influencer-specific insights for confident, data-driven decisions.",
+    icon: "/lightbulb.svg",
   },
   {
-    title: 'Actionable Data',
-    description: 'Turn complex data into clear information that empowers smarter decisions to accelerate business growth.',
-    icon: '/bar-chart.svg'
+    title: "Actionable Data",
+    description:
+      "Turn complex data into clear information that empowers smarter decisions to accelerate business growth.",
+    icon: "/bar-chart.svg",
   },
   {
-    title: 'Global Reach',
-    description: 'Expand your business internationally with localization strategies to connect with foreign audiences.',
-    icon: '/globe.svg'
-  }
+    title: "Global Reach",
+    description:
+      "Expand your business internationally with localization strategies to connect with foreign audiences.",
+    icon: "/globe.svg",
+  },
 ];
 
 const stats = [
   {
-    number: '15',
-    title: 'Advanced Filters',
-    description: ' for your \'ideal\' influencer with our filters in minutes',
-    highlight: 'Explore'
+    number: "15",
+    title: "Advanced Filters",
+    description: " for your 'ideal' influencer with our filters in minutes",
+    highlight: "Explore",
   },
   {
-    number: '40',
-    title: 'Analytical Parameters',
-    description: ' your \'ideal\' influencer with our parameters and make well-informed decisions',
-    highlight: 'Analyse',
-    suffix: '+'
-  }
+    number: "40",
+    title: "Analytical Parameters",
+    description:
+      " your 'ideal' influencer with our parameters and make well-informed decisions",
+    highlight: "Analyse",
+    suffix: "+",
+  },
 ];
-
 ---
 
 <style>
   :root {
-    --swiper-theme-color: #EE7380;
+    --swiper-theme-color: #ee7380;
   }
 </style>
 
 <!-- Sections appear animation -->
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
+            entry.target.classList.add("visible");
           }
         });
       },
       {
         threshold: 0.1,
-      },
+      }
     );
 
-    const cards = document.querySelectorAll('.animate-appear');
+    const cards = document.querySelectorAll(".animate-appear");
     cards.forEach((card) => observer.observe(card));
   });
 </script>
@@ -95,7 +100,7 @@ const stats = [
 <!-- Numbers count animation -->
 <script is:inline>
   function countUp(element) {
-    const target = +element.getAttribute('data-target');
+    const target = +element.getAttribute("data-target");
     const speed = 150;
 
     const increment = target / speed;
@@ -124,8 +129,8 @@ const stats = [
     });
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    const countElements = document.querySelectorAll('.count');
+  document.addEventListener("DOMContentLoaded", () => {
+    const countElements = document.querySelectorAll(".count");
     const observer = new IntersectionObserver(handleIntersection, {
       threshold: 0.5,
     });
@@ -139,87 +144,181 @@ const stats = [
 <!-- Scrolling with offset to sections -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener('click', function (e: Event) {
+    anchor.addEventListener("click", function (e: Event) {
       e.preventDefault();
 
-      const targetID = (e.target as HTMLAnchorElement).getAttribute('href');
+      const targetID = (e.target as HTMLAnchorElement).getAttribute("href");
       const targetElement = document.querySelector(targetID!);
 
       if (targetElement) {
         const offset = 100;
-        const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - offset;
+        const targetPosition =
+          targetElement.getBoundingClientRect().top + window.scrollY - offset;
 
         window.scrollTo({
           top: targetPosition,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       }
     });
   });
 </script>
 
-<Layout title={'iON'}>
+<script>
+  function handlePriceChange(event: CustomEvent) {
+    const monthlyPrices = document.querySelectorAll(".monthly-price");
+    const annualPrices = document.querySelectorAll(".annual-price");
+    const yearlyPriceContainer = document.querySelectorAll(".yearly-price");
+    const freeTierContainer = document.querySelectorAll(".free-tier");
+
+    if (event.detail.period === "annual") {
+      monthlyPrices.forEach((price) => price.classList.add("hidden"));
+      annualPrices.forEach((price) => price.classList.remove("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.remove("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[44px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[120px]")
+      );
+    } else {
+      monthlyPrices.forEach((price) => price.classList.remove("hidden"));
+      annualPrices.forEach((price) => price.classList.add("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.add("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[120px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[44px]")
+      );
+    }
+  }
+
+  document.addEventListener(
+    "pricingPeriodChange",
+    handlePriceChange as EventListener
+  );
+</script>
+
+<Layout title={"iON"}>
   <Navbar />
   <main class="relative">
     <!-- Slider section -->
-    <section class="min-h-screen flex justify-center items-center bg-white pb-12">
+    <section
+      class="min-h-screen flex justify-center items-center bg-white pb-12"
+    >
       <Swiper />
     </section>
 
     <!-- Featured Solutions section -->
     <section class="pb-24 px-4 lg:px-12">
-      <h1 class="text-center text-[#EE7380] text-[74px] font-extrabold tracking-wide mb-16">
+      <h1
+        class="text-center text-[#EE7380] text-[74px] font-extrabold tracking-wide mb-16"
+      >
         Key Features
       </h1>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 animate-appear">
         <div class="flex flex-row items-center gap-8 p-2">
-            <Image class="hidden lg:block" src="/ionExploreKey.svg" alt="key" width={198} height={128} />
-            <div class="flex flex-col gap-6">
-                <div class="text-5xl font-semibold"><span class="text-[#EE7380] mr-2">ION</span>Explore</div>
-                <p class="text-xl">Discover and connect with creators who amplify your brand's message. Save time with advanced filters to find influencers who align with your goals and deliver real results.</p>
-                <a href="/features"> <Button text='Discover more' className='w-[200px]' /></a>
+          <Image
+            class="hidden lg:block"
+            src="/ionExploreKey.svg"
+            alt="key"
+            width={198}
+            height={128}
+          />
+          <div class="flex flex-col gap-6">
+            <div class="text-5xl font-semibold">
+              <span class="text-[#EE7380] mr-2">ION</span>Explore
             </div>
+            <p class="text-xl">
+              Discover and connect with creators who amplify your brand's
+              message. Save time with advanced filters to find influencers who
+              align with your goals and deliver real results.
+            </p>
+            <a href="/features">
+              <Button text="Discover more" className="w-[200px]" /></a
+            >
+          </div>
         </div>
 
         <div class="flex flex-row items-center gap-8 p-2">
-            <Image class="hidden lg:block" src="/ionAnalyseKey.svg" alt="key" width={198} height={128} />
-            <div class="flex flex-col gap-6">
-                <div class="text-5xl font-semibold"><span class="text-[#EE7380] mr-2">ION</span>Analyse</div>
-                <p class="text-xl">Evaluate the success of your influencer partnerships with actionable insights into performance metrics and audience engagement.</p>
-                <a href="/features"><Button text='Discover more' className='w-[200px]'/></a> 
+          <Image
+            class="hidden lg:block"
+            src="/ionAnalyseKey.svg"
+            alt="key"
+            width={198}
+            height={128}
+          />
+          <div class="flex flex-col gap-6">
+            <div class="text-5xl font-semibold">
+              <span class="text-[#EE7380] mr-2">ION</span>Analyse
             </div>
+            <p class="text-xl">
+              Evaluate the success of your influencer partnerships with
+              actionable insights into performance metrics and audience
+              engagement.
+            </p>
+            <a href="/features"
+              ><Button text="Discover more" className="w-[200px]" /></a
+            >
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Achieve Goals section -->
     <section class="py-20 relative bg-white px-4 lg:px-12">
-      <div class="absolute rotate-180 rounded-full w-full h-[2000px] top-0 left-0 z-100" style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"></div>
-      <h2 class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16">
+      <div
+        class="absolute rotate-180 rounded-full w-full h-[2000px] top-0 left-0 z-100"
+        style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"
+      >
+      </div>
+      <h2
+        class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16"
+      >
         Achieve all your goals in one place
       </h2>
 
-      <div class="max-w-7xl animate-appear mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {features.slice(0, 2).map(feature => (
+      <div
+        class="max-w-7xl animate-appear mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8"
+      >
+        {
+          features.slice(0, 2).map((feature) => (
             <div class="text-center p-6">
-              <img src={feature.icon} alt={feature.title} class="w-12 h-12 mx-auto mb-4" />
-              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">{feature.title}</h3>
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                class="w-12 h-12 mx-auto mb-4"
+              />
+              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">
+                {feature.title}
+              </h3>
               <p class="text-[20px]">{feature.description}</p>
             </div>
-        ))}
-        </div>
+          ))
+        }
+      </div>
 
-
-      <div class="max-w-7xl mx-auto animate-appear grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {features.slice(2, 6).map(feature => (
+      <div
+        class="max-w-7xl mx-auto animate-appear grid grid-cols-1 lg:grid-cols-3 gap-8"
+      >
+        {
+          features.slice(2, 6).map((feature) => (
             <div class="text-center p-6">
-              <img src={feature.icon} alt={feature.title} class="w-12 h-12 mx-auto mb-4" />
-              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">{feature.title}</h3>
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                class="w-12 h-12 mx-auto mb-4"
+              />
+              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">
+                {feature.title}
+              </h3>
               <p class="text-[20px]">{feature.description}</p>
             </div>
-        ))}
-        </div>
+          ))
+        }
+      </div>
     </section>
 
     <section class="py-20 px-4 lg:px-12">
@@ -227,34 +326,75 @@ const stats = [
         <p class="text-[62px] gap-8 font-semibold mb-6 relative">
           <span>Harness the power of</span>
           <span class="relative inline-block w-[127px] h-[64px]">
-            <Image class="absolute top-4 left-8" src="/ion.svg" alt="key" width={127} height={64} />
+            <Image
+              class="absolute top-4 left-8"
+              src="/ion.svg"
+              alt="key"
+              width={127}
+              height={64}
+            />
           </span>
         </p>
-      <p class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative animate-appear">
+        <p
+          class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative animate-appear"
+        >
           <span>
-            <Image class="absolute top-1.5 left-0" src="/ion.svg" alt="key" width={47} height={24} />
+            <Image
+              class="absolute top-1.5 left-0"
+              src="/ion.svg"
+              alt="key"
+              width={47}
+              height={24}
+            />
           </span>
-          <span class="pl-[40px]">empowers businesses to grow with intuitive tools and actionable insights. By streamlining decision-making and enabling effective influencer partnerships,</span>
+          <span class="pl-[40px]"
+            >empowers businesses to grow with intuitive tools and actionable
+            insights. By streamlining decision-making and enabling effective
+            influencer partnerships,</span
+          >
           <span class="relative inline-block w-[48px] h-[24px]">
-            <Image class="absolute top-1.5 left-1" src="/ion.svg" alt="key" width={47} height={24} />
+            <Image
+              class="absolute top-1.5 left-1"
+              src="/ion.svg"
+              alt="key"
+              width={47}
+              height={24}
+            />
           </span>
-          <span class="pl-[8px]">transforms raw data into impactful marketing insights, helping businesses of all sizes drive meaningful results.</span>
-      </p>
-        
-        
+          <span class="pl-[8px]"
+            >transforms raw data into impactful marketing insights, helping
+            businesses of all sizes drive meaningful results.</span
+          >
+        </p>
 
         <!-- Stats -->
         <div class="space-y-12 animate-appear">
-          {stats.map(stat => (
-           <div class="flex flex-col relative lg:flex-row gap-4 lg:gap-12 justify-center lg:justify-normal items-center">
-            <div class="relative">
-              <span data-target={stat.number} class="text-[#EE7380] text-[100px] font-semibold count">{0}</span>
-              {stat.suffix && <span class="text-[32px] font-bold text-[#EE7380] absolute top-20">+</span>}
-            </div>
-            <span class="text-[34px] font-semibold text-center lg:text-start w-[190px]">{stat.title}</span>
-            <p class="text-[20px] text-center lg:text-start"><span class="text-[#EE7380]">{stat.highlight}</span>{stat.description}</p>
-           </div>
-          ))}
+          {
+            stats.map((stat) => (
+              <div class="flex flex-col relative lg:flex-row gap-4 lg:gap-12 justify-center lg:justify-normal items-center">
+                <div class="relative">
+                  <span
+                    data-target={stat.number}
+                    class="text-[#EE7380] text-[100px] font-semibold count"
+                  >
+                    {0}
+                  </span>
+                  {stat.suffix && (
+                    <span class="text-[32px] font-bold text-[#EE7380] absolute top-20">
+                      +
+                    </span>
+                  )}
+                </div>
+                <span class="text-[34px] font-semibold text-center lg:text-start w-[190px]">
+                  {stat.title}
+                </span>
+                <p class="text-[20px] text-center lg:text-start">
+                  <span class="text-[#EE7380]">{stat.highlight}</span>
+                  {stat.description}
+                </p>
+              </div>
+            ))
+          }
         </div>
       </div>
     </section>
@@ -268,14 +408,15 @@ const stats = [
 
         <div class="flex flex-col items-center space-y-14">
           <Switcher />
-          
+
           <!-- Pricing cards -->
-          <div class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 w-full">
+          <div
+            class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
+          >
             <PriceCardsData client:load />
           </div>
 
-          <Button text='Discover more' />
-
+          <Button text="Discover more" />
         </div>
       </div>
     </section>
@@ -285,29 +426,3 @@ const stats = [
   </main>
 </Layout>
 <Footer />
-
-<script>
-  function handlePriceChange(event: CustomEvent) {
-    const monthlyPrices = document.querySelectorAll('.monthly-price');
-    const annualPrices = document.querySelectorAll('.annual-price');
-    const yearlyPriceContainer = document.querySelectorAll('.yearly-price');
-    const freeTierContainer = document.querySelectorAll('.free-tier');
-    
-    if (event.detail.period === 'annual') {
-      monthlyPrices.forEach(price => price.classList.add('hidden'));
-      annualPrices.forEach(price => price.classList.remove('hidden'));
-      yearlyPriceContainer.forEach(price => price.classList.remove('hidden'));
-      freeTierContainer.forEach(container => container.classList.remove('mb-[44px]'));
-      freeTierContainer.forEach(container => container.classList.add('mb-[120px]'));
-    } else {
-      monthlyPrices.forEach(price => price.classList.remove('hidden'));
-      annualPrices.forEach(price => price.classList.add('hidden'));
-      yearlyPriceContainer.forEach(price => price.classList.add('hidden'));
-      freeTierContainer.forEach(container => container.classList.remove('mb-[120px]'));
-      freeTierContainer.forEach(container => container.classList.add('mb-[44px]'));
-    }
-  }
-
-  // Add event listener for price changes
-  document.addEventListener('pricingPeriodChange', handlePriceChange as EventListener);
-</script>

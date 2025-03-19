@@ -1,0 +1,132 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import FeaturesTabs from "../components/react/FeaturesTabs";
+import { Image } from "astro:assets";
+import "./_index.css";
+import Subscribe from "../components/Subscribe.astro";
+import Switcher from "../components/Switcher.astro";
+import PriceCardsData from "../components/react/PriceCards";
+import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".animate-appear");
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+<script>
+  function handlePriceChange(event: CustomEvent) {
+    const monthlyPrices = document.querySelectorAll(".monthly-price");
+    const annualPrices = document.querySelectorAll(".annual-price");
+    const yearlyPriceContainer = document.querySelectorAll(".yearly-price");
+    const freeTierContainer = document.querySelectorAll(".free-tier");
+
+    if (event.detail.period === "annual") {
+      monthlyPrices.forEach((price) => price.classList.add("hidden"));
+      annualPrices.forEach((price) => price.classList.remove("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.remove("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[44px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[120px]")
+      );
+    } else {
+      monthlyPrices.forEach((price) => price.classList.remove("hidden"));
+      annualPrices.forEach((price) => price.classList.add("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.add("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[120px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[44px]")
+      );
+    }
+  }
+
+  document.addEventListener(
+    "pricingPeriodChange",
+    handlePriceChange as EventListener
+  );
+</script>
+
+<Layout title="Pricing - iON">
+  <Navbar />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12">
+      <div class="flex flex-col items-center text-center gap-8">
+        <div
+          class="flex text-[62px] flex-wrap font-semibold flex-row justify-center gap-6"
+        >
+          <span>See which</span>
+          <Image src="/ion.svg" alt="features" width={133} height={64} />
+          <span>Plan Works For You</span>
+        </div>
+        <div class="text-xl flex flex-col">
+          <span>Unlock influencer insights with our flexible plans. </span>
+          <span
+            >Choose the perfect option to analyze, track, and optimize your
+            campaigns.</span
+          >
+        </div>
+
+        <Button text="Try 1 Complimentary Report" className="w-[345px]" />
+      </div>
+    </section>
+
+    <section class="py-20 px-4 lg:px-12">
+      <div class="flex flex-col items-center space-y-14">
+        <h2 class="text-center text-5xl font-extrabold">
+          <span class="text-[#EE7380]">Subscription Plan</span>
+        </h2>
+
+        <div class="flex flex-col items-center space-y-14">
+          <Switcher />
+
+          <!-- Pricing cards -->
+          <div
+            class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
+          >
+            <PriceCardsData client:load />
+          </div>
+
+          <Button text="Start Now" />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 px-4 lg:px-12">
+      <div class="flex flex-col items-center text-center gap-8">
+        <div
+          class="flex text-[62px] flex-wrap font-semibold flex-row justify-center gap-6"
+        >
+          <span>Evaluate</span>
+          <Image src="/ion.svg" alt="features" width={133} height={64} />
+          <span>Versus Other Options</span>
+        </div>
+        <EvaluatePriceTabs client:load />
+      </div>
+    </section>
+
+    <Subscribe />
+  </main>
+</Layout>
+<Footer />
