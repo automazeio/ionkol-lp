@@ -113,10 +113,15 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
       </div>
     </section>
 
-    <section class="py-20 px-4 lg:px-12">
+    <section class="py-20 px-4 lg:px-12 relative">
+      <div
+        class="absolute rotate-180 rounded-[100%] w-full h-screen top-0 left-0 z-100"
+        style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"
+      >
+      </div>
       <div class="flex flex-col items-center text-center gap-8">
         <div
-          class="flex text-[62px] flex-wrap font-semibold flex-row justify-center gap-6"
+          class="flex text-[62px] relative flex-wrap font-semibold flex-row justify-center gap-6"
         >
           <span>Evaluate</span>
           <Image src="/ion.svg" alt="features" width={133} height={64} />
