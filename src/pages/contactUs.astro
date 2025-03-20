@@ -1,0 +1,93 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import Button from "../components/ui/Button.astro";
+import FeaturesTabs from "../components/react/FeaturesTabs";
+import { Image } from "astro:assets";
+import "./_index.css";
+import Subscribe from "../components/Subscribe.astro";
+import Switcher from "../components/Switcher.astro";
+import PriceCardsData from "../components/react/PriceCards";
+import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
+import ContactUsTabs from "../components/react/ContactUsTabs";
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".animate-appear");
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+<script>
+  function handlePriceChange(event: CustomEvent) {
+    const monthlyPrices = document.querySelectorAll(".monthly-price");
+    const annualPrices = document.querySelectorAll(".annual-price");
+    const yearlyPriceContainer = document.querySelectorAll(".yearly-price");
+    const freeTierContainer = document.querySelectorAll(".free-tier");
+
+    if (event.detail.period === "annual") {
+      monthlyPrices.forEach((price) => price.classList.add("hidden"));
+      annualPrices.forEach((price) => price.classList.remove("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.remove("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[44px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[120px]")
+      );
+    } else {
+      monthlyPrices.forEach((price) => price.classList.remove("hidden"));
+      annualPrices.forEach((price) => price.classList.add("hidden"));
+      yearlyPriceContainer.forEach((price) => price.classList.add("hidden"));
+      freeTierContainer.forEach((container) =>
+        container.classList.remove("mb-[120px]")
+      );
+      freeTierContainer.forEach((container) =>
+        container.classList.add("mb-[44px]")
+      );
+    }
+  }
+
+  document.addEventListener(
+    "pricingPeriodChange",
+    handlePriceChange as EventListener
+  );
+</script>
+
+<Layout title="Pricing - iON">
+  <Navbar />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12">
+      <div class="flex flex-col items-center text-center gap-8">
+        <span class="text-[62px] font-semibold">Contact Us</span>
+        <div class="flex flex-row gap-2 text-xl">
+          <span>Get in touch with the right people at</span>
+          <div class="flex flex-row">
+            <Image src="/ion.svg" alt="features" width={47} height={24} /><span
+              >.</span
+            >
+          </div>
+          <span>We are here to help.</span>
+        </div>
+
+        <ContactUsTabs client:load />
+      </div>
+    </section>
+  </main>
+</Layout>
+<Footer />

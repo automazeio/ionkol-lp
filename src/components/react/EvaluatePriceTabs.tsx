@@ -93,22 +93,6 @@ const AlternativesTabContent = () => {
   );
 };
 
-const tabs = [
-  {
-    id: 0,
-    title: "Manual Work",
-    icon: "/manual-work.svg",
-    description: "Traditional manual approach to influencer marketing",
-    content: <ManualWorkTabContent />,
-  },
-  {
-    id: 1,
-    title: "IONKOL",
-    icon: "/ionkol.svg",
-    description: "Automated and efficient approach with IONKOL",
-  },
-];
-
 const EvaluatePriceTabs = () => {
   const [currentTab, setCurrentTab] = useState<number>(0);
 
