@@ -1,12 +1,14 @@
 ---
-const titles = ["Explore", "Analyse"]
- const data = {
-    textColor: 'text-[#EE7380]',
-    description: 'Data-driven success',
-    buttonLabel: 'Start Now',
-    circleBackgroundColor: 'bg-[#feeff1]',
-    circleTopPosition: '-top-[20%] lg:-top-[200px]',
-    circleContent: `
+import { Image } from "astro:assets";
+
+const titles = ["Explore", "Analyse"];
+const data = {
+  textColor: "text-[#EE7380]",
+  description: "Data-driven success",
+  buttonLabel: "Start Now",
+  circleBackgroundColor: "bg-[#feeff1]",
+  circleTopPosition: "-top-[20%] lg:-top-[200px]",
+  circleContent: `
         <div class=" scale-75 lg:scale-100 h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center">
           <div class="flex gap-3 mb-2">
             <div class="p-2 bg-[#fea598] rounded-full">
@@ -21,13 +23,12 @@ const titles = ["Explore", "Analyse"]
           </div>
           <div class="text-center">Social Media</div>
         </div>
-    `
-  }
+    `,
+};
 ---
 
 <style>
-
-.animated-box {
+  .animated-box {
     position: relative;
     height: 250px;
     overflow: hidden;
@@ -35,7 +36,6 @@ const titles = ["Explore", "Analyse"]
     align-items: center;
     justify-content: center;
   }
-
 
   .animated-slides {
     transform: translateY(-25%);
@@ -64,33 +64,43 @@ const titles = ["Explore", "Analyse"]
       transform: translateY(25%);
     }
   }
-
 </style>
 
-<div class="flex flex-col relative items-center mt-10 justify-center z-10 text-center px-4">
-  <p class="text-[#0d0c22] text-lg absolute top-0 font-medium tracking-tight lg:text-2xl">
+<div
+  class="flex flex-col relative items-center mt-10 justify-center z-10 text-center px-4"
+>
+  <p
+    class="text-[#0d0c22] text-lg absolute top-0 font-medium tracking-tight lg:text-2xl"
+  >
     AI influencer analytics platform
   </p>
-    <div class={`${data.textColor} text-5xl flex mb-8 lg:gap-10  w-screen lg:ml-0 ml-6 sm:ml-10 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}>
-      ION <div class="animated-box lg:w-[500px] md:w-[250px] sm:w-[220px] w-[210px]"><span class="animated-slides">{titles[0]}</span></div>
+  <div
+    class={`${data.textColor} text-5xl flex mb-8 lg:gap-10  w-screen lg:ml-0 ml-6 sm:ml-10 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}
+  >
+    <Image src="/ion.svg" alt="key" width={240} height={101} />
+
+    <div class="animated-box lg:w-[500px] md:w-[250px] sm:w-[220px] w-[210px]">
+      <span class="animated-slides">{titles[0]}</span>
     </div>
+  </div>
   <p class="font-normal tracking-wide mb-14 text-[42px]">
     {data.description}
   </p>
-  <button class="h-10 px-10 py-2 bg-[#EE7380] rounded-3xl text-white text-base font-medium leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300">
+  <button
+    class="h-10 px-10 py-2 bg-[#EE7380] rounded-3xl text-white text-base font-medium leading-normal tracking-wide hover:bg-[#1a1a2e] active:bg-[#33334d] transition-colors duration-300"
+  >
     {data.buttonLabel}
   </button>
 </div>
 
 <script>
-  const titles = ["Explore", "Analyse"]
+  const titles = ["Explore", "Analyse"];
   let index = 0;
-    setInterval(() => {
+  setInterval(() => {
     index = (index + 1) % titles.length;
-    const container =  document.querySelector('.animated-slides');
+    const container = document.querySelector(".animated-slides");
     const slide = titles[index];
     if (!container) return;
     container.innerHTML = slide;
-    
   }, 3000);
 </script>

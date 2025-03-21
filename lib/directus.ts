@@ -17,6 +17,8 @@ export type Article = {
   slug: string;
   description: string;
   body: string;
+  thumbnail: string;
+  category: "101" | "resources" | "updates";
 };
 
 type Schema = {
