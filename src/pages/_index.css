@@ -1,7 +1,9 @@
 .animate-appear {
   opacity: 0;
   transform: translateY(10px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  transition:
+    opacity 0.5s ease-in-out,
+    transform 0.5s ease-in-out;
 }
 
 .animate-appear.visible {
@@ -11,4 +13,5 @@
 
 body {
   font-family: "Gill Sans";
+  color: #0d0c22;
 }

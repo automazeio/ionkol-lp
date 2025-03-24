@@ -18,7 +18,11 @@ export type Article = {
   description: string;
   body: string;
   thumbnail: string;
-  category: "101" | "resources" | "updates";
+  category: "101" | "research" | "updates";
+  post_type?: string;
+  location?: string;
+  interest?: string;
+  created_at?: string;
 };
 
 type Schema = {

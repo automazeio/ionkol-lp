@@ -11,6 +11,7 @@ import Switcher from "../components/Switcher.astro";
 import PriceCardsData from "../components/react/PriceCards";
 import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
 import ResourcesTabs from "../components/react/resources/ResourcesTabs";
+import FAQ from "../components/react/FAQ";
 ---
 
 <script is:inline>
@@ -92,6 +93,15 @@ import ResourcesTabs from "../components/react/resources/ResourcesTabs";
     </section>
     <section class="pb-32 px-4 lg:px-12">
       <ResourcesTabs client:load />
+    </section>
+
+    <section class="pb-32 px-4 lg:px-12">
+      <div class="flex flex-col items-center justify-center w-full gap-12">
+        <span class="text-[62px] text-[#EE7380] font-semibold"
+          >Frequently Asked Questions</span
+        >
+        <FAQ client:load />
+      </div>
     </section>
 
     <Subscribe />
