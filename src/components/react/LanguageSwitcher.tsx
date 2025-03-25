@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactCountryFlag from "react-country-flag";
 
 interface Language {
@@ -21,10 +21,25 @@ const LanguageSwitcher = () => {
     languages[0]
   );
 
+  // Initialize language from URL
+  useEffect(() => {
+    const pathSegments = window.location.pathname.split("/");
+    const langCode = pathSegments[1];
+    const language = languages.find((lang) => lang.code === langCode);
+    if (language) {
+      setSelectedLanguage(language);
+    }
+  }, []);
+
   const handleLanguageChange = (language: Language) => {
     setSelectedLanguage(language);
     setIsOpen(false);
-    console.log("Language changed to:", language.code);
+
+    // Update URL with new language code
+    const pathSegments = window.location.pathname.split("/");
+    pathSegments[1] = language.code;
+    const newPath = pathSegments.join("/");
+    window.location.href = newPath;
   };
 
   return (

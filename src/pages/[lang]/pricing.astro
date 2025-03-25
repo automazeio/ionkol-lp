@@ -1,15 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
-import FeaturesTabs from "../components/react/FeaturesTabs";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Button from "../../components/ui/Button.astro";
+import FeaturesTabs from "../../components/react/FeaturesTabs";
 import { Image } from "astro:assets";
-import "./_index.css";
-import Subscribe from "../components/Subscribe.astro";
-import Switcher from "../components/Switcher.astro";
-import PriceCardsData from "../components/react/PriceCards";
-import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
+import "../_index.css";
+import Subscribe from "../../components/Subscribe.astro";
+import Switcher from "../../components/Switcher.astro";
+import PriceCardsData from "../../components/react/PriceCards";
+import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
+import { m } from "../../paraglide/messages.js";
 ---
 
 <script is:inline>
@@ -76,19 +77,16 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
         <div
           class="flex text-[62px] flex-wrap font-semibold flex-row justify-center gap-6"
         >
-          <span>See which</span>
+          <span>{m["pricing.title.part1"]()}</span>
           <Image src="/ion.svg" alt="features" width={133} height={64} />
-          <span>Plan Works For You</span>
+          <span>{m["pricing.title.part2"]()}</span>
         </div>
         <div class="text-xl flex flex-col">
-          <span>Unlock influencer insights with our flexible plans. </span>
-          <span
-            >Choose the perfect option to analyze, track, and optimize your
-            campaigns.</span
-          >
+          <span>{m["pricing.subtitle.part1"]()}</span>
+          <span>{m["pricing.subtitle.part2"]()}</span>
         </div>
         <a href="https://app.ionkol.com/sign-up">
-          <Button text="Try 1 Complimentary Report" className="w-[345px]" />
+          <Button text={m["pricing.tryReport"]()} className="w-[345px]" />
         </a>
       </div>
     </section>
@@ -96,7 +94,8 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
     <section class="py-20 px-4 lg:px-12">
       <div class="flex flex-col items-center space-y-14">
         <h2 class="text-center text-5xl font-extrabold">
-          <span class="text-[#EE7380]">Subscription Plan</span>
+          <span class="text-[#EE7380]">{m["pricing.subscription.title"]()}</span
+          >
         </h2>
 
         <div class="flex flex-col items-center space-y-14">
@@ -109,7 +108,7 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
             <PriceCardsData client:load />
           </div>
           <a href="https://app.ionkol.com/sign-up">
-            <Button text="Discover More" />
+            <Button text={m["pricing.discoverMore"]()} />
           </a>
         </div>
       </div>
@@ -125,9 +124,9 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
         <div
           class="flex text-[62px] relative flex-wrap font-semibold flex-row justify-center gap-6"
         >
-          <span>Evaluate</span>
+          <span>{m["pricing.evaluate.title.part1"]()}</span>
           <Image src="/ion.svg" alt="features" width={133} height={64} />
-          <span>Versus Other Options</span>
+          <span>{m["pricing.evaluate.title.part2"]()}</span>
         </div>
         <EvaluatePriceTabs client:load />
       </div>

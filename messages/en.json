@@ -1,0 +1,474 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "example_message": "Hello world {username}",
+  "aboutUs": {
+    "title": "iON, the Story",
+    "subtitle": "just as iON's",
+    "tagline": "the smallest building blocks of creation",
+    "description": "combine to form everything we know, we transform data into actionable insights. By turning the simplest elements into tools for growth, we empower businesses to build extraordinary connections and achieve meaningful transformation.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "Simplifying decision-making with data-driven insights to enable smarter, more impactful marketing."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "To empower businesses to unlock their full potential through actionable, data-driven marketing insights."
+    }
+  },
+  "index": {
+    "keyFeatures": "Key Features",
+    "explore": {
+      "title": "Explore",
+      "description": "Discover and connect with creators who amplify your brand's message. Save time with advanced filters to find influencers who align with your goals and deliver real results.",
+      "button": "Discover more"
+    },
+    "analyse": {
+      "title": "Analyse",
+      "description": "Evaluate the success of your influencer partnerships with actionable insights into performance metrics and audience engagement.",
+      "button": "Discover more"
+    },
+    "goals": {
+      "title": "Achieve all your goals in one place"
+    },
+    "features": {
+      "timeSaving": {
+        "title": "Time-saving",
+        "description": "Streamline your search and verification process to find your ideal influencer with ION's efficient tools."
+      },
+      "competitivePricing": {
+        "title": "Competitive Pricing",
+        "description": "Access powerful influencer marketing tools at affordable prices with no hidden costs."
+      },
+      "smartInsights": {
+        "title": "Smart Insights",
+        "description": "Proprietary AI-powered analytics to gain influencer-specific insights for confident, data-driven decisions."
+      },
+      "actionableData": {
+        "title": "Actionable Data",
+        "description": "Turn complex data into clear information that empowers smarter decisions to accelerate business growth."
+      },
+      "globalReach": {
+        "title": "Global Reach",
+        "description": "Expand your business internationally with localization strategies to connect with foreign audiences."
+      }
+    },
+    "stats": {
+      "filters": {
+        "title": "Advanced Filters",
+        "description": "for your 'ideal' influencer with our filters in minutes",
+        "highlight": "Explore"
+      },
+      "parameters": {
+        "title": "Analytical Parameters",
+        "description": "your 'ideal' influencer with our parameters and make well-informed decisions",
+        "highlight": "Analyse"
+      }
+    },
+    "power": {
+      "title": "Harness the power of",
+      "description1": "empowers businesses to grow with intuitive tools and actionable insights. By streamlining decision-making and enabling effective influencer partnerships,",
+      "description2": "transforms raw data into impactful marketing insights, helping businesses of all sizes drive meaningful results."
+    },
+    "pricing": {
+      "title": "Subscription Plan",
+      "button": "Discover more"
+    }
+  },
+  "subscribe": {
+    "title": "Subscribe",
+    "description": "Join our growing community and get latest case studies, trends, updates, valuable resources, and more to grow your business.",
+    "emailPlaceholder": "Email address",
+    "button": "Subscribe"
+  },
+  "footer": {
+    "tagline": "Data-driven Success",
+    "locations": {
+      "title": "Locations",
+      "japan": "Japan",
+      "korea": "Korea",
+      "malaysia": "Malaysia",
+      "singapore": "Singapore"
+    },
+    "services": {
+      "title": "Services",
+      "explore": "Ion Explore",
+      "analyze": "Ion Analyze"
+    },
+    "getStarted": {
+      "title": "Get Started",
+      "bookDemo": "Book a demo",
+      "contactUs": "Contact us"
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "aboutUs": "About us",
+      "blog": "Blog",
+      "caseStudy": "Case study",
+      "faqs": "FAQs"
+    },
+    "legal": {
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service"
+    }
+  },
+  "navbar": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "resourceHub": "Resource Hub",
+    "signUp": "Sign-up",
+    "login": "Login"
+  },
+  "features": {
+    "title": "Features",
+    "startNow": "Start Now",
+    "explore": {
+      "title": "Explore",
+      "subtitle": "how data can drive your success",
+      "description1": "Transform your marketing with effortless access to thousands of influencers across the globe. Discover, connect, and elevate your brand with our unparalleled database.",
+      "description2": "Discover influencers who inspire and engage. Apply 15 customizable filters to find the 'ideal' fit for your brand in minutes.",
+      "tabs": {
+        "filter": {
+          "title": "Filter",
+          "description": "Refine your search by applying advanced filters tailored to your needs."
+        },
+        "search": {
+          "title": "Search",
+          "description": "Use keywords to pinpoint influencers matching your goals."
+        },
+        "save": {
+          "title": "Save",
+          "description": "Organize your selected creators into custom lists for easy access."
+        }
+      }
+    },
+    "analyse": {
+      "title": "Analyse",
+      "subtitle": "how data can drive your success",
+      "description": "Elevate your influencer marketing with cutting-edge reports: gain unparalleled insights into audience demographics, performance metrics, and engagement trends—empowering your brand to take bold, data-driven actions.",
+      "tabs": {
+        "parameters": {
+          "title": "Parameters",
+          "description": "Transform decisions with insights, validate audiences, measure performance, ensure brand-aligned partnerships with 40+ parameters."
+        },
+        "audience": {
+          "title": "Audience",
+          "description": "Discover the essence of your audience with advanced analytics: explore follower demographics from location to age and more, to craft bespoke campaigns."
+        },
+        "engagement": {
+          "title": "Save",
+          "description": "Elevate your influencer evaluation with engagement insights: measure interaction rates, assess audience quality, and ensure every creator delivers genuine, impactful engagement."
+        }
+      }
+    }
+  },
+  "pricing": {
+    "title": {
+      "part1": "See which",
+      "part2": "Plan Works For You"
+    },
+    "subtitle": {
+      "part1": "Unlock influencer insights with our flexible plans.",
+      "part2": "Choose the perfect option to analyze, track, and optimize your campaigns."
+    },
+    "tryReport": "Try 1 Complimentary Report",
+    "subscription": {
+      "title": "Subscription Plan"
+    },
+    "discoverMore": "Discover More",
+    "evaluate": {
+      "title": {
+        "part1": "Evaluate",
+        "part2": "Versus Other Options"
+      },
+      "tabs": {
+        "manualWork": "Manual Work",
+        "alternatives": "Alternatives"
+      },
+      "manualWork": {
+        "timePerMonth": "Time Per Month",
+        "monthlyCost": "Monthly Cost",
+        "hourlyRate": "(25 USD / hour)",
+        "creatorSearch": "Creator Search",
+        "dataCompilation": "Data Compilation",
+        "analysis": "Analysis",
+        "total": "Total",
+        "minutes": "Minutes",
+        "monthlyTotal": "$1,700 / month",
+        "ionTotal": "$80 ~/ month"
+      },
+      "alternatives": {
+        "competitors": "Competitors",
+        "countries": "Countries",
+        "localJointVentures": "Local joint ventures",
+        "presence": "Presence in 4 countries across Asia",
+        "parameters": "Parameters",
+        "basicParameters": "12~ basic parameters",
+        "advancedParameters": "40+ advanced parameters",
+        "cost": "Cost",
+        "competitorCost": "$200~ / month",
+        "ionCost": "$80 / month"
+      }
+    }
+  },
+  "resources": {
+    "featured": "Featured",
+    "featuredPost": {
+      "title": "Title for the featured post",
+      "subtitle": "Sub-title for the featured post ABC123",
+      "readMore": "Read more +"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "whatIsIonkol": {
+        "title": "What is IONKOL?",
+        "preview": "IONKOL is a data analytics startup. We provide data-driven influencer marketing insights to help businesses discover...",
+        "content": "IONKOL is a data analytics startup. We provide data-driven influencer marketing insights to help businesses discover, manage, and optimize their influencer partnerships. By leveraging audience analytics, performance metrics, and advanced filters, IONKOL simplifies the influencer selection process, enabling businesses of all sizes to connect with the right influencers to grow their brand. Whether you're just starting or looking to scale your influencer marketing efforts, IONKOL provides the tools you need to make smarter, data-driven decisions.",
+        "findOutMore": "Find out more"
+      },
+      "howDoesIonkolWork": {
+        "title": "How does IONKOL work?",
+        "preview": "IONKOL works by offering businesses a streamlined platform to search for influencers using customizable filters like...",
+        "content": "IONKOL works by offering businesses a streamlined platform to search for influencers using customizable filters like location, interests, audience demographics, and engagement metrics. Once you find the right influencers, you can assess their past performance through comprehensive analytics, ensuring they align with your marketing goals.",
+        "howItWorks": "Here's how it works in a nutshell:",
+        "steps": {
+          "search": {
+            "title": "Search",
+            "description": "Use IONKOL's advanced search filters to find influencers who match your brand's audience, niche, and goals."
+          },
+          "analyze": {
+            "title": "Analyze",
+            "description": "Evaluate influencers using detailed analytics, such as engagement rates, audience authenticity, and past performance."
+          },
+          "connect": {
+            "title": "Connect",
+            "description": "Reach out to influencers directly through the platform to start collaborations, track campaigns, and manage contracts."
+          },
+          "optimize": {
+            "title": "Optimize",
+            "description": "Review ongoing campaign performance and make adjustments to ensure the best possible ROI."
+          }
+        },
+        "conclusion": "IONKOL makes influencer marketing efficient, accessible, and data-driven.",
+        "findOutMore": "Find out more"
+      },
+      "whoIsIonkolFor": {
+        "title": "Who is IONKOL for? Is it right for me?",
+        "preview": "IONKOL is designed for businesses of all sizes that want to harness the power of influencer marketing to grow their...",
+        "content": "IONKOL is designed for businesses of all sizes that want to harness the power of influencer marketing to grow their brand. Whether you're a small business just starting to explore influencer partnerships or a larger company looking to scale your campaigns, IONKOL has the tools you need to succeed.",
+        "perfectFor": "IONKOL is perfect for:",
+        "targets": {
+          "smallBusinesses": {
+            "title": "Small to Medium Businesses",
+            "description": "If you're looking for cost-effective ways to reach new customers and expand your brand presence."
+          },
+          "ecommerce": {
+            "title": "E-commerce Brands",
+            "description": "To boost visibility, drive sales, and enhance customer loyalty through influencer collaborations."
+          },
+          "marketingTeams": {
+            "title": "Marketing Teams",
+            "description": "For businesses that already work with influencers but need an easy way to streamline the process and optimize performance."
+          },
+          "agencies": {
+            "title": "Agencies",
+            "description": "To efficiently manage multiple influencer campaigns for clients across various industries."
+          },
+          "contentCreators": {
+            "title": "Content Creators",
+            "description": "Those looking to expand their reach and connect with brands that align with their values."
+          }
+        },
+        "conclusion": "IONKOL serves businesses across various industries, including fashion, beauty, food and beverage, lifestyle, and more.",
+        "findOutMore": "Find out more"
+      },
+      "howMuchDoesIonkolCost": {
+        "title": "How much does IONKOL cost?",
+        "preview": "IONKOL offers flexible pricing plans to suit the needs of businesses of all sizes. We provide both monthly and...",
+        "content": "IONKOL offers flexible pricing plans to suit the needs of businesses of all sizes. We provide both monthly and annual subscription options, with various tiers based on the features you need and the scale of your business.",
+        "pricingPlans": "Our Pricing Plans:",
+        "plans": {
+          "free": {
+            "title": "Free Plan",
+            "description": "Try out IONKOL with limited features, perfect for small businesses just getting started with influencer marketing."
+          },
+          "core": {
+            "title": "Core Plan",
+            "description": "Starting at $100/month, ideal for small businesses that need access to more features like advanced influencer search, tracking, and reporting."
+          },
+          "plus": {
+            "title": "Plus Plan",
+            "description": "$220/month, offering more comprehensive tools and additional support for growing businesses and larger influencer campaigns."
+          },
+          "prime": {
+            "title": "Prime Plan",
+            "description": "$375/month, designed for large businesses with advanced needs, offering the most extensive features, analytics, and priority support."
+          }
+        },
+        "discounts": "We also offer discounts for annual subscriptions, allowing you to save up to 25% compared to the monthly pricing.",
+        "conclusion": "Our pricing is designed to be affordable, with plans that grow alongside your business. Choose the plan that best fits your influencer marketing goals and start leveraging the power of influencer campaigns today.",
+        "findOutMore": "Find out more"
+      },
+      "whatMakesIonkolDifferent": {
+        "title": "What makes IONKOL different from others?",
+        "preview": "IONKOL stands out in the influencer marketing landscape by offering a comprehensive platform that combines...",
+        "content": "IONKOL stands out in the influencer marketing landscape by offering a comprehensive platform that combines data-driven insights, ease of use, and affordability.",
+        "keyFeatures": "Here are some key features that make IONKOL unique:",
+        "features": {
+          "dataDriven": {
+            "title": "Data-Driven Influencer Insights",
+            "description": "IONKOL offers in-depth audience and engagement analytics that help you identify the right influencers, not just based on followers, but on the actual impact their audience has. Our robust parameters allow you to evaluate influencer authenticity, engagement quality, and audience relevance for more precise decision-making."
+          },
+          "customizable": {
+            "title": "Customizable and Flexible Plans",
+            "description": "Whether you're a small business owner just starting with influencer marketing or a large corporation running high-volume campaigns, IONKOL offers plans that scale with your needs. Plus, our intuitive platform ensures that even those with minimal marketing experience can easily navigate and run successful campaigns."
+          },
+          "transparency": {
+            "title": "Transparency and Control",
+            "description": "IONKOL provides complete transparency in influencer performance and analytics. This empowers businesses to make data-backed decisions and optimize their marketing strategies effectively."
+          },
+          "education": {
+            "title": "Integration of Education and Tools",
+            "description": "IONKOL is not just about offering influencer marketing tools. We provide a range of educational resources like tutorials, webinars, and blogs to help you understand the influencer marketing ecosystem and how to maximize your campaigns."
+          }
+        },
+        "conclusion": "IONKOL is designed to make influencer marketing accessible, actionable, and highly efficient for businesses of all sizes."
+      }
+    },
+    "tabs": {
+      "allPosts": "All posts",
+      "ionkol101": "IONKOL 101",
+      "research": "Research",
+      "ionUpdates": "ION Updates"
+    },
+    "filters": {
+      "postType": "Post Type",
+      "location": "Location",
+      "interest": "Interest",
+      "seeMore": "See more +"
+    },
+    "postTypes": {
+      "blog": "Blog",
+      "caseStudy": "Case Study",
+      "trendReport": "Trend Report"
+    },
+    "locations": {
+      "global": "Global",
+      "japan": "Japan",
+      "korea": "Korea",
+      "malaysia": "Malaysia",
+      "singapore": "Singapore",
+      "unitedStates": "United States",
+      "northAmerica": "North America"
+    }
+  },
+  "contact": {
+    "title": {
+      "en": "Contact Us"
+    },
+    "subtitle": {
+      "part1": {
+        "en": "Talk to the IONKOL team"
+      },
+      "part2": {
+        "en": "We're here to help."
+      }
+    },
+    "tabs": {
+      "generalInquiry": {
+        "en": "General Inquiry"
+      },
+      "demo": {
+        "en": "Demo"
+      }
+    },
+    "form": {
+      "firstName": {
+        "en": "First Name*"
+      },
+      "lastName": {
+        "en": "Last Name*"
+      },
+      "company": {
+        "en": "Company / Brand"
+      },
+      "position": {
+        "en": "Position"
+      },
+      "phone": {
+        "en": "Phone Number"
+      },
+      "country": {
+        "en": "Country"
+      },
+      "email": {
+        "en": "Email*"
+      },
+      "source": {
+        "en": "How did you hear about IONKOL?"
+      },
+      "inquiry": {
+        "en": "Inquiry*"
+      },
+      "consent": {
+        "part1": {
+          "en": "*I have read and agree to"
+        },
+        "part2": {
+          "en": "'s"
+        },
+        "part3": {
+          "en": "Terms of Use and Privacy Policy"
+        }
+      },
+      "submit": {
+        "en": "Submit"
+      },
+      "demoComingSoon": {
+        "en": "Demo registration coming soon"
+      }
+    },
+    "sourceOptions": {
+      "google": {
+        "en": "Google / Search Engine"
+      },
+      "onlineAd": {
+        "en": "Online Ad"
+      },
+      "influencerRef": {
+        "en": "Referral from Influencer"
+      },
+      "friendRef": {
+        "en": "Referral from Friend / Family"
+      },
+      "event": {
+        "en": "Event or Conference"
+      },
+      "content": {
+        "en": "Podcast, Blog, or News Article"
+      },
+      "email": {
+        "en": "Email or Newsletter"
+      },
+      "other": {
+        "en": "Other (Please specify)"
+      }
+    },
+    "countryOptions": {
+      "singapore": {
+        "en": "Singapore"
+      },
+      "malaysia": {
+        "en": "Malaysia"
+      },
+      "china": {
+        "en": "China"
+      },
+      "japan": {
+        "en": "Japan"
+      },
+      "korea": {
+        "en": "Korea"
+      }
+    }
+  }
+}

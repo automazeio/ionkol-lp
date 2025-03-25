@@ -2,19 +2,20 @@
 import { Image } from "astro:assets";
 import Button from "./ui/Button.astro";
 import LanguageSwitcher from "../components/react/LanguageSwitcher";
+import { m } from "../paraglide/messages.js";
 
 const navItems = [
   {
     link: "/features",
-    title: "Features",
+    title: m["navbar.features"](),
   },
   {
     link: "/pricing",
-    title: "Pricing",
+    title: m["navbar.pricing"](),
   },
   {
     link: "/resources",
-    title: "Resource Hub",
+    title: m["navbar.resourceHub"](),
   },
 ];
 const SIGN_IN_URL = "https://app.ionkol.com/sign-in";
@@ -28,6 +29,7 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
   <a
     href="/"
     class="text-center text-[#0d0c22] text-[28px] font-bold tracking-wide"
+    data-link="/"
   >
     <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
   </a>
@@ -55,6 +57,7 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
           <a
             href={`${item.link}`}
             class="cursor-pointer text-[#0d0c22] hover:text-[#EE7380] active:text-[#d55e6b] transition-colors duration-300"
+            data-link={item.link}
           >
             {item.title}
           </a>
@@ -63,8 +66,10 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     </ul>
 
     <LanguageSwitcher client:load />
-    <a href={SIGN_UP_URL}> <Button text="Sign-up" type="outline" /></a>
-    <a href={SIGN_IN_URL}> <Button text="Login" /></a>
+    <a href={SIGN_UP_URL}>
+      <Button text={m["navbar.signUp"]()} type="outline" /></a
+    >
+    <a href={SIGN_IN_URL}> <Button text={m["navbar.login"]()} /></a>
   </div>
 </header>
 
@@ -77,10 +82,11 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
       {
         navItems.map((item) => (
           <a
-            href={`#${item}`}
+            href={`${item.link}`}
             class="cursor-pointer py-2 text-center w-full hover:bg-[#fff7f8] text-[#0d0c22] hover:text-[#EE7380] active:text-[#d55e6b] transition-colors duration-300"
+            data-link={item.link}
           >
-            {item}
+            {item.title}
           </a>
         ))
       }
@@ -90,10 +96,10 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
   <!-- Sign-up and Login buttons for mobile -->
   <div class="flex flex-col gap-4">
     <a href={SIGN_UP_URL}>
-      <Button className="w-full" text="Sign-up" type="outline" />
+      <Button className="w-full" text={m["navbar.signUp"]()} type="outline" />
     </a>
     <a href={SIGN_IN_URL}>
-      <Button className="w-full" text="Login" />
+      <Button className="w-full" text={m["navbar.login"]()} />
     </a>
   </div>
 </div>
@@ -103,6 +109,18 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     const menu = document.getElementById("menu");
     menu.classList.toggle("hidden");
   }
+
+  function updateNavigationLinks() {
+    const pathSegments = window.location.pathname.split("/");
+    const currentLang = pathSegments[1] || "en";
+
+    document.querySelectorAll("a[data-link]").forEach((link) => {
+      const basePath = link.getAttribute("data-link");
+      link.href = `/${currentLang}${basePath}`;
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", updateNavigationLinks);
 
   document.addEventListener("scroll", () => {
     const navbar = document.getElementById("navbar");

@@ -1,15 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
-import FeaturesTabs from "../components/react/FeaturesTabs";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Button from "../../components/ui/Button.astro";
+import FeaturesTabs from "../../components/react/FeaturesTabs";
 import { Image } from "astro:assets";
-import "./_index.css";
-import Subscribe from "../components/Subscribe.astro";
-import Switcher from "../components/Switcher.astro";
-import PriceCardsData from "../components/react/PriceCards";
-import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
+import "../_index.css";
+import Subscribe from "../../components/Subscribe.astro";
+import Switcher from "../../components/Switcher.astro";
+import PriceCardsData from "../../components/react/PriceCards";
+import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
+import { m } from "../../paraglide/messages.js";
 ---
 
 <script is:inline>
@@ -92,29 +93,24 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
         class="relative flex flex-row gap-2 justify-center w-full font-semibold text-[62px]"
       >
         <Image src="/ion.svg" alt="features" width={133} height={67} />
-        <span>, the Story</span>
+        <span>{m["aboutUs.title"]}</span>
       </div>
 
       <div class="mt-10 relative flex flex-row justify-center text-xl">
-        <span class="pr-2">just as</span>
-        <Image src="/ion.svg" alt="features" width={60} height={30} />
-        <span>'s</span>
+        <span class="pr-2">{m["aboutUs.subtitle"]}</span>
       </div>
 
       <div class="flex relative items-center justify-center gap-4 mt-8">
         <div class="border-t w-24 border-[#EE7380]"></div>
         <span class="text-[26px] font-semibold text-center"
-          >the the smallest building blocks of creation</span
+          >{m["aboutUs.tagline"]}</span
         >
         <div class="w-24 border-t border-[#EE7380]"></div>
       </div>
 
       <div class="mt-8 flex justify-center relative">
         <div class="w-1/2 text-center text-xl">
-          combine to form everything we know, we transform data into actionable
-          insights. By turning the simplest elements into tools for growth, we
-          empower businesses to build extraordinary connections and achieve
-          meaningful transformation.
+          {m["aboutUs.description"]}
         </div>
       </div>
     </section>
@@ -125,24 +121,18 @@ import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
           <div
             class="w-fit px-12 py-4 border-b-2 border-[#EE7380] text-[62px] font-semibold"
           >
-            Our Mission
+            {m["aboutUs.mission.title"]}
           </div>
-          <span class="text-xl w-2/3"
-            >Simplifying decision-making with data-driven insights to enable
-            smarter, more impactful marketing.</span
-          >
+          <span class="text-xl w-2/3">{m["aboutUs.mission.description"]}</span>
         </div>
 
         <div class="flex flex-col items-center text-center gap-6">
           <div
             class="w-fit px-12 py-4 border-b-2 border-[#EE7380] text-[62px] font-semibold"
           >
-            Our Vision
+            {m["aboutUs.vision.title"]}
           </div>
-          <span class="text-xl w-2/3"
-            >To empower businesses to unlock their full potential through
-            actionable, data-driven marketing insights.</span
-          >
+          <span class="text-xl w-2/3">{m["aboutUs.vision.description"]}</span>
         </div>
       </div>
     </section>

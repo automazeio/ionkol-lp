@@ -1,4 +1,5 @@
 import type { Article } from "../../../../lib/directus";
+import { m } from "../../../paraglide/messages.js";
 
 type Props = {
   title: string | React.ReactElement;
@@ -13,7 +14,7 @@ const Section = ({ title, posts, onClick }: Props) => {
         <span className="text-[42px] font-semibold">{title}</span>
         {onClick && (
           <button onClick={onClick} className="text-xl text-[#EE7380]">
-            See more +
+            {m["resources.filters.seeMore"]()}
           </button>
         )}
       </div>

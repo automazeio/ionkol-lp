@@ -1,17 +1,16 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
-import FeaturesTabs from "../components/react/FeaturesTabs";
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Button from "../../components/ui/Button.astro";
+import FeaturesTabs from "../../components/react/FeaturesTabs";
 import { Image } from "astro:assets";
-import "./_index.css";
-import Subscribe from "../components/Subscribe.astro";
-import Switcher from "../components/Switcher.astro";
-import PriceCardsData from "../components/react/PriceCards";
-import EvaluatePriceTabs from "../components/react/EvaluatePriceTabs";
-import ResourcesTabs from "../components/react/resources/ResourcesTabs";
-import FAQ from "../components/react/FAQ";
+import "../_index.css";
+import Subscribe from "../../components/Subscribe.astro";
+import Switcher from "../../components/Switcher.astro";
+import PriceCardsData from "../../components/react/PriceCards";
+import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
+import ContactUsTabs from "../../components/react/ContactUsTabs";
 ---
 
 <script is:inline>
@@ -74,37 +73,21 @@ import FAQ from "../components/react/FAQ";
   <Navbar />
   <main class="relative">
     <section class="mt-40 pb-32 px-4 lg:px-12">
-      <div class="flex items-center justify-center w-full">
-        <div class="flex flex-col lg:flex-row gap-16 items-center">
-          <div class="flex flex-col gap-6">
-            <span class="text-[26px] font-semibold">Featured</span>
-            <span class="text-[42px] font-semibold"
-              >Title for the featured post
-            </span>
-            <span class="text-[34px]"
-              >Sub-title for the featured post ABC123</span
+      <div class="flex flex-col items-center text-center gap-8">
+        <span class="text-[62px] font-semibold">Contact Us</span>
+        <div class="flex flex-row gap-2 text-xl">
+          <span>Get in touch with the right people at</span>
+          <div class="flex flex-row">
+            <Image src="/ion.svg" alt="features" width={47} height={24} /><span
+              >.</span
             >
-            <span class="mt-4 text-xl text-[#EE7380]">Read more +</span>
           </div>
-
-          <div class="w-[650px] h-[450px] bg-[#D9D9D9]"></div>
+          <span>We are here to help.</span>
         </div>
+
+        <ContactUsTabs client:load />
       </div>
     </section>
-    <section class="pb-32 px-4 lg:px-12">
-      <ResourcesTabs client:load />
-    </section>
-
-    <section class="pb-32 px-4 lg:px-12">
-      <div class="flex flex-col items-center justify-center w-full gap-12">
-        <span class="text-[62px] text-[#EE7380] font-semibold"
-          >Frequently Asked Questions</span
-        >
-        <FAQ client:load />
-      </div>
-    </section>
-
-    <Subscribe />
   </main>
-  <Footer />
 </Layout>
+<Footer />

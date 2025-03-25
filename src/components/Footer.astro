@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import { m } from "../paraglide/messages.js";
 ---
 
 <footer
@@ -10,15 +11,15 @@ import { Image } from "astro:assets";
     class="flex flex-col items-center lg:items-start gap-2 mb-8 sm:mb-10 sm:text-center"
   >
     <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
-    <p class="text-lg text-left">Data-driven Success</p>
+    <p class="text-lg text-left">{m["footer.tagline"]()}</p>
     <div class="w-56 border-1 border-red-200 border-t mt-2"></div>
 
     <div class="mt-5">
       <ul class="text-lg text-left">
-        <li>Japan</li>
-        <li>Korea</li>
-        <li>Malaysia</li>
-        <li>Singapore</li>
+        <li>{m["footer.locations.japan"]()}</li>
+        <li>{m["footer.locations.korea"]()}</li>
+        <li>{m["footer.locations.malaysia"]()}</li>
+        <li>{m["footer.locations.singapore"]()}</li>
       </ul>
     </div>
 
@@ -36,29 +37,37 @@ import { Image } from "astro:assets";
         <h3
           class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
         >
-          Services
+          {m["footer.services.title"]()}
         </h3>
         <ul class="flex flex-col text-center sm:text-left">
           <li>
-            <a href="#" class="text-lg leading-normal tracking-tight">
-              Ion Explore
+            <a
+              href="/features"
+              class="text-lg leading-normal tracking-tight"
+              data-link="/features"
+            >
+              {m["footer.services.explore"]()}
             </a>
           </li>
           <li>
-            <a href="#" class="text-lg leading-normal tracking-tight">
-              Ion Analyze
+            <a
+              href="/features"
+              class="text-lg leading-normal tracking-tight"
+              data-link="/features"
+            >
+              {m["footer.services.analyze"]()}
             </a>
           </li>
         </ul>
       </div>
 
       <div class="flex flex-row gap-4 absolute w-64 top-28 md:top-52 left-0">
-        <a href="#" class="text-lg leading-normal tracking-tight">
-          Privacy Policy
+        <a href="#" class="text-lg leading-normal tracking-tight" data-link="#">
+          {m["footer.legal.privacyPolicy"]()}
         </a>
         <span>|</span>
-        <a href="#" class="text-lg leading-normal tracking-tight">
-          Terms of Service
+        <a href="#" class="text-lg leading-normal tracking-tight" data-link="#">
+          {m["footer.legal.termsOfService"]()}
         </a>
       </div>
     </div>
@@ -67,17 +76,25 @@ import { Image } from "astro:assets";
       <h3
         class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
       >
-        Get Started
+        {m["footer.getStarted.title"]()}
       </h3>
       <ul class="flex flex-col text-center sm:text-left">
         <li>
-          <a href="#" class="text-lg leading-normal tracking-tight">
-            Book a demo
+          <a
+            href="/contactUs"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/contactUs"
+          >
+            {m["footer.getStarted.bookDemo"]()}
           </a>
         </li>
         <li>
-          <a href="/contactUs" class="text-lg leading-normal tracking-tight">
-            Contact us
+          <a
+            href="/contactUs"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/contactUs"
+          >
+            {m["footer.getStarted.contactUs"]()}
           </a>
         </li>
       </ul>
@@ -87,42 +104,67 @@ import { Image } from "astro:assets";
       <h3
         class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
       >
-        Who We Are
+        {m["footer.whoWeAre.title"]()}
       </h3>
       <ul class="flex flex-col text-center sm:text-left">
         <li>
-          <a href="/aboutUs" class="text-lg leading-normal tracking-tight">
-            About us
-          </a>
-        </li>
-        <li>
-          <a href="/blog" class="text-lg leading-normal tracking-tight">
-            Blog
-          </a>
-        </li>
-        <li>
-          <a href="#" class="text-lg leading-normal tracking-tight">
-            Case study
-          </a>
-        </li>
-        <li>
-          <a href="#" class="text-lg leading-normal tracking-tight"> FAQs </a>
-        </li>
-        <!-- <li>
           <a
-            href="#"
-            class="text-lg leading-normal tracking-tight">
-            Privacy Policy
+            href="/aboutUs"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/aboutUs"
+          >
+            {m["footer.whoWeAre.aboutUs"]()}
           </a>
         </li>
         <li>
           <a
-            href="#"
-            class="text-lg leading-normal tracking-tight">
-            Terms of Service
+            href="/resources"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/resources"
+          >
+            {m["footer.whoWeAre.blog"]()}
           </a>
-        </li> -->
+        </li>
+        <li>
+          <a
+            href="/resources"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/resources"
+          >
+            {m["footer.whoWeAre.caseStudy"]()}
+          </a>
+        </li>
+        <li>
+          <a
+            href="/resources"
+            class="text-lg leading-normal tracking-tight"
+            data-link="/resources"
+          >
+            {m["footer.whoWeAre.faqs"]()}
+          </a>
+        </li>
       </ul>
     </div>
   </nav>
 </footer>
+
+<script is:inline>
+  function updateFooterLinks() {
+    const pathSegments = window.location.pathname.split("/");
+    const currentLang = pathSegments[1] || "en";
+
+    document.querySelectorAll("a[data-link]").forEach((link) => {
+      const basePath = link.getAttribute("data-link");
+      // Only update links that aren't external or anchor links
+      if (
+        basePath &&
+        !basePath.startsWith("http") &&
+        !basePath.startsWith("#")
+      ) {
+        link.href = `/${currentLang}${basePath}`;
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", updateFooterLinks);
+</script>

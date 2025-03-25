@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronDown } from "./icons/ChevronDown";
 import type { Filters } from "./ResourcesTabs";
+import { m } from "../../../paraglide/messages.js";
 
 const interests = [
   "Art & Design",
@@ -151,19 +152,19 @@ const ResearchFilters = ({ onFilterChange, filters }: FilterProps) => {
   };
 
   const postTypes = [
-    { value: "blog", label: "Blog" },
-    { value: "case-study", label: "Case Study" },
-    { value: "trend-report", label: "Trend Report" },
+    { value: "blog", label: m["resources.postTypes.blog"]() },
+    { value: "case-study", label: m["resources.postTypes.caseStudy"]() },
+    { value: "trend-report", label: m["resources.postTypes.trendReport"]() },
   ];
 
   const locations = [
-    { value: "global", label: "Global" },
-    { value: "japan", label: "Japan" },
-    { value: "korea", label: "Korea" },
-    { value: "malaysia", label: "Malaysia" },
-    { value: "singapore", label: "Singapore" },
-    { value: "united-states", label: "United States" },
-    { value: "north-america", label: "North America" },
+    { value: "global", label: m["resources.locations.global"]() },
+    { value: "japan", label: m["resources.locations.japan"]() },
+    { value: "korea", label: m["resources.locations.korea"]() },
+    { value: "malaysia", label: m["resources.locations.malaysia"]() },
+    { value: "singapore", label: m["resources.locations.singapore"]() },
+    { value: "united-states", label: m["resources.locations.unitedStates"]() },
+    { value: "north-america", label: m["resources.locations.northAmerica"]() },
   ];
 
   const interestOptions = interests.map((interest) => ({
@@ -177,19 +178,19 @@ const ResearchFilters = ({ onFilterChange, filters }: FilterProps) => {
         value={localFilters.postType}
         onChange={(value) => handleChange("postType", value)}
         options={postTypes}
-        label="Post Type"
+        label={m["resources.filters.postType"]()}
       />
       <CustomSelect
         value={localFilters.location}
         onChange={(value) => handleChange("location", value)}
         options={locations}
-        label="Location"
+        label={m["resources.filters.location"]()}
       />
       <CustomSelect
         value={localFilters.interest}
         onChange={(value) => handleChange("interest", value)}
         options={interestOptions}
-        label="Interest"
+        label={m["resources.filters.interest"]()}
       />
     </div>
   );

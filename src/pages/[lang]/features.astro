@@ -1,0 +1,174 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import Button from "../../components/ui/Button.astro";
+import FeaturesTabs from "../../components/react/FeaturesTabs";
+import { Image } from "astro:assets";
+import "../_index.css";
+import Subscribe from "../../components/Subscribe.astro";
+import { m } from "../../paraglide/messages.js";
+
+const exploreTabs = [
+  {
+    id: 0,
+    title: m["features.explore.tabs.filter.title"](),
+    description: m["features.explore.tabs.filter.description"](),
+    icon: "/features/exploreFilter.svg",
+  },
+  {
+    id: 1,
+    title: m["features.explore.tabs.search.title"](),
+    description: m["features.explore.tabs.search.description"](),
+    icon: "/features/exploreSearch.svg",
+  },
+  {
+    id: 2,
+    title: m["features.explore.tabs.save.title"](),
+    description: m["features.explore.tabs.save.description"](),
+    icon: "/features/exploreSave.svg",
+  },
+];
+
+const analyseTabs = [
+  {
+    id: 0,
+    title: m["features.analyse.tabs.parameters.title"](),
+    description: m["features.analyse.tabs.parameters.description"](),
+    icon: "/features/analyseParameters.svg",
+  },
+  {
+    id: 1,
+    title: m["features.analyse.tabs.audience.title"](),
+    description: m["features.analyse.tabs.audience.description"](),
+    icon: "/features/analyseAudience.svg",
+  },
+  {
+    id: 2,
+    title: m["features.analyse.tabs.engagement.title"](),
+    description: m["features.analyse.tabs.engagement.description"](),
+    icon: "/features/analyseEngagement.svg",
+  },
+];
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".animate-appear");
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+<Layout title="Features - iON">
+  <Navbar />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12">
+      <div class="flex flex-row justify-center gap-8 items-center">
+        <Image
+          class="hidden lg:block"
+          src="/FeaturesImage.png"
+          alt="features"
+          width={432}
+          height={432}
+        />
+        <div class="flex flex-col gap-8 items-center lg:items-start">
+          <Image
+            src="/ionkolLogoNewShort.svg"
+            alt="features"
+            width={225}
+            height={60}
+          />
+          <span
+            class="text-[63px] lg:text-[146px] font-semibold lg:leading-[160px]"
+            >{m["features.title"]()}</span
+          >
+          <a href="https://app.ionkol.com/sign-up">
+            <Button text={m["features.startNow"]()} className="w-[188px]" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full pb-32 px-4 lg:px-12">
+      <div class="text-center">
+        <span class="text-[62px] font-semibold"
+          ><span class="text-[#EE7380]">{m["features.explore.title"]()} </span>
+          {m["features.explore.subtitle"]()}</span
+        >
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20"
+      >
+        <div class="flex flex-col gap-6 max-w-2xl">
+          <div class="flex flex-row gap-2">
+            <Image src="/ion.svg" alt="features" width={99} height={50} />
+            <span class="font-semibold text-5xl"
+              >{m["features.explore.title"]()}</span
+            >
+          </div>
+
+          <p class="text-xl">
+            {m["features.explore.description1"]()}
+          </p>
+          <p class="text-xl">
+            {m["features.explore.description2"]()}
+          </p>
+          <a href="https://app.ionkol.com/sign-up">
+            <Button text={m["features.startNow"]()} className="w-[188px]" />
+          </a>
+        </div>
+
+        <FeaturesTabs client:load tabs={exploreTabs} />
+      </div>
+    </section>
+
+    <section class="w-full pb-20 px-4 lg:px-12">
+      <div class="text-center">
+        <span class="text-[62px] font-semibold"
+          ><span class="text-[#EE7380]">{m["features.analyse.title"]()} </span>
+          {m["features.analyse.subtitle"]()}</span
+        >
+      </div>
+
+      <div
+        class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20"
+      >
+        <div class="flex flex-col gap-6 max-w-2xl">
+          <div class="flex flex-row gap-2">
+            <Image src="/ion.svg" alt="features" width={99} height={50} />
+            <span class="font-semibold text-5xl"
+              >{m["features.analyse.title"]()}</span
+            >
+          </div>
+
+          <p class="text-xl">
+            {m["features.analyse.description"]()}
+          </p>
+
+          <a href="https://app.ionkol.com/sign-up">
+            <Button text={m["features.startNow"]()} className="w-[188px]" />
+          </a>
+        </div>
+
+        <FeaturesTabs client:load tabs={analyseTabs} />
+      </div>
+    </section>
+
+    <Subscribe />
+  </main>
+</Layout>
+<Footer />

@@ -6,6 +6,7 @@ import { readItems } from "@directus/sdk";
 import ResearchFilters from "./ResearchFilters";
 import Pagination from "./Pagination";
 import Tab from "./Tab";
+import { m } from "../../../paraglide/messages.js";
 
 export type Filters = {
   postType: string;
@@ -23,23 +24,23 @@ const ResourcesTabs = () => {
   }[] = [
     {
       id: 0,
-      title: "All posts",
+      title: m["resources.tabs.allPosts"](),
       postType: "all",
     },
     {
       id: 1,
       postType: "101",
-      title: "IONKOL 101",
+      title: m["resources.tabs.ionkol101"](),
     },
     {
       id: 2,
       postType: "research",
-      title: "Research",
+      title: m["resources.tabs.research"](),
     },
     {
       id: 3,
       postType: "updates",
-      title: "ION Updates",
+      title: m["resources.tabs.ionUpdates"](),
     },
   ];
 

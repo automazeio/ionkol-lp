@@ -1,5 +1,6 @@
 import Image from "astro/components/Image.astro";
 import React, { useState } from "react";
+import { m } from "../../paraglide/messages.js";
 
 const ManualWorkTabContent = () => {
   return (
@@ -8,11 +9,17 @@ const ManualWorkTabContent = () => {
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[24%] lg:right-[22%] w-[2px] bg-[#EE7380]"></div>
 
-        <div className="font-semibold pb-4">Manual Work</div>
-        <div className="font-semibold pb-4">Time Per Month</div>
         <div className="font-semibold pb-4">
-          Monthly Cost{" "}
-          <span className="text-xl font-normal">(25 USD / hour)</span>
+          {m["pricing.evaluate.tabs.manualWork"]()}
+        </div>
+        <div className="font-semibold pb-4">
+          {m["pricing.evaluate.manualWork.timePerMonth"]()}
+        </div>
+        <div className="font-semibold pb-4">
+          {m["pricing.evaluate.manualWork.monthlyCost"]()}{" "}
+          <span className="text-xl font-normal">
+            {m["pricing.evaluate.manualWork.hourlyRate"]()}
+          </span>
         </div>
         <div className="flex justify-center pb-4">
           <img
@@ -24,29 +31,41 @@ const ManualWorkTabContent = () => {
         </div>
 
         {/* Creator Search */}
-        <div>Creator Search</div>
+        <div>{m["pricing.evaluate.manualWork.creatorSearch"]()}</div>
         <div>40</div>
         <div>1,000</div>
-        <div className="text-[#EE7380] font-bold">Minutes</div>
+        <div className="text-[#EE7380] font-bold">
+          {m["pricing.evaluate.manualWork.minutes"]()}
+        </div>
 
         {/* Data Compilation */}
-        <div>Data Compilation</div>
+        <div>{m["pricing.evaluate.manualWork.dataCompilation"]()}</div>
         <div>8</div>
         <div>500</div>
-        <div className="text-[#EE7380] font-bold">Minutes</div>
+        <div className="text-[#EE7380] font-bold">
+          {m["pricing.evaluate.manualWork.minutes"]()}
+        </div>
 
         {/* Analysis */}
-        <div>Analysis</div>
+        <div>{m["pricing.evaluate.manualWork.analysis"]()}</div>
         <div>20</div>
         <div>200</div>
-        <div className="text-[#EE7380] font-bold">Minutes</div>
+        <div className="text-[#EE7380] font-bold">
+          {m["pricing.evaluate.manualWork.minutes"]()}
+        </div>
 
         {/* Total row */}
-        <div className="font-semibold pt-4">Total</div>
+        <div className="font-semibold pt-4">
+          {m["pricing.evaluate.manualWork.total"]()}
+        </div>
         <div className="font-semibold pt-4">68</div>
-        <div className="font-semibold pt-4">$1,700 / month</div>
+        <div className="font-semibold pt-4">
+          {m["pricing.evaluate.manualWork.monthlyTotal"]()}
+        </div>
         <div className="text-[#EE7380] pt-4">
-          <span className="font-semibold">$80 ~</span>/ month
+          <span className="font-semibold">
+            {m["pricing.evaluate.manualWork.ionTotal"]()}
+          </span>
         </div>
       </div>
     </div>
@@ -60,8 +79,12 @@ const AlternativesTabContent = () => {
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[29%] md:right-[32%] lg:right-[48.5%] w-[2px] bg-[#EE7380]"></div>
 
-        <div className="font-semibold pb-4">Alternatives</div>
-        <div className="font-semibold pb-4">Competitors</div>
+        <div className="font-semibold pb-4">
+          {m["pricing.evaluate.tabs.alternatives"]()}
+        </div>
+        <div className="font-semibold pb-4">
+          {m["pricing.evaluate.alternatives.competitors"]()}
+        </div>
         <div className="flex justify-center pb-4 lg:col-span-2">
           <img
             src="/ionkolLogoNewShort.svg"
@@ -71,22 +94,22 @@ const AlternativesTabContent = () => {
           />
         </div>
 
-        <div>Countries</div>
-        <div>Local joint ventures</div>
+        <div>{m["pricing.evaluate.alternatives.countries"]()}</div>
+        <div>{m["pricing.evaluate.alternatives.localJointVentures"]()}</div>
         <div className="text-[#EE7380] font-bold lg:col-span-2">
-          Presence in 4 countries across Asia
+          {m["pricing.evaluate.alternatives.presence"]()}
         </div>
 
-        <div>Parameters</div>
-        <div>12~ basic parameters</div>
+        <div>{m["pricing.evaluate.alternatives.parameters"]()}</div>
+        <div>{m["pricing.evaluate.alternatives.basicParameters"]()}</div>
         <div className="text-[#EE7380] font-bold lg:col-span-2">
-          40+ advanced parameters
+          {m["pricing.evaluate.alternatives.advancedParameters"]()}
         </div>
 
-        <div>Cost</div>
-        <div>$200~ / month</div>
+        <div>{m["pricing.evaluate.alternatives.cost"]()}</div>
+        <div>{m["pricing.evaluate.alternatives.competitorCost"]()}</div>
         <div className="text-[#EE7380] font-bold lg:col-span-2">
-          $80 / month
+          {m["pricing.evaluate.alternatives.ionCost"]()}
         </div>
       </div>
     </div>
@@ -103,13 +126,13 @@ const EvaluatePriceTabs = () => {
           onClick={() => setCurrentTab(0)}
           className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
-          Manual Work
+          {m["pricing.evaluate.tabs.manualWork"]()}
         </button>
         <button
           onClick={() => setCurrentTab(1)}
           className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
-          Alternatives
+          {m["pricing.evaluate.tabs.alternatives"]()}
         </button>
       </div>
       {currentTab === 0 ? <ManualWorkTabContent /> : <AlternativesTabContent />}

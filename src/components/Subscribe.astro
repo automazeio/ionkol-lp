@@ -1,30 +1,33 @@
 ---
 import Button from "./ui/Button.astro";
+import { m } from "../paraglide/messages.js";
 ---
 
 <section class="h-[468px] py-20 flex justify-center items-center">
-    <div
-    class="animate-appear w-full flex justify-center bg-[#FFE2E5] transform opacity-0 translate-y-10 p-32 relative">
+  <div
+    class="animate-appear w-full flex justify-center bg-[#FFE2E5] transform opacity-0 translate-y-10 p-32 relative"
+  >
     <div class="max-w-[654px]">
-        <h1
-        class="text-center text-[#EE7380] text-[62px] font-semibold mb-4">
-        Subscribe
-        </h1>
-        <p
-        class="text-center text-[#0d0c22] text-[20px] mb-9">
-        Join our growing community and get latest case studies, trends, updates, valuable resources, and more to grow your business.
-        </p>
-        <form class="flex gap-3 relative" action="/subscribe" method="POST">
+      <h1 class="text-center text-[#EE7380] text-[62px] font-semibold mb-4">
+        {m["subscribe.title"]()}
+      </h1>
+      <p class="text-center text-[#0d0c22] text-[20px] mb-9">
+        {m["subscribe.description"]()}
+      </p>
+      <form class="flex gap-3 relative" action="/subscribe" method="POST">
         <input
-            type="email"
-            name="email"
-            placeholder="Email address"
-            aria-label="Email address"
-            required
-            class="flex-1 h-12 px-4 py-2 bg-white rounded-full border border-[#EE7380] text-base font-medium leading-normal tracking-wide"
+          type="email"
+          name="email"
+          placeholder={m["subscribe.emailPlaceholder"]()}
+          aria-label={m["subscribe.emailPlaceholder"]()}
+          required
+          class="flex-1 h-12 px-4 py-2 bg-white rounded-full border border-[#EE7380] text-base font-medium leading-normal tracking-wide"
         />
-        <Button text="Subscribe"  className='absolute top-1 right-1'/>
-        </form>
+        <Button
+          text={m["subscribe.button"]()}
+          className="absolute top-1 right-1"
+        />
+      </form>
     </div>
-    </div>
+  </div>
 </section>

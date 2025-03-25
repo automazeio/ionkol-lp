@@ -1,6 +1,5 @@
-// @ts-check
 import { defineConfig } from "astro/config";
-
+import { paraglideVitePlugin } from "@inlang/paraglide-js";
 import tailwind from "@astrojs/tailwind";
 
 import node from "@astrojs/node";
@@ -13,6 +12,10 @@ export default defineConfig({
   image: {
     remotePatterns: [{ protocol: "https" }],
   },
+  i18n: {
+    locales: ["en", "ms", "ja", "ko", "zh"],
+    defaultLocale: "en",
+  },
   integrations: [
     tailwind({
       // applyBaseStyles: false,
@@ -20,9 +23,15 @@ export default defineConfig({
     react(),
   ],
 
-  output: "static",
-
-  adapter: node({
-    mode: "standalone",
-  }),
+  vite: {
+    plugins: [
+      paraglideVitePlugin({
+        project: "./project.inlang",
+        outdir: "./src/paraglide",
+        strategy: ["url", "cookie", "preferredLanguage", "basicLocale"],
+      }),
+    ],
+  },
+  output: "server",
+  adapter: node({ mode: "standalone" }),
 });

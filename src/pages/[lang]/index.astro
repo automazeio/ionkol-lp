@@ -1,53 +1,49 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import directus from "../../lib/directus";
+import Layout from "../../layouts/Layout.astro";
+import directus from "../../../lib/directus";
 import { readItems } from "@directus/sdk";
-import Benefit from "../components/Benefit.astro";
-import Navbar from "../components/Navbar.astro";
-import Switcher from "../components/Switcher.astro";
-import FeaturedSolutionsCard from "../components/FeaturedSolutionsCard.astro";
+import Benefit from "../../components/Benefit.astro";
+import Navbar from "../../components/Navbar.astro";
+import Switcher from "../../components/Switcher.astro";
+import FeaturedSolutionsCard from "../../components/FeaturedSolutionsCard.astro";
 import { Image } from "astro:assets";
-import { htmlStringOne, htmlStringTwo } from "../constants/htmlStrings";
-import "./_index.css";
-import PriceCard from "../components/PriceCard.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
+import { htmlStringOne, htmlStringTwo } from "../../constants/htmlStrings";
+import "../_index.css";
+import PriceCard from "../../components/PriceCard.astro";
+import Footer from "../../components/Footer.astro";
+import Button from "../../components/ui/Button.astro";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import Swiper from "../components/slider/Swiper.astro";
-import PriceCardsData from "../components/react/PriceCards";
-import Subscribe from "../components/Subscribe.astro";
+import Swiper from "../../components/slider/Swiper.astro";
+import PriceCardsData from "../../components/react/PriceCards";
+import Subscribe from "../../components/Subscribe.astro";
+import { m } from "../../paraglide/messages.js";
 
 const features = [
   {
-    title: "Time-saving",
-    description:
-      "Streamline your search and verification process to find your ideal influencer with ION's efficient tools.",
+    title: m["index.features.timeSaving.title"](),
+    description: m["index.features.timeSaving.description"](),
     icon: "/clock.svg",
   },
   {
-    title: "Competitive Pricing",
-    description:
-      "Access powerful influencer marketing tools at affordable prices with no hidden costs.",
+    title: m["index.features.competitivePricing.title"](),
+    description: m["index.features.competitivePricing.description"](),
     icon: "/coins-hand.svg",
   },
   {
-    title: "Smart Insights",
-    description:
-      "Proprietary AI-powered analytics to gain influencer-specific insights for confident, data-driven decisions.",
+    title: m["index.features.smartInsights.title"](),
+    description: m["index.features.smartInsights.description"](),
     icon: "/lightbulb.svg",
   },
   {
-    title: "Actionable Data",
-    description:
-      "Turn complex data into clear information that empowers smarter decisions to accelerate business growth.",
+    title: m["index.features.actionableData.title"](),
+    description: m["index.features.actionableData.description"](),
     icon: "/bar-chart.svg",
   },
   {
-    title: "Global Reach",
-    description:
-      "Expand your business internationally with localization strategies to connect with foreign audiences.",
+    title: m["index.features.globalReach.title"](),
+    description: m["index.features.globalReach.description"](),
     icon: "/globe.svg",
   },
 ];
@@ -55,16 +51,15 @@ const features = [
 const stats = [
   {
     number: "15",
-    title: "Advanced Filters",
-    description: " for your 'ideal' influencer with our filters in minutes",
-    highlight: "Explore",
+    title: m["index.stats.filters.title"](),
+    description: m["index.stats.filters.description"](),
+    highlight: m["index.stats.filters.highlight"](),
   },
   {
     number: "40",
-    title: "Analytical Parameters",
-    description:
-      " your 'ideal' influencer with our parameters and make well-informed decisions",
-    highlight: "Analyse",
+    title: m["index.stats.parameters.title"](),
+    description: m["index.stats.parameters.description"](),
+    highlight: m["index.stats.parameters.highlight"](),
     suffix: "+",
   },
 ];
@@ -215,7 +210,7 @@ const stats = [
       <h1
         class="text-center text-[#EE7380] text-[74px] font-extrabold tracking-wide mb-16"
       >
-        Key Features
+        {m["index.keyFeatures"]()}
       </h1>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 animate-appear">
@@ -230,17 +225,18 @@ const stats = [
           <div class="flex flex-col gap-6">
             <div class="text-5xl font-semibold flex flex-row gap-2">
               <Image src="/ion.svg" alt="key" width={95} height={50} /><span
-                >Explore</span
+                >{m["index.explore.title"]()}</span
               >
             </div>
             <p class="text-xl">
-              Discover and connect with creators who amplify your brand's
-              message. Save time with advanced filters to find influencers who
-              align with your goals and deliver real results.
+              {m["index.explore.description"]()}
             </p>
-            <a href="/features">
-              <Button text="Discover more" className="w-[200px]" /></a
-            >
+            <a href="/features" data-link="/features">
+              <Button
+                text={m["index.explore.button"]()}
+                className="w-[200px]"
+              />
+            </a>
           </div>
         </div>
 
@@ -255,17 +251,18 @@ const stats = [
           <div class="flex flex-col gap-6">
             <div class="text-5xl font-semibold flex flex-row gap-2">
               <Image src="/ion.svg" alt="key" width={95} height={50} /><span
-                >Analyse</span
+                >{m["index.analyse.title"]()}</span
               >
             </div>
             <p class="text-xl">
-              Evaluate the success of your influencer partnerships with
-              actionable insights into performance metrics and audience
-              engagement.
+              {m["index.analyse.description"]()}
             </p>
-            <a href="/features"
-              ><Button text="Discover more" className="w-[200px]" /></a
-            >
+            <a href="/features" data-link="/features">
+              <Button
+                text={m["index.analyse.button"]()}
+                className="w-[200px]"
+              />
+            </a>
           </div>
         </div>
       </div>
@@ -281,7 +278,7 @@ const stats = [
       <h2
         class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16"
       >
-        Achieve all your goals in one place
+        {m["index.goals.title"]()}
       </h2>
 
       <div
@@ -328,7 +325,7 @@ const stats = [
     <section class="py-20 px-4 lg:px-12">
       <div class="max-w-4xl mx-auto text-center">
         <p class="text-[62px] gap-8 font-semibold mb-6 relative">
-          <span>Harness the power of</span>
+          <span>{m["index.power.title"]()}</span>
           <span class="relative inline-block w-[127px] h-[64px]">
             <Image
               class="absolute top-4 left-8"
@@ -342,20 +339,6 @@ const stats = [
         <p
           class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative animate-appear"
         >
-          <span>
-            <Image
-              class="absolute top-1.5 left-0"
-              src="/ion.svg"
-              alt="key"
-              width={47}
-              height={24}
-            />
-          </span>
-          <span class="pl-[40px]"
-            >empowers businesses to grow with intuitive tools and actionable
-            insights. By streamlining decision-making and enabling effective
-            influencer partnerships,</span
-          >
           <span class="relative inline-block w-[48px] h-[24px]">
             <Image
               class="absolute top-1.5 left-1"
@@ -365,10 +348,17 @@ const stats = [
               height={24}
             />
           </span>
-          <span class="pl-[8px]"
-            >transforms raw data into impactful marketing insights, helping
-            businesses of all sizes drive meaningful results.</span
-          >
+          <span class="pl-[8px]">{m["index.power.description1"]()}</span>
+          <span class="relative inline-block w-[48px] h-[24px]">
+            <Image
+              class="absolute top-1.5 left-1"
+              src="/ion.svg"
+              alt="key"
+              width={47}
+              height={24}
+            />
+          </span>
+          <span class="pl-[8px]">{m["index.power.description2"]()}</span>
         </p>
 
         <!-- Stats -->
@@ -393,7 +383,7 @@ const stats = [
                   {stat.title}
                 </span>
                 <p class="text-[20px] text-center lg:text-start">
-                  <span class="text-[#EE7380]">{stat.highlight}</span>
+                  <span class="text-[#EE7380]">{stat.highlight + " "} </span>
                   {stat.description}
                 </p>
               </div>
@@ -407,7 +397,7 @@ const stats = [
     <section class="py-20 px-4 lg:px-12">
       <div class="flex flex-col items-center space-y-14">
         <h2 class="text-center text-5xl font-extrabold">
-          <span class="text-[#EE7380]">Subscription Plan</span>
+          <span class="text-[#EE7380]">{m["index.pricing.title"]()}</span>
         </h2>
 
         <div class="flex flex-col items-center space-y-14">
@@ -419,8 +409,8 @@ const stats = [
           >
             <PriceCardsData client:load />
           </div>
-          <a href="/pricing">
-            <Button text="Discover more" />
+          <a href="/pricing" data-link="/pricing">
+            <Button text={m["index.pricing.button"]()} />
           </a>
         </div>
       </div>
@@ -431,3 +421,24 @@ const stats = [
   </main>
 </Layout>
 <Footer />
+
+<script is:inline>
+  function updateIndexLinks() {
+    const pathSegments = window.location.pathname.split("/");
+    const currentLang = pathSegments[1] || "en";
+
+    document.querySelectorAll("a[data-link]").forEach((link) => {
+      const basePath = link.getAttribute("data-link");
+      // Only update links that aren't external or anchor links
+      if (
+        basePath &&
+        !basePath.startsWith("http") &&
+        !basePath.startsWith("#")
+      ) {
+        link.href = `/${currentLang}${basePath}`;
+      }
+    });
+  }
+
+  document.addEventListener("DOMContentLoaded", updateIndexLinks);
+</script>

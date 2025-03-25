@@ -5,6 +5,7 @@ import { readItems } from "@directus/sdk";
 import Section from "./Section";
 import ResearchFilters from "./ResearchFilters";
 import Pagination from "./Pagination";
+import { m } from "../../../paraglide/messages.js";
 
 type Props = {
   postType: "all" | "101" | "research" | "updates";
@@ -55,7 +56,7 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
           />
           <Section
             posts={data.filter((article) => article.category === "research")}
-            title="Research"
+            title={m["resources.tabs.research"]()}
             onClick={() => {
               setCurrentTab(2);
               setCurrentPage(1);
@@ -63,7 +64,7 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
           />
           <Section
             posts={data.filter((article) => article.category === "updates")}
-            title="ION Updates"
+            title={m["resources.tabs.ionUpdates"]()}
             onClick={() => {
               setCurrentTab(3);
               setCurrentPage(1);
@@ -72,7 +73,8 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
         </div>
       );
 
-    if (postType === "101") return <Section title="IONKOL 101" posts={data} />;
+    if (postType === "101")
+      return <Section title={m["resources.tabs.ionkol101"]()} posts={data} />;
 
     if (postType === "research")
       return (
@@ -81,12 +83,12 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
             onFilterChange={handleFilterChange}
             filters={filters}
           />
-          <Section title="Research" posts={data} />
+          <Section title={m["resources.tabs.research"]()} posts={data} />
         </div>
       );
 
     if (postType === "updates")
-      return <Section title="ION Updates" posts={data} />;
+      return <Section title={m["resources.tabs.ionUpdates"]()} posts={data} />;
   };
 
   useEffect(() => {

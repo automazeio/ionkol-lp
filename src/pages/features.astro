@@ -1,180 +1,38 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import Button from "../components/ui/Button.astro";
-import FeaturesTabs from "../components/react/FeaturesTabs";
-import { Image } from "astro:assets";
-import "./_index.css";
-import Subscribe from "../components/Subscribe.astro";
-
-const exploreTabs = [
-  {
-    id: 0,
-    title: "Filter",
-    description:
-      "Refine your search by applying advanced filters tailored to your needs.",
-    icon: "/features/exploreFilter.svg",
-  },
-  {
-    id: 1,
-    title: "Search",
-    description: "Use keywords to pinpoint influencers matching your goals.",
-    icon: "/features/exploreSearch.svg",
-  },
-  {
-    id: 2,
-    title: "Save",
-    description:
-      "Organize your selected creators into custom lists for easy access.",
-    icon: "/features/exploreSave.svg",
-  },
-];
-
-const analyseTabs = [
-  {
-    id: 0,
-    title: "Parameters",
-    description:
-      "Transform decisions with insights, validate audiences, measure performance, ensure brand-aligned partnerships with 40+ parameters.",
-    icon: "/features/analyseParameters.svg",
-  },
-  {
-    id: 1,
-    title: "Audience",
-    description:
-      "Discover the essence of your audience with advanced analytics: explore follower demographics from location to age and more, to craft bespoke campaigns.",
-    icon: "/features/analyseAudience.svg",
-  },
-  {
-    id: 2,
-    title: "Save",
-    description:
-      "Elevate your influencer evaluation with engagement insights: measure interaction rates, assess audience quality, and ensure every creator delivers genuine, impactful engagement.",
-    icon: "/features/analyseEngagement.svg",
-  },
-];
+import { m } from "../paraglide/messages.js";
+import Explore from "../components/features/Explore";
+import Analyse from "../components/features/Analyse";
 ---
 
-<script is:inline>
-  document.addEventListener("DOMContentLoaded", () => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-          }
-        });
-      },
-      {
-        threshold: 0.1,
-      }
-    );
-
-    const cards = document.querySelectorAll(".animate-appear");
-    cards.forEach((card) => observer.observe(card));
-  });
-</script>
-
-<Layout title="Features - iON">
-  <Navbar />
-  <main class="relative">
-    <section class="mt-40 pb-32 px-4 lg:px-12">
-      <div class="flex flex-row justify-center gap-8 items-center">
-        <Image
-          class="hidden lg:block"
-          src="/FeaturesImage.png"
-          alt="features"
-          width={432}
-          height={432}
-        />
-        <div class="flex flex-col gap-8 items-center lg:items-start">
-          <Image
-            src="/ionkolLogoNewShort.svg"
-            alt="features"
-            width={225}
-            height={60}
-          />
-          <span
-            class="text-[63px] lg:text-[146px] font-semibold lg:leading-[160px]"
-            >Features</span
+<Layout title={m["features.title"]()}>
+  <main>
+    <section class="bg-white">
+      <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+        <div class="text-center">
+          <h1
+            class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl"
           >
-          <a href="https://app.ionkol.com/sign-up">
-            <Button text="Start Now" className="w-[188px]" />
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="w-full pb-32 px-4 lg:px-12">
-      <div class="text-center">
-        <span class="text-[62px] font-semibold"
-          ><span class="text-[#EE7380]">Explore </span>how data can drive your
-          success</span
-        >
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20"
-      >
-        <div class="flex flex-col gap-6 max-w-2xl">
-          <div class="flex flex-row gap-2">
-            <Image src="/ion.svg" alt="features" width={99} height={50} />
-            <span class="font-semibold text-5xl">Explore</span>
+            {m["features.title"]()}
+          </h1>
+          <p class="max-w-xl mt-5 mx-auto text-xl text-gray-500">
+            {m["features.explore.subtitle"]()}
+          </p>
+          <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+            <div class="rounded-md shadow">
+              <a
+                href="#"
+                class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+              >
+                {m["features.startNow"]()}
+              </a>
+            </div>
           </div>
-
-          <p class="text-xl">
-            Transform your marketing with effortless access to thousands of
-            influencers across the globe. Discover, connect, and elevate your
-            brand with our unparalleled database.
-          </p>
-          <p class="text-xl">
-            Discover influencers who inspire and engage. Apply 15 customizable
-            filters to find the 'ideal' fit for your brand in minutes.
-          </p>
-          <a href="https://app.ionkol.com/sign-up">
-            <Button text="Start Now" className="w-[188px]" />
-          </a>
         </div>
-
-        <FeaturesTabs client:load tabs={exploreTabs} />
       </div>
     </section>
 
-    <section class="w-full pb-20 px-4 lg:px-12">
-      <div class="text-center">
-        <span class="text-[62px] font-semibold"
-          ><span class="text-[#EE7380]">Analyse </span>how data can drive your
-          success</span
-        >
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center w-full gap-20 mt-20"
-      >
-        <div class="flex flex-col gap-6 max-w-2xl">
-          <div class="flex flex-row gap-2">
-            <Image src="/ion.svg" alt="features" width={99} height={50} />
-            <span class="font-semibold text-5xl">Analyse</span>
-          </div>
-
-          <p class="text-xl">
-            Elevate your influencer marketing with cutting-edge reports: gain
-            unparalleled insights into audience demographics, performance
-            metrics, and engagement trends—empowering your brand to take bold,
-            data-driven actions.
-          </p>
-
-          <a href="https://app.ionkol.com/sign-up">
-            <Button text="Start Now" className="w-[188px]" />
-          </a>
-        </div>
-
-        <FeaturesTabs client:load tabs={analyseTabs} />
-      </div>
-    </section>
-
-    <Subscribe />
+    <Explore client:load />
+    <Analyse client:load />
   </main>
 </Layout>
-<Footer />

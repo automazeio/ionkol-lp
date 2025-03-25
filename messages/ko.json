@@ -1,0 +1,474 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "example_message": "etetet {username}",
+  "aboutUs": {
+    "title": "iON, 이야기",
+    "subtitle": "마치 iON처럼",
+    "tagline": "창조의 가장 작은 구성 요소",
+    "description": "우리가 아는 모든 것을 형성하듯이, 우리는 데이터를 실행 가능한 통찰력으로 변환합니다. 가장 단순한 요소들을 성장을 위한 도구로 전환함으로써, 우리는 기업들이 특별한 연결을 구축하고 의미 있는 변화를 달성할 수 있도록 지원합니다.",
+    "mission": {
+      "title": "우리의 미션",
+      "description": "데이터 기반 통찰력으로 의사결정을 단순화하여 더 스마트하고 영향력 있는 마케팅을 가능하게 합니다."
+    },
+    "vision": {
+      "title": "우리의 비전",
+      "description": "실행 가능한 데이터 기반 마케팅 통찰력을 통해 기업들이 그들의 전체 잠재력을 발휘할 수 있도록 지원합니다."
+    }
+  },
+  "index": {
+    "keyFeatures": "주요 기능",
+    "explore": {
+      "title": "탐색",
+      "description": "브랜드 메시지를 증폭시키는 크리에이터들을 발견하고 연결하세요. 고급 필터를 사용하여 목표에 부합하고 실제 결과를 제공하는 인플루언서를 빠르게 찾으세요.",
+      "button": "더 알아보기"
+    },
+    "analyse": {
+      "title": "분석",
+      "description": "실행 가능한 성과 지표와 청중 참여에 대한 통찰력을 통해 인플루언서 파트너십의 성공을 평가하세요.",
+      "button": "더 알아보기"
+    },
+    "goals": {
+      "title": "한 곳에서 모든 목표 달성"
+    },
+    "features": {
+      "timeSaving": {
+        "title": "시간 절약",
+        "description": "iON의 효율적인 도구를 사용하여 이상적인 인플루언서를 찾는 검색 및 검증 프로세스를 간소화하세요."
+      },
+      "competitivePricing": {
+        "title": "경쟁력 있는 가격",
+        "description": "숨겨진 비용 없이 합리적인 가격으로 강력한 인플루언서 마케팅 도구에 접근하세요."
+      },
+      "smartInsights": {
+        "title": "스마트 인사이트",
+        "description": "자체 AI 기반 분석을 통해 인플루언서별 통찰력을 얻어 자신감 있는 데이터 기반 의사결정을 하세요."
+      },
+      "actionableData": {
+        "title": "실행 가능한 데이터",
+        "description": "복잡한 데이터를 명확한 정보로 전환하여 비즈니스 성장을 가속화하는 더 스마트한 의사결정을 지원합니다."
+      },
+      "globalReach": {
+        "title": "글로벌 도달",
+        "description": "현지화 전략을 통해 해외 청중과 연결하여 비즈니스를 국제적으로 확장하세요."
+      }
+    },
+    "stats": {
+      "filters": {
+        "title": "고급 필터",
+        "description": "몇 분 안에 우리의 필터로 '이상적인' 인플루언서를 찾으세요",
+        "highlight": "탐색"
+      },
+      "parameters": {
+        "title": "분석 매개변수",
+        "description": "우리의 매개변수로 '이상적인' 인플루언서를 찾고 정보에 기반한 의사결정을 하세요",
+        "highlight": "분석"
+      }
+    },
+    "power": {
+      "title": "의 힘을 활용하세요",
+      "description1": "직관적인 도구와 실행 가능한 통찰력으로 비즈니스 성장을 지원합니다. 의사결정을 간소화하고 효과적인 인플루언서 파트너십을 가능하게 하여,",
+      "description2": "원시 데이터를 영향력 있는 마케팅 통찰력으로 변환하여 모든 규모의 비즈니스가 의미 있는 결과를 달성하도록 도와줍니다."
+    },
+    "pricing": {
+      "title": "구독 플랜",
+      "button": "더 알아보기"
+    }
+  },
+  "subscribe": {
+    "title": "구독하기",
+    "description": "우리의 성장하는 커뮤니티에 참여하여 최신 사례 연구, 트렌드, 업데이트, 가치 있는 리소스 등을 받아 비즈니스를 성장시키세요.",
+    "emailPlaceholder": "이메일 주소",
+    "button": "구독하기"
+  },
+  "footer": {
+    "tagline": "데이터 기반 성공",
+    "locations": {
+      "title": "위치",
+      "japan": "일본",
+      "korea": "한국",
+      "malaysia": "말레이시아",
+      "singapore": "싱가포르"
+    },
+    "services": {
+      "title": "서비스",
+      "explore": "iON 탐색",
+      "analyze": "iON 분석"
+    },
+    "getStarted": {
+      "title": "시작하기",
+      "bookDemo": "데모 예약",
+      "contactUs": "문의하기"
+    },
+    "whoWeAre": {
+      "title": "회사 소개",
+      "aboutUs": "회사 소개",
+      "blog": "블로그",
+      "caseStudy": "사례 연구",
+      "faqs": "자주 묻는 질문"
+    },
+    "legal": {
+      "privacyPolicy": "개인정보 처리방침",
+      "termsOfService": "이용약관"
+    }
+  },
+  "navbar": {
+    "features": "기능",
+    "pricing": "가격",
+    "resourceHub": "리소스 허브",
+    "signUp": "회원가입",
+    "login": "로그인"
+  },
+  "features": {
+    "title": "기능",
+    "startNow": "지금 시작하기",
+    "explore": {
+      "title": "탐색",
+      "subtitle": "데이터가 성공을 이끄는 방법",
+      "description1": "전 세계 수천 명의 인플루언서에 쉽게 접근하여 마케팅을 혁신하세요. 우리의 독보적인 데이터베이스로 브랜드를 발견하고, 연결하고, 향상시키세요.",
+      "description2": "영감을 주고 참여를 이끄는 인플루언서를 발견하세요. 15가지 맞춤형 필터를 적용하여 몇 분 안에 브랜드에 '이상적인' 인플루언서를 찾으세요.",
+      "tabs": {
+        "filter": {
+          "title": "필터",
+          "description": "필요에 맞는 고급 필터를 적용하여 검색을 세분화하세요."
+        },
+        "search": {
+          "title": "검색",
+          "description": "키워드를 사용하여 목표에 맞는 인플루언서를 정확히 찾으세요."
+        },
+        "save": {
+          "title": "저장",
+          "description": "선택한 크리에이터를 사용자 정의 목록으로 구성하여 쉽게 접근하세요."
+        }
+      }
+    },
+    "analyse": {
+      "title": "분석",
+      "subtitle": "데이터가 성공을 이끄는 방법",
+      "description": "최첨단 보고서로 인플루언서 마케팅을 향상시키세요: 청중 인구통계, 성과 지표, 참여 트렌드에 대한 독보적인 통찰력을 얻어 브랜드가 대담한 데이터 기반 조치를 취할 수 있도록 하세요.",
+      "tabs": {
+        "parameters": {
+          "title": "매개변수",
+          "description": "40개 이상의 매개변수로 통찰력을 통해 의사결정을 혁신하고, 청중을 검증하며, 성과를 측정하고, 브랜드 정렬 파트너십을 보장하세요."
+        },
+        "audience": {
+          "title": "청중",
+          "description": "고급 분석으로 청중의 본질을 발견하세요: 위치부터 나이까지 팔로워 인구통계를 탐색하여 맞춤형 캠페인을 제작하세요."
+        },
+        "engagement": {
+          "title": "저장",
+          "description": "참여 통찰력으로 인플루언서 평가를 향상시키세요: 상호작용률을 측정하고, 청중 품질을 평가하며, 모든 크리에이터가 진정성 있고 영향력 있는 참여를 제공하는지 확인하세요."
+        }
+      }
+    }
+  },
+  "pricing": {
+    "title": {
+      "part1": "어떤",
+      "part2": "플랜이 적합한지 확인하세요"
+    },
+    "subtitle": {
+      "part1": "유연한 플랜으로 인플루언서 인사이트를 활용하세요.",
+      "part2": "캠페인을 분석하고, 추적하고, 최적화하기 위한 완벽한 옵션을 선택하세요."
+    },
+    "tryReport": "무료 보고서 1회 체험",
+    "subscription": {
+      "title": "구독 플랜"
+    },
+    "discoverMore": "더 알아보기",
+    "evaluate": {
+      "title": {
+        "part1": "다른 옵션과",
+        "part2": "비교해보세요"
+      },
+      "tabs": {
+        "manualWork": "수동 작업",
+        "alternatives": "대안"
+      },
+      "manualWork": {
+        "timePerMonth": "월간 소요 시간",
+        "monthlyCost": "월간 비용",
+        "hourlyRate": "(시간당 25 USD)",
+        "creatorSearch": "크리에이터 검색",
+        "dataCompilation": "데이터 컴파일",
+        "analysis": "분석",
+        "total": "총계",
+        "minutes": "분",
+        "monthlyTotal": "월 $1,700",
+        "ionTotal": "월 $80 ~"
+      },
+      "alternatives": {
+        "competitors": "경쟁사",
+        "countries": "국가",
+        "localJointVentures": "현지 합작 투자",
+        "presence": "아시아 4개국 진출",
+        "parameters": "매개변수",
+        "basicParameters": "기본 매개변수 12개~",
+        "advancedParameters": "고급 매개변수 40개+",
+        "cost": "비용",
+        "competitorCost": "월 $200~",
+        "ionCost": "월 $80"
+      }
+    }
+  },
+  "resources": {
+    "featured": "추천",
+    "featuredPost": {
+      "title": "추천 게시물 제목",
+      "subtitle": "추천 게시물 부제목 ABC123",
+      "readMore": "더 보기 +"
+    },
+    "faq": {
+      "title": "자주 묻는 질문",
+      "whatIsIonkol": {
+        "title": "IONKOL이란 무엇인가요?",
+        "preview": "IONKOL은 데이터 분석 스타트업으로, 기업이 발견하고...",
+        "content": "IONKOL은 데이터 분석 스타트업으로, 데이터 기반의 인플루언서 마케팅 인사이트를 제공하여 기업이 인플루언서 파트너십을 발견하고, 관리하고, 최적화할 수 있도록 도와줍니다. 오디언스 분석, 성과 지표, 고급 필터를 활용하여 IONKOL은 인플루언서 선택 프로세스를 단순화하고, 모든 규모의 기업이 브랜드 성장을 위해 적절한 인플루언서와 연결될 수 있도록 합니다. 인플루언서 마케팅을 시작하거나 캠페인을 확장하고 싶으시다면, IONKOL은 더 스마트하고 데이터 기반의 의사결정을 내리는 데 필요한 도구를 제공합니다.",
+        "findOutMore": "자세히 알아보기"
+      },
+      "howDoesIonkolWork": {
+        "title": "IONKOL은 어떻게 작동하나요?",
+        "preview": "IONKOL은 위치, 관심사, 오디언스 인구통계, 참여 지표 등과 같은 맞춤형 필터를 사용하여 인플루언서를 검색할 수 있는 효율적인 플랫폼을 제공합니다...",
+        "content": "IONKOL은 위치, 관심사, 오디언스 인구통계, 참여 지표 등과 같은 맞춤형 필터를 사용하여 인플루언서를 검색할 수 있는 효율적인 플랫폼을 제공합니다. 적절한 인플루언서를 찾은 후에는 종합적인 분석을 통해 과거 성과를 평가하고 마케팅 목표와 일치하는지 확인할 수 있습니다.",
+        "howItWorks": "간단히 설명하면:",
+        "steps": {
+          "search": {
+            "title": "검색",
+            "description": "IONKOL의 고급 검색 필터를 사용하여 브랜드의 오디언스, 틈새시장, 목표에 맞는 인플루언서를 찾으세요."
+          },
+          "analyze": {
+            "title": "분석",
+            "description": "참여율, 오디언스 신뢰도, 과거 성과에 대한 상세 분석을 통해 인플루언서를 평가하세요."
+          },
+          "connect": {
+            "title": "연결",
+            "description": "플랫폼을 통해 직접 인플루언서에게 연락하고, 협업을 시작하고, 캠페인을 추적하고, 계약을 관리하세요."
+          },
+          "optimize": {
+            "title": "최적화",
+            "description": "진행 중인 캠페인 성과를 모니터링하고 최고의 ROI를 보장하기 위한 조정을 하세요."
+          }
+        },
+        "conclusion": "IONKOL은 인플루언서 마케팅을 효율적이고, 접근하기 쉽으며, 데이터 기반으로 만듭니다.",
+        "findOutMore": "자세히 알아보기"
+      },
+      "whoIsIonkolFor": {
+        "title": "IONKOL은 누구를 위한 것인가요? 제게 적합한가요?",
+        "preview": "IONKOL은 브랜드 성장을 위해 인플루언서 마케팅의 힘을 활용하고 싶은 모든 규모의 기업을 위해 설계되었습니다...",
+        "content": "IONKOL은 브랜드 성장을 위해 인플루언서 마케팅의 힘을 활용하고 싶은 모든 규모의 기업을 위해 설계되었습니다. 인플루언서 파트너십을 처음 탐색하는 소규모 기업이든, 캠페인을 확장하고 싶은 대규모 기업이든, IONKOL은 성공에 필요한 도구를 제공합니다.",
+        "perfectFor": "IONKOL은 다음과 같은 분들에게 적합합니다:",
+        "targets": {
+          "smallBusinesses": {
+            "title": "소규모 기업",
+            "description": "새로운 고객에게 도달하고 브랜드 존재감을 확대하기 위한 비용 효율적인 방법을 찾는 기업."
+          },
+          "ecommerce": {
+            "title": "이커머스 브랜드",
+            "description": "인플루언서 협업을 통해 인지도를 높이고, 매출을 늘리고, 고객 충성도를 구축하고 싶은 기업."
+          },
+          "marketingTeams": {
+            "title": "마케팅 팀",
+            "description": "이미 인플루언서와 협력 중이지만 프로세스를 최적화하고 성과를 개선하기 위한 간단한 방법이 필요한 기업."
+          },
+          "agencies": {
+            "title": "에이전시",
+            "description": "다양한 산업의 클라이언트를 위한 여러 인플루언서 캠페인을 효율적으로 관리하고 싶은 에이전시."
+          },
+          "contentCreators": {
+            "title": "콘텐츠 크리에이터",
+            "description": "영향력을 확대하고 자신의 가치관과 일치하는 브랜드와 연결되고 싶은 크리에이터."
+          }
+        },
+        "conclusion": "IONKOL은 패션, 뷰티, 식음료, 라이프스타일 등 다양한 산업의 기업을 지원합니다.",
+        "findOutMore": "자세히 알아보기"
+      },
+      "howMuchDoesIonkolCost": {
+        "title": "IONKOL의 비용은 얼마인가요?",
+        "preview": "IONKOL은 모든 규모의 기업의 요구에 맞는 유연한 가격 플랜을 제공합니다. 월간 및 연간 구독 옵션...",
+        "content": "IONKOL은 모든 규모의 기업의 요구에 맞는 유연한 가격 플랜을 제공합니다. 필요한 기능과 비즈니스 규모에 따라 다양한 수준의 월간 및 연간 구독 옵션을 제공합니다.",
+        "pricingPlans": "가격 플랜:",
+        "plans": {
+          "free": {
+            "title": "무료 플랜",
+            "description": "제한된 기능으로 IONKOL을 시도해보세요. 인플루언서 마케팅을 시작하는 소규모 기업에 적합합니다."
+          },
+          "core": {
+            "title": "코어 플랜",
+            "description": "월 $100부터, 고급 인플루언서 검색, 추적, 보고서와 같은 기능에 대한 액세스가 필요한 소규모 기업에 적합합니다."
+          },
+          "plus": {
+            "title": "플러스 플랜",
+            "description": "월 $220로, 성장하는 기업과 더 큰 인플루언서 캠페인을 위한 더 포괄적인 도구와 추가 지원을 제공합니다."
+          },
+          "prime": {
+            "title": "프라임 플랜",
+            "description": "월 $375로, 고급 요구사항이 있는 대규모 기업을 위해 설계되었으며, 가장 포괄적인 기능, 분석, 우선 지원을 제공합니다."
+          }
+        },
+        "discounts": "연간 구독의 경우 월간 가격 대비 최대 25% 할인을 제공합니다.",
+        "conclusion": "우리의 가격은 비즈니스와 함께 성장하도록 설계되었습니다. 인플루언서 마케팅 목표에 가장 적합한 플랜을 선택하고 오늘부터 인플루언서 캠페인의 힘을 활용하세요.",
+        "findOutMore": "자세히 알아보기"
+      },
+      "whatMakesIonkolDifferent": {
+        "title": "IONKOL이 다른 서비스와 다른 점은 무엇인가요?",
+        "preview": "IONKOL은 데이터 기반 인사이트, 사용 용이성, 합리적인 가격을 결합한 포괄적인 플랫폼을 제공하여 인플루언서 마케팅 분야에서 두각을 나타냅니다...",
+        "content": "IONKOL은 데이터 기반 인사이트, 사용 용이성, 합리적인 가격을 결합한 포괄적인 플랫폼을 제공하여 인플루언서 마케팅 분야에서 두각을 나타냅니다.",
+        "keyFeatures": "IONKOL을 특별하게 만드는 주요 기능:",
+        "features": {
+          "dataDriven": {
+            "title": "데이터 기반 인플루언서 인사이트",
+            "description": "IONKOL은 팔로워 수뿐만 아니라 오디언스의 실제 영향력을 기반으로 적절한 인플루언서를 식별하는 데 도움이 되는 깊이 있는 오디언스와 참여 분석을 제공합니다. 우리의 강력한 매개변수를 통해 인플루언서의 신뢰도, 참여 품질, 오디언스 관련성을 평가하고 더 정확한 의사결정을 할 수 있습니다."
+          },
+          "customizable": {
+            "title": "맞춤형 및 유연한 플랜",
+            "description": "인플루언서 마케팅을 시작하는 소규모 기업 소유자이든, 대규모 캠페인을 운영하는 대기업이든, IONKOL은 요구사항에 맞게 확장되는 플랜을 제공합니다. 우리의 직관적인 플랫폼은 사용하기 쉽게 설계되어 있어 최소한의 마케팅 경험을 가진 사람도 쉽게 성공적인 캠페인을 운영할 수 있습니다."
+          },
+          "transparency": {
+            "title": "투명성과 통제",
+            "description": "IONKOL은 인플루언서의 성과와 분석에 대한 완전한 투명성을 제공하여 기업이 데이터 기반 의사결정을 내리고 마케팅 전략을 효과적으로 최적화할 수 있도록 합니다."
+          },
+          "education": {
+            "title": "교육 및 도구 통합",
+            "description": "IONKOL은 단순히 인플루언서 마케팅 도구를 제공하는 것이 아닙니다. 튜토리얼, 웨비나, 블로그 등 다양한 교육 리소스를 제공하여 인플루언서 마케팅 생태계를 이해하고 캠페인을 최대화하는 방법을 배울 수 있도록 도와줍니다."
+          }
+        },
+        "conclusion": "IONKOL은 모든 규모의 기업을 위해 인플루언서 마케팅을 접근 가능하고, 실행 가능하며, 매우 효율적으로 만드도록 설계되었습니다."
+      }
+    },
+    "tabs": {
+      "allPosts": "전체 게시물",
+      "ionkol101": "IONKOL 101",
+      "research": "리서치",
+      "ionUpdates": "ION 업데이트"
+    },
+    "filters": {
+      "postType": "게시물 유형",
+      "location": "위치",
+      "interest": "관심사",
+      "seeMore": "더 보기 +"
+    },
+    "postTypes": {
+      "blog": "블로그",
+      "caseStudy": "사례 연구",
+      "trendReport": "트렌드 리포트"
+    },
+    "locations": {
+      "global": "전세계",
+      "japan": "일본",
+      "korea": "한국",
+      "malaysia": "말레이시아",
+      "singapore": "싱가포르",
+      "unitedStates": "미국",
+      "northAmerica": "북미"
+    }
+  },
+  "contact": {
+    "title": {
+      "ko": "문의하기"
+    },
+    "subtitle": {
+      "part1": {
+        "ko": "IONKOL 팀과 대화하세요"
+      },
+      "part2": {
+        "ko": "우리가 도와드리겠습니다."
+      }
+    },
+    "tabs": {
+      "generalInquiry": {
+        "ko": "일반 문의"
+      },
+      "demo": {
+        "ko": "데모"
+      }
+    },
+    "form": {
+      "firstName": {
+        "ko": "이름*"
+      },
+      "lastName": {
+        "ko": "성*"
+      },
+      "company": {
+        "ko": "회사 / 브랜드"
+      },
+      "position": {
+        "ko": "직위"
+      },
+      "phone": {
+        "ko": "전화번호"
+      },
+      "country": {
+        "ko": "국가"
+      },
+      "email": {
+        "ko": "이메일*"
+      },
+      "source": {
+        "ko": "IONKOL을 어떻게 알게 되셨나요?"
+      },
+      "inquiry": {
+        "ko": "문의 내용*"
+      },
+      "consent": {
+        "part1": {
+          "ko": "*다음을 읽고 동의합니다"
+        },
+        "part2": {
+          "ko": "'s"
+        },
+        "part3": {
+          "ko": "이용약관 및 개인정보처리방침"
+        }
+      },
+      "submit": {
+        "ko": "제출"
+      },
+      "demoComingSoon": {
+        "ko": "데모 등록이 곧 시작됩니다"
+      }
+    },
+    "sourceOptions": {
+      "google": {
+        "ko": "구글 / 검색 엔진"
+      },
+      "onlineAd": {
+        "ko": "온라인 광고"
+      },
+      "influencerRef": {
+        "ko": "인플루언서 추천"
+      },
+      "friendRef": {
+        "ko": "친구 / 가족 추천"
+      },
+      "event": {
+        "ko": "이벤트 또는 컨퍼런스"
+      },
+      "content": {
+        "ko": "팟캐스트, 블로그 또는 뉴스 기사"
+      },
+      "email": {
+        "ko": "이메일 또는 뉴스레터"
+      },
+      "other": {
+        "ko": "기타 (구체적으로 명시)"
+      }
+    },
+    "countryOptions": {
+      "singapore": {
+        "ko": "싱가포르"
+      },
+      "malaysia": {
+        "ko": "말레이시아"
+      },
+      "china": {
+        "ko": "중국"
+      },
+      "japan": {
+        "ko": "일본"
+      },
+      "korea": {
+        "ko": "한국"
+      }
+    }
+  }
+}
