@@ -360,45 +360,5 @@
       "unitedStates": "美国",
       "northAmerica": "北美"
     }
-  },
-  "contact": {
-    "title": "联系我们",
-    "subtitle": {
-      "part1": "与IONKOL团队交谈",
-      "part2": "我们随时为您服务。"
-    },
-    "tabs": {
-      "generalInquiry": "一般查询",
-      "demo": "演示"
-    },
-    "form": {
-      "firstName": "名字*",
-      "lastName": "姓氏*",
-      "company": "公司/品牌",
-      "position": "职位",
-      "phone": "电话号码",
-      "country": "国家",
-      "email": "电子邮件*",
-      "source": "您是如何了解IONKOL的？",
-      "inquiry": "查询内容*",
-      "consent": {
-        "part1": "*我已阅读并同意",
-        "part2": "'s",
-        "part3": "使用条款和隐私政策"
-      },
-      "submit": "提交",
-      "demoComingSoon": "演示注册即将开始"
-    },
-    "sourceOptions": [
-      "Google/搜索引擎",
-      "在线广告",
-      "网红推荐",
-      "朋友/家人推荐",
-      "活动或会议",
-      "播客、博客或新闻文章",
-      "电子邮件或通讯",
-      "其他（请说明）"
-    ],
-    "countryOptions": ["新加坡", "马来西亚", "中国", "日本", "韩国"]
   }
 }
