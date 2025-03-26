@@ -360,5 +360,42 @@
       "unitedStates": "Amerika Syarikat",
       "northAmerica": "Amerika Utara"
     }
+  },
+  "contact": {
+    "title": "Hubungi Kami",
+    "subtitle": {
+      "part1": "Hubungi orang yang tepat di",
+      "part2": "Kami sedia membantu."
+    },
+    "tabs": {
+      "generalInquiry": "Pertanyaan Umum",
+      "demo": "Demo"
+    },
+    "form": {
+      "firstName": "Nama Pertama*",
+      "lastName": "Nama Akhir*",
+      "company": "Nama Syarikat / Jenama",
+      "position": "Jawatan",
+      "phone": "Nombor Telefon",
+      "country": "Negara",
+      "email": "E-mel*",
+      "source": "Bagaimana anda mengetahui tentang kami?",
+      "inquiry": "Pertanyaan*",
+      "consent": {
+        "text": "*Saya mengesahkan bahawa saya telah membaca, bersetuju dan menerima",
+        "terms": "Syarat Perkhidmatan dan Dasar Privasi"
+      },
+      "submit": "Hantar",
+      "sourceOptions": {
+        "google": "Google / Enjin Carian",
+        "onlineAd": "Iklan Dalam Talian",
+        "influencerRecommendation": "Cadangan Influencer",
+        "friendRecommendation": "Cadangan Rakan / Keluarga",
+        "event": "Acara atau Persidangan",
+        "media": "Podcast, Blog, atau Artikel Berita",
+        "email": "E-mel atau Surat Berita",
+        "other": "Lain-lain (Sila nyatakan)"
+      }
+    }
   }
 }

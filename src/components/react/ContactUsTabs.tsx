@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
 import PhoneInput from "./PhoneInput";
+import { m } from "../../paraglide/messages.js";
 
 const GeneralInquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -35,14 +36,14 @@ const GeneralInquiryForm = () => {
   };
 
   const sourceOptions = [
-    "Google / Search Engine",
-    "Online Ad",
-    "Influencer Recommendation",
-    "Friend / Family Recommendation",
-    "Event or Conference",
-    "Podcast, Blog, or News Article",
-    "Email or Newsletter",
-    "Other (Please specify)",
+    m["contact.form.sourceOptions.google"](),
+    m["contact.form.sourceOptions.onlineAd"](),
+    m["contact.form.sourceOptions.influencerRecommendation"](),
+    m["contact.form.sourceOptions.friendRecommendation"](),
+    m["contact.form.sourceOptions.event"](),
+    m["contact.form.sourceOptions.media"](),
+    m["contact.form.sourceOptions.email"](),
+    m["contact.form.sourceOptions.other"](),
   ];
 
   const countryOptions = [
@@ -63,7 +64,7 @@ const GeneralInquiryForm = () => {
         <input
           type="text"
           name="firstName"
-          placeholder="First Name*"
+          placeholder={m["contact.form.firstName"]()}
           required
           className="w-full px-4 py-3 bg-white rounded-full"
           value={formData.firstName}
@@ -74,7 +75,7 @@ const GeneralInquiryForm = () => {
         <input
           type="text"
           name="lastName"
-          placeholder="Last Name*"
+          placeholder={m["contact.form.lastName"]()}
           required
           className="w-full px-4 py-3 bg-white rounded-full"
           value={formData.lastName}
@@ -85,7 +86,7 @@ const GeneralInquiryForm = () => {
         <input
           type="text"
           name="company"
-          placeholder="Company / Brand Name"
+          placeholder={m["contact.form.company"]()}
           className="w-full px-4 py-3 bg-white rounded-full"
           value={formData.company}
           onChange={handleInputChange}
@@ -95,7 +96,7 @@ const GeneralInquiryForm = () => {
         <input
           type="text"
           name="position"
-          placeholder="Position"
+          placeholder={m["contact.form.position"]()}
           className="w-full px-4 py-3 bg-white rounded-full"
           value={formData.position}
           onChange={handleInputChange}
@@ -118,7 +119,7 @@ const GeneralInquiryForm = () => {
           onChange={(value) =>
             setFormData((prev) => ({ ...prev, country: value }))
           }
-          placeholder="Country"
+          placeholder={m["contact.form.country"]()}
         />
       </div>
 
@@ -126,7 +127,7 @@ const GeneralInquiryForm = () => {
       <input
         type="email"
         name="email"
-        placeholder="Email*"
+        placeholder={m["contact.form.email"]()}
         required
         className="w-full px-4 py-3 bg-white rounded-full"
         value={formData.email}
@@ -140,13 +141,13 @@ const GeneralInquiryForm = () => {
         onChange={(value) =>
           setFormData((prev) => ({ ...prev, source: value }))
         }
-        placeholder="How did you find out about us?"
+        placeholder={m["contact.form.source"]()}
       />
 
       {/* Inquiry */}
       <textarea
         name="inquiry"
-        placeholder="Inquiry*"
+        placeholder={m["contact.form.inquiry"]()}
         required
         className="w-full px-4 py-3 bg-white rounded-3xl min-h-[200px]"
         value={formData.inquiry}
@@ -164,9 +165,7 @@ const GeneralInquiryForm = () => {
           onChange={handleInputChange}
         />
         <div className="text-xl flex-col items-start flex md:flex-row gap-1 flex-wrap">
-          <span className="text-start">
-            *I confirm that I have read, consent and agree to
-          </span>
+          <span className="text-start">{m["contact.form.consent.text"]()}</span>
           <div className="flex flex-row items-center">
             <img
               src="/ionkolLogoNewShort.svg"
@@ -176,7 +175,7 @@ const GeneralInquiryForm = () => {
             />
             <span>'s</span>
           </div>
-          <span>Terms of service and Privacy Policy</span>
+          <span>{m["contact.form.consent.terms"]()}</span>
         </div>
       </div>
 
@@ -185,7 +184,7 @@ const GeneralInquiryForm = () => {
         type="submit"
         className="w-1/2 px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
       >
-        Submit
+        {m["contact.form.submit"]()}
       </button>
     </form>
   );
@@ -201,13 +200,13 @@ const ContactUsTabs = () => {
           onClick={() => setCurrentTab(0)}
           className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
-          General Inquiry
+          {m["contact.tabs.generalInquiry"]()}
         </button>
         <button
           onClick={() => setCurrentTab(1)}
           className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
-          Demo
+          {m["contact.tabs.demo"]()}
         </button>
       </div>
       {currentTab === 0 ? <GeneralInquiryForm /> : "Demo Form Coming Soon"}

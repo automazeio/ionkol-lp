@@ -360,5 +360,42 @@
       "unitedStates": "アメリカ",
       "northAmerica": "北米"
     }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": {
+      "part1": "適切な担当者と連絡を取りましょう",
+      "part2": "私たちがお手伝いいたします。"
+    },
+    "tabs": {
+      "generalInquiry": "一般お問い合わせ",
+      "demo": "デモ"
+    },
+    "form": {
+      "firstName": "名*",
+      "lastName": "姓*",
+      "company": "会社名/ブランド名",
+      "position": "役職",
+      "phone": "電話番号",
+      "country": "国",
+      "email": "メールアドレス*",
+      "source": "当社を知ったきっかけ",
+      "inquiry": "お問い合わせ内容*",
+      "consent": {
+        "text": "*利用規約とプライバシーポリシーに同意します",
+        "terms": "利用規約とプライバシーポリシー"
+      },
+      "submit": "送信",
+      "sourceOptions": {
+        "google": "Google/検索エンジン",
+        "onlineAd": "オンライン広告",
+        "influencerRecommendation": "インフルエンサーの紹介",
+        "friendRecommendation": "知人/家族の紹介",
+        "event": "イベントやカンファレンス",
+        "media": "ポッドキャスト、ブログ、ニュース記事",
+        "email": "メールやニュースレター",
+        "other": "その他（具体的に記載）"
+      }
+    }
   }
 }

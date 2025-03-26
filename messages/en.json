@@ -360,5 +360,42 @@
       "unitedStates": "United States",
       "northAmerica": "North America"
     }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": {
+      "part1": "Get in touch with the right people at",
+      "part2": "We are here to help."
+    },
+    "tabs": {
+      "generalInquiry": "General Inquiry",
+      "demo": "Demo"
+    },
+    "form": {
+      "firstName": "First Name*",
+      "lastName": "Last Name*",
+      "company": "Company / Brand Name",
+      "position": "Position",
+      "phone": "Phone number",
+      "country": "Country",
+      "email": "Email*",
+      "source": "How did you find out about us?",
+      "inquiry": "Inquiry*",
+      "consent": {
+        "text": "*I confirm that I have read, consent and agree to",
+        "terms": "Terms of service and Privacy Policy"
+      },
+      "submit": "Submit",
+      "sourceOptions": {
+        "google": "Google / Search Engine",
+        "onlineAd": "Online Ad",
+        "influencerRecommendation": "Influencer Recommendation",
+        "friendRecommendation": "Friend / Family Recommendation",
+        "event": "Event or Conference",
+        "media": "Podcast, Blog, or News Article",
+        "email": "Email or Newsletter",
+        "other": "Other (Please specify)"
+      }
+    }
   }
 }

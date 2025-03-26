@@ -360,5 +360,42 @@
       "unitedStates": "美国",
       "northAmerica": "北美"
     }
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": {
+      "part1": "与合适的人联系",
+      "part2": "我们随时为您提供帮助。"
+    },
+    "tabs": {
+      "generalInquiry": "一般咨询",
+      "demo": "演示"
+    },
+    "form": {
+      "firstName": "名字*",
+      "lastName": "姓氏*",
+      "company": "公司/品牌名称",
+      "position": "职位",
+      "phone": "电话号码",
+      "country": "国家",
+      "email": "电子邮件*",
+      "source": "您是如何了解我们的？",
+      "inquiry": "咨询内容*",
+      "consent": {
+        "text": "*我确认已阅读、同意并接受",
+        "terms": "服务条款和隐私政策"
+      },
+      "submit": "提交",
+      "sourceOptions": {
+        "google": "谷歌/搜索引擎",
+        "onlineAd": "在线广告",
+        "influencerRecommendation": "网红推荐",
+        "friendRecommendation": "朋友/家人推荐",
+        "event": "活动或会议",
+        "media": "播客、博客或新闻文章",
+        "email": "电子邮件或新闻通讯",
+        "other": "其他（请说明）"
+      }
+    }
   }
 }

@@ -360,5 +360,42 @@
       "unitedStates": "미국",
       "northAmerica": "북미"
     }
+  },
+  "contact": {
+    "title": "문의하기",
+    "subtitle": {
+      "part1": "담당자와 연락하세요",
+      "part2": "우리가 도와드리겠습니다."
+    },
+    "tabs": {
+      "generalInquiry": "일반 문의",
+      "demo": "데모"
+    },
+    "form": {
+      "firstName": "이름*",
+      "lastName": "성*",
+      "company": "회사/브랜드명",
+      "position": "직위",
+      "phone": "전화번호",
+      "country": "국가",
+      "email": "이메일*",
+      "source": "알게 된 경로",
+      "inquiry": "문의내용*",
+      "consent": {
+        "text": "*이용약관과 개인정보처리방침에 동의합니다",
+        "terms": "이용약관과 개인정보처리방침"
+      },
+      "submit": "제출",
+      "sourceOptions": {
+        "google": "구글/검색엔진",
+        "onlineAd": "온라인 광고",
+        "influencerRecommendation": "인플루언서 추천",
+        "friendRecommendation": "친구/가족 추천",
+        "event": "이벤트 또는 컨퍼런스",
+        "media": "팟캐스트, 블로그, 뉴스 기사",
+        "email": "이메일 또는 뉴스레터",
+        "other": "기타 (구체적으로 기재)"
+      }
+    }
   }
 }

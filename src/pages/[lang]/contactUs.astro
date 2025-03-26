@@ -11,6 +11,7 @@ import Switcher from "../../components/Switcher.astro";
 import PriceCardsData from "../../components/react/PriceCards";
 import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
 import ContactUsTabs from "../../components/react/ContactUsTabs";
+import { m } from "../../paraglide/messages.js";
 ---
 
 <script is:inline>
@@ -69,20 +70,20 @@ import ContactUsTabs from "../../components/react/ContactUsTabs";
   );
 </script>
 
-<Layout title="Pricing - iON">
+<Layout title={m["contact.title"]()}>
   <Navbar />
   <main class="relative">
     <section class="mt-40 pb-32 px-4 lg:px-12">
       <div class="flex flex-col items-center text-center gap-8">
-        <span class="text-[62px] font-semibold">Contact Us</span>
+        <span class="text-[62px] font-semibold">{m["contact.title"]()}</span>
         <div class="flex flex-row gap-2 text-xl">
-          <span>Get in touch with the right people at</span>
+          <span>{m["contact.subtitle.part1"]()}</span>
           <div class="flex flex-row">
             <Image src="/ion.svg" alt="features" width={47} height={24} /><span
               >.</span
             >
           </div>
-          <span>We are here to help.</span>
+          <span>{m["contact.subtitle.part2"]()}</span>
         </div>
 
         <ContactUsTabs client:load />
