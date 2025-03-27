@@ -1,6 +1,13 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "etetet {username}",
+  "main": {
+    "aiPlatform": "AI 影响者分析平台",
+    "explore": "探索",
+    "analyse": "分析",
+    "dataDriverSuccess": "数据驱动成功",
+    "startNow": "立即开始"
+  },
   "aboutUs": {
     "title": "iON，故事",
     "subtitle": "就像iON一样",

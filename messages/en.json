@@ -1,6 +1,13 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "Hello world {username}",
+  "main": {
+    "aiPlatform": "AI influencer analytics platform",
+    "explore": "Explore",
+    "analyse": "Analyse",
+    "dataDriverSuccess": " Data-driven success",
+    "startNow": "Start Now"
+  },
   "aboutUs": {
     "title": "iON, the Story",
     "subtitle": "just as iON's",

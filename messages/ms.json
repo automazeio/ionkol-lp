@@ -1,6 +1,13 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "etetet {username}",
+  "main": {
+    "aiPlatform": "Platform analitik AI influencer",
+    "explore": "Teroka",
+    "analyse": "Analisis",
+    "dataDriverSuccess": "Kejayaan berasaskan data",
+    "startNow": "Mula Sekarang"
+  },
   "aboutUs": {
     "title": "iON, Kisahnya",
     "subtitle": "seperti iON",

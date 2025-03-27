@@ -1,6 +1,13 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "example_message": "etetet {username}",
+  "main": {
+    "aiPlatform": "AI 인플루언서 분석 플랫폼",
+    "explore": "탐색",
+    "analyse": "분석",
+    "dataDriverSuccess": "데이터 기반 성공",
+    "startNow": "지금 시작하기"
+  },
   "aboutUs": {
     "title": "iON, 이야기",
     "subtitle": "마치 iON처럼",
