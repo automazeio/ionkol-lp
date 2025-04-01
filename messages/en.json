@@ -9,8 +9,8 @@
     "startNow": "Start Now"
   },
   "aboutUs": {
-    "title": "iON, the Story",
-    "subtitle": "just as iON's",
+    "title": ", the Story",
+    "subtitle": "ion's",
     "tagline": "the smallest building blocks of creation",
     "description": "combine to form everything we know, we transform data into actionable insights. By turning the simplest elements into tools for growth, we empower businesses to build extraordinary connections and achieve meaningful transformation.",
     "mission": {
@@ -26,12 +26,12 @@
     "keyFeatures": "Key Features",
     "explore": {
       "title": "Explore",
-      "description": "Discover and connect with creators who amplify your brand's message. Save time with advanced filters to find influencers who align with your goals and deliver real results.",
+      "description": "Explore for your ideal influencer in just a few clicks. Save time with our advanced filters and find for influencers who align with your brand's message.",
       "button": "Discover more"
     },
     "analyse": {
       "title": "Analyse",
-      "description": "Evaluate the success of your influencer partnerships with actionable insights into performance metrics and audience engagement.",
+      "description": "Analyse an influencer's audience and performance in minutes. Access detailed information on everything from engagement to audience, all in one report.",
       "button": "Discover more"
     },
     "goals": {
@@ -40,41 +40,40 @@
     "features": {
       "timeSaving": {
         "title": "Time-saving",
-        "description": "Streamline your search and verification process to find your ideal influencer with ION's efficient tools."
+        "description": "Unlock more time for your business. ION streamlines influencer search and analysis to help you find the perfect match in minutes."
       },
       "competitivePricing": {
         "title": "Competitive Pricing",
-        "description": "Access powerful influencer marketing tools at affordable prices with no hidden costs."
+        "description": "Access powerful influencer marketing tools at affordable prices, delivering results without the high costs."
       },
       "smartInsights": {
         "title": "Smart Insights",
-        "description": "Proprietary AI-powered analytics to gain influencer-specific insights for confident, data-driven decisions."
+        "description": "AI-powered analytics provide clear, influencer-specific insights. Make confident data-backed decisions without the guesswork"
       },
       "actionableData": {
         "title": "Actionable Data",
-        "description": "Turn complex data into clear information that empowers smarter decisions to accelerate business growth."
+        "description": "Visualize complex data through simple, actionable insights, enabling smarter decisions without needing data expertise"
       },
       "globalReach": {
         "title": "Global Reach",
-        "description": "Expand your business internationally with localization strategies to connect with foreign audiences."
+        "description": "Easily connect with global audiences using tools that expand your reach and grow your business"
       }
     },
     "stats": {
       "filters": {
         "title": "Advanced Filters",
-        "description": "for your 'ideal' influencer with our filters in minutes",
+        "description": "for your ideal influencer in just a few clicks",
         "highlight": "Explore"
       },
       "parameters": {
         "title": "Analytical Parameters",
-        "description": "your 'ideal' influencer with our parameters and make well-informed decisions",
+        "description": "an influencer's audience and performance to find the ideal influencer in minutes",
         "highlight": "Analyse"
       }
     },
     "power": {
       "title": "Harness the power of",
-      "description1": "empowers businesses to grow with intuitive tools and actionable insights. By streamlining decision-making and enabling effective influencer partnerships,",
-      "description2": "transforms raw data into impactful marketing insights, helping businesses of all sizes drive meaningful results."
+      "description1": "empowers businesses by automating complex processes and turning data into clear insights, saving you time and effort. Simplify influencer partnerships, make smarter decisions faster, and fuel long-term growth."
     },
     "pricing": {
       "title": "Subscription Plan",
@@ -83,7 +82,7 @@
   },
   "subscribe": {
     "title": "Subscribe",
-    "description": "Join our growing community and get latest case studies, trends, updates, valuable resources, and more to grow your business.",
+    "description": "Join our growing community and get the latest case studies, trends, updates, and more to grow your business.",
     "emailPlaceholder": "Email address",
     "button": "Subscribe"
   },
@@ -99,7 +98,7 @@
     "services": {
       "title": "Services",
       "explore": "Ion Explore",
-      "analyze": "Ion Analyze"
+      "analyze": "Ion Analyse"
     },
     "getStarted": {
       "title": "Get Started",
@@ -131,39 +130,71 @@
     "explore": {
       "title": "Explore",
       "subtitle": "how data can drive your success",
-      "description1": "Transform your marketing with effortless access to thousands of influencers across the globe. Discover, connect, and elevate your brand with our unparalleled database.",
+      "description1": "Use 15 customisable filters: follower count, engagement rate, verified status, and more, to easily narrow down and find the perfect influencer match in three steps.",
       "description2": "Discover influencers who inspire and engage. Apply 15 customizable filters to find the 'ideal' fit for your brand in minutes.",
       "tabs": {
         "filter": {
           "title": "Filter",
-          "description": "Refine your search by applying advanced filters tailored to your needs."
+          "description": "Apply 15 customizable filters to quickly narrow down influencers for your brand’s needs."
         },
         "search": {
           "title": "Search",
-          "description": "Use keywords to pinpoint influencers matching your goals."
+          "description": "Search and compare influencers based on key metrics like Engagement Rate, Estimated Reach, and Engaged Followers. Instantly view and evaluate your filtered list, make side-by-side comparisons and make informed decisions."
         },
         "save": {
           "title": "Save",
-          "description": "Organize your selected creators into custom lists for easy access."
+          "description": "Save your selected influencers to custom lists for easy reference and ready-to-go outreach when you're ready to launch your campaign."
         }
       }
     },
     "analyse": {
       "title": "Analyse",
       "subtitle": "how data can drive your success",
-      "description": "Elevate your influencer marketing with cutting-edge reports: gain unparalleled insights into audience demographics, performance metrics, and engagement trends—empowering your brand to take bold, data-driven actions.",
+      "description": "Elevate your influencer marketing with comprehensive, easy-to-read reports. Access over 40 key metrics, including audience demographics, engagement rates, and performance trends. We consolidate dispersed data into a single, intuitive page, making it easy for you to assess influencer quality and predict performance—without needing in-depth data knowledge.",
       "tabs": {
         "parameters": {
           "title": "Parameters",
-          "description": "Transform decisions with insights, validate audiences, measure performance, ensure brand-aligned partnerships with 40+ parameters."
+          "description": "Don’t just rely on follower counts. Get a true understanding of influencer impact with our detailed analysis. Quickly assess key performance metrics that matter for your business:",
+          "engagementMetrics": {
+            "highlight": "Engagement metrics:",
+            "description": " shows interactions between an influencer and their audience, indicating how effectively the content resonates with followers"
+          },
+          "audienceMetrics": {
+            "highlight": "Audience metrics:",
+            "description": " basic details about an influencer's followers, like their age, gender, location, and interests, helping you see if their audience matches your target customers."
+          }
         },
         "audience": {
           "title": "Audience",
-          "description": "Discover the essence of your audience with advanced analytics: explore follower demographics from location to age and more, to craft bespoke campaigns."
+          "description": "Finding the right audience is key to effective influencer marketing. Audience metrics show if an influencer’s followers align with your target market, helping you make focused marketing decisions.",
+          "ageGenderDistribution": {
+            "highlight": "Age-Gender Distribution:",
+            "description": " Shows the age range and gender breakdown of an influencer’s audience, helping you target the right demographic for your brand"
+          },
+          "location": {
+            "highlight": "Location:",
+            "description": " Displays the geographic location of followers, helping you target specific regions."
+          },
+          "interests": {
+            "highlight": "Interests/Behavior:",
+            "description": " Highlights the interests of followers, showing if they match your brand."
+          }
         },
         "engagement": {
-          "title": "Save",
-          "description": "Elevate your influencer evaluation with engagement insights: measure interaction rates, assess audience quality, and ensure every creator delivers genuine, impactful engagement."
+          "title": "Engagement",
+          "description": "Engagement is more than just likes, shares, and subscribes. ION's engagement analysis breaks down performance across images, feeds, and reels, providing a clear picture of an influencer’s true impact.",
+          "engagementRate": {
+            "highlight": "Engagement rate:",
+            "description": " The ratio of interactions (likes, comments, shares) to total followers, showing how actively the audience engages with content."
+          },
+          "reach": {
+            "highlight": "Reach:",
+            "description": " The total number of unique users who have seen the content, indicating the influencer’s overall visibility."
+          },
+          "engagementConsistency": {
+            "highlight": "Engagement Consistency:",
+            "description": " Measures the stability of engagement over time, showing how consistently the influencer’s audience interacts with their content."
+          }
         }
       }
     }
@@ -175,7 +206,7 @@
     },
     "subtitle": {
       "part1": "Unlock influencer insights with our flexible plans.",
-      "part2": "Choose the perfect option to analyze, track, and optimize your campaigns."
+      "part2": "Choose the perfect option to analyse, track, and optimise your campaigns."
     },
     "tryReport": "Try 1 Complimentary Report",
     "subscription": {
@@ -192,10 +223,10 @@
         "alternatives": "Alternatives"
       },
       "manualWork": {
-        "timePerMonth": "Time Per Month",
+        "timePerMonth": "Hours Per Month",
         "monthlyCost": "Monthly Cost",
         "hourlyRate": "(25 USD / hour)",
-        "creatorSearch": "Creator Search",
+        "creatorSearch": "Influencer Search",
         "dataCompilation": "Data Compilation",
         "analysis": "Analysis",
         "total": "Total",
@@ -212,8 +243,8 @@
         "basicParameters": "12~ basic parameters",
         "advancedParameters": "40+ advanced parameters",
         "cost": "Cost",
-        "competitorCost": "$200~ / month",
-        "ionCost": "$80 / month"
+        "competitorCost": "$200 ~/ month",
+        "ionCost": "$80 ~/ month"
       }
     }
   },
@@ -229,7 +260,7 @@
       "whatIsIonkol": {
         "title": "What is IONKOL?",
         "preview": "IONKOL is a data analytics startup. We provide data-driven influencer marketing insights to help businesses discover...",
-        "content": "IONKOL is a data analytics startup. We provide data-driven influencer marketing insights to help businesses discover, manage, and optimize their influencer partnerships. By leveraging audience analytics, performance metrics, and advanced filters, IONKOL simplifies the influencer selection process, enabling businesses of all sizes to connect with the right influencers to grow their brand. Whether you're just starting or looking to scale your influencer marketing efforts, IONKOL provides the tools you need to make smarter, data-driven decisions.",
+        "content": "IONKOL is a data analytics startup. We provide data-driven influencer marketing insights to help businesses discover, manage, and optimise their influencer partnerships. By leveraging audience analytics, performance metrics, and advanced filters, IONKOL simplifies the influencer selection process, enabling businesses of all sizes to connect with the right influencers to grow their brand. Whether you're just starting or looking to scale your influencer marketing efforts, IONKOL provides the tools you need to make smarter, data-driven decisions.",
         "findOutMore": "Find out more"
       },
       "howDoesIonkolWork": {
@@ -243,7 +274,7 @@
             "description": "Use IONKOL's advanced search filters to find influencers who match your brand's audience, niche, and goals."
           },
           "analyze": {
-            "title": "Analyze",
+            "title": "Analyse",
             "description": "Evaluate influencers using detailed analytics, such as engagement rates, audience authenticity, and past performance."
           },
           "connect": {
@@ -251,7 +282,7 @@
             "description": "Reach out to influencers directly through the platform to start collaborations, track campaigns, and manage contracts."
           },
           "optimize": {
-            "title": "Optimize",
+            "title": "Optimise",
             "description": "Review ongoing campaign performance and make adjustments to ensure the best possible ROI."
           }
         },
@@ -274,7 +305,7 @@
           },
           "marketingTeams": {
             "title": "Marketing Teams",
-            "description": "For businesses that already work with influencers but need an easy way to streamline the process and optimize performance."
+            "description": "For businesses that already work with influencers but need an easy way to streamline the process and optimise performance."
           },
           "agencies": {
             "title": "Agencies",
@@ -331,7 +362,7 @@
           },
           "transparency": {
             "title": "Transparency and Control",
-            "description": "IONKOL provides complete transparency in influencer performance and analytics. This empowers businesses to make data-backed decisions and optimize their marketing strategies effectively."
+            "description": "IONKOL provides complete transparency in influencer performance and analytics. This empowers businesses to make data-backed decisions and optimise their marketing strategies effectively."
           },
           "education": {
             "title": "Integration of Education and Tools",
@@ -379,17 +410,18 @@
       "demo": "Demo"
     },
     "form": {
-      "firstName": "First Name*",
-      "lastName": "Last Name*",
+      "firstName": "* First Name",
+      "lastName": "* Last Name",
       "company": "Company / Brand Name",
       "position": "Position",
       "phone": "Phone number",
       "country": "Country",
-      "email": "Email*",
+      "email": "* Email",
       "source": "How did you find out about us?",
-      "inquiry": "Inquiry*",
+      "sourceOther": "If other, please specify",
+      "inquiry": "* Inquiry",
       "consent": {
-        "text": "*I confirm that I have read, consent and agree to",
+        "text": "* I confirm that I have read, consent and agree to",
         "terms": "Terms of service and Privacy Policy"
       },
       "submit": "Submit",

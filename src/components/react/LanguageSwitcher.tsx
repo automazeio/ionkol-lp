@@ -21,7 +21,6 @@ const LanguageSwitcher = () => {
     languages[0]
   );
 
-  // Initialize language from URL
   useEffect(() => {
     const pathSegments = window.location.pathname.split("/");
     const langCode = pathSegments[1];
@@ -35,7 +34,6 @@ const LanguageSwitcher = () => {
     setSelectedLanguage(language);
     setIsOpen(false);
 
-    // Update URL with new language code
     const pathSegments = window.location.pathname.split("/");
     pathSegments[1] = language.code;
     const newPath = pathSegments.join("/");
@@ -50,8 +48,8 @@ const LanguageSwitcher = () => {
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="40"
-          height="40"
+          width="24"
+          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -64,7 +62,7 @@ const LanguageSwitcher = () => {
           <line x1="2" y1="12" x2="22" y2="12" />
           <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
         </svg>
-        <span className="text-xl font-semibold">{selectedLanguage.name}</span>
+        <span className="font-semibold">{selectedLanguage.name}</span>
       </button>
 
       {isOpen && (

@@ -36,18 +36,59 @@ const analyseTabs = [
     title: m["features.analyse.tabs.parameters.title"](),
     description: m["features.analyse.tabs.parameters.description"](),
     icon: "/features/analyseParameters.svg",
+    options: [
+      {
+        id: 0,
+        "title": m["features.analyse.tabs.parameters.engagementMetrics.highlight"](),
+        "description": m["features.analyse.tabs.parameters.engagementMetrics.description"](),
+      }, {
+        id: 1,
+        "title": m["features.analyse.tabs.parameters.audienceMetrics.highlight"](),
+        "description": m["features.analyse.tabs.parameters.audienceMetrics.description"](),
+      }
+    ]
   },
   {
     id: 1,
     title: m["features.analyse.tabs.audience.title"](),
     description: m["features.analyse.tabs.audience.description"](),
     icon: "/features/analyseAudience.svg",
+    options: [
+      {
+        id: 0,
+        "title": m["features.analyse.tabs.audience.ageGenderDistribution.highlight"](),
+        "description": m["features.analyse.tabs.audience.ageGenderDistribution.description"](),
+      }, {
+        id: 1,
+        "title": m["features.analyse.tabs.audience.location.highlight"](),
+        "description": m["features.analyse.tabs.audience.location.description"](),
+      }, {
+        id: 2,
+        "title": m["features.analyse.tabs.audience.interests.highlight"](),
+        "description": m["features.analyse.tabs.audience.interests.description"](),
+      }
+    ]
   },
   {
     id: 2,
     title: m["features.analyse.tabs.engagement.title"](),
     description: m["features.analyse.tabs.engagement.description"](),
     icon: "/features/analyseEngagement.svg",
+    options: [
+      {
+        id: 0,
+        "title": m["features.analyse.tabs.engagement.engagementRate.highlight"](),
+        "description": m["features.analyse.tabs.engagement.engagementRate.description"](),
+      }, {
+        id: 1,
+        "title": m["features.analyse.tabs.engagement.reach.highlight"](),
+        "description": m["features.analyse.tabs.engagement.reach.description"](),
+      }, {
+        id: 2,
+        "title": m["features.analyse.tabs.engagement.engagementConsistency.highlight"](),
+        "description": m["features.analyse.tabs.engagement.engagementConsistency.description"](),
+      }
+    ]
   },
 ];
 ---

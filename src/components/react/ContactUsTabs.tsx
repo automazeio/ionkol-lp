@@ -16,7 +16,8 @@ const GeneralInquiryForm = () => {
     inquiry: "",
     consent: false,
   });
-
+  const [isOtherSource, setIsOtherSource] = useState(false);
+  const [otherSource, setOtherSource] = useState("");
   const [countryCode, setCountryCode] = useState("+65");
 
   const handleInputChange = (
@@ -46,13 +47,7 @@ const GeneralInquiryForm = () => {
     m["contact.form.sourceOptions.other"](),
   ];
 
-  const countryOptions = [
-    "Singapore",
-    "Malaysia",
-    "China",
-    "Japan",
-    "South Korea",
-  ];
+  const countryOptions = ["Singapore", "Malaysia", "Japan", "South Korea"];
 
   return (
     <form
@@ -138,11 +133,22 @@ const GeneralInquiryForm = () => {
       <Dropdown
         options={sourceOptions}
         value={formData.source}
-        onChange={(value) =>
-          setFormData((prev) => ({ ...prev, source: value }))
-        }
+        onChange={(value) => {
+          setFormData((prev) => ({ ...prev, source: value }));
+          setIsOtherSource(value === m["contact.form.sourceOptions.other"]());
+        }}
         placeholder={m["contact.form.source"]()}
       />
+      {isOtherSource && (
+        <input
+          type="text"
+          name="sourceOther"
+          placeholder={m["contact.form.sourceOther"]()}
+          className="w-full px-4 py-3 bg-white rounded-full"
+          value={otherSource}
+          onChange={(e) => setOtherSource(e.target.value)}
+        />
+      )}
 
       {/* Inquiry */}
       <textarea
@@ -164,19 +170,23 @@ const GeneralInquiryForm = () => {
           checked={formData.consent}
           onChange={handleInputChange}
         />
-        <div className="text-xl flex-col items-start flex md:flex-row gap-1 flex-wrap">
-          <span className="text-start">{m["contact.form.consent.text"]()}</span>
-          <div className="flex flex-row items-center">
-            <img
-              src="/ionkolLogoNewShort.svg"
-              alt="features"
-              width={90}
-              height={24}
-            />
-            <span>'s</span>
+        <p className="text-xl text-start">
+          <div className="flex flex-row gap-2">
+            <span className="text-start">
+              {m["contact.form.consent.text"]()}
+            </span>
+            <div className="flex flex-row items-center">
+              <img
+                src="/ionkolLogoNewShort.svg"
+                alt="features"
+                width={90}
+                height={24}
+              />
+              <span>'s</span>
+            </div>
           </div>
           <span>{m["contact.form.consent.terms"]()}</span>
-        </div>
+        </p>
       </div>
 
       {/* Submit Button */}
