@@ -1,94 +1,93 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "etetet {username}",
+  "example_message": "Hello dunia {username}",
   "main": {
-    "aiPlatform": "Platform analitik AI influencer",
+    "aiPlatform": "Platform analitik pemberi pengaruh AI",
     "explore": "Teroka",
     "analyse": "Analisis",
-    "dataDriverSuccess": "Kejayaan berasaskan data",
+    "dataDriverSuccess": "Kejayaan dipacu data",
     "startNow": "Mula Sekarang"
   },
   "aboutUs": {
-    "title": "iON, Kisahnya",
-    "subtitle": "seperti iON",
+    "title": ", Kisah",
+    "subtitle": "Ion",
     "tagline": "blok binaan terkecil penciptaan",
-    "description": "bergabung untuk membentuk segala yang kita ketahui, kita mengubah data menjadi wawasan yang boleh ditindaklanjuti. Dengan mengubah elemen paling ringkas menjadi alat untuk pertumbuhan, kami memberdayakan perniagaan untuk membina hubungan luar biasa dan mencapai transformasi yang bermakna.",
+    "description": "bergabung untuk membentuk segala yang kita tahu, kami mengubah data menjadi wawasan yang boleh diambil tindakan. Dengan mengubah elemen paling mudah menjadi alat untuk pertumbuhan, kami memperkasakan perniagaan untuk membina hubungan luar biasa dan mencapai transformasi yang bermakna.",
     "mission": {
       "title": "Misi Kami",
-      "description": "Memudahkan pembuatan keputusan dengan wawasan berasaskan data untuk membolehkan pemasaran yang lebih pintar dan berimpak tinggi."
+      "description": "Memudahkan membuat keputusan dengan wawasan dipacu data untuk membolehkan pemasaran yang lebih bijak dan lebih berimpak."
     },
     "vision": {
       "title": "Visi Kami",
-      "description": "Untuk memberdayakan perniagaan untuk membuka potensi penuh mereka melalui wawasan pemasaran berasaskan data yang boleh ditindaklanjuti."
+      "description": "Untuk memperkasakan perniagaan untuk membuka potensi penuh mereka melalui wawasan pemasaran dipacu data yang boleh diambil tindakan."
     }
   },
   "index": {
-    "keyFeatures": "Ciri-ciri Utama",
+    "keyFeatures": "Ciri Utama",
     "explore": {
-      "title": "Terokai",
-      "description": "Temui dan berhubung dengan pencipta yang menguatkan mesej jenama anda. Jimat masa dengan penapis lanjutan untuk mencari pengaruh yang selaras dengan matlamat anda dan memberikan hasil sebenar.",
-      "button": "Terokai lebih lanjut"
+      "title": "Teroka",
+      "description": "Teroka pemberi pengaruh ideal anda dalam beberapa klik sahaja. Jimat masa dengan penapis lanjutan kami dan cari pemberi pengaruh yang selaras dengan mesej jenama anda.",
+      "button": "Ketahui lebih lanjut"
     },
     "analyse": {
       "title": "Analisis",
-      "description": "Nilai kejayaan perkongsian pengaruh anda dengan wawasan yang boleh ditindaklanjuti ke dalam metrik prestasi dan penglibatan penonton.",
-      "button": "Terokai lebih lanjut"
+      "description": "Analisis khalayak dan prestasi pemberi pengaruh dalam beberapa minit. Akses maklumat terperinci tentang segala-galanya daripada penglibatan kepada khalayak, semuanya dalam satu laporan.",
+      "button": "Ketahui lebih lanjut"
     },
     "goals": {
       "title": "Capai semua matlamat anda di satu tempat"
     },
     "features": {
       "timeSaving": {
-        "title": "Menjimatkan Masa",
-        "description": "Permudahkan proses carian dan pengesahan anda untuk mencari pengaruh ideal anda dengan alat iON yang cekap."
+        "title": "Penjimatan masa",
+        "description": "Buka lebih banyak masa untuk perniagaan anda. ION menyelaraskan carian dan analisis pemberi pengaruh untuk membantu anda mencari padanan yang sempurna dalam beberapa minit."
       },
       "competitivePricing": {
         "title": "Harga Berdaya Saing",
-        "description": "Akses alat pemasaran pengaruh yang berkuasa pada harga berpatutan tanpa kos tersembunyi."
+        "description": "Akses alat pemasaran pemberi pengaruh yang berkuasa pada harga yang berpatutan, memberikan hasil tanpa kos yang tinggi."
       },
       "smartInsights": {
         "title": "Wawasan Pintar",
-        "description": "Analitik berkuasa AI proprietari untuk mendapatkan wawasan khusus pengaruh untuk keputusan berasaskan data yang yakin."
+        "description": "Analitik dipacu AI memberikan wawasan yang jelas dan khusus pemberi pengaruh. Buat keputusan yang disokong data yang yakin tanpa tekaan."
       },
       "actionableData": {
-        "title": "Data Boleh Ditindaklanjuti",
-        "description": "Tukar data kompleks menjadi maklumat jelas yang memberdayakan keputusan lebih pintar untuk mempercepatkan pertumbuhan perniagaan."
+        "title": "Data Boleh Diambil Tindakan",
+        "description": "Visualisasikan data kompleks melalui wawasan yang mudah dan boleh diambil tindakan, membolehkan keputusan yang lebih bijak tanpa memerlukan kepakaran data."
       },
       "globalReach": {
         "title": "Jangkauan Global",
-        "description": "Kembangkan perniagaan anda secara antarabangsa dengan strategi lokalisasi untuk berhubung dengan penonton asing."
+        "description": "Berhubung dengan mudah dengan khalayak global menggunakan alat yang meluaskan jangkauan anda dan mengembangkan perniagaan anda."
       }
     },
     "stats": {
       "filters": {
         "title": "Penapis Lanjutan",
-        "description": "untuk pengaruh 'ideal' anda dengan penapis kami dalam beberapa minit",
-        "highlight": "Terokai"
+        "description": "untuk pemberi pengaruh ideal anda dalam beberapa klik sahaja",
+        "highlight": "Teroka"
       },
       "parameters": {
         "title": "Parameter Analitik",
-        "description": "pengaruh 'ideal' anda dengan parameter kami dan buat keputusan yang berpengetahuan",
+        "description": "khalayak dan prestasi pemberi pengaruh untuk mencari pemberi pengaruh ideal dalam beberapa minit",
         "highlight": "Analisis"
       }
     },
     "power": {
       "title": "Manfaatkan kuasa",
-      "description1": "memberdayakan perniagaan untuk berkembang dengan alat intuitif dan wawasan yang boleh ditindaklanjuti. Dengan memudahkan pembuatan keputusan dan membolehkan perkongsian pengaruh yang berkesan,",
-      "description2": "mengubah data mentah menjadi wawasan pemasaran yang berimpak, membantu perniagaan semua saiz mencapai hasil yang bermakna."
+      "description1": "memperkasakan perniagaan dengan mengautomasikan proses kompleks dan menukar data menjadi wawasan yang jelas, menjimatkan masa dan usaha anda. Permudahkan perkongsian pemberi pengaruh, buat keputusan yang lebih bijak dengan lebih cepat, dan memacu pertumbuhan jangka panjang."
     },
     "pricing": {
       "title": "Pelan Langganan",
-      "button": "Terokai lebih lanjut"
+      "button": "Ketahui lebih lanjut"
     }
   },
   "subscribe": {
     "title": "Langgan",
-    "description": "Sertai komuniti kami yang semakin berkembang dan dapatkan kajian kes terkini, trend, kemas kini, sumber berharga, dan banyak lagi untuk mengembangkan perniagaan anda.",
-    "emailPlaceholder": "Alamat e-mel",
+    "description": "Sertai komuniti kami yang semakin berkembang dan dapatkan kajian kes, trend, kemas kini dan banyak lagi untuk mengembangkan perniagaan anda.",
+    "emailPlaceholder": "Alamat emel",
     "button": "Langgan"
   },
   "footer": {
-    "tagline": "Kejayaan Berasaskan Data",
+    "tagline": "Kejayaan Dipacu Data",
     "locations": {
       "title": "Lokasi",
       "japan": "Jepun",
@@ -98,8 +97,8 @@
     },
     "services": {
       "title": "Perkhidmatan",
-      "explore": "iON Terokai",
-      "analyze": "iON Analisis"
+      "explore": "Ion Teroka",
+      "analyze": "Ion Analisis"
     },
     "getStarted": {
       "title": "Mulakan",
@@ -119,51 +118,83 @@
     }
   },
   "navbar": {
-    "features": "Ciri-ciri",
+    "features": "Ciri",
     "pricing": "Harga",
     "resourceHub": "Hab Sumber",
     "signUp": "Daftar",
-    "login": "Log Masuk"
+    "login": "Log masuk"
   },
   "features": {
-    "title": "Ciri-ciri",
-    "startNow": "Mulakan Sekarang",
+    "title": "Ciri",
+    "startNow": "Mula Sekarang",
     "explore": {
-      "title": "Terokai",
-      "subtitle": "cara data mendorong kejayaan anda",
-      "description1": "Transformasikan pemasaran anda dengan akses mudah kepada ribuan influencer di seluruh dunia. Temui, sambungkan, dan tingkatkan jenama anda dengan pangkalan data kami yang tiada tandingan.",
-      "description2": "Temui influencer yang menginspirasi dan melibatkan. Gunakan 15 penapis yang boleh disesuaikan untuk mencari 'sesuai ideal' untuk jenama anda dalam beberapa minit.",
+      "title": "Teroka",
+      "subtitle": "bagaimana data boleh memacu kejayaan anda",
+      "description1": "Gunakan 15 penapis boleh disesuaikan: kiraan pengikut, kadar penglibatan, status pengesahan dan banyak lagi, untuk mengecilkan dan mencari padanan pemberi pengaruh yang sempurna dalam tiga langkah dengan mudah.",
+      "description2": "Temui pemberi pengaruh yang memberi inspirasi dan melibatkan diri. Gunakan 15 penapis boleh disesuaikan untuk mencari padanan 'ideal' untuk jenama anda dalam beberapa minit.",
       "tabs": {
         "filter": {
-          "title": "Tapis",
-          "description": "Perhalusi carian anda dengan menggunakan penapis lanjutan yang disesuaikan dengan keperluan anda."
+          "title": "Penapis",
+          "description": "Gunakan 15 penapis boleh disesuaikan untuk mengecilkan pemberi pengaruh dengan cepat untuk keperluan jenama anda."
         },
         "search": {
           "title": "Cari",
-          "description": "Gunakan kata kunci untuk mengenal pasti influencer yang sesuai dengan matlamat anda."
+          "description": "Cari dan bandingkan pemberi pengaruh berdasarkan metrik utama seperti Kadar Penglibatan, Anggaran Jangkauan dan Pengikut Terlibat. Lihat dan nilai senarai yang ditapis anda serta-merta, buat perbandingan bersebelahan dan buat keputusan termaklum."
         },
         "save": {
           "title": "Simpan",
-          "description": "Susun pencipta pilihan anda ke dalam senarai tersuai untuk akses mudah."
+          "description": "Simpan pemberi pengaruh pilihan anda ke senarai tersuai untuk rujukan mudah dan jangkauan sedia untuk digunakan apabila anda bersedia untuk melancarkan kempen anda."
         }
       }
     },
     "analyse": {
       "title": "Analisis",
-      "subtitle": "cara data mendorong kejayaan anda",
-      "description": "Tingkatkan pemasaran influencer anda dengan laporan terkini: dapatkan pandangan mendalam tentang demografi penonton, metrik prestasi, dan trend penglibatan—memberi kuasa kepada jenama anda untuk mengambil tindakan berani berdasarkan data.",
+      "subtitle": "bagaimana data boleh memacu kejayaan anda",
+      "description": "Tingkatkan pemasaran pemberi pengaruh anda dengan laporan yang komprehensif dan mudah dibaca. Akses lebih 40 metrik utama, termasuk demografi khalayak, kadar penglibatan dan trend prestasi. Kami menyatukan data yang bertaburan ke dalam satu halaman intuitif, menjadikannya mudah untuk anda menilai kualiti pemberi pengaruh dan meramalkan prestasi—tanpa memerlukan pengetahuan data yang mendalam.",
       "tabs": {
         "parameters": {
           "title": "Parameter",
-          "description": "Transformasikan keputusan dengan pandangan, sahkan penonton, ukur prestasi, pastikan perkongsian sejajar dengan jenama dengan 40+ parameter."
+          "description": "Jangan hanya bergantung pada kiraan pengikut. Dapatkan pemahaman sebenar tentang kesan pemberi pengaruh dengan analisis terperinci kami. Nilaikan metrik prestasi utama dengan cepat yang penting untuk perniagaan anda:",
+          "engagementMetrics": {
+            "highlight": "Metrik penglibatan:",
+            "description": "menunjukkan interaksi antara pemberi pengaruh dan khalayak mereka, menunjukkan sejauh mana kandungan itu beresonansi dengan pengikut"
+          },
+          "audienceMetrics": {
+            "highlight": "Metrik khalayak:",
+            "description": "butiran asas tentang pengikut pemberi pengaruh, seperti umur, jantina, lokasi dan minat mereka, membantu anda melihat sama ada khalayak mereka sepadan dengan pelanggan sasaran anda."
+          }
         },
         "audience": {
-          "title": "Penonton",
-          "description": "Temui intipati penonton anda dengan analisis lanjutan: terokai demografi pengikut dari lokasi hingga umur dan banyak lagi, untuk mencipta kempen yang disesuaikan."
+          "title": "Khalayak",
+          "description": "Mencari khalayak yang betul adalah kunci kepada pemasaran pemberi pengaruh yang berkesan. Metrik khalayak menunjukkan sama ada pengikut pemberi pengaruh sejajar dengan pasaran sasaran anda, membantu anda membuat keputusan pemasaran yang fokus.",
+          "ageGenderDistribution": {
+            "highlight": "Taburan Umur-Jantina:",
+            "description": "Menunjukkan julat umur dan pecahan jantina khalayak pemberi pengaruh, membantu anda menyasarkan demografi yang betul untuk jenama anda"
+          },
+          "location": {
+            "highlight": "Lokasi:",
+            "description": "Memaparkan lokasi geografi pengikut, membantu anda menyasarkan wilayah tertentu."
+          },
+          "interests": {
+            "highlight": "Minat/Tingkah Laku:",
+            "description": "Menyerlahkan minat pengikut, menunjukkan sama ada mereka sepadan dengan jenama anda."
+          }
         },
         "engagement": {
-          "title": "Simpan",
-          "description": "Tingkatkan penilaian influencer anda dengan pandangan penglibatan: ukur kadar interaksi, nilai kualiti penonton, dan pastikan setiap pencipta memberikan penglibatan yang tulen dan berimpak."
+          "title": "Penglibatan",
+          "description": "Penglibatan lebih daripada sekadar suka, perkongsian dan langganan. Analisis penglibatan ION memecahkan prestasi merentas imej, suapan dan kekili, memberikan gambaran yang jelas tentang kesan sebenar pemberi pengaruh.",
+          "engagementRate": {
+            "highlight": "Kadar penglibatan:",
+            "description": "Nisbah interaksi (suka, komen, perkongsian) kepada jumlah pengikut, menunjukkan sejauh mana khalayak aktif terlibat dengan kandungan."
+          },
+          "reach": {
+            "highlight": "Jangkauan:",
+            "description": "Jumlah bilangan pengguna unik yang telah melihat kandungan, menunjukkan keterlihatan keseluruhan pemberi pengaruh."
+          },
+          "engagementConsistency": {
+            "highlight": "Konsistensi Penglibatan:",
+            "description": "Mengukur kestabilan penglibatan dari semasa ke semasa, menunjukkan sejauh mana khalayak pemberi pengaruh berinteraksi dengan kandungan mereka secara konsisten."
+          }
         }
       }
     }
@@ -174,17 +205,17 @@
       "part2": "Pelan Sesuai Untuk Anda"
     },
     "subtitle": {
-      "part1": "Buka kunci wawasan influencer dengan pelan fleksibel kami.",
-      "part2": "Pilih pilihan yang sempurna untuk menganalisis, menjejak, dan mengoptimumkan kempen anda."
+      "part1": "Buka wawasan pemberi pengaruh dengan pelan fleksibel kami.",
+      "part2": "Pilih pilihan yang sempurna untuk menganalisis, menjejaki dan mengoptimumkan kempen anda."
     },
     "tryReport": "Cuba 1 Laporan Percuma",
     "subscription": {
       "title": "Pelan Langganan"
     },
-    "discoverMore": "Terokai Lagi",
+    "discoverMore": "Ketahui Lebih Lanjut",
     "evaluate": {
       "title": {
-        "part1": "Nilai",
+        "part1": "Nilaikan",
         "part2": "Berbanding Pilihan Lain"
       },
       "tabs": {
@@ -192,7 +223,7 @@
         "alternatives": "Alternatif"
       },
       "manualWork": {
-        "timePerMonth": "Masa Sebulan",
+        "timePerMonth": "Jam Sebulan",
         "monthlyCost": "Kos Bulanan",
         "hourlyRate": "(25 USD / jam)",
         "creatorSearch": "Carian Pencipta",
@@ -207,151 +238,152 @@
         "competitors": "Pesaing",
         "countries": "Negara",
         "localJointVentures": "Usaha sama tempatan",
-        "presence": "Kehadiran di 4 negara di Asia",
+        "presence": "Kehadiran di 4 negara di seluruh Asia",
         "parameters": "Parameter",
         "basicParameters": "12~ parameter asas",
         "advancedParameters": "40+ parameter lanjutan",
         "cost": "Kos",
-        "competitorCost": "$200~ / bulan",
-        "ionCost": "$80 / bulan"
+        "competitorCost": "$200 ~/ bulan",
+        "ionCost": "$80 ~/ bulan"
       }
     }
   },
   "resources": {
-    "featured": "Tampilan",
+    "featured": "Ditampilkan",
     "featuredPost": {
-      "title": "Tajuk untuk pos yang ditampilkan",
-      "subtitle": "Sub-tajuk untuk pos yang ditampilkan ABC123",
-      "readMore": "Baca lebih lanjut +"
+      "title": "Tajuk untuk siaran yang ditampilkan",
+      "subtitle": "Sub-tajuk untuk siaran yang ditampilkan ABC123",
+      "readMore": "Baca lagi +"
     },
     "faq": {
       "title": "Soalan Lazim",
       "whatIsIonkol": {
         "title": "Apakah IONKOL?",
-        "preview": "IONKOL ialah syarikat permulaan analisis data yang membantu syarikat mencari...",
-        "content": "IONKOL ialah syarikat permulaan analisis data yang membantu syarikat mencari, mengurus, dan mengoptimumkan perkongsian pengaruh mereka dengan menyediakan pandangan pemasaran pengaruh yang didorong oleh data. Dengan menggunakan analisis audiens, metrik prestasi, dan penapis lanjutan, IONKOL memudahkan proses pemilihan pengaruh, membolehkan syarikat dari semua saiz berhubung dengan pengaruh yang sesuai untuk pertumbuhan jenama mereka. Sama ada anda baru memulakan pemasaran pengaruh atau ingin mengembangkan kempen anda, IONKOL menyediakan alat yang diperlukan untuk membuat keputusan yang lebih bijak dan didorong oleh data.",
+        "preview": "IONKOL ialah syarikat permulaan analitik data. Kami menyediakan wawasan pemasaran pemberi pengaruh dipacu data untuk membantu perniagaan menemui...",
+        "content": "IONKOL ialah syarikat permulaan analitik data. Kami menyediakan wawasan pemasaran pemberi pengaruh dipacu data untuk membantu perniagaan menemui, mengurus dan mengoptimumkan perkongsian pemberi pengaruh mereka. Dengan memanfaatkan analitik khalayak, metrik prestasi dan penapis lanjutan, IONKOL memudahkan proses pemilihan pemberi pengaruh, membolehkan perniagaan dari semua saiz berhubung dengan pemberi pengaruh yang betul untuk mengembangkan jenama mereka. Sama ada anda baru bermula atau ingin meningkatkan usaha pemasaran pemberi pengaruh anda, IONKOL menyediakan alat yang anda perlukan untuk membuat keputusan yang lebih bijak dan dipacu data.",
         "findOutMore": "Ketahui lebih lanjut"
       },
       "howDoesIonkolWork": {
-        "title": "Bagaimana IONKOL berfungsi?",
-        "preview": "IONKOL menyediakan platform yang cekap di mana syarikat boleh mencari pengaruh menggunakan penapis yang boleh disesuaikan seperti lokasi...",
-        "content": "IONKOL menyediakan platform yang cekap di mana syarikat boleh mencari pengaruh menggunakan penapis yang boleh disesuaikan seperti lokasi, minat, demografi audiens, dan metrik penglibatan. Setelah menemui pengaruh yang sesuai, anda boleh menilai prestasi masa lalu mereka melalui analisis komprehensif untuk memastikan mereka sejajar dengan matlamat pemasaran anda.",
-        "howItWorks": "Secara ringkasnya:",
+        "title": "Bagaimanakah IONKOL berfungsi?",
+        "preview": "IONKOL berfungsi dengan menawarkan perniagaan platform yang diperkemas untuk mencari pemberi pengaruh menggunakan penapis boleh disesuaikan seperti...",
+        "content": "IONKOL berfungsi dengan menawarkan perniagaan platform yang diperkemas untuk mencari pemberi pengaruh menggunakan penapis boleh disesuaikan seperti lokasi, minat, demografi khalayak dan metrik penglibatan. Sebaik sahaja anda menemui pemberi pengaruh yang betul, anda boleh menilai prestasi masa lalu mereka melalui analitik yang komprehensif, memastikan mereka sejajar dengan matlamat pemasaran anda.",
+        "howItWorks": "Inilah cara ia berfungsi secara ringkas:",
         "steps": {
           "search": {
             "title": "Cari",
-            "description": "Gunakan penapis carian lanjutan IONKOL untuk menemui pengaruh yang sesuai dengan audiens, niche, dan matlamat jenama anda."
+            "description": "Gunakan penapis carian lanjutan IONKOL untuk mencari pemberi pengaruh yang sepadan dengan khalayak, niche dan matlamat jenama anda."
           },
           "analyze": {
             "title": "Analisis",
-            "description": "Nilai pengaruh melalui analisis terperinci tentang kadar penglibatan, kredibiliti audiens, dan prestasi masa lalu."
+            "description": "Nilaikan pemberi pengaruh menggunakan analitik terperinci, seperti kadar penglibatan, ketulenan khalayak dan prestasi masa lalu."
           },
           "connect": {
-            "title": "Hubung",
-            "description": "Hubungi pengaruh secara langsung melalui platform, mulakan kerjasama, jejaki kempen, dan urus kontrak."
+            "title": "Sambung",
+            "description": "Jangkau pemberi pengaruh secara langsung melalui platform untuk memulakan kerjasama, menjejaki kempen dan mengurus kontrak."
           },
           "optimize": {
             "title": "Optimumkan",
-            "description": "Pantau prestasi kempen yang sedang berlangsung dan buat pelarasan untuk memastikan ROI terbaik."
+            "description": "Semak prestasi kempen yang sedang berjalan dan buat pelarasan untuk memastikan ROI terbaik."
           }
         },
-        "conclusion": "IONKOL menjadikan pemasaran pengaruh cekap, mudah diakses, dan didorong oleh data.",
+        "conclusion": "IONKOL menjadikan pemasaran pemberi pengaruh cekap, boleh diakses dan dipacu data.",
         "findOutMore": "Ketahui lebih lanjut"
       },
       "whoIsIonkolFor": {
-        "title": "Siapa yang sesuai untuk IONKOL? Adakah ia sesuai untuk saya?",
-        "preview": "IONKOL direka untuk syarikat dari semua saiz yang ingin memanfaatkan kuasa pemasaran pengaruh untuk pertumbuhan jenama mereka...",
-        "content": "IONKOL direka untuk syarikat dari semua saiz yang ingin memanfaatkan kuasa pemasaran pengaruh untuk pertumbuhan jenama mereka. Sama ada anda ialah syarikat kecil yang baru mula meneroka perkongsian pengaruh atau syarikat besar yang ingin mengembangkan kempen anda, IONKOL menyediakan alat yang diperlukan untuk berjaya.",
+        "title": "Siapakah IONKOL? Adakah ia sesuai untuk saya?",
+        "preview": "IONKOL direka untuk perniagaan dari semua saiz yang ingin memanfaatkan kuasa pemasaran pemberi pengaruh untuk mengembangkan...",
+        "content": "IONKOL direka untuk perniagaan dari semua saiz yang ingin memanfaatkan kuasa pemasaran pemberi pengaruh untuk mengembangkan jenama mereka. Sama ada anda perniagaan kecil yang baru bermula untuk meneroka perkongsian pemberi pengaruh atau syarikat yang lebih besar yang ingin meningkatkan kempen anda, IONKOL mempunyai alat yang anda perlukan untuk berjaya.",
         "perfectFor": "IONKOL sesuai untuk:",
         "targets": {
           "smallBusinesses": {
-            "title": "Perniagaan Kecil",
-            "description": "Mereka yang mencari cara kos efektif untuk mencapai pelanggan baharu dan mengembangkan kehadiran jenama mereka."
+            "title": "Perniagaan Kecil hingga Sederhana",
+            "description": "Jika anda mencari cara yang kos efektif untuk menjangkau pelanggan baharu dan mengembangkan kehadiran jenama anda."
           },
           "ecommerce": {
             "title": "Jenama E-dagang",
-            "description": "Mereka yang ingin meningkatkan kesedaran, meningkatkan jualan, dan membina kesetiaan pelanggan melalui kerjasama pengaruh."
+            "description": "Untuk meningkatkan keterlihatan, memacu jualan dan meningkatkan kesetiaan pelanggan melalui kerjasama pemberi pengaruh."
           },
           "marketingTeams": {
             "title": "Pasukan Pemasaran",
-            "description": "Syarikat yang sudah bekerja dengan pengaruh tetapi memerlukan cara mudah untuk mengoptimumkan proses dan prestasi."
+            "description": "Untuk perniagaan yang sudah bekerjasama dengan pemberi pengaruh tetapi memerlukan cara mudah untuk menyelaraskan proses dan mengoptimumkan prestasi."
           },
           "agencies": {
             "title": "Agensi",
-            "description": "Mereka yang ingin menguruskan pelbagai kempen pengaruh untuk pelanggan dalam pelbagai industri."
+            "description": "Untuk mengurus berbilang kempen pemberi pengaruh dengan cekap untuk pelanggan merentas pelbagai industri."
           },
           "contentCreators": {
             "title": "Pencipta Kandungan",
-            "description": "Mereka yang ingin mengembangkan jangkauan mereka dan berhubung dengan jenama yang sejajar dengan nilai mereka."
+            "description": "Mereka yang ingin meluaskan jangkauan mereka dan berhubung dengan jenama yang sejajar dengan nilai mereka."
           }
         },
-        "conclusion": "IONKOL menyokong syarikat dalam pelbagai industri, termasuk fesyen, kecantikan, makanan dan minuman, dan gaya hidup.",
+        "conclusion": "IONKOL melayani perniagaan merentas pelbagai industri, termasuk fesyen, kecantikan, makanan dan minuman, gaya hidup dan banyak lagi.",
         "findOutMore": "Ketahui lebih lanjut"
       },
       "howMuchDoesIonkolCost": {
         "title": "Berapakah kos IONKOL?",
-        "preview": "IONKOL menawarkan pelan harga yang fleksibel yang disesuaikan dengan keperluan syarikat dari semua saiz. Pilihan langganan bulanan dan tahunan...",
-        "content": "IONKOL menawarkan pelan harga yang fleksibel yang disesuaikan dengan keperluan syarikat dari semua saiz. Kami menawarkan pelbagai tahap pilihan langganan bulanan dan tahunan berdasarkan ciri yang anda perlukan dan saiz perniagaan anda.",
-        "pricingPlans": "Pelan Harga:",
+        "preview": "IONKOL menawarkan pelan harga yang fleksibel untuk memenuhi keperluan perniagaan dari semua saiz. Kami menyediakan kedua-dua bulanan dan...",
+        "content": "IONKOL menawarkan pelan harga yang fleksibel untuk memenuhi keperluan perniagaan dari semua saiz. Kami menyediakan pilihan langganan bulanan dan tahunan, dengan pelbagai peringkat berdasarkan ciri yang anda perlukan dan skala perniagaan anda.",
+        "pricingPlans": "Pelan Harga Kami:",
         "plans": {
           "free": {
             "title": "Pelan Percuma",
-            "description": "Cuba IONKOL dengan ciri terhad. Sesuai untuk perniagaan kecil yang baru memulakan pemasaran pengaruh."
+            "description": "Cuba IONKOL dengan ciri terhad, sesuai untuk perniagaan kecil yang baru bermula dengan pemasaran pemberi pengaruh."
           },
           "core": {
             "title": "Pelan Teras",
-            "description": "Dari $100 sebulan, sesuai untuk perniagaan kecil yang memerlukan akses kepada ciri seperti carian pengaruh lanjutan, penjejakan, dan pelaporan."
+            "description": "Bermula pada $100/bulan, sesuai untuk perniagaan kecil yang memerlukan akses kepada lebih banyak ciri seperti carian, penjejakan dan pelaporan pemberi pengaruh lanjutan."
           },
           "plus": {
             "title": "Pelan Plus",
-            "description": "Pada $220 sebulan, menawarkan alat yang lebih komprehensif dan sokongan tambahan untuk perniagaan yang berkembang dan kempen pengaruh yang lebih besar."
+            "description": "$220/bulan, menawarkan alat yang lebih komprehensif dan sokongan tambahan untuk perniagaan yang berkembang dan kempen pemberi pengaruh yang lebih besar."
           },
           "prime": {
-            "title": "Pelan Utama",
-            "description": "Pada $375 sebulan, direka untuk syarikat besar dengan keperluan lanjutan, menawarkan ciri, analisis, dan sokongan keutamaan yang paling komprehensif."
+            "title": "Pelan Perdana",
+            "description": "$375/bulan, direka untuk perniagaan besar dengan keperluan lanjutan, menawarkan ciri, analitik dan sokongan keutamaan yang paling luas."
           }
         },
-        "discounts": "Kami menawarkan diskaun sehingga 25% untuk langganan tahunan berbanding harga bulanan.",
-        "conclusion": "Harga kami direka untuk berkembang bersama perniagaan anda. Pilih pelan yang sesuai dengan matlamat pemasaran pengaruh anda dan mulakan memanfaatkan kuasa kempen pengaruh hari ini.",
+        "discounts": "Kami juga menawarkan diskaun untuk langganan tahunan, membolehkan anda menjimatkan sehingga 25% berbanding harga bulanan.",
+        "conclusion": "Harga kami direka untuk berpatutan, dengan pelan yang berkembang seiring dengan perniagaan anda. Pilih pelan yang paling sesuai dengan matlamat pemasaran pemberi pengaruh anda dan mula memanfaatkan kuasa kempen pemberi pengaruh hari ini.",
         "findOutMore": "Ketahui lebih lanjut"
       },
       "whatMakesIonkolDifferent": {
-        "title": "Apakah yang menjadikan IONKOL berbeza daripada perkhidmatan lain?",
-        "preview": "IONKOL menonjol dalam pemasaran pengaruh dengan menawarkan platform komprehensif yang menggabungkan pandangan didorong oleh data...",
-        "content": "IONKOL menonjol dalam pemasaran pengaruh dengan menawarkan platform komprehensif yang menggabungkan pandangan didorong oleh data, kemudahan penggunaan, dan harga berpatutan.",
-        "keyFeatures": "Ciri utama yang menjadikan IONKOL istimewa:",
+        "title": "Apakah yang membezakan IONKOL daripada yang lain?",
+        "preview": "IONKOL menonjol dalam landskap pemasaran pemberi pengaruh dengan menawarkan platform komprehensif yang menggabungkan...",
+        "content": "IONKOL menonjol dalam landskap pemasaran pemberi pengaruh dengan menawarkan platform komprehensif yang menggabungkan wawasan dipacu data, kemudahan penggunaan dan kemampuan.",
+        "keyFeatures": "Berikut ialah beberapa ciri utama yang menjadikan IONKOL unik:",
         "features": {
           "dataDriven": {
-            "title": "Pandangan Pengaruh Didorong oleh Data",
-            "description": "IONKOL menyediakan analisis audiens dan penglibatan yang mendalam yang membantu mengenal pasti pengaruh yang sesuai berdasarkan pengaruh sebenar audiens mereka, bukan hanya bilangan pengikut. Parameter kami yang kuat membolehkan anda menilai kredibiliti pengaruh, kualiti penglibatan, dan relevansi audiens untuk membuat keputusan yang lebih tepat."
+            "title": "Wawasan Pemberi Pengaruh Dipacu Data",
+            "description": "IONKOL menawarkan analitik khalayak dan penglibatan yang mendalam yang membantu anda mengenal pasti pemberi pengaruh yang betul, bukan hanya berdasarkan pengikut, tetapi pada kesan sebenar khalayak mereka. Parameter kami yang teguh membolehkan anda menilai ketulenan pemberi pengaruh, kualiti penglibatan dan perkaitan khalayak untuk membuat keputusan yang lebih tepat."
           },
           "customizable": {
             "title": "Pelan Boleh Disesuaikan dan Fleksibel",
-            "description": "Sama ada anda ialah pemilik perniagaan kecil yang baru memulakan pemasaran pengaruh atau syarikat besar yang menjalankan kempen yang lebih besar, IONKOL menawarkan pelan yang berkembang dengan keperluan anda. Platform intuitif kami juga memudahkan untuk dikendalikan, membolehkan sesiapa sahaja dengan pengalaman pemasaran minimum menjalankan kempen yang berjaya."
+            "description": "Sama ada anda pemilik perniagaan kecil yang baru bermula dengan pemasaran pemberi pengaruh atau syarikat besar yang menjalankan kempen volum tinggi, IONKOL menawarkan pelan yang berskala dengan keperluan anda. Selain itu, platform intuitif kami memastikan bahawa walaupun mereka yang mempunyai pengalaman pemasaran yang minimum boleh menavigasi dan menjalankan kempen yang berjaya dengan mudah."
           },
           "transparency": {
             "title": "Ketelusan dan Kawalan",
-            "description": "IONKOL menyediakan ketelusan penuh mengenai prestasi dan analisis pengaruh, membolehkan syarikat membuat keputusan berdasarkan data dan mengoptimumkan strategi pemasaran mereka dengan berkesan."
+            "description": "IONKOL memberikan ketelusan yang lengkap dalam prestasi dan analitik pemberi pengaruh. Ini memperkasakan perniagaan untuk membuat keputusan yang disokong data dan mengoptimumkan strategi pemasaran mereka dengan berkesan."
           },
           "education": {
-            "title": "Pendidikan dan Integrasi Alat",
-            "description": "IONKOL bukan sekadar menyediakan alat pemasaran pengaruh. Kami menawarkan pelbagai sumber pendidikan, termasuk tutorial, webinar, dan blog, untuk membantu anda memahami ekosistem pemasaran pengaruh dan belajar cara memaksimumkan kempen anda."
+            "title": "Penyepaduan Pendidikan dan Alat",
+            "description": "IONKOL bukan sahaja tentang menawarkan alat pemasaran pemberi pengaruh. Kami menyediakan pelbagai sumber pendidikan seperti tutorial, webinar dan blog untuk membantu anda memahami ekosistem pemasaran pemberi pengaruh dan cara memaksimumkan kempen anda."
           }
         },
-        "conclusion": "IONKOL direka untuk menjadikan pemasaran pengaruh mudah diakses, boleh dilaksanakan, dan sangat cekap untuk syarikat dari semua saiz."
+        "conclusion": "IONKOL direka untuk menjadikan pemasaran pemberi pengaruh boleh diakses, boleh diambil tindakan dan sangat cekap untuk perniagaan dari semua saiz.",
+        "findOutMore": "Ketahui lebih lanjut"
       }
     },
     "tabs": {
-      "allPosts": "Semua pos",
+      "allPosts": "Semua siaran",
       "ionkol101": "IONKOL 101",
       "research": "Penyelidikan",
-      "ionUpdates": "Kemas kini ION"
+      "ionUpdates": "Kemas Kini ION"
     },
     "filters": {
-      "postType": "Jenis Pos",
+      "postType": "Jenis Siaran",
       "location": "Lokasi",
       "interest": "Minat",
-      "seeMore": "Lihat lebih banyak +"
+      "seeMore": "Lihat lagi +"
     },
     "postTypes": {
       "blog": "Blog",
@@ -371,7 +403,7 @@
   "contact": {
     "title": "Hubungi Kami",
     "subtitle": {
-      "part1": "Hubungi orang yang tepat di",
+      "part1": "Berhubung dengan orang yang betul di",
       "part2": "Kami sedia membantu."
     },
     "tabs": {
@@ -379,28 +411,29 @@
       "demo": "Demo"
     },
     "form": {
-      "firstName": "Nama Pertama*",
-      "lastName": "Nama Akhir*",
+      "firstName": "* Nama Pertama",
+      "lastName": "* Nama Akhir",
       "company": "Nama Syarikat / Jenama",
       "position": "Jawatan",
-      "phone": "Nombor Telefon",
+      "phone": "Nombor telefon",
       "country": "Negara",
-      "email": "E-mel*",
-      "source": "Bagaimana anda mengetahui tentang kami?",
-      "inquiry": "Pertanyaan*",
+      "email": "* Emel",
+      "source": "Bagaimanakah anda mengetahui tentang kami?",
+      "sourceOther": "Jika lain, sila nyatakan",
+      "inquiry": "* Pertanyaan",
       "consent": {
-        "text": "*Saya mengesahkan bahawa saya telah membaca, bersetuju dan menerima",
-        "terms": "Syarat Perkhidmatan dan Dasar Privasi"
+        "text": "* Saya mengesahkan bahawa saya telah membaca, bersetuju dan bersetuju dengan",
+        "terms": "Syarat perkhidmatan dan Dasar Privasi"
       },
       "submit": "Hantar",
       "sourceOptions": {
         "google": "Google / Enjin Carian",
         "onlineAd": "Iklan Dalam Talian",
-        "influencerRecommendation": "Cadangan Influencer",
+        "influencerRecommendation": "Cadangan Pemberi Pengaruh",
         "friendRecommendation": "Cadangan Rakan / Keluarga",
         "event": "Acara atau Persidangan",
-        "media": "Podcast, Blog, atau Artikel Berita",
-        "email": "E-mel atau Surat Berita",
+        "media": "Podcast, Blog atau Artikel Berita",
+        "email": "Emel atau Surat Berita",
         "other": "Lain-lain (Sila nyatakan)"
       }
     }

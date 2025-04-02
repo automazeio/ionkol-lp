@@ -1,80 +1,79 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "etetet {username}",
+  "example_message": "你好世界 {username}",
   "main": {
-    "aiPlatform": "AI 影响者分析平台",
+    "aiPlatform": "AI影响者分析平台",
     "explore": "探索",
     "analyse": "分析",
-    "dataDriverSuccess": "数据驱动成功",
+    "dataDriverSuccess": "数据驱动的成功",
     "startNow": "立即开始"
   },
   "aboutUs": {
-    "title": "iON，故事",
-    "subtitle": "就像iON一样",
+    "title": "，故事",
+    "subtitle": "离子的",
     "tagline": "创造的最小构建块",
-    "description": "就像形成我们所知的一切一样，我们将数据转化为可执行的见解。通过将最简单的元素转化为增长工具，我们使企业能够建立非凡的联系并实现有意义的转型。",
+    "description": "结合起来形成我们所知道的一切，我们将数据转化为可操作的见解。通过将最简单的元素转化为增长工具，我们帮助企业建立非凡的联系并实现有意义的转变。",
     "mission": {
       "title": "我们的使命",
-      "description": "通过数据驱动的见解简化决策，实现更智能、更有影响力的营销。"
+      "description": "通过数据驱动的洞察简化决策，实现更智能、更具影响力的营销。"
     },
     "vision": {
       "title": "我们的愿景",
-      "description": "通过可执行的数据驱动营销见解，使企业能够充分发挥其潜力。"
+      "description": "通过可操作的数据驱动营销洞察，帮助企业释放其全部潜力。"
     }
   },
   "index": {
-    "keyFeatures": "主要功能",
+    "keyFeatures": "主要特点",
     "explore": {
       "title": "探索",
-      "description": "发现并连接能够放大您品牌信息的创作者。使用高级筛选器快速找到与您的目标一致并提供实际结果的网红。",
+      "description": "只需点击几下即可探索您理想的影响者。使用我们的高级过滤器节省时间，并找到与您的品牌信息一致的影响者。",
       "button": "了解更多"
     },
     "analyse": {
       "title": "分析",
-      "description": "通过可执行的绩效指标和受众参与度洞察来评估您的网红合作伙伴关系的成功。",
+      "description": "在几分钟内分析影响者的受众和表现。在一个报告中访问从互动到受众的所有详细信息。",
       "button": "了解更多"
     },
     "goals": {
-      "title": "在一处实现所有目标"
+      "title": "在一个地方实现您的所有目标"
     },
     "features": {
       "timeSaving": {
         "title": "节省时间",
-        "description": "使用iON的高效工具简化寻找理想网红的搜索和验证流程。"
+        "description": "为您的业务释放更多时间。ION简化了影响者搜索和分析，帮助您在几分钟内找到完美的匹配项。"
       },
       "competitivePricing": {
-        "title": "具有竞争力的价格",
-        "description": "以实惠的价格访问强大的网红营销工具，无隐藏费用。"
+        "title": "有竞争力的定价",
+        "description": "以实惠的价格访问强大的影响者营销工具，无需高成本即可实现成果。"
       },
       "smartInsights": {
         "title": "智能洞察",
-        "description": "专有AI驱动分析，获取网红特定洞察，做出自信的数据驱动决策。"
+        "description": "人工智能驱动的分析提供清晰的、影响者特定的洞察。做出自信的数据支持的决策，无需猜测。"
       },
       "actionableData": {
-        "title": "可执行数据",
-        "description": "将复杂数据转化为清晰信息，赋能更智能的决策以加速业务增长。"
+        "title": "可操作的数据",
+        "description": "通过简单、可操作的洞察可视化复杂的数据，无需数据专业知识即可做出更明智的决策。"
       },
       "globalReach": {
         "title": "全球覆盖",
-        "description": "通过本地化策略连接海外受众，实现业务国际化扩张。"
+        "description": "使用扩展您的覆盖范围并发展您的业务的工具轻松连接全球受众。"
       }
     },
     "stats": {
       "filters": {
-        "title": "高级筛选器",
-        "description": "几分钟内使用我们的筛选器找到您的'理想'网红",
+        "title": "高级过滤器",
+        "description": "只需点击几下即可找到您理想的影响者",
         "highlight": "探索"
       },
       "parameters": {
         "title": "分析参数",
-        "description": "使用我们的参数找到您的'理想'网红并做出明智决策",
+        "description": "分析影响者的受众和表现，在几分钟内找到理想的影响者",
         "highlight": "分析"
       }
     },
     "power": {
       "title": "利用的力量",
-      "description1": "通过直观工具和可执行洞察赋能业务增长。通过简化决策和实现有效的网红合作伙伴关系，",
-      "description2": "将原始数据转化为有影响力的营销洞察，帮助各种规模的企业实现有意义的结果。"
+      "description1": "通过自动化复杂流程并将数据转化为清晰的洞察，从而节省您的时间和精力，从而增强企业的能力。简化影响者合作伙伴关系，更快地做出更明智的决策，并推动长期增长。"
     },
     "pricing": {
       "title": "订阅计划",
@@ -83,14 +82,14 @@
   },
   "subscribe": {
     "title": "订阅",
-    "description": "加入我们不断壮大的社区，获取最新的案例研究、趋势、更新、有价值的资源等，助力您的业务增长。",
-    "emailPlaceholder": "电子邮箱地址",
+    "description": "加入我们不断增长的社区，获取最新的案例研究、趋势、更新等，以发展您的业务。",
+    "emailPlaceholder": "电子邮件地址",
     "button": "订阅"
   },
   "footer": {
-    "tagline": "数据驱动成功",
+    "tagline": "数据驱动的成功",
     "locations": {
-      "title": "位置",
+      "title": "地点",
       "japan": "日本",
       "korea": "韩国",
       "malaysia": "马来西亚",
@@ -98,8 +97,8 @@
     },
     "services": {
       "title": "服务",
-      "explore": "iON 探索",
-      "analyze": "iON 分析"
+      "explore": "Ion 探索",
+      "analyze": "Ion 分析"
     },
     "getStarted": {
       "title": "开始使用",
@@ -119,51 +118,83 @@
     }
   },
   "navbar": {
-    "features": "功能",
-    "pricing": "价格",
+    "features": "特点",
+    "pricing": "定价",
     "resourceHub": "资源中心",
     "signUp": "注册",
     "login": "登录"
   },
   "features": {
-    "title": "功能",
+    "title": "特点",
     "startNow": "立即开始",
     "explore": {
       "title": "探索",
-      "subtitle": "数据如何驱动您的成功",
-      "description1": "通过轻松访问全球数千名影响者来革新您的营销。使用我们无与伦比的数据库发现、连接和提升您的品牌。",
-      "description2": "发现能激发灵感并促进参与的影响者。使用15个可自定义的过滤器在几分钟内找到品牌的'理想'匹配。",
+      "subtitle": "数据如何推动您的成功",
+      "description1": "使用15个可自定义的过滤器：粉丝数量、互动率、验证状态等，轻松缩小范围，并通过三个步骤找到完美的影响者匹配项。",
+      "description2": "发现能够激发和吸引人的影响者。应用15个可自定义的过滤器，在几分钟内找到适合您品牌的“理想”匹配项。",
       "tabs": {
         "filter": {
-          "title": "过滤",
-          "description": "使用根据您的需求定制的高级过滤器来优化搜索。"
+          "title": "筛选",
+          "description": "应用15个可自定义的过滤器，快速缩小影响者的范围，以满足您品牌的需要。"
         },
         "search": {
           "title": "搜索",
-          "description": "使用关键词精确定位符合您目标的影响者。"
+          "description": "根据互动率、估计覆盖范围和参与的粉丝等关键指标搜索和比较影响者。立即查看和评估您筛选的列表，进行并排比较并做出明智的决定。"
         },
         "save": {
           "title": "保存",
-          "description": "将您选择的创作者组织到自定义列表中以便轻松访问。"
+          "description": "将您选择的影响者保存到自定义列表中，以便在您准备启动广告系列时轻松参考和随时进行外展。"
         }
       }
     },
     "analyse": {
       "title": "分析",
-      "subtitle": "数据如何驱动您的成功",
-      "description": "通过尖端报告提升您的影响者营销：获得关于受众人口统计、性能指标和参与趋势的无与伦比的洞察—使您的品牌能够采取大胆的数据驱动行动。",
+      "subtitle": "数据如何推动您的成功",
+      "description": "通过全面、易于阅读的报告提升您的影响者营销。访问40多个关键指标，包括受众人口统计、互动率和表现趋势。我们将分散的数据整合到一个直观的页面中，使您可以轻松评估影响者质量和预测表现，而无需深入的数据知识。",
       "tabs": {
         "parameters": {
           "title": "参数",
-          "description": "通过40多个参数的洞察革新决策、验证受众、衡量性能、确保品牌一致的合作伙伴关系。"
+          "description": "不要只依赖粉丝数量。通过我们的详细分析，真正了解影响者的影响力。快速评估对您的业务至关重要的关键绩效指标：",
+          "engagementMetrics": {
+            "highlight": "互动指标：",
+            "description": "显示影响者与其受众之间的互动，表明内容与粉丝产生共鸣的程度。"
+          },
+          "audienceMetrics": {
+            "highlight": "受众指标：",
+            "description": "关于影响者粉丝的基本详细信息，如他们的年龄、性别、位置和兴趣，帮助您了解他们的受众是否与您的目标客户匹配。"
+          }
         },
         "audience": {
           "title": "受众",
-          "description": "通过高级分析发现受众的本质：从位置到年龄等探索关注者人口统计，以创建定制活动。"
+          "description": "找到合适的受众是有效影响者营销的关键。受众指标显示影响者的粉丝是否与您的目标市场一致，帮助您做出有针对性的营销决策。",
+          "ageGenderDistribution": {
+            "highlight": "年龄性别分布：",
+            "description": "显示影响者受众的年龄范围和性别细分，帮助您定位适合您品牌的受众。"
+          },
+          "location": {
+            "highlight": "位置：",
+            "description": "显示粉丝的地理位置，帮助您定位特定地区。"
+          },
+          "interests": {
+            "highlight": "兴趣/行为：",
+            "description": "突出显示粉丝的兴趣，显示他们是否与您的品牌匹配。"
+          }
         },
         "engagement": {
-          "title": "保存",
-          "description": "通过参与洞察提升您的影响者评估：衡量互动率、评估受众质量，并确保每位创作者提供真实、有影响力的参与。"
+          "title": "互动",
+          "description": "互动不仅仅是点赞、分享和订阅。ION的互动分析分解了图像、动态和短视频的表现，清楚地展示了影响者的真实影响力。",
+          "engagementRate": {
+            "highlight": "互动率：",
+            "description": "互动（点赞、评论、分享）与粉丝总数的比率，显示受众与内容互动的活跃程度。"
+          },
+          "reach": {
+            "highlight": "覆盖范围：",
+            "description": "看过内容的唯一用户总数，表示影响者的整体可见度。"
+          },
+          "engagementConsistency": {
+            "highlight": "互动一致性：",
+            "description": "衡量一段时间内互动的稳定性，显示影响者的受众与其内容互动的持续性。"
+          }
         }
       }
     }
@@ -174,10 +205,10 @@
       "part2": "计划适合您"
     },
     "subtitle": {
-      "part1": "通过我们灵活的计划解锁网红洞察。",
-      "part2": "选择完美的选项来分析、跟踪和优化您的营销活动。"
+      "part1": "通过我们的灵活计划解锁影响者洞察。",
+      "part2": "选择完美的选项来分析、跟踪和优化您的广告系列。"
     },
-    "tryReport": "免费体验1份报告",
+    "tryReport": "尝试1份免费报告",
     "subscription": {
       "title": "订阅计划"
     },
@@ -185,170 +216,171 @@
     "evaluate": {
       "title": {
         "part1": "评估",
-        "part2": "与其他选项比较"
+        "part2": "与其他选项的比较"
       },
       "tabs": {
         "manualWork": "手动工作",
         "alternatives": "替代方案"
       },
       "manualWork": {
-        "timePerMonth": "每月时间",
-        "monthlyCost": "每月成本",
-        "hourlyRate": "(25美元/小时)",
-        "creatorSearch": "创作者搜索",
+        "timePerMonth": "每月小时数",
+        "monthlyCost": "每月费用",
+        "hourlyRate": "（25美元/小时）",
+        "creatorSearch": "影响者搜索",
         "dataCompilation": "数据汇编",
         "analysis": "分析",
         "total": "总计",
         "minutes": "分钟",
-        "monthlyTotal": "每月$1,700",
-        "ionTotal": "每月$80~"
+        "monthlyTotal": "1700美元/月",
+        "ionTotal": "80美元~/月"
       },
       "alternatives": {
         "competitors": "竞争对手",
         "countries": "国家",
         "localJointVentures": "本地合资企业",
-        "presence": "在亚洲4个国家设有业务",
+        "presence": "在亚洲4个国家设有分支机构",
         "parameters": "参数",
-        "basicParameters": "12~个基本参数",
-        "advancedParameters": "40+个高级参数",
-        "cost": "成本",
-        "competitorCost": "每月$200~",
-        "ionCost": "每月$80"
+        "basicParameters": "12个基本参数",
+        "advancedParameters": "40多个高级参数",
+        "cost": "费用",
+        "competitorCost": "200美元~/月",
+        "ionCost": "80美元~/月"
       }
     }
   },
   "resources": {
     "featured": "精选",
     "featuredPost": {
-      "title": "精选文章标题",
-      "subtitle": "精选文章副标题 ABC123",
+      "title": "精选帖子的标题",
+      "subtitle": "精选帖子的副标题 ABC123",
       "readMore": "阅读更多 +"
     },
     "faq": {
       "title": "常见问题",
       "whatIsIonkol": {
         "title": "什么是IONKOL？",
-        "preview": "IONKOL是一家数据分析初创公司，帮助企业发现...",
-        "content": "IONKOL是一家数据分析初创公司，通过提供数据驱动的网红营销洞察，帮助企业发现、管理和优化他们的网红合作伙伴关系。通过使用受众分析、性能指标和高级过滤器，IONKOL简化了网红选择过程，使各种规模的企业都能与合适的网红建立联系，促进品牌增长。无论您是刚开始网红营销还是想要扩大您的活动，IONKOL都提供所需的工具，帮助您做出更智能、数据驱动的决策。",
+        "preview": "IONKOL是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，帮助企业发现...",
+        "content": "IONKOL是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，帮助企业发现、管理和优化其影响者合作伙伴关系。通过利用受众分析、绩效指标和高级过滤器，IONKOL简化了影响者选择过程，使各种规模的企业都能与合适的影响者建立联系，从而发展其品牌。无论您是刚刚起步还是希望扩大您的影响者营销工作，IONKOL都提供您做出更智能、数据驱动决策所需的工具。",
         "findOutMore": "了解更多"
       },
       "howDoesIonkolWork": {
-        "title": "IONKOL如何运作？",
-        "preview": "IONKOL提供一个高效的平台，企业可以使用可定制的过滤器（如位置、兴趣、受众人口统计和参与度指标）来搜索网红...",
-        "content": "IONKOL提供一个高效的平台，企业可以使用可定制的过滤器（如位置、兴趣、受众人口统计和参与度指标）来搜索网红。找到合适的网红后，您可以通过全面的分析评估他们过去的表现，确保他们符合您的营销目标。",
-        "howItWorks": "简单来说：",
+        "title": "IONKOL如何工作？",
+        "preview": "IONKOL通过为企业提供一个简化的平台，使用可自定义的过滤器（如...）搜索影响者来工作。",
+        "content": "IONKOL通过为企业提供一个简化的平台，使用可自定义的过滤器（如位置、兴趣、受众人口统计和互动指标）搜索影响者来工作。找到合适的影响者后，您可以通过全面的分析评估他们过去的表现，确保他们与您的营销目标一致。",
+        "howItWorks": "以下是简要的工作原理：",
         "steps": {
           "search": {
             "title": "搜索",
-            "description": "使用IONKOL的高级搜索过滤器找到适合您的品牌受众、细分市场和目标的网红。"
+            "description": "使用IONKOL的高级搜索过滤器查找与您的品牌受众、利基和目标匹配的影响者。"
           },
           "analyze": {
             "title": "分析",
-            "description": "通过详细的参与率、受众可信度和过去表现分析来评估网红。"
+            "description": "使用详细的分析（例如互动率、受众真实性和过去的表现）评估影响者。"
           },
           "connect": {
             "title": "连接",
-            "description": "通过平台直接联系网红，开始合作，跟踪活动，管理合同。"
+            "description": "通过平台直接联系影响者，开始合作、跟踪广告系列和管理合同。"
           },
           "optimize": {
             "title": "优化",
-            "description": "监控正在进行的活动表现，进行调整以确保最佳投资回报率。"
+            "description": "查看正在进行的广告系列的效果并进行调整，以确保最佳的投资回报率。"
           }
         },
-        "conclusion": "IONKOL使网红营销变得高效、易于访问且数据驱动。",
+        "conclusion": "IONKOL使影响者营销高效、易于访问且数据驱动。",
         "findOutMore": "了解更多"
       },
       "whoIsIonkolFor": {
-        "title": "IONKOL适合谁？适合我吗？",
-        "preview": "IONKOL专为各种规模的企业设计，这些企业希望利用网红营销的力量来促进品牌增长...",
-        "content": "IONKOL专为各种规模的企业设计，这些企业希望利用网红营销的力量来促进品牌增长。无论您是刚开始探索网红合作伙伴关系的小企业，还是想要扩大活动的大企业，IONKOL都提供成功所需的工具。",
+        "title": "IONKOL适合谁？它适合我吗？",
+        "preview": "IONKOL专为希望利用影响者营销的力量发展其品牌的各种规模的企业而设计...",
+        "content": "IONKOL专为希望利用影响者营销的力量发展其品牌的各种规模的企业而设计。无论您是刚刚开始探索影响者合作伙伴关系的小型企业，还是希望扩大广告系列规模的大型公司，IONKOL都拥有您成功所需的工具。",
         "perfectFor": "IONKOL非常适合：",
         "targets": {
           "smallBusinesses": {
-            "title": "小企业",
-            "description": "寻找具有成本效益的方式接触新客户并扩大品牌影响力的企业。"
+            "title": "中小型企业",
+            "description": "如果您正在寻找经济高效的方式来接触新客户并扩大您的品牌影响力。"
           },
           "ecommerce": {
-            "title": "电商品牌",
-            "description": "希望通过网红合作提高知名度、增加销售额并建立客户忠诚度的企业。"
+            "title": "电子商务品牌",
+            "description": "通过影响者合作提高知名度、促进销售并增强客户忠诚度。"
           },
           "marketingTeams": {
             "title": "营销团队",
-            "description": "已经在与网红合作但需要简单方法来优化流程和表现的企业。"
+            "description": "对于已经与影响者合作但需要一种简单方法来简化流程和优化绩效的企业。"
           },
           "agencies": {
             "title": "代理机构",
-            "description": "希望为不同行业的客户管理多个网红活动的机构。"
+            "description": "为跨各个行业的客户高效管理多个影响者广告系列。"
           },
           "contentCreators": {
             "title": "内容创作者",
-            "description": "希望扩大影响力并与符合其价值观的品牌建立联系的创作者。"
+            "description": "那些希望扩大其影响力并与符合其价值观的品牌建立联系的人。"
           }
         },
-        "conclusion": "IONKOL支持各个行业的企业，包括时尚、美妆、食品饮料和生活方式。",
+        "conclusion": "IONKOL为包括时尚、美容、食品和饮料、生活方式等在内的各个行业的企业提供服务。",
         "findOutMore": "了解更多"
       },
       "howMuchDoesIonkolCost": {
         "title": "IONKOL的费用是多少？",
-        "preview": "IONKOL提供灵活的价格计划，适应各种规模企业的需求。提供月度和年度订阅选项...",
-        "content": "IONKOL提供灵活的价格计划，适应各种规模企业的需求。我们根据您需要的功能和业务规模提供不同级别的月度和年度订阅选项。",
-        "pricingPlans": "价格计划：",
+        "preview": "IONKOL提供灵活的定价计划，以满足各种规模的企业的需求。我们提供月度和...",
+        "content": "IONKOL提供灵活的定价计划，以满足各种规模的企业的需求。我们提供月度和年度订阅选项，并根据您需要的功能和业务规模提供不同的级别。",
+        "pricingPlans": "我们的定价计划：",
         "plans": {
           "free": {
             "title": "免费计划",
-            "description": "使用有限功能试用IONKOL。适合刚开始网红营销的小企业。"
+            "description": "尝试使用功能有限的IONKOL，非常适合刚刚开始影响者营销的小型企业。"
           },
           "core": {
             "title": "核心计划",
-            "description": "每月$100起，适合需要访问高级网红搜索、跟踪和报告等功能的小企业。"
+            "description": "起价为100美元/月，非常适合需要访问更多功能（如高级影响者搜索、跟踪和报告）的小型企业。"
           },
           "plus": {
-            "title": "升级计划",
-            "description": "每月$220，为成长中的企业和更大的网红活动提供更全面的工具和额外支持。"
+            "title": "Plus计划",
+            "description": "220美元/月，为成长型企业和大型影响者广告系列提供更全面的工具和额外的支持。"
           },
           "prime": {
-            "title": "高级计划",
-            "description": "每月$375，专为具有高级需求的大企业设计，提供最全面的功能、分析和优先支持。"
+            "title": "Prime计划",
+            "description": "375美元/月，专为具有高级需求的大型企业设计，提供最广泛的功能、分析和优先支持。"
           }
         },
-        "discounts": "我们为年度订阅提供高达25%的折扣，相比月度价格。",
-        "conclusion": "我们的价格设计为与您的业务一起成长。选择最适合您网红营销目标的计划，今天就开始利用网红活动的力量。",
+        "discounts": "我们还为年度订阅提供折扣，与每月定价相比，您可以节省高达25%。",
+        "conclusion": "我们的定价旨在经济实惠，计划随着您的业务增长而增长。选择最适合您的影响者营销目标的计划，立即开始利用影响者广告系列的力量。",
         "findOutMore": "了解更多"
       },
       "whatMakesIonkolDifferent": {
-        "title": "是什么让IONKOL与其他服务不同？",
-        "preview": "IONKOL在网红营销领域脱颖而出，提供结合数据驱动洞察、易用性和实惠价格的综合平台...",
-        "content": "IONKOL在网红营销领域脱颖而出，提供结合数据驱动洞察、易用性和实惠价格的综合平台。",
-        "keyFeatures": "使IONKOL与众不同的主要特点：",
+        "title": "IONKOL与其他公司有何不同？",
+        "preview": "IONKOL在影响者营销领域脱颖而出，它提供了一个结合了...的综合平台。",
+        "content": "IONKOL在影响者营销领域脱颖而出，它提供了一个结合了数据驱动的洞察、易用性和经济实惠的综合平台。",
+        "keyFeatures": "以下是一些使IONKOL独一无二的主要功能：",
         "features": {
           "dataDriven": {
-            "title": "数据驱动的网红洞察",
-            "description": "IONKOL提供深入的受众和参与度分析，帮助根据受众的实际影响力（而不仅仅是粉丝数量）识别合适的网红。我们强大的参数让您能够评估网红的可信度、参与质量和受众相关性，做出更准确的决策。"
+            "title": "数据驱动的影响者洞察",
+            "description": "IONKOL提供深入的受众和互动分析，帮助您识别合适的影响者，不仅基于粉丝，还基于其受众的实际影响力。我们强大的参数使您可以评估影响者真实性、互动质量和受众相关性，从而做出更精确的决策。"
           },
           "customizable": {
-            "title": "可定制和灵活的计划",
-            "description": "无论您是刚开始网红营销的小企业主，还是运营大型活动的大企业，IONKOL都提供随您需求扩展的计划。我们的直观平台也易于使用，让具有最少营销经验的人也能轻松运营成功的活动。"
+            "title": "可自定义且灵活的计划",
+            "description": "无论您是刚刚开始影响者营销的小型企业主，还是运行大量广告系列的大型企业，IONKOL都提供可根据您的需求扩展的计划。此外，我们直观的平台确保即使是营销经验最少的人也可以轻松导航和运行成功的广告系列。"
           },
           "transparency": {
             "title": "透明度和控制",
-            "description": "IONKOL提供关于网红表现和分析的完全透明度，使企业能够做出数据驱动的决策并有效优化其营销策略。"
+            "description": "IONKOL在影响者表现和分析方面提供完全的透明度。这使企业能够做出数据支持的决策并有效地优化其营销策略。"
           },
           "education": {
-            "title": "教育和工具集成",
-            "description": "IONKOL不仅仅是提供网红营销工具。我们提供各种教育资源，包括教程、网络研讨会和博客，帮助您了解网红营销生态系统并学习如何最大化您的活动。"
+            "title": "教育和工具的整合",
+            "description": "IONKOL不仅仅是提供影响者营销工具。我们提供一系列教育资源，如教程、网络研讨会和博客，帮助您了解影响者营销生态系统以及如何最大化您的广告系列。"
           }
         },
-        "conclusion": "IONKOL设计为使网红营销对所有规模的企业来说都易于访问、可执行且非常高效。"
+        "conclusion": "IONKOL旨在使各种规模的企业都能访问、操作和高效地进行影响者营销。",
+        "findOutMore": "了解更多"
       }
     },
     "tabs": {
-      "allPosts": "所有文章",
+      "allPosts": "所有帖子",
       "ionkol101": "IONKOL 101",
       "research": "研究",
       "ionUpdates": "ION 更新"
     },
     "filters": {
-      "postType": "文章类型",
+      "postType": "帖子类型",
       "location": "位置",
       "interest": "兴趣",
       "seeMore": "查看更多 +"
@@ -371,7 +403,7 @@
   "contact": {
     "title": "联系我们",
     "subtitle": {
-      "part1": "与合适的人联系",
+      "part1": "与的合适人选取得联系",
       "part2": "我们随时为您提供帮助。"
     },
     "tabs": {
@@ -379,29 +411,30 @@
       "demo": "演示"
     },
     "form": {
-      "firstName": "名字*",
-      "lastName": "姓氏*",
+      "firstName": "* 名字",
+      "lastName": "* 姓氏",
       "company": "公司/品牌名称",
       "position": "职位",
       "phone": "电话号码",
       "country": "国家",
-      "email": "电子邮件*",
+      "email": "* 电子邮件",
       "source": "您是如何了解我们的？",
-      "inquiry": "咨询内容*",
+      "sourceOther": "如果是其他，请注明",
+      "inquiry": "* 咨询",
       "consent": {
-        "text": "*我确认已阅读、同意并接受",
+        "text": "* 我确认已阅读、同意并接受",
         "terms": "服务条款和隐私政策"
       },
       "submit": "提交",
       "sourceOptions": {
         "google": "谷歌/搜索引擎",
         "onlineAd": "在线广告",
-        "influencerRecommendation": "网红推荐",
+        "influencerRecommendation": "影响者推荐",
         "friendRecommendation": "朋友/家人推荐",
         "event": "活动或会议",
         "media": "播客、博客或新闻文章",
         "email": "电子邮件或新闻通讯",
-        "other": "其他（请说明）"
+        "other": "其他（请注明）"
       }
     }
   }
