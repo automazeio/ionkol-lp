@@ -1,3 +1,7 @@
+---
+import { m } from "../paraglide/messages";
+---
+
 <div
   class="relative inline-flex bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]"
 >
@@ -5,16 +9,17 @@
     class="relative z-10 px-12 py-4 text-white rounded-full transition-colors duration-200 focus:outline-none tab-button active bg-[#EE7380]"
     data-tab="monthly"
   >
-    Monthly
+    {m["index.pricing.monthly"]()}
   </button>
   <button
     class="relative z-10 px-12 py-4 text-[#EE7380] rounded-full transition-colors duration-200 focus:outline-none tab-button group"
     data-tab="annual"
   >
-    Annual
-    <span
-      class="save-text absolute top-10 left-10 whitespace-nowrap text-[12px] transition-colors duration-200 text-[#0d0c22]"
-      >Save up to 25%</span
+  {m["index.pricing.annual"]()}
+  <span
+      class="save-text absolute top-10 left-12 whitespace-nowrap text-[12px] transition-colors duration-200 text-[#0d0c22]"
+      > {m["index.pricing.saveUp"]()}
+      </span
     >
   </button>
 </div>

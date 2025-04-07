@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import type { PriceCard } from "../../../lib/directus";
 import directus from "../../../lib/directus";
 import { readItems } from "@directus/sdk";
+import { m } from "../../paraglide/messages";
 
 export default function PriceCardsData() {
   const [data, setData] = useState<PriceCard[]>([]);
@@ -39,10 +40,10 @@ export default function PriceCardsData() {
                     <span className="text-3xl">USD</span>
                   </p>
                 </div>
-                <p className="text-xl mb-4">Per Month</p>
+                <p className="text-xl mb-4">{m["index.pricing.perMonth"]()}</p>
                 <div className="yearly-price text-xl mb-6 flex flex-col hidden">
                   <span>$ {price.price_yearly}</span>
-                  <span>(Billed Annually)</span>
+                  <span>({m["index.pricing.billedAnnually"]()})</span>
                 </div>
               </>
             )}

@@ -23,6 +23,7 @@ export type Article = {
   location?: string;
   interest?: string;
   created_at?: string;
+  is_featured: string;
 };
 
 type Schema = {
