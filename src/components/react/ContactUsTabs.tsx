@@ -3,7 +3,17 @@ import Dropdown from "./Dropdown";
 import PhoneInput from "./PhoneInput";
 import { m } from "../../paraglide/messages.js";
 
-const GeneralInquiryForm = () => {
+type GeneralInquiryFormProps = {
+  countries: {
+    code: string;
+    flag: string;
+    name: string;
+  }[];
+};
+
+type Props = GeneralInquiryFormProps;
+
+const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -47,7 +57,7 @@ const GeneralInquiryForm = () => {
     m["contact.form.sourceOptions.other"](),
   ];
 
-  const countryOptions = ["Singapore", "Malaysia", "Japan", "South Korea"];
+  const countryOptions = countries.map((country) => country.name);
 
   return (
     <form
@@ -105,6 +115,7 @@ const GeneralInquiryForm = () => {
           }
           countryCode={countryCode}
           onCountryCodeChange={setCountryCode}
+          countryCodes={countries}
         />
 
         {/* Country */}
@@ -175,17 +186,7 @@ const GeneralInquiryForm = () => {
             <span className="text-start">
               {m["contact.form.consent.text"]()}
             </span>
-            <div className="flex flex-row items-center">
-              <img
-                src="/ionkolLogoNewShort.svg"
-                alt="features"
-                width={90}
-                height={24}
-              />
-              <span>'s</span>
-            </div>
           </div>
-          <span>{m["contact.form.consent.terms"]()}</span>
         </p>
       </div>
 
@@ -200,7 +201,7 @@ const GeneralInquiryForm = () => {
   );
 };
 
-const ContactUsTabs = () => {
+const ContactUsTabs = ({ countries }: Props) => {
   const [currentTab, setCurrentTab] = useState<number>(0);
 
   return (
@@ -219,7 +220,11 @@ const ContactUsTabs = () => {
           {m["contact.tabs.demo"]()}
         </button>
       </div>
-      {currentTab === 0 ? <GeneralInquiryForm /> : "Demo Form Coming Soon"}
+      {currentTab === 0 ? (
+        <GeneralInquiryForm countries={countries} />
+      ) : (
+        "Demo Form Coming Soon"
+      )}
     </div>
   );
 };
