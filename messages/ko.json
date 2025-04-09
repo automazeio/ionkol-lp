@@ -224,14 +224,14 @@
       },
       "tabs": {
         "manualWork": "수동 작업",
-        "alternatives": "대안"
+        "alternatives": "경쟁사"
       },
       "manualWork": {
-        "timePerMonth": "월별 시간",
+        "timePerMonth": "월간 소요 시간",
         "monthlyCost": "월별 비용",
         "hourlyRate": "(시간당 25 USD)",
-        "creatorSearch": "크리에이터 검색",
-        "dataCompilation": "데이터 편집",
+        "creatorSearch": "인플루언서 탐색",
+        "dataCompilation": "데이터 수집",
         "analysis": "분석",
         "total": "총액",
         "minutes": "분",

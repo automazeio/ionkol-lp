@@ -31,7 +31,7 @@ const SingleArticle = ({ slug }: Props) => {
       {data && (
         <div className="flex flex-col gap-10 w-full lg:w-[45rem]">
           <img
-            src={data.thumbnail}
+            src={`https://cms.ionkol.com/assets/${data.thumbnail}`}
             alt={data.title}
             className="w-full h-[20rem] object-cover rounded-lg"
           />

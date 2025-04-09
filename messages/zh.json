@@ -1,8 +1,8 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "example_message": "你好世界 {username}",
+  "example_message": "你好，世界 {username}",
   "main": {
-    "aiPlatform": "AI影响者分析平台",
+    "aiPlatform": "AI 影响者分析平台",
     "explore": "探索",
     "analyse": "分析",
     "dataDriverSuccess": "数据驱动的成功",
@@ -10,28 +10,28 @@
   },
   "aboutUs": {
     "title": "，故事",
-    "subtitle": "离子的",
+    "subtitle": "ion 的",
     "tagline": "创造的最小构建块",
-    "description": "结合起来形成我们所知道的一切，我们将数据转化为可操作的见解。通过将最简单的元素转化为增长工具，我们帮助企业建立非凡的联系并实现有意义的转变。",
+    "description": "结合形成我们所知的一切，我们将数据转化为可操作的见解。通过将最简单的元素转化为增长的工具，我们赋能企业建立非凡的连接并实现有意义的转型。",
     "mission": {
       "title": "我们的使命",
-      "description": "通过数据驱动的洞察简化决策，实现更智能、更具影响力的营销。"
+      "description": "通过数据驱动的洞察简化决策，从而实现更智能、更具影响力的营销。"
     },
     "vision": {
       "title": "我们的愿景",
-      "description": "通过可操作的数据驱动营销洞察，帮助企业释放其全部潜力。"
+      "description": "通过可操作的数据驱动的营销洞察，赋能企业释放其全部潜力。"
     }
   },
   "index": {
     "keyFeatures": "主要特点",
     "explore": {
       "title": "探索",
-      "description": "只需点击几下即可探索您理想的影响者。使用我们的高级过滤器节省时间，并找到与您的品牌信息一致的影响者。",
+      "description": "只需点击几下，即可探索您理想的影响者。通过我们的高级筛选器节省时间，找到与您品牌信息一致的影响者。",
       "button": "了解更多"
     },
     "analyse": {
       "title": "分析",
-      "description": "在几分钟内分析影响者的受众和表现。在一个报告中访问从互动到受众的所有详细信息。",
+      "description": "在几分钟内分析影响者的受众和表现。在一个报告中访问从参与度到受众的所有详细信息。",
       "button": "了解更多"
     },
     "goals": {
@@ -40,50 +40,55 @@
     "features": {
       "timeSaving": {
         "title": "节省时间",
-        "description": "为您的业务释放更多时间。ION简化了影响者搜索和分析，帮助您在几分钟内找到完美的匹配项。"
+        "description": "为您的业务腾出更多时间。ION 简化了影响者搜索和分析，帮助您在几分钟内找到完美匹配。"
       },
       "competitivePricing": {
-        "title": "有竞争力的定价",
-        "description": "以实惠的价格访问强大的影响者营销工具，无需高成本即可实现成果。"
+        "title": "具有竞争力的价格",
+        "description": "以实惠的价格访问强大的影响者营销工具，无需高成本即可获得成果。"
       },
       "smartInsights": {
         "title": "智能洞察",
-        "description": "人工智能驱动的分析提供清晰的、影响者特定的洞察。做出自信的数据支持的决策，无需猜测。"
+        "description": "人工智能驱动的分析提供清晰的、特定于影响者的洞察。无需猜测，即可自信地做出数据驱动的决策。"
       },
       "actionableData": {
         "title": "可操作的数据",
-        "description": "通过简单、可操作的洞察可视化复杂的数据，无需数据专业知识即可做出更明智的决策。"
+        "description": "通过简单、可操作的洞察可视化复杂数据，无需数据专业知识即可实现更智能的决策。"
       },
       "globalReach": {
         "title": "全球覆盖",
-        "description": "使用扩展您的覆盖范围并发展您的业务的工具轻松连接全球受众。"
+        "description": "使用可扩展您的覆盖范围并促进业务增长的工具，轻松与全球受众建立联系。"
       }
     },
     "stats": {
       "filters": {
-        "title": "高级过滤器",
-        "description": "只需点击几下即可找到您理想的影响者",
+        "title": "高级筛选器",
+        "description": "只需点击几下，即可找到您理想的影响者",
         "highlight": "探索"
       },
       "parameters": {
         "title": "分析参数",
-        "description": "分析影响者的受众和表现，在几分钟内找到理想的影响者",
+        "description": "分析影响者的受众和表现，以便在几分钟内找到理想的影响者",
         "highlight": "分析"
       }
     },
     "power": {
-      "title": "利用的力量",
-      "description1": "通过自动化复杂流程并将数据转化为清晰的洞察，从而节省您的时间和精力，从而增强企业的能力。简化影响者合作伙伴关系，更快地做出更明智的决策，并推动长期增长。"
+      "title": "驾驭 ION 的力量",
+      "description1": "通过自动化复杂流程并将数据转化为清晰的见解，赋能企业，从而节省您的时间和精力。简化影响者合作，更快地做出更智能的决策，并促进长期增长。"
     },
     "pricing": {
       "title": "订阅计划",
-      "button": "了解更多"
+      "button": "了解更多",
+      "annual": "每月",
+      "monthly": "每年",
+      "saveUp": "节省高达 25%",
+      "perMonth": "每月",
+      "billedAnnually": "按年计费"
     }
   },
   "subscribe": {
     "title": "订阅",
-    "description": "加入我们不断增长的社区，获取最新的案例研究、趋势、更新等，以发展您的业务。",
-    "emailPlaceholder": "电子邮件地址",
+    "description": "加入我们不断壮大的社区，获取最新的案例研究、趋势、更新等，以促进您的业务增长。",
+    "emailPlaceholder": "邮箱地址",
     "button": "订阅"
   },
   "footer": {
@@ -129,51 +134,51 @@
     "startNow": "立即开始",
     "explore": {
       "title": "探索",
-      "subtitle": "数据如何推动您的成功",
-      "description1": "使用15个可自定义的过滤器：粉丝数量、互动率、验证状态等，轻松缩小范围，并通过三个步骤找到完美的影响者匹配项。",
-      "description2": "发现能够激发和吸引人的影响者。应用15个可自定义的过滤器，在几分钟内找到适合您品牌的“理想”匹配项。",
+      "subtitle": "数据如何驱动您的成功",
+      "description1": "使用 15 个可自定义的筛选器：粉丝数量、互动率、认证状态等，只需三个步骤即可轻松缩小范围并找到完美的影响者匹配。",
+      "description2": "发现能够激发和吸引受众的影响者。应用 15 个可自定义的筛选器，在几分钟内找到最适合您品牌的“理想”人选。",
       "tabs": {
         "filter": {
           "title": "筛选",
-          "description": "应用15个可自定义的过滤器，快速缩小影响者的范围，以满足您品牌的需要。"
+          "description": "应用 15 个可自定义的筛选器，快速缩小符合您品牌需求的影响者范围。"
         },
         "search": {
           "title": "搜索",
-          "description": "根据互动率、估计覆盖范围和参与的粉丝等关键指标搜索和比较影响者。立即查看和评估您筛选的列表，进行并排比较并做出明智的决定。"
+          "description": "根据关键指标（如互动率、预计覆盖人数和参与的粉丝）搜索和比较影响者。即时查看和评估您筛选后的列表，进行并排比较并做出明智的决策。"
         },
         "save": {
           "title": "保存",
-          "description": "将您选择的影响者保存到自定义列表中，以便在您准备启动广告系列时轻松参考和随时进行外展。"
+          "description": "将您选择的影响者保存到自定义列表中，以便在您准备发起活动时轻松参考和随时进行外联。"
         }
       }
     },
     "analyse": {
       "title": "分析",
-      "subtitle": "数据如何推动您的成功",
-      "description": "通过全面、易于阅读的报告提升您的影响者营销。访问40多个关键指标，包括受众人口统计、互动率和表现趋势。我们将分散的数据整合到一个直观的页面中，使您可以轻松评估影响者质量和预测表现，而无需深入的数据知识。",
+      "subtitle": "数据如何驱动您的成功",
+      "description": "通过全面且易于阅读的报告，提升您的影响者营销水平。访问 40 多个关键指标，包括受众人口统计、互动率和表现趋势。我们将分散的数据整合到一个直观的页面中，使您可以轻松评估影响者质量和预测表现，而无需深入的数据知识。",
       "tabs": {
         "parameters": {
           "title": "参数",
-          "description": "不要只依赖粉丝数量。通过我们的详细分析，真正了解影响者的影响力。快速评估对您的业务至关重要的关键绩效指标：",
+          "description": "不要仅仅依赖粉丝数量。通过我们的详细分析，真正了解影响者的影响力。快速评估对您的业务至关重要的关键绩效指标：",
           "engagementMetrics": {
             "highlight": "互动指标：",
-            "description": "显示影响者与其受众之间的互动，表明内容与粉丝产生共鸣的程度。"
+            "description": "显示影响者及其受众之间的互动，表明内容与粉丝产生共鸣的有效程度"
           },
           "audienceMetrics": {
             "highlight": "受众指标：",
-            "description": "关于影响者粉丝的基本详细信息，如他们的年龄、性别、位置和兴趣，帮助您了解他们的受众是否与您的目标客户匹配。"
+            "description": "关于影响者粉丝的基本详细信息，例如他们的年龄、性别、位置和兴趣，帮助您了解他们的受众是否与您的目标客户匹配。"
           }
         },
         "audience": {
           "title": "受众",
-          "description": "找到合适的受众是有效影响者营销的关键。受众指标显示影响者的粉丝是否与您的目标市场一致，帮助您做出有针对性的营销决策。",
+          "description": "找到合适的受众是有效的影响者营销的关键。受众指标显示影响者的粉丝是否与您的目标市场一致，帮助您做出有针对性的营销决策。",
           "ageGenderDistribution": {
-            "highlight": "年龄性别分布：",
-            "description": "显示影响者受众的年龄范围和性别细分，帮助您定位适合您品牌的受众。"
+            "highlight": "年龄-性别分布：",
+            "description": "显示影响者受众的年龄范围和性别构成，帮助您定位适合您品牌的人群"
           },
           "location": {
             "highlight": "位置：",
-            "description": "显示粉丝的地理位置，帮助您定位特定地区。"
+            "description": "显示粉丝的地理位置，帮助您定位特定区域。"
           },
           "interests": {
             "highlight": "兴趣/行为：",
@@ -182,18 +187,18 @@
         },
         "engagement": {
           "title": "互动",
-          "description": "互动不仅仅是点赞、分享和订阅。ION的互动分析分解了图像、动态和短视频的表现，清楚地展示了影响者的真实影响力。",
+          "description": "互动不仅仅是点赞、分享和订阅。ION 的互动分析细分了图片、帖子和短视频的表现，清晰地展示了影响者的真实影响力。",
           "engagementRate": {
             "highlight": "互动率：",
-            "description": "互动（点赞、评论、分享）与粉丝总数的比率，显示受众与内容互动的活跃程度。"
+            "description": "互动（点赞、评论、分享）与总粉丝数的比率，显示受众与内容的互动程度。"
           },
           "reach": {
-            "highlight": "覆盖范围：",
-            "description": "看过内容的唯一用户总数，表示影响者的整体可见度。"
+            "highlight": "覆盖人数：",
+            "description": "看过内容的独立用户总数，表明影响者的整体可见度。"
           },
           "engagementConsistency": {
             "highlight": "互动一致性：",
-            "description": "衡量一段时间内互动的稳定性，显示影响者的受众与其内容互动的持续性。"
+            "description": "衡量一段时间内互动的稳定性，显示影响者的受众与其内容的互动是否稳定。"
           }
         }
       }
@@ -201,22 +206,20 @@
   },
   "pricing": {
     "title": {
-      "part1": "查看哪个",
-      "part2": "计划适合您"
+      "part1": "查看哪个 ION 计划适合您"
     },
     "subtitle": {
-      "part1": "通过我们的灵活计划解锁影响者洞察。",
-      "part2": "选择完美的选项来分析、跟踪和优化您的广告系列。"
+      "part1": "通过我们灵活的计划解锁影响者洞察。",
+      "part2": "选择最适合您分析、跟踪和优化营销活动的选项。"
     },
-    "tryReport": "尝试1份免费报告",
+    "tryReport": "试用 1 份免费报告",
     "subscription": {
       "title": "订阅计划"
     },
     "discoverMore": "了解更多",
     "evaluate": {
       "title": {
-        "part1": "评估",
-        "part2": "与其他选项的比较"
+        "part1": "评估 ION 与其他选项的比较"
       },
       "tabs": {
         "manualWork": "手动工作",
@@ -225,53 +228,53 @@
       "manualWork": {
         "timePerMonth": "每月小时数",
         "monthlyCost": "每月费用",
-        "hourlyRate": "（25美元/小时）",
+        "hourlyRate": "（25 美元/小时）",
         "creatorSearch": "影响者搜索",
-        "dataCompilation": "数据汇编",
+        "dataCompilation": "数据整理",
         "analysis": "分析",
         "total": "总计",
         "minutes": "分钟",
-        "monthlyTotal": "1700美元/月",
-        "ionTotal": "80美元~/月"
+        "monthlyTotal": "每月 1,700 美元",
+        "ionTotal": "每月约 80 美元"
       },
       "alternatives": {
         "competitors": "竞争对手",
         "countries": "国家",
-        "localJointVentures": "本地合资企业",
-        "presence": "在亚洲4个国家设有分支机构",
+        "localJointVentures": "当地合资企业",
+        "presence": "在亚洲 4 个国家开展业务",
         "parameters": "参数",
-        "basicParameters": "12个基本参数",
-        "advancedParameters": "40多个高级参数",
-        "cost": "费用",
-        "competitorCost": "200美元~/月",
-        "ionCost": "80美元~/月"
+        "basicParameters": "约 12 个基本参数",
+        "advancedParameters": "40 多个高级参数",
+        "cost": "成本",
+        "competitorCost": "每月约 200 美元",
+        "ionCost": "每月约 80 美元"
       }
     }
   },
   "resources": {
     "featured": "精选",
     "featuredPost": {
-      "title": "精选帖子的标题",
-      "subtitle": "精选帖子的副标题 ABC123",
+      "title": "精选文章标题",
+      "subtitle": "精选文章副标题 ABC123",
       "readMore": "阅读更多 +"
     },
     "faq": {
       "title": "常见问题",
       "whatIsIonkol": {
-        "title": "什么是IONKOL？",
-        "preview": "IONKOL是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，帮助企业发现...",
-        "content": "IONKOL是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，帮助企业发现、管理和优化其影响者合作伙伴关系。通过利用受众分析、绩效指标和高级过滤器，IONKOL简化了影响者选择过程，使各种规模的企业都能与合适的影响者建立联系，从而发展其品牌。无论您是刚刚起步还是希望扩大您的影响者营销工作，IONKOL都提供您做出更智能、数据驱动决策所需的工具。",
+        "title": "什么是 IONKOL？",
+        "preview": "IONKOL 是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，以帮助企业发现...",
+        "content": "IONKOL 是一家数据分析初创公司。我们提供数据驱动的影响者营销洞察，以帮助企业发现、管理和优化其影响者合作关系。通过利用受众分析、绩效指标和高级筛选器，IONKOL 简化了影响者选择过程，使各种规模的企业都能够与合适的影响者建立联系，从而促进品牌增长。无论您是刚刚起步还是希望扩大您的影响者营销工作，IONKOL 都提供了您做出更智能、数据驱动决策所需的工具。",
         "findOutMore": "了解更多"
       },
       "howDoesIonkolWork": {
-        "title": "IONKOL如何工作？",
-        "preview": "IONKOL通过为企业提供一个简化的平台，使用可自定义的过滤器（如...）搜索影响者来工作。",
-        "content": "IONKOL通过为企业提供一个简化的平台，使用可自定义的过滤器（如位置、兴趣、受众人口统计和互动指标）搜索影响者来工作。找到合适的影响者后，您可以通过全面的分析评估他们过去的表现，确保他们与您的营销目标一致。",
-        "howItWorks": "以下是简要的工作原理：",
+        "title": "IONKOL 是如何运作的？",
+        "preview": "IONKOL 通过为企业提供一个简化的平台来搜索影响者，该平台使用可自定义的筛选器，例如...",
+        "content": "IONKOL 通过为企业提供一个简化的平台来搜索影响者，该平台使用可自定义的筛选器，例如位置、兴趣、受众人口统计和互动指标。一旦您找到合适的影响者，您可以通过全面的分析评估他们过去的表现，确保他们与您的营销目标一致。",
+        "howItWorks": "简而言之，它的工作原理如下：",
         "steps": {
           "search": {
             "title": "搜索",
-            "description": "使用IONKOL的高级搜索过滤器查找与您的品牌受众、利基和目标匹配的影响者。"
+            "description": "使用 IONKOL 的高级搜索筛选器查找与您品牌的受众、细分市场和目标相匹配的影响者。"
           },
           "analyze": {
             "title": "分析",
@@ -279,25 +282,25 @@
           },
           "connect": {
             "title": "连接",
-            "description": "通过平台直接联系影响者，开始合作、跟踪广告系列和管理合同。"
+            "description": "直接通过平台联系影响者，开始合作、跟踪活动和管理合同。"
           },
           "optimize": {
             "title": "优化",
-            "description": "查看正在进行的广告系列的效果并进行调整，以确保最佳的投资回报率。"
+            "description": "审查正在进行的活动绩效并进行调整，以确保获得最佳的投资回报率。"
           }
         },
-        "conclusion": "IONKOL使影响者营销高效、易于访问且数据驱动。",
+        "conclusion": "IONKOL 使影响者营销高效、易于访问且数据驱动。",
         "findOutMore": "了解更多"
       },
       "whoIsIonkolFor": {
-        "title": "IONKOL适合谁？它适合我吗？",
-        "preview": "IONKOL专为希望利用影响者营销的力量发展其品牌的各种规模的企业而设计...",
-        "content": "IONKOL专为希望利用影响者营销的力量发展其品牌的各种规模的企业而设计。无论您是刚刚开始探索影响者合作伙伴关系的小型企业，还是希望扩大广告系列规模的大型公司，IONKOL都拥有您成功所需的工具。",
-        "perfectFor": "IONKOL非常适合：",
+        "title": "IONKOL 适合谁？它适合我吗？",
+        "preview": "IONKOL 专为希望利用影响者营销的力量来促进其增长的各种规模的企业而设计...",
+        "content": "IONKOL 专为希望利用影响者营销的力量来促进其品牌增长的各种规模的企业而设计。无论您是刚开始探索影响者合作的小型企业，还是希望扩大营销活动的大公司，IONKOL 都拥有您成功所需的工具。",
+        "perfectFor": "IONKOL 非常适合：",
         "targets": {
           "smallBusinesses": {
             "title": "中小型企业",
-            "description": "如果您正在寻找经济高效的方式来接触新客户并扩大您的品牌影响力。"
+            "description": "如果您正在寻找具有成本效益的方式来接触新客户并扩大您的品牌影响力。"
           },
           "ecommerce": {
             "title": "电子商务品牌",
@@ -305,72 +308,71 @@
           },
           "marketingTeams": {
             "title": "营销团队",
-            "description": "对于已经与影响者合作但需要一种简单方法来简化流程和优化绩效的企业。"
+            "description": "对于已经与影响者合作但需要一种简单的方法来简化流程和优化绩效的企业。"
           },
           "agencies": {
             "title": "代理机构",
-            "description": "为跨各个行业的客户高效管理多个影响者广告系列。"
+            "description": "高效管理跨多个行业的客户的多个影响者活动。"
           },
           "contentCreators": {
             "title": "内容创作者",
             "description": "那些希望扩大其影响力并与符合其价值观的品牌建立联系的人。"
           }
         },
-        "conclusion": "IONKOL为包括时尚、美容、食品和饮料、生活方式等在内的各个行业的企业提供服务。",
+        "conclusion": "IONKOL 为包括时尚、美容、食品和饮料、生活方式等各个行业的企业提供服务。",
         "findOutMore": "了解更多"
       },
       "howMuchDoesIonkolCost": {
-        "title": "IONKOL的费用是多少？",
-        "preview": "IONKOL提供灵活的定价计划，以满足各种规模的企业的需求。我们提供月度和...",
-        "content": "IONKOL提供灵活的定价计划，以满足各种规模的企业的需求。我们提供月度和年度订阅选项，并根据您需要的功能和业务规模提供不同的级别。",
+        "title": "IONKOL 的费用是多少？",
+        "preview": "IONKOL 提供灵活的定价计划，以满足各种规模企业的需求。我们提供每月和...",
+        "content": "IONKOL 提供灵活的定价计划，以满足各种规模企业的需求。我们提供每月和每年的订阅选项，并根据您需要的功能和业务规模提供不同的级别。",
         "pricingPlans": "我们的定价计划：",
         "plans": {
           "free": {
             "title": "免费计划",
-            "description": "尝试使用功能有限的IONKOL，非常适合刚刚开始影响者营销的小型企业。"
+            "description": "试用 IONKOL 的有限功能，非常适合刚开始进行影响者营销的小型企业。"
           },
           "core": {
             "title": "核心计划",
-            "description": "起价为100美元/月，非常适合需要访问更多功能（如高级影响者搜索、跟踪和报告）的小型企业。"
+            "description": "起价为每月 100 美元，非常适合需要访问更多功能（如高级影响者搜索、跟踪和报告）的小型企业。"
           },
           "plus": {
-            "title": "Plus计划",
-            "description": "220美元/月，为成长型企业和大型影响者广告系列提供更全面的工具和额外的支持。"
+            "title": "Plus 计划",
+            "description": "每月 220 美元，为成长型企业和更大的影响者活动提供更全面的工具和额外的支持。"
           },
           "prime": {
-            "title": "Prime计划",
-            "description": "375美元/月，专为具有高级需求的大型企业设计，提供最广泛的功能、分析和优先支持。"
+            "title": "Prime 计划",
+            "description": "每月 375 美元，专为具有高级需求的大型企业设计，提供最广泛的功能、分析和优先支持。"
           }
         },
-        "discounts": "我们还为年度订阅提供折扣，与每月定价相比，您可以节省高达25%。",
-        "conclusion": "我们的定价旨在经济实惠，计划随着您的业务增长而增长。选择最适合您的影响者营销目标的计划，立即开始利用影响者广告系列的力量。",
+        "discounts": "我们还为年度订阅提供折扣，与按月定价相比，您可以节省高达 25%。",
+        "conclusion": "我们的定价旨在经济实惠，并且计划会随着您的业务增长而增长。选择最适合您影响者营销目标的计划，立即开始利用影响者活动的力量。",
         "findOutMore": "了解更多"
       },
       "whatMakesIonkolDifferent": {
-        "title": "IONKOL与其他公司有何不同？",
-        "preview": "IONKOL在影响者营销领域脱颖而出，它提供了一个结合了...的综合平台。",
-        "content": "IONKOL在影响者营销领域脱颖而出，它提供了一个结合了数据驱动的洞察、易用性和经济实惠的综合平台。",
-        "keyFeatures": "以下是一些使IONKOL独一无二的主要功能：",
+        "title": "是什么让 IONKOL 与众不同？",
+        "preview": "IONKOL 通过提供一个全面的平台，在影响者营销领域脱颖而出...",
+        "content": "IONKOL 通过提供一个全面的平台，将数据驱动的洞察、易用性和经济性相结合，在影响者营销领域脱颖而出。",
+        "keyFeatures": "以下是一些使 IONKOL 独具特色的主要功能：",
         "features": {
           "dataDriven": {
             "title": "数据驱动的影响者洞察",
-            "description": "IONKOL提供深入的受众和互动分析，帮助您识别合适的影响者，不仅基于粉丝，还基于其受众的实际影响力。我们强大的参数使您可以评估影响者真实性、互动质量和受众相关性，从而做出更精确的决策。"
+            "description": "IONKOL 提供深入的受众和互动分析，帮助您识别合适的影响者，而不仅仅是基于粉丝数量，而是基于其受众的实际影响力。我们强大的参数使您能够评估影响者的真实性、互动质量和受众相关性，从而做出更准确的决策。"
           },
           "customizable": {
-            "title": "可自定义且灵活的计划",
-            "description": "无论您是刚刚开始影响者营销的小型企业主，还是运行大量广告系列的大型企业，IONKOL都提供可根据您的需求扩展的计划。此外，我们直观的平台确保即使是营销经验最少的人也可以轻松导航和运行成功的广告系列。"
+            "title": "可定制且灵活的计划",
+            "description": "无论您是刚开始进行影响者营销的小型企业主，还是运营大量活动的庞大公司，IONKOL 都提供可以根据您的需求进行扩展的计划。此外，我们直观的平台使即使是营销经验很少的人也可以轻松导航并运行成功的活动。"
           },
           "transparency": {
             "title": "透明度和控制",
-            "description": "IONKOL在影响者表现和分析方面提供完全的透明度。这使企业能够做出数据支持的决策并有效地优化其营销策略。"
+            "description": "IONKOL 在影响者绩效和分析方面提供完全的透明度。这使企业能够做出数据驱动的决策并有效地优化其营销策略。"
           },
           "education": {
-            "title": "教育和工具的整合",
-            "description": "IONKOL不仅仅是提供影响者营销工具。我们提供一系列教育资源，如教程、网络研讨会和博客，帮助您了解影响者营销生态系统以及如何最大化您的广告系列。"
+            "title": "教育和工具集成",
+            "description": "IONKOL 不仅仅是提供影响者营销工具。我们提供各种教育资源，例如教程、网络研讨会和博客，以帮助您了解影响者营销生态系统以及如何最大限度地利用您的活动。"
           }
         },
-        "conclusion": "IONKOL旨在使各种规模的企业都能访问、操作和高效地进行影响者营销。",
-        "findOutMore": "了解更多"
+        "conclusion": "IONKOL 旨在使各种规模的企业都能轻松访问、可操作且高效地进行影响者营销。"
       }
     },
     "tabs": {
@@ -397,45 +399,260 @@
       "malaysia": "马来西亚",
       "singapore": "新加坡",
       "unitedStates": "美国",
-      "northAmerica": "北美"
+      "northAmerica": "北美洲"
     }
   },
   "contact": {
     "title": "联系我们",
     "subtitle": {
-      "part1": "与的合适人选取得联系",
-      "part2": "我们随时为您提供帮助。"
+      "part1": "与 ION 的合适人选联系。"
     },
     "tabs": {
       "generalInquiry": "一般咨询",
       "demo": "演示"
     },
     "form": {
-      "firstName": "* 名字",
-      "lastName": "* 姓氏",
-      "company": "公司/品牌名称",
+      "firstName": "* 名",
+      "lastName": "* 姓",
+      "company": "公司 / 品牌名称",
       "position": "职位",
       "phone": "电话号码",
       "country": "国家",
-      "email": "* 电子邮件",
+      "email": "* 邮箱",
       "source": "您是如何了解我们的？",
-      "sourceOther": "如果是其他，请注明",
-      "inquiry": "* 咨询",
+      "sourceOther": "如果选择其他，请具体说明",
+      "inquiry": "* 咨询内容",
       "consent": {
-        "text": "* 我确认已阅读、同意并接受",
-        "terms": "服务条款和隐私政策"
+        "text": "* 我确认已阅读、同意并接受 IONKOL 的服务条款和隐私政策"
       },
       "submit": "提交",
       "sourceOptions": {
-        "google": "谷歌/搜索引擎",
+        "google": "Google / 搜索引擎",
         "onlineAd": "在线广告",
         "influencerRecommendation": "影响者推荐",
-        "friendRecommendation": "朋友/家人推荐",
+        "friendRecommendation": "朋友 / 家人推荐",
         "event": "活动或会议",
         "media": "播客、博客或新闻文章",
         "email": "电子邮件或新闻通讯",
-        "other": "其他（请注明）"
+        "other": "其他（请具体说明）"
       }
+    },
+    "country": {
+      "malaysia": "马来西亚",
+      "singapore": "新加坡",
+      "japan": "日本",
+      "southKorea": "韩国",
+      "afghanistan": "阿富汗",
+      "albania": "阿尔巴尼亚",
+      "algeria": "阿尔及利亚",
+      "americanSamoa": "美属萨摩亚",
+      "andorra": "安道尔",
+      "angola": "安哥拉",
+      "antiguaAndBarbuda": "安提瓜和巴布达",
+      "argentina": "阿根廷",
+      "armenia": "亚美尼亚",
+      "australia": "澳大利亚",
+      "austria": "奥地利",
+      "azerbaijan": "阿塞拜疆",
+      "bahrain": "巴林",
+      "bangladesh": "孟加拉国",
+      "barbados": "巴巴多斯",
+      "belarus": "白俄罗斯",
+      "belgium": "比利时",
+      "belize": "伯利兹",
+      "benin": "贝宁",
+      "bermuda": "百慕大",
+      "bhutan": "不丹",
+      "bolivia": "玻利维亚",
+      "bosniaAndHerzegovina": "波斯尼亚和黑塞哥维那",
+      "botswana": "博茨瓦纳",
+      "brazil": "巴西",
+      "britishIndianOceanTerritory": "英属印度洋领地",
+      "brunei": "文莱",
+      "bulgaria": "保加利亚",
+      "burkinaFaso": "布基纳法索",
+      "burundi": "布隆迪",
+      "caboVerde": "佛得角",
+      "cambodia": "柬埔寨",
+      "cameroon": "喀麦隆",
+      "canada": "加拿大",
+      "centralAfricanRepublic": "中非共和国",
+      "chad": "乍得",
+      "channelIslands": "海峡群岛",
+      "chile": "智利",
+      "china": "中国",
+      "colombia": "哥伦比亚",
+      "comoros": "科摩罗",
+      "costaRica": "哥斯达黎加",
+      "croatia": "克罗地亚",
+      "cuba": "古巴",
+      "cyprus": "塞浦路斯",
+      "czechRepublic": "捷克共和国",
+      "democraticRepublicOfTheCongo": "刚果民主共和国",
+      "denmark": "丹麦",
+      "djibouti": "吉布提",
+      "dominica": "多米尼克",
+      "dominicanRepublic": "多米尼加共和国",
+      "eastTimor": "东帝汶",
+      "ecuador": "厄瓜多尔",
+      "egypt": "埃及",
+      "elSalvador": "萨尔瓦多",
+      "equatorialGuinea": "赤道几内亚",
+      "eritrea": "厄立特里亚",
+      "estonia": "爱沙尼亚",
+      "eswatini": "斯威士兰",
+      "ethiopia": "埃塞俄比亚",
+      "falklandIslands": "福克兰群岛",
+      "federatedStatesOfMicronesia": "密克罗尼西亚联邦",
+      "fiji": "斐济",
+      "finland": "芬兰",
+      "france": "法国",
+      "gabon": "加蓬",
+      "georgia": "格鲁吉亚",
+      "germany": "德国",
+      "ghana": "加纳",
+      "gibraltar": "直布罗陀",
+      "greece": "希腊",
+      "greenland": "格陵兰",
+      "gd": "gd",
+      "guam": "关岛",
+      "guatemala": "危地马拉",
+      "guinea": "几内亚",
+      "guineaBissau": "几内亚比绍",
+      "guyana": "圭亚那",
+      "haiti": "海地",
+      "honduras": "洪都拉斯",
+      "hongKong": "香港",
+      "hungary": "匈牙利",
+      "iceland": "冰岛",
+      "india": "印度",
+      "indonesia": "印度尼西亚",
+      "iran": "伊朗",
+      "iraq": "伊拉克",
+      "ireland": "爱尔兰",
+      "isleOfMan": "马恩岛",
+      "israel": "以色列",
+      "italy": "意大利",
+      "ivoryCoast": "科特迪瓦",
+      "jamaica": "牙买加",
+      "jordan": "约旦",
+      "kazakhstan": "哈萨克斯坦",
+      "kenya": "肯尼亚",
+      "kiribati": "基里巴斯",
+      "kosovo": "科索沃",
+      "kuwait": "科威特",
+      "kyrgyzstan": "吉尔吉斯斯坦",
+      "laos": "老挝",
+      "latvia": "拉脱维亚",
+      "lebanon": "黎巴嫩",
+      "lesotho": "莱索托",
+      "liberia": "利比里亚",
+      "libya": "利比亚",
+      "liechtenstein": "列支敦士登",
+      "lithuania": "立陶宛",
+      "luxembourg": "卢森堡",
+      "macau": "澳门",
+      "madagascar": "马达加斯加",
+      "malawi": "马拉维",
+      "maldives": "马尔代夫",
+      "mali": "马里",
+      "malta": "马耳他",
+      "marshallIslands": "马绍尔群岛",
+      "mauritania": "毛里塔尼亚",
+      "mauritius": "毛里求斯",
+      "mexico": "墨西哥",
+      "moldova": "摩尔多瓦",
+      "monaco": "摩纳哥",
+      "mongolia": "蒙古",
+      "montenegro": "黑山",
+      "montserrat": "蒙特塞拉特",
+      "morocco": "摩洛哥",
+      "mozambique": "莫桑比克",
+      "myanmar": "缅甸",
+      "namibia": "纳米比亚",
+      "nauru": "瑙鲁",
+      "nepal": "尼泊尔",
+      "netherlands": "荷兰",
+      "newZealand": "新西兰",
+      "nicaragua": "尼加拉瓜",
+      "niger": "尼日尔",
+      "nigeria": "尼日利亚",
+      "northKorea": "朝鲜",
+      "northMacedonia": "北马其顿",
+      "northernMarianaIslands": "北马里亚纳群岛",
+      "norway": "挪威",
+      "oman": "阿曼",
+      "pakistan": "巴基斯坦",
+      "palau": "帕劳",
+      "panama": "巴拿马",
+      "papuaNewGuinea": "巴布亚新几内亚",
+      "paraguay": "巴拉圭",
+      "peru": "秘鲁",
+      "philippines": "菲律宾",
+      "pitcairnIslands": "皮特凯恩群岛",
+      "poland": "波兰",
+      "portugal": "葡萄牙",
+      "puertoRico": "波多黎各",
+      "qatar": "卡塔尔",
+      "republicOfTheCongo": "刚果共和国",
+      "romania": "罗马尼亚",
+      "russia": "俄罗斯",
+      "rwanda": "卢旺达",
+      "saintHelena": "圣赫勒拿",
+      "saintKittsAndNevis": "圣基茨和尼维斯",
+      "saintLucia": "圣卢西亚",
+      "saintPierreAndMiquelon": "圣皮埃尔和密克隆",
+      "saintVincentAndTheGrenadines": "圣文森特和格林纳丁斯",
+      "samoa": "萨摩亚",
+      "sanMarino": "圣马力诺",
+      "saoTomeAndPrincipe": "圣多美和普林西比",
+      "saudiArabia": "沙特阿拉伯",
+      "senegal": "塞内加尔",
+      "serbia": "塞尔维亚",
+      "seychelles": "塞舌尔",
+      "sierraLeone": "塞拉利昂",
+      "slovakia": "斯洛伐克",
+      "slovenia": "斯洛文尼亚",
+      "solomonIslands": "所罗门群岛",
+      "somalia": "索马里",
+      "southAfrica": "南非",
+      "southSudan": "南苏丹",
+      "spain": "西班牙",
+      "sriLanka": "斯里兰卡",
+      "sudan": "苏丹",
+      "suriname": "苏里南",
+      "sweden": "瑞典",
+      "switzerland": "瑞士",
+      "syria": "叙利亚",
+      "taiwan": "台湾",
+      "tajikistan": "塔吉克斯坦",
+      "tanzania": "坦桑尼亚",
+      "thailand": "泰国",
+      "theBahamas": "巴哈马",
+      "theGambia": "冈比亚",
+      "togo": "多哥",
+      "tokelau": "托克劳",
+      "tonga": "汤加",
+      "trinidadAndTobago": "特立尼达和多巴哥",
+      "tunisia": "突尼斯",
+      "turkiye": "土耳其",
+      "turkmenistan": "土库曼斯坦",
+      "tuvalu": "图瓦卢",
+      "uganda": "乌干达",
+      "ukraine": "乌克兰",
+      "unitedArabEmirates": "阿拉伯联合酋长国",
+      "unitedKingdom": "英国",
+      "unitedStates": "美国",
+      "uruguay": "乌拉圭",
+      "uzbekistan": "乌兹别克斯坦",
+      "vanuatu": "瓦努阿图",
+      "vaticanCity": "梵蒂冈城",
+      "venezuela": "委内瑞拉",
+      "vietnam": "越南",
+      "virginIslands": "维尔京群岛",
+      "yemen": "也门",
+      "zambia": "赞比亚",
+      "zimbabwe": "津巴布韦"
     }
   }
 }
