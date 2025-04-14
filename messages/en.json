@@ -78,8 +78,8 @@
     "pricing": {
       "title": "Subscription Plan",
       "button": "Discover more",
-      "annual": "Monthly",
-      "monthly": "Annual",
+      "annual": "Annual",
+      "monthly": "Monthly",
       "saveUp": "Save up to 25%",
       "perMonth": "Per Month",
       "billedAnnually": "Billed Annually"
@@ -136,11 +136,11 @@
       "title": "Explore",
       "subtitle": "how data can drive your success",
       "description1": "Use 15 customisable filters: follower count, engagement rate, verified status, and more, to easily narrow down and find the perfect influencer match in three steps.",
-      "description2": "Discover influencers who inspire and engage. Apply 15 customizable filters to find the 'ideal' fit for your brand in minutes.",
+      "description2": "Discover influencers who inspire and engage. Apply 15 customisable filters to find the 'ideal' fit for your brand in minutes.",
       "tabs": {
         "filter": {
           "title": "Filter",
-          "description": "Apply 15 customizable filters to quickly narrow down influencers for your brand’s needs."
+          "description": "Apply 15 customisable filters to quickly narrow down influencers for your brand’s needs."
         },
         "search": {
           "title": "Search",
@@ -268,8 +268,8 @@
       },
       "howDoesIonkolWork": {
         "title": "How does IONKOL work?",
-        "preview": "IONKOL works by offering businesses a streamlined platform to search for influencers using customizable filters like...",
-        "content": "IONKOL works by offering businesses a streamlined platform to search for influencers using customizable filters like location, interests, audience demographics, and engagement metrics. Once you find the right influencers, you can assess their past performance through comprehensive analytics, ensuring they align with your marketing goals.",
+        "preview": "IONKOL works by offering businesses a streamlined platform to search for influencers using customisable filters like...",
+        "content": "IONKOL works by offering businesses a streamlined platform to search for influencers using customisable filters like location, interests, audience demographics, and engagement metrics. Once you find the right influencers, you can assess their past performance through comprehensive analytics, ensuring they align with your marketing goals.",
         "howItWorks": "Here's how it works in a nutshell:",
         "steps": {
           "search": {
