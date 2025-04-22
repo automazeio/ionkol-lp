@@ -2,6 +2,7 @@ import { useState } from "react";
 import Dropdown from "./Dropdown";
 import PhoneInput from "./PhoneInput";
 import { m } from "../../paraglide/messages.js";
+import { DEMO_LINK } from "../../../lib/constants.js";
 
 type GeneralInquiryFormProps = {
   countries: {
@@ -223,7 +224,12 @@ const ContactUsTabs = ({ countries }: Props) => {
       {currentTab === 0 ? (
         <GeneralInquiryForm countries={countries} />
       ) : (
-        "Demo Form Coming Soon"
+        <button
+          onClick={() => window.open(DEMO_LINK)}
+          className="w-1/2 px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
+        >
+          {m["contact.bookDemo"]()}
+        </button>
       )}
     </div>
   );
