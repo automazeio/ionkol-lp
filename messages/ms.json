@@ -10,9 +10,7 @@
   },
   "aboutUs": {
     "title": ", Kisahnya",
-    "subtitle": "ion's",
-    "tagline": "blok binaan terkecil ciptaan",
-    "description": "bergabung untuk membentuk segala yang kita tahu, kami mengubah data menjadi wawasan yang boleh diambil tindakan. Dengan menukar elemen yang paling mudah menjadi alat untuk pertumbuhan, kami memperkasakan perniagaan untuk membina hubungan yang luar biasa dan mencapai transformasi yang bermakna.",
+    "tagline": "Bergabung untuk membentuk segala yang kita tahu, kami mengubah data menjadi wawasan yang boleh diambil tindakan. Dengan menukarkan elemen yang paling mudah menjadi alat untuk pertumbuhan, kami memperkasakan perniagaan untuk membina hubungan yang luar biasa dan mencapai transformasi yang bermakna.",
     "mission": {
       "title": "Misi Kami",
       "description": "Memudahkan membuat keputusan dengan wawasan didorong data untuk membolehkan pemasaran yang lebih pintar dan berimpak."
@@ -73,7 +71,7 @@
     },
     "power": {
       "title": "Manfaatkan kuasa ION",
-      "description1": "memperkasakan perniagaan dengan mengautomasikan proses yang kompleks dan menukar data menjadi wawasan yang jelas, menjimatkan masa dan usaha anda. Permudahkan perkongsian pempengaruh, buat keputusan yang lebih pintar dengan lebih cepat, dan dorong pertumbuhan jangka panjang."
+      "description1": "ION memperkasakan perniagaan dengan mengautomasikan proses yang kompleks dan menukarkan data menjadi pandangan yang jelas, menjimatkan masa dan usaha anda. Permudahkan perkongsian dengan pempengaruh, buat keputusan yang lebih bijak dengan lebih cepat, dan dorong pertumbuhan jangka panjang."
     },
     "pricing": {
       "title": "Pelan Langganan",
@@ -113,7 +111,7 @@
     "whoWeAre": {
       "title": "Siapa Kami",
       "aboutUs": "Tentang kami",
-      "blog": "Blog",
+      "blog": "Hab Sumber",
       "caseStudy": "Kajian kes",
       "faqs": "Soalan Lazim"
     },

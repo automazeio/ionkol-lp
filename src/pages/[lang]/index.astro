@@ -200,20 +200,20 @@ const stats = [
   <main class="relative">
     <!-- Slider section -->
     <section
-      class="min-h-screen flex justify-center items-center bg-white pb-12"
+      class="flex justify-center items-center bg-white"
     >
       <Swiper />
     </section>
 
     <!-- Featured Solutions section -->
-    <section class="pb-24 px-4 lg:px-12">
+    <section class="pb-24 pt-28 px-4 lg:px-12 animate-appear">
       <h1
-        class="text-center text-[#EE7380] text-[74px] font-extrabold tracking-wide mb-16"
+        class="text-center text-[#EE7380] text-[62px] font-extrabold tracking-wide mb-16"
       >
         {m["index.keyFeatures"]()}
       </h1>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 animate-appear">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div class="flex flex-row items-center gap-8 p-2">
           <Image
             class="hidden lg:block"
@@ -269,7 +269,7 @@ const stats = [
     </section>
 
     <!-- Achieve Goals section -->
-    <section class="py-20 relative bg-white px-4 lg:px-12">
+    <section class="py-20 relative bg-white px-4 lg:px-12 animate-appear">
       <div
         class="absolute rotate-180 rounded-[100%] w-full h-screen top-20 left-0 z-100"
         style="background: linear-gradient(180deg, #FFFFFF 60.5%, #FFF9F9 100%);"
@@ -282,7 +282,7 @@ const stats = [
       </h2>
 
       <div
-        class="max-w-7xl animate-appear mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8"
+        class="max-w-7xl mx-auto animate-appear grid grid-cols-1 lg:grid-cols-2 gap-8"
       >
         {
           features.slice(0, 2).map((feature) => (
@@ -322,28 +322,18 @@ const stats = [
       </div>
     </section>
 
-    <section class="py-20 px-4 lg:px-12">
+    <section class="py-20 px-4 lg:px-12 animate-appear">
       <div class="max-w-4xl mx-auto text-center">
-        <p class="text-[62px] gap-8 font-semibold mb-6 relative">
+        <p class="text-[62px] text-[#EE7380] gap-8 font-semibold mb-6 relative">
           <span>{m["index.power.title"]()}</span>
         </p>
         <p
-          class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative animate-appear"
+          class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative"
         >
-          <span class="relative inline-block w-[48px] h-[24px]">
-            <Image
-              class="absolute top-1.5 left-1"
-              src="/ion.svg"
-              alt="key"
-              width={47}
-              height={24}
-            />
-          </span>
           <span class="pl-[8px] text-left">{m["index.power.description1"]()}</span>
         </p>
 
-        <!-- Stats -->
-        <div class="space-y-12 animate-appear">
+        <div class="space-y-12">
           {
             stats.map((stat) => (
               <div class="flex flex-col relative lg:flex-row gap-4 lg:gap-12 justify-center lg:justify-normal items-center">
@@ -374,8 +364,7 @@ const stats = [
       </div>
     </section>
 
-    <!-- Pricing section -->
-    <section class="py-20 px-4 lg:px-12">
+    <section class="py-20 px-4 lg:px-12 animate-appear">
       <div class="flex flex-col items-center space-y-14">
         <h2 class="text-center text-5xl font-extrabold">
           <span class="text-[#EE7380]">{m["index.pricing.title"]()}</span>
@@ -386,7 +375,7 @@ const stats = [
 
           <!-- Pricing cards -->
           <div
-            class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
+            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
           >
             <PriceCardsData client:load />
           </div>
@@ -397,7 +386,6 @@ const stats = [
       </div>
     </section>
 
-    <!-- Contact us section -->
     <Subscribe />
   </main>
 </Layout>

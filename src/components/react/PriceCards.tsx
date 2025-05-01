@@ -52,7 +52,7 @@ export default function PriceCardsData() {
             <div className="w-full h-[1px] bg-black/30 mb-8"></div>
             <ul className="space-y-2 text-center w-full text-[20px]">
               {price.description.map((line) => (
-                <li>{line}</li>
+                <li>{line.replace(".", ",")}</li>
               ))}
             </ul>
           </div>

@@ -10,7 +10,6 @@ const FAQ = () => {
 
       document.querySelectorAll("a[data-link]").forEach((link) => {
         const basePath = link.getAttribute("data-link");
-        // Only update links that aren't external or anchor links
         if (
           basePath &&
           !basePath.startsWith("http") &&

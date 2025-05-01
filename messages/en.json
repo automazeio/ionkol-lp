@@ -10,9 +10,7 @@
   },
   "aboutUs": {
     "title": ", the Story",
-    "subtitle": "ion's",
-    "tagline": "the smallest building blocks of creation",
-    "description": "combine to form everything we know, we transform data into actionable insights. By turning the simplest elements into tools for growth, we empower businesses to build extraordinary connections and achieve meaningful transformation.",
+    "tagline": "combine to form everything we know, we transform data into actionable insights. By turning the simplest elements into tools for growth, we empower businesses to build extraordinary connections and achieve meaningful transformation.",
     "mission": {
       "title": "Our Mission",
       "description": "Simplifying decision-making with data-driven insights to enable smarter, more impactful marketing."
@@ -73,7 +71,7 @@
     },
     "power": {
       "title": "Harness the power of ION",
-      "description1": "empowers businesses by automating complex processes and turning data into clear insights, saving you time and effort. Simplify influencer partnerships, make smarter decisions faster, and fuel long-term growth."
+      "description1": "ION empowers businesses by automating complex processes and turning data into clear insights, saving you time and effort. Simplify influencer partnerships, make smarter decisions faster, and fuel long-term growth."
     },
     "pricing": {
       "title": "Subscription Plan",
@@ -113,7 +111,7 @@
     "whoWeAre": {
       "title": "Who We Are",
       "aboutUs": "About us",
-      "blog": "Blog",
+      "blog": "Resource Hub",
       "caseStudy": "Case study",
       "faqs": "FAQs"
     },
@@ -206,11 +204,11 @@
   },
   "pricing": {
     "title": {
-      "part1": "See which ION Plan Works For You"
+      "part1": "See which ION plan works for you"
     },
     "subtitle": {
       "part1": "Unlock influencer insights with our flexible plans.",
-      "part2": "Choose the perfect option to analyse, track, and optimise your campaigns."
+      "part2": "Choose the perfect option to analyse and optimise your campaigns."
     },
     "tryReport": "Try 1 Complimentary Report",
     "subscription": {
@@ -219,7 +217,7 @@
     "discoverMore": "Discover More",
     "evaluate": {
       "title": {
-        "part1": "Evaluate ION Versus Other Options"
+        "part1": "Evaluate ION versus other options"
       },
       "tabs": {
         "manualWork": "Manual Work",
@@ -376,7 +374,7 @@
       }
     },
     "tabs": {
-      "allPosts": "All posts",
+      "allPosts": "All Posts",
       "ionkol101": "IONKOL 101",
       "research": "Research",
       "ionUpdates": "ION Updates"
