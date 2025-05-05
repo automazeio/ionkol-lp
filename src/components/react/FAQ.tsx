@@ -49,32 +49,32 @@ const FAQ = () => {
           <span className="font-semibold">
             {m["resources.faq.howDoesIonkolWork.howItWorks"]()}
           </span>
-          <div className="grid grid-cols-12 gap-y-4 px-2">
-            <span className="font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 px-2">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howDoesIonkolWork.steps.search.title"]()}
             </span>
-            <span className="col-span-11">
+            <span className="col-span-9">
               {m["resources.faq.howDoesIonkolWork.steps.search.description"]()}
             </span>
 
-            <span className="font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howDoesIonkolWork.steps.analyze.title"]()}
             </span>
-            <span className="col-span-11">
+            <span className="col-span-9">
               {m["resources.faq.howDoesIonkolWork.steps.analyze.description"]()}
             </span>
 
-            <span className="font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howDoesIonkolWork.steps.connect.title"]()}
             </span>
-            <span className="col-span-11">
+            <span className="col-span-9">
               {m["resources.faq.howDoesIonkolWork.steps.connect.description"]()}
             </span>
 
-            <span className="font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howDoesIonkolWork.steps.optimize.title"]()}
             </span>
-            <span className="col-span-11">
+            <span className="col-span-9">
               {m[
                 "resources.faq.howDoesIonkolWork.steps.optimize.description"
               ]()}
@@ -103,7 +103,7 @@ const FAQ = () => {
           <span className="font-semibold">
             {m["resources.faq.whoIsIonkolFor.perfectFor"]()}
           </span>
-          <div className="grid grid-cols-12 gap-y-4 px-2">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 px-2">
             <span className="col-span-3 font-semibold">
               {m[
                 "resources.faq.whoIsIonkolFor.targets.smallBusinesses.title"
@@ -174,38 +174,38 @@ const FAQ = () => {
           <span className="font-semibold">
             {m["resources.faq.howMuchDoesIonkolCost.pricingPlans"]()}
           </span>
-          <div className="grid grid-cols-12 gap-y-4 px-2">
-            <span className="col-span-2 font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 px-2">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howMuchDoesIonkolCost.plans.free.title"]()}
             </span>
-            <span className="col-span-10">
+            <span className="col-span-9">
               {m[
                 "resources.faq.howMuchDoesIonkolCost.plans.free.description"
               ]()}
             </span>
 
-            <span className="col-span-2 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howMuchDoesIonkolCost.plans.core.title"]()}
             </span>
-            <span className="col-span-10">
+            <span className="col-span-9">
               {m[
                 "resources.faq.howMuchDoesIonkolCost.plans.core.description"
               ]()}
             </span>
 
-            <span className="col-span-2 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howMuchDoesIonkolCost.plans.plus.title"]()}
             </span>
-            <span className="col-span-10">
+            <span className="col-span-9">
               {m[
                 "resources.faq.howMuchDoesIonkolCost.plans.plus.description"
               ]()}
             </span>
 
-            <span className="col-span-2 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m["resources.faq.howMuchDoesIonkolCost.plans.prime.title"]()}
             </span>
-            <span className="col-span-10">
+            <span className="col-span-9">
               {m[
                 "resources.faq.howMuchDoesIonkolCost.plans.prime.description"
               ]()}
@@ -236,46 +236,46 @@ const FAQ = () => {
           <span className="font-semibold">
             {m["resources.faq.whatMakesIonkolDifferent.keyFeatures"]()}
           </span>
-          <div className="grid grid-cols-10 gap-y-4 px-2">
-            <span className="col-span-4 font-semibold">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 px-2">
+            <span className="col-span-3 font-semibold">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.dataDriven.title"
               ]()}
             </span>
-            <span className="col-span-6">
+            <span className="col-span-9">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.dataDriven.description"
               ]()}
             </span>
 
-            <span className="col-span-4 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.customizable.title"
               ]()}
             </span>
-            <span className="col-span-6">
+            <span className="col-span-9">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.customizable.description"
               ]()}
             </span>
 
-            <span className="col-span-4 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.transparency.title"
               ]()}
             </span>
-            <span className="col-span-6">
+            <span className="col-span-9">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.transparency.description"
               ]()}
             </span>
 
-            <span className="col-span-4 font-semibold">
+            <span className="col-span-3 font-semibold">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.education.title"
               ]()}
             </span>
-            <span className="col-span-6">
+            <span className="col-span-9">
               {m[
                 "resources.faq.whatMakesIonkolDifferent.features.education.description"
               ]()}

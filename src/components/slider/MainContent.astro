@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import { m } from "../../paraglide/messages.js";
 
-const titles = ["KOL", m["main.explore"](), m["main.analyse"]()];
+const titles = [m["main.explore"](), m["main.analyse"](), "AI", "KOL"];
 const data = {
   textColor: "text-[#EE7380]",
   description: "Data-driven success",
@@ -76,7 +76,7 @@ const data = {
     {m["main.aiPlatform"]()}
   </p>
   <div
-    class={`${data.textColor} text-5xl flex mb-4 gap-6 w-screen ml-10 lg:ml-52 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}
+    class={`${data.textColor} text-5xl flex mb-4 gap-6 w-screen ml-10 lg:ml-64 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}
   >
     <Image src="/ion.svg" alt="key" width={240} height={101} />
 
@@ -98,7 +98,7 @@ const data = {
 
 <script>
   import { m } from "../../paraglide/messages";
-  const titles = ["KOL", m["main.explore"](), m["main.analyse"]()];
+  const titles = [m["main.explore"](), m["main.analyse"](), "AI", "KOL"];
   let index = 0;
   setInterval(() => {
     index = (index + 1) % titles.length;

@@ -226,7 +226,7 @@ const ContactUsTabs = ({ countries }: Props) => {
       ) : (
         <button
           onClick={() => window.open(DEMO_LINK)}
-          className="w-1/2 px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
+          className="px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
         >
           {m["contact.bookDemo"]()}
         </button>
