@@ -2,7 +2,7 @@ import { paraglideMiddleware } from "./paraglide/server.js";
 import { defineMiddleware } from "astro/middleware";
 
 const DEFAULT_LANGUAGE = "en";
-const SUPPORTED_LANGUAGES = ["en", "ms", "ja", "ko", "zh"];
+const SUPPORTED_LANGUAGES = ["en", "ms", "ja", "ko", "chs", "cht"];
 
 export const onRequest = defineMiddleware((context, next) => {
   const url = new URL(context.request.url);

@@ -1,0 +1,656 @@
+{
+  "$schema": "https://inlang.com/schema/inlang-message-format",
+  "main": {
+    "aiPlatform": "AI 影響者分析平台",
+    "explore": "探索",
+    "analyse": "分析",
+    "dataDriverSuccess": "數據驅動的成功",
+    "startNow": "立即開始"
+  },
+  "aboutUs": {
+    "title": "，故事",
+    "tagline": "融合構建我們所知的一切，我們將數據轉化為可執行的洞察。通過將最簡單的元素轉化為增長的工具，我們賦能企業建立非凡的連接並實現有意義的轉型。",
+    "mission": {
+      "title": "我們的使命",
+      "description": "通過數據驅動的洞察簡化決策，從而實現更智能、更具影響力的行銷。"
+    },
+    "vision": {
+      "title": "我們的願景",
+      "description": "通過可操作的數據驅動的行銷洞察，賦能企業釋放其全部潛力。"
+    }
+  },
+  "index": {
+    "keyFeatures": "主要特色",
+    "explore": {
+      "title": "探索",
+      "description": "只需點擊幾下，即可探索您的理想影響者。通過我們的高級篩選器節省時間，並尋找與您品牌訊息一致的影響者。",
+      "button": "了解更多"
+    },
+    "analyse": {
+      "title": "分析",
+      "description": "在幾分鐘內分析影響者的受眾和表現。存取從互動到受眾的詳細資訊，所有資訊都集中在一份報告中。",
+      "button": "了解更多"
+    },
+    "goals": {
+      "title": "在一個地方實現您的所有目標"
+    },
+    "features": {
+      "timeSaving": {
+        "title": "節省時間",
+        "description": "為您的業務釋放更多時間。ION 簡化了影響者搜尋和分析，幫助您在幾分鐘內找到完美匹配的對象。"
+      },
+      "competitivePricing": {
+        "title": "具競爭力的價格",
+        "description": "以實惠的價格存取強大的影響者行銷工具，在不增加高成本的情況下實現成果。"
+      },
+      "smartInsights": {
+        "title": "智能洞察",
+        "description": "AI 驅動的分析提供清晰、針對影響者的洞察。無需猜測即可做出自信的數據支持決策。"
+      },
+      "actionableData": {
+        "title": "可操作的數據",
+        "description": "通過簡單、可操作的洞察可視化複雜數據，無需數據專業知識即可做出更明智的決策。"
+      },
+      "globalReach": {
+        "title": "全球覆蓋",
+        "description": "使用擴大您的影響力並促進業務增長的工具，輕鬆與全球受眾建立聯繫。"
+      }
+    },
+    "stats": {
+      "filters": {
+        "title": "高級篩選器",
+        "description": "只需點擊幾下即可找到您的理想影響者",
+        "highlight": "探索"
+      },
+      "parameters": {
+        "title": "分析參數",
+        "description": "分析影響者的受眾和表現，以便在幾分鐘內找到理想的影響者",
+        "highlight": "分析"
+      }
+    },
+    "power": {
+      "title": "駕馭 ION 的力量",
+      "description1": "ION 通過自動化複雜流程並將數據轉化為清晰的洞察，從而賦能企業，節省您的時間和精力。簡化影響者合作夥伴關係，更快地做出更明智的決策，並促進長期增長。"
+    },
+    "pricing": {
+      "title": "訂閱方案",
+      "button": "了解更多",
+      "annual": "年度",
+      "monthly": "每月",
+      "saveUp": "節省高達 25%",
+      "perMonth": "每月",
+      "billedAnnually": "按年計費"
+    }
+  },
+  "subscribe": {
+    "title": "訂閱",
+    "description": "加入我們不斷壯大的社群，獲取最新的案例研究、趨勢、更新等資訊，以促進您的業務增長。",
+    "emailPlaceholder": "電子郵件地址",
+    "button": "訂閱"
+  },
+  "footer": {
+    "tagline": "數據驅動的成功",
+    "locations": {
+      "title": "地點",
+      "japan": "日本",
+      "korea": "韓國",
+      "malaysia": "馬來西亞",
+      "singapore": "新加坡"
+    },
+    "services": {
+      "title": "服務",
+      "explore": "Ion 探索",
+      "analyze": "Ion 分析"
+    },
+    "getStarted": {
+      "title": "開始使用",
+      "bookDemo": "預約演示",
+      "contactUs": "聯繫我們"
+    },
+    "whoWeAre": {
+      "title": "關於我們",
+      "aboutUs": "關於我們",
+      "blog": "資源中心",
+      "caseStudy": "案例研究",
+      "faqs": "常見問題"
+    },
+    "legal": {
+      "privacyPolicy": "隱私權政策",
+      "termsOfService": "服務條款"
+    }
+  },
+  "navbar": {
+    "features": "特色",
+    "pricing": "價格",
+    "resourceHub": "資源中心",
+    "signUp": "註冊",
+    "login": "登入"
+  },
+  "features": {
+    "title": "特色",
+    "startNow": "立即開始",
+    "explore": {
+      "title": "探索",
+      "subtitle": "數據如何驅動您的成功",
+      "description1": "使用 15 個可自訂的篩選器：追蹤者人數、互動率、已驗證狀態等，輕鬆縮小範圍並在三個步驟中找到完美的影響者配對。",
+      "description2": "發掘能啟發和吸引受眾的影響者。應用 15 個可自訂的篩選器，在幾分鐘內找到最符合您品牌的「理想」人選。",
+      "tabs": {
+        "filter": {
+          "title": "篩選",
+          "description": "應用 15 個可自訂的篩選器，快速縮小符合您品牌需求的影響者範圍。"
+        },
+        "search": {
+          "title": "搜尋",
+          "description": "根據關鍵指標（如互動率、預計觸及人數和參與的追蹤者）搜尋和比較影響者。即時查看和評估您篩選後的列表，進行並排比較並做出明智的決策。"
+        },
+        "save": {
+          "title": "儲存",
+          "description": "將您選擇的影響者儲存到自訂列表中，以便在您準備好啟動行銷活動時輕鬆參考和隨時進行聯繫。"
+        }
+      }
+    },
+    "analyse": {
+      "title": "分析",
+      "subtitle": "數據如何驅動您的成功",
+      "description": "通過全面且易於閱讀的報告，提升您的影響者行銷水平。存取超過 40 個關鍵指標，包括受眾人口統計、互動率和績效趨勢。我們將分散的數據整合到一個直觀的頁面中，讓您無需深入的數據知識即可輕鬆評估影響者品質並預測績效。",
+      "tabs": {
+        "parameters": {
+          "title": "參數",
+          "description": "不要只依賴追蹤者人數。通過我們的詳細分析，真正了解影響者的影響力。快速評估對您的業務至關重要的關鍵績效指標：",
+          "engagementMetrics": {
+            "highlight": "互動指標：",
+            "description": "顯示影響者及其受眾之間的互動，表明內容與追蹤者的共鳴程度"
+          },
+          "audienceMetrics": {
+            "highlight": "受眾指標：",
+            "description": "關於影響者追蹤者的基本詳細資訊，例如他們的年齡、性別、地點和興趣，幫助您了解他們的受眾是否與您的目標客戶相符。"
+          }
+        },
+        "audience": {
+          "title": "受眾",
+          "description": "找到合適的受眾是有效影響者行銷的關鍵。受眾指標顯示影響者的追蹤者是否與您的目標市場一致，幫助您做出有重點的行銷決策。",
+          "ageGenderDistribution": {
+            "highlight": "年齡性別分佈：",
+            "description": "顯示影響者受眾的年齡範圍和性別構成，幫助您針對品牌的正確受眾。"
+          },
+          "location": {
+            "highlight": "地點：",
+            "description": "顯示追蹤者的地理位置，幫助您針對特定地區。"
+          },
+          "interests": {
+            "highlight": "興趣/行為：",
+            "description": "突出顯示追蹤者的興趣，顯示他們是否與您的品牌相符。"
+          }
+        },
+        "engagement": {
+          "title": "互動",
+          "description": "互動不僅僅是按讚、分享和訂閱。ION 的互動分析細分了圖片、貼文和短片的表現，清晰地呈現了影響者的真實影響力。",
+          "engagementRate": {
+            "highlight": "互動率：",
+            "description": "互動次數（按讚、留言、分享）與總追蹤者人數的比率，顯示受眾與內容互動的積極程度。"
+          },
+          "reach": {
+            "highlight": "觸及人數：",
+            "description": "看過內容的不重複用戶總數，表示影響者的整體可見度。"
+          },
+          "engagementConsistency": {
+            "highlight": "互動一致性：",
+            "description": "衡量一段時間內互動的穩定性，顯示影響者的受眾與其內容互動的持續性。"
+          }
+        }
+      }
+    }
+  },
+  "pricing": {
+    "title": {
+      "part1": "查看哪種 ION 方案適合您"
+    },
+    "subtitle": {
+      "part1": "通過我們靈活的方案解鎖影響者洞察。",
+      "part2": "選擇最適合的選項來分析和優化您的行銷活動。"
+    },
+    "tryReport": "試用 1 份免費報告",
+    "subscription": {
+      "title": "訂閱方案"
+    },
+    "discoverMore": "了解更多",
+    "evaluate": {
+      "title": {
+        "part1": "評估 ION 與其他選項"
+      },
+      "tabs": {
+        "manualWork": "手動操作",
+        "alternatives": "替代方案"
+      },
+      "manualWork": {
+        "timePerMonth": "每月時數",
+        "monthlyCost": "每月成本",
+        "hourlyRate": "(每小時 25 美元)",
+        "creatorSearch": "影響者搜尋",
+        "dataCompilation": "數據彙編",
+        "analysis": "分析",
+        "total": "總計",
+        "minutes": "分鐘",
+        "monthlyTotal": "每月 $1,700",
+        "ionTotal": "每月約 $80"
+      },
+      "alternatives": {
+        "competitors": "競爭對手",
+        "countries": "國家",
+        "localJointVentures": "當地合資企業",
+        "presence": "在亞洲 4 個國家/地區設有據點",
+        "parameters": "參數",
+        "basicParameters": "12 個基本參數",
+        "advancedParameters": "40 個以上高級參數",
+        "cost": "成本",
+        "competitorCost": "每月約 $200",
+        "ionCost": "每月約 $80"
+      }
+    }
+  },
+  "resources": {
+    "featured": "精選內容",
+    "featuredPost": {
+      "title": "精選文章標題",
+      "subtitle": "精選文章副標題 ABC123",
+      "readMore": "閱讀更多 +"
+    },
+    "faq": {
+      "title": "常見問題",
+      "whatIsIonkol": {
+        "title": "什麼是 IONKOL？",
+        "preview": "IONKOL 是一家數據分析新創公司。我們提供數據驅動的影響者行銷洞察，以幫助企業發掘...",
+        "content": "IONKOL 是一家數據分析新創公司。我們提供數據驅動的影響者行銷洞察，以幫助企業發掘、管理和優化其影響者合作夥伴關係。通過利用受眾分析、績效指標和高級篩選器，IONKOL 簡化了影響者的選擇過程，使各種規模的企業都能與合適的影響者建立聯繫，從而發展其品牌。無論您是剛開始還是希望擴大您的影響者行銷工作，IONKOL 都提供您做出更明智、數據驅動決策所需的工具。",
+        "findOutMore": "了解更多"
+      },
+      "howDoesIonkolWork": {
+        "title": "IONKOL 如何運作？",
+        "preview": "IONKOL 的運作方式是為企業提供一個簡化的平台，通過可自訂的篩選器（如...）搜尋影響者。",
+        "content": "IONKOL 的運作方式是為企業提供一個簡化的平台，通過可自訂的篩選器（如地點、興趣、受眾人口統計和互動指標）搜尋影響者。找到合適的影響者後，您可以通過全面的分析評估他們過去的表現，確保他們與您的行銷目標一致。",
+        "howItWorks": "簡而言之，其運作方式如下：",
+        "steps": {
+          "search": {
+            "title": "搜尋",
+            "description": "使用 IONKOL 的高級搜尋篩選器，找到符合您品牌受眾、利基市場和目標的影響者。"
+          },
+          "analyze": {
+            "title": "分析",
+            "description": "使用詳細的分析（如互動率、受眾真實性和過往績效）評估影響者。"
+          },
+          "connect": {
+            "title": "聯繫",
+            "description": "直接通過平台聯繫影響者，開始合作、追蹤行銷活動和管理合約。"
+          },
+          "optimize": {
+            "title": "優化",
+            "description": "檢閱正在進行的行銷活動績效並進行調整，以確保獲得最佳的投資回報率。"
+          }
+        },
+        "conclusion": "IONKOL 使影響者行銷變得高效、易於使用且數據驅動。",
+        "findOutMore": "了解更多"
+      },
+      "whoIsIonkolFor": {
+        "title": "IONKOL 適合誰？它適合我嗎？",
+        "preview": "IONKOL 專為希望利用影響者行銷的力量來發展其...的各種規模的企業而設計。",
+        "content": "IONKOL 專為希望利用影響者行銷的力量來發展其品牌的各種規模的企業而設計。無論您是剛開始探索影響者合作關係的小型企業，還是希望擴大行銷活動的大型公司，IONKOL 都能提供您成功所需的工具。",
+        "perfectFor": "IONKOL 非常適合：",
+        "targets": {
+          "smallBusinesses": {
+            "title": "中小型企業",
+            "description": "如果您正在尋找具有成本效益的方式來接觸新客戶並擴大您的品牌知名度。"
+          },
+          "ecommerce": {
+            "title": "電子商務品牌",
+            "description": "通過影響者合作來提高可見度、促進銷售並增強客戶忠誠度。"
+          },
+          "marketingTeams": {
+            "title": "行銷團隊",
+            "description": "對於已經與影響者合作但需要一種簡單的方法來簡化流程並優化績效的企業。"
+          },
+          "agencies": {
+            "title": "代理商",
+            "description": "為各行各業的客戶有效管理多個影響者行銷活動。"
+          },
+          "contentCreators": {
+            "title": "內容創作者",
+            "description": "那些希望擴大其影響力並與符合其價值的品牌建立聯繫的人。"
+          }
+        },
+        "conclusion": "IONKOL 為各行各業的企業提供服務，包括時尚、美容、食品和飲料、生活方式等等。",
+        "findOutMore": "了解更多"
+      },
+      "howMuchDoesIonkolCost": {
+        "title": "IONKOL 的費用是多少？",
+        "preview": "IONKOL 提供靈活的定價方案，以滿足各種規模企業的需求。我們提供每月和...",
+        "content": "IONKOL 提供靈活的定價方案，以滿足各種規模企業的需求。我們提供每月和年度訂閱選項，並根據您需要的功能和企業規模提供不同的級別。",
+        "pricingPlans": "我們的定價方案：",
+        "plans": {
+          "free": {
+            "title": "免費方案",
+            "description": "試用功能有限的 IONKOL，非常適合剛開始進行影響者行銷的小型企業。"
+          },
+          "core": {
+            "title": "核心方案",
+            "description": "起價為每月 100 美元，非常適合需要更多功能（如高級影響者搜尋、追蹤和報告）的小型企業。"
+          },
+          "plus": {
+            "title": "Plus 方案",
+            "description": "每月 220 美元，為成長型企業和較大型的影響者行銷活動提供更全面的工具和額外支援。"
+          },
+          "prime": {
+            "title": "Prime 方案",
+            "description": "每月 375 美元，專為具有高級需求的大型企業設計，提供最廣泛的功能、分析和優先支援。"
+          }
+        },
+        "discounts": "我們還為年度訂閱提供折扣，與每月定價相比，您最多可以節省 25%。",
+        "conclusion": "我們的定價旨在經濟實惠，並提供隨著您的業務成長而擴展的方案。選擇最符合您影響者行銷目標的方案，並立即開始利用影響者行銷活動的力量。",
+        "findOutMore": "了解更多"
+      },
+      "whatMakesIonkolDifferent": {
+        "title": "IONKOL 與其他平台有何不同？",
+        "preview": "IONKOL 在影響者行銷領域脫穎而出，通過提供一個結合了...的綜合平台。",
+        "content": "IONKOL 在影響者行銷領域脫穎而出，通過提供一個結合了數據驅動的洞察、易用性和經濟實惠的綜合平台。",
+        "keyFeatures": "以下是一些使 IONKOL 獨特的關鍵功能：",
+        "features": {
+          "dataDriven": {
+            "title": "數據驅動的影響者洞察",
+            "description": "IONKOL 提供深入的受眾和互動分析，幫助您識別合適的影響者，不僅僅基於追蹤者人數，而是基於其受眾的實際影響力。我們強大的參數使您能夠評估影響者的真實性、互動質量和受眾相關性，從而做出更精確的決策。"
+          },
+          "customizable": {
+            "title": "可自訂且靈活的方案",
+            "description": "無論您是剛開始進行影響者行銷的小企業主，還是運行大量行銷活動的大型企業，IONKOL 都提供可根據您的需求擴展的方案。此外，我們直觀的平台確保即使是行銷經驗最少的人也能輕鬆導航並運行成功的行銷活動。"
+          },
+          "transparency": {
+            "title": "透明度和控制",
+            "description": "IONKOL 提供影響者績效和分析的完全透明度。這使企業能夠做出數據驅動的決策並有效地優化其行銷策略。"
+          },
+          "education": {
+            "title": "教育與工具的整合",
+            "description": "IONKOL 不僅僅是提供影響者行銷工具。我們還提供一系列教育資源，如教程、網路研討會和部落格，以幫助您了解影響者行銷生態系統以及如何最大化您的行銷活動。"
+          }
+        },
+        "conclusion": "IONKOL 旨在使各種規模的企業都能輕鬆、可操作且高效地進行影響者行銷。"
+      }
+    },
+    "tabs": {
+      "allPosts": "所有文章",
+      "ionkol101": "IONKOL 101",
+      "research": "研究",
+      "ionUpdates": "ION 最新消息"
+    },
+    "filters": {
+      "postType": "文章類型",
+      "location": "地點",
+      "interest": "興趣",
+      "seeMore": "查看更多 +"
+    },
+    "postTypes": {
+      "blog": "部落格",
+      "caseStudy": "案例研究",
+      "trendReport": "趨勢報告"
+    },
+    "locations": {
+      "global": "全球",
+      "japan": "日本",
+      "korea": "韓國",
+      "malaysia": "馬來西亞",
+      "singapore": "新加坡",
+      "unitedStates": "美國",
+      "northAmerica": "北美洲"
+    }
+  },
+  "contact": {
+    "title": "聯繫我們",
+    "subtitle": {
+      "part1": "與 ION 的相關人員聯繫。"
+    },
+    "tabs": {
+      "generalInquiry": "一般諮詢",
+      "demo": "演示"
+    },
+    "form": {
+      "firstName": "* 名字",
+      "lastName": "* 姓氏",
+      "company": "公司 / 品牌名稱",
+      "position": "職位",
+      "phone": "電話號碼",
+      "country": "國家",
+      "email": "* 電子郵件",
+      "source": "您是如何認識我們的？",
+      "sourceOther": "如果其他，請註明",
+      "inquiry": "* 諮詢內容",
+      "consent": {
+        "text": "* 我確認已閱讀、同意並接受 IONKOL 的服務條款和隱私權政策"
+      },
+      "submit": "提交",
+      "sourceOptions": {
+        "google": "Google / 搜索引擎",
+        "onlineAd": "線上廣告",
+        "influencerRecommendation": "影響者推薦",
+        "friendRecommendation": "朋友 / 家人推薦",
+        "event": "活動或會議",
+        "media": "播客、部落格或新聞文章",
+        "email": "電子郵件或電子報",
+        "other": "其他（請註明）"
+      }
+    },
+    "bookDemo": "預約演示",
+    "country": {
+      "malaysia": "馬來西亞",
+      "singapore": "新加坡",
+      "japan": "日本",
+      "southKorea": "韓國",
+      "afghanistan": "阿富汗",
+      "albania": "阿爾巴尼亞",
+      "algeria": "阿爾及利亞",
+      "americanSamoa": "美屬薩摩亞",
+      "andorra": "安道爾",
+      "angola": "安哥拉",
+      "antiguaAndBarbuda": "安提瓜和巴布達",
+      "argentina": "阿根廷",
+      "armenia": "亞美尼亞",
+      "australia": "澳大利亞",
+      "austria": "奧地利",
+      "azerbaijan": "亞塞拜然",
+      "bahrain": "巴林",
+      "bangladesh": "孟加拉國",
+      "barbados": "巴巴多斯",
+      "belarus": "白俄羅斯",
+      "belgium": "比利時",
+      "belize": "伯利茲",
+      "benin": "貝南",
+      "bermuda": "百慕達",
+      "bhutan": "不丹",
+      "bolivia": "玻利維亞",
+      "bosniaAndHerzegovina": "波士尼亞和黑塞哥維那",
+      "botswana": "波札那",
+      "brazil": "巴西",
+      "britishIndianOceanTerritory": "英屬印度洋領地",
+      "brunei": "汶萊",
+      "bulgaria": "保加利亞",
+      "burkinaFaso": "布吉納法索",
+      "burundi": "蒲隆地",
+      "caboVerde": "維德角",
+      "cambodia": "柬埔寨",
+      "cameroon": "喀麥隆",
+      "canada": "加拿大",
+      "centralAfricanRepublic": "中非共和國",
+      "chad": "乍得",
+      "channelIslands": "海峽群島",
+      "chile": "智利",
+      "china": "中國",
+      "colombia": "哥倫比亞",
+      "comoros": "葛摩",
+      "costaRica": "哥斯大黎加",
+      "croatia": "克羅埃西亞",
+      "cuba": "古巴",
+      "cyprus": "賽普勒斯",
+      "czechRepublic": "捷克共和國",
+      "democraticRepublicOfTheCongo": "剛果民主共和國",
+      "denmark": "丹麥",
+      "djibouti": "吉布地",
+      "dominica": "多米尼克",
+      "dominicanRepublic": "多明尼加共和國",
+      "eastTimor": "東帝汶",
+      "ecuador": "厄瓜多爾",
+      "egypt": "埃及",
+      "elSalvador": "薩爾瓦多",
+      "equatorialGuinea": "赤道幾內亞",
+      "eritrea": "厄利垂亞",
+      "estonia": "愛沙尼亞",
+      "eswatini": "史瓦帝尼",
+      "ethiopia": "衣索比亞",
+      "falklandIslands": "福克蘭群島",
+      "federatedStatesOfMicronesia": "密克羅尼西亞聯邦",
+      "fiji": "斐濟",
+      "finland": "芬蘭",
+      "france": "法國",
+      "gabon": "加彭",
+      "georgia": "喬治亞州",
+      "germany": "德國",
+      "ghana": "迦納",
+      "gibraltar": "直布羅陀",
+      "greece": "希臘",
+      "greenland": "格陵蘭",
+      "gd": "格瑞那達",
+      "guam": "關島",
+      "guatemala": "瓜地馬拉",
+      "guinea": "幾內亞",
+      "guineaBissau": "幾內亞比索",
+      "guyana": "蓋亞那",
+      "haiti": "海地",
+      "honduras": "宏都拉斯",
+      "hongKong": "香港",
+      "hungary": "匈牙利",
+      "iceland": "冰島",
+      "india": "印度",
+      "indonesia": "印度尼西亞",
+      "iran": "伊朗",
+      "iraq": "伊拉克",
+      "ireland": "愛爾蘭",
+      "isleOfMan": "曼島",
+      "israel": "以色列",
+      "italy": "義大利",
+      "ivoryCoast": "象牙海岸",
+      "jamaica": "牙買加",
+      "jordan": "約旦",
+      "kazakhstan": "哈薩克斯坦",
+      "kenya": "肯亞",
+      "kiribati": "吉里巴斯",
+      "kosovo": "科索沃",
+      "kuwait": "科威特",
+      "kyrgyzstan": "吉爾吉斯斯坦",
+      "laos": "寮國",
+      "latvia": "拉脫維亞",
+      "lebanon": "黎巴嫩",
+      "lesotho": "賴索托",
+      "liberia": "賴比瑞亞",
+      "libya": "利比亞",
+      "liechtenstein": "列支敦士登",
+      "lithuania": "立陶宛",
+      "luxembourg": "盧森堡",
+      "macau": "澳門",
+      "madagascar": "馬達加斯加",
+      "malawi": "馬拉威",
+      "maldives": "馬爾地夫",
+      "mali": "馬里",
+      "malta": "馬爾他",
+      "marshallIslands": "馬紹爾群島",
+      "mauritania": "茅利塔尼亞",
+      "mauritius": "模里西斯",
+      "mexico": "墨西哥",
+      "moldova": "摩爾多瓦",
+      "monaco": "摩納哥",
+      "mongolia": "蒙古",
+      "montenegro": "蒙特內哥羅",
+      "montserrat": "蒙塞拉特",
+      "morocco": "摩洛哥",
+      "mozambique": "莫三比克",
+      "myanmar": "緬甸",
+      "namibia": "納米比亞",
+      "nauru": "諾魯",
+      "nepal": "尼泊爾",
+      "netherlands": "荷蘭",
+      "newZealand": "紐西蘭",
+      "nicaragua": "尼加拉瓜",
+      "niger": "尼日",
+      "nigeria": "奈及利亞",
+      "northKorea": "北韓",
+      "northMacedonia": "北馬其頓",
+      "northernMarianaIslands": "北馬里亞納群島",
+      "norway": "挪威",
+      "oman": "阿曼",
+      "pakistan": "巴基斯坦",
+      "palau": "帛琉",
+      "panama": "巴拿馬",
+      "papuaNewGuinea": "巴布亞新幾內亞",
+      "paraguay": "巴拉圭",
+      "peru": "秘魯",
+      "philippines": "菲律賓",
+      "pitcairnIslands": "皮特凱恩群島",
+      "poland": "波蘭",
+      "portugal": "葡萄牙",
+      "puertoRico": "波多黎各",
+      "qatar": "卡達",
+      "republicOfTheCongo": "剛果共和國",
+      "romania": "羅馬尼亞",
+      "russia": "俄羅斯",
+      "rwanda": "盧安達",
+      "saintHelena": "聖赫勒拿",
+      "saintKittsAndNevis": "聖克里斯多福及尼維斯",
+      "saintLucia": "聖露西亞",
+      "saintPierreAndMiquelon": "聖皮埃爾和密克隆",
+      "saintVincentAndTheGrenadines": "聖文森及格瑞那丁",
+      "samoa": "薩摩亞",
+      "sanMarino": "聖馬力諾",
+      "saoTomeAndPrincipe": "聖多美普林西比",
+      "saudiArabia": "沙烏地阿拉伯",
+      "senegal": "塞內加爾",
+      "serbia": "塞爾維亞",
+      "seychelles": "塞席爾",
+      "sierraLeone": "獅子山",
+      "slovakia": "斯洛伐克",
+      "slovenia": "斯洛維尼亞",
+      "solomonIslands": "索羅門群島",
+      "somalia": "索馬里亞",
+      "southAfrica": "南非",
+      "southSudan": "南蘇丹",
+      "spain": "西班牙",
+      "sriLanka": "斯里蘭卡",
+      "sudan": "蘇丹",
+      "suriname": "蘇利南",
+      "sweden": "瑞典",
+      "switzerland": "瑞士",
+      "syria": "敘利亞",
+      "taiwan": "臺灣",
+      "tajikistan": "塔吉克斯坦",
+      "tanzania": "坦桑尼亞",
+      "thailand": "泰國",
+      "theBahamas": "巴哈馬",
+      "theGambia": "岡比亞",
+      "togo": "多哥",
+      "tokelau": "托克勞",
+      "tonga": "湯加",
+      "trinidadAndTobago": "千里達及托巴哥",
+      "tunisia": "突尼西亞",
+      "turkiye": "土耳其",
+      "turkmenistan": "土庫曼",
+      "tuvalu": "吐瓦魯",
+      "uganda": "烏干達",
+      "ukraine": "烏克蘭",
+      "unitedArabEmirates": "阿拉伯聯合大公國",
+      "unitedKingdom": "英國",
+      "unitedStates": "美國",
+      "uruguay": "烏拉圭",
+      "uzbekistan": "烏茲別克斯坦",
+      "vanuatu": "萬那杜",
+      "vaticanCity": "梵蒂岡",
+      "venezuela": "委內瑞拉",
+      "vietnam": "越南",
+      "virginIslands": "維爾京群島",
+      "yemen": "葉門",
+      "zambia": "尚比亞",
+      "zimbabwe": "辛巴威"
+    }
+  }
+}

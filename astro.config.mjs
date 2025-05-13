@@ -13,7 +13,7 @@ export default defineConfig({
     remotePatterns: [{ protocol: "https" }],
   },
   i18n: {
-    locales: ["en", "ms", "ja", "ko", "zh"],
+    locales: ["en", "ms", "ja", "ko", "chs", "cht"],
     defaultLocale: "en",
   },
   integrations: [

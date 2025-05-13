@@ -12,7 +12,8 @@ const languages: Language[] = [
   { code: "ms", name: "Bahasa Melayu", flag: "my" },
   { code: "ja", name: "日本語", flag: "jp" },
   { code: "ko", name: "한국어", flag: "kr" },
-  { code: "zh", name: "中文", flag: "cn" },
+  { code: "chs", name: "简体中文", flag: "cn" },
+  { code: "cht", name: "繁體中文", flag: "cn" },
 ];
 
 const LanguageSwitcher = () => {
