@@ -31,7 +31,6 @@ const data = {
 <style>
   .animated-box {
     position: relative;
-    height: 250px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -71,17 +70,17 @@ const data = {
   class="flex flex-col relative items-center mt-10 justify-center z-10 text-center px-4"
 >
   <p
-    class="text-[#0d0c22] text-lg absolute top-0 font-medium tracking-tight lg:text-2xl"
+    class="text-[#0d0c22] text-lg font-medium mb-20 lg:mb-0 tracking-tight lg:text-2xl"
   >
     {m["main.aiPlatform"]()}
   </p>
   <div
-    class={`${data.textColor} text-5xl flex mb-4 gap-6 w-screen ml-10 lg:ml-64 flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}
+    class={`${data.textColor} text-[100px] flex flex-col mb-4 gap-6 w-screen lg:ml-64 lg:flex-row items-center justify-center font-extrabold tracking-[2.6px] lg:text-[130px]`}
   >
-    <Image src="/ion.svg" alt="key" width={240} height={101} />
+    <Image src="/ion.svg" alt="key" width={240} height={50} />
 
-    <div class="animated-box">
-      <span class="animated-slides min-w-[500px] text-left">{titles[0]}</span>
+    <div class="animated-box h-[200px] lg:h-[250px]">
+      <span class="animated-slides min-w-[500px] text-center lg:text-left">{titles[0]}</span>
     </div>
   </div>
   <p class="font-normal tracking-wide mb-8 text-[42px]">
