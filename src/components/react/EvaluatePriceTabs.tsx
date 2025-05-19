@@ -5,7 +5,7 @@ import { m } from "../../paraglide/messages.js";
 const ManualWorkTabContent = () => {
   return (
     <div className="w-full">
-      <div className="grid grid-cols-4 gap-4 text-center items-center text-2xl relative">
+      <div className="grid grid-cols-4 gap-4 text-center items-center text-lg md:text-2xl relative">
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[24%] lg:right-[22%] w-[2px] bg-[#EE7380]"></div>
 
@@ -75,7 +75,7 @@ const ManualWorkTabContent = () => {
 const AlternativesTabContent = () => {
   return (
     <div>
-      <div className="grid grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-10 text-center items-center text-2xl relative">
+      <div className="grid grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-10 text-center items-center text-lg md:text-2xl relative">
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[29%] md:right-[32%] lg:right-[48.5%] w-[2px] bg-[#EE7380]"></div>
 
