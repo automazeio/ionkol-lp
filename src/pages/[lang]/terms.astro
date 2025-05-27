@@ -1,0 +1,352 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import { Image } from "astro:assets";
+import "../_index.css";
+import { m } from "../../paraglide/messages.js";
+---
+
+<script is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    const cards = document.querySelectorAll(".animate-appear");
+    cards.forEach((card) => observer.observe(card));
+  });
+</script>
+
+
+<Layout title="Terms of Service & Privacy Policy">
+  <Navbar />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12 relative">
+      <div class="max-w-4xl mx-auto">
+        <!-- Title -->
+        <div class="text-center mb-12">
+          <h1 class="font-bold text-4xl mb-8">{m["terms.title"]()}</h1>
+        </div>
+
+        <!-- Introduction -->
+        <div class="mb-12">
+          <div class="prose max-w-none mb-6">
+            <p class="text-lg leading-relaxed">{m["terms.introduction.paragraph1"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-6">
+            <p class="text-lg leading-relaxed font-medium">{m["terms.introduction.paragraph2"]()}</p>
+          </div>
+        </div>
+
+        <!-- Agreement Acceptance Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.agreementAcceptance.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.agreementAcceptance.content"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.agreementAcceptance.additionalInfo.paragraph1"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.agreementAcceptance.additionalInfo.paragraph2"]()}</p>
+          </div>
+        </div>
+
+        <!-- Amendments Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.amendments.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.amendments.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Your Use of This Service Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.yourUseOfService.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.intro"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.license"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.account"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.communications"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.dataResponsibility"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.yourUseOfService.dataSubjects"]()}</p>
+          </div>
+        </div>
+
+        <!-- Provision of The Service Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.provisionOfService.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.provisionOfService.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Security Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.security.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.security.registration"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.security.termination"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.security.credentials"]()}</p>
+          </div>
+        </div>
+
+        <!-- Personal Data Protection Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.personalDataProtection.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.personalDataProtection.agreement"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.personalDataProtection.update"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.personalDataProtection.obligation"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.personalDataProtection.usage"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.personalDataProtection.sharing"]()}</p>
+          </div>
+        </div>
+
+        <!-- Confidentiality Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.confidentiality.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.confidentiality.obligation"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.confidentiality.remedies"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.confidentiality.liability"]()}</p>
+          </div>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.privacyPolicy.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.privacyPolicy.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Charged Services Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.chargedServices.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.intro"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.currency"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.tax"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.billing"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.payment"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.chargedServices.storage"]()}</p>
+          </div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.content.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.content.usage"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.content.externalSites"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.content.objectionableContent"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.content.attribution"]()}</p>
+          </div>
+        </div>
+
+        <!-- Restrictions Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.restrictions.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.restrictions.general"]()}</p>
+          </div>
+          
+          <div class="ml-6 mb-4">
+            <ul class="list-disc space-y-2 text-base">
+              <li>{m["terms.sections.restrictions.prohibitedActivities.accessingChargedServicesWithoutPayment"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.alteringTamperingService"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.retainingUsingDataAfterRemovalRequest"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.broadcastingReproducingServices"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.assigningResellingInformation"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.copyingReverseEngineeringServices"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.harmingIonkolOrAffiliates"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.damagingInterferingServices"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.incorporatingMetaTags"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.displayingSiteWithinFrames"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.breachingThirdPartyTerms"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.stalkingHarassingCollectingPersonalData"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.compilingFalseMisleadingInformation"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.exploitingHarmToMinors"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.infringingIntellectualProperty"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.unauthorizedAccessToSystems"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.impersonatingIonkolOrThirdParty"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.creatingMultipleTokensKeysPasswords"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.harvestingDataViaAutomatedMeans"]()}</li>
+              <li>{m["terms.sections.restrictions.prohibitedActivities.multipleAccountsOrPromotionalPlans"]()}</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Publicity Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.publicity.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.publicity.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Cancellation or Termination Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.cancellationTermination.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.cancellationTermination.userCancellation"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.cancellationTermination.ionkolTermination"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.cancellationTermination.effects"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.cancellationTermination.survival"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.cancellationTermination.refunds"]()}</p>
+          </div>
+        </div>
+
+        <!-- Proprietary Rights Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.proprietaryRights.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.proprietaryRights.ownership"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.proprietaryRights.notices"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.proprietaryRights.copyright"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.proprietaryRights.trademarks"]()}</p>
+          </div>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.proprietaryRights.confidential"]()}</p>
+          </div>
+        </div>
+
+        <!-- Force Majeure Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.forceMajeure.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.forceMajeure.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Invalidity or Unenforceability Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.invalidityUnenforceability.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.invalidityUnenforceability.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Limitation of Liability Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.limitationOfLiability.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.limitationOfLiability.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Indemnification Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.indemnification.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.indemnification.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Modifications Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.modifications.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.modifications.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Governing Law and Jurisdiction Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.governingLawJurisdiction.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.governingLawJurisdiction.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.contactUs.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.contactUs.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Disclaimer of Warranties Section -->
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold mb-4">{m["terms.sections.disclaimerWarranties.title"]()}</h2>
+          <div class="prose max-w-none mb-4">
+            <p class="text-base leading-relaxed">{m["terms.sections.disclaimerWarranties.content"]()}</p>
+          </div>
+        </div>
+
+        <!-- Effective Date -->
+        <div class="text-center mt-12 pt-8 border-t border-gray-200">
+          <p class="text-lg font-medium">{m["terms.effectiveDate"]()}</p>
+        </div>      </div>
+    </section>
+  </main>
+</Layout>
+<Footer />
