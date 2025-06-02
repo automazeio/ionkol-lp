@@ -12,13 +12,14 @@ import "../_index.css";
 import PriceCard from "../../components/PriceCard.astro";
 import Footer from "../../components/Footer.astro";
 import Button from "../../components/ui/Button.astro";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import Swiper from "../../components/slider/Swiper.astro";
+import SwiperCustom from "../../components/slider/Swiper.astro";
 import PriceCardsData from "../../components/react/PriceCards";
 import Subscribe from "../../components/Subscribe.astro";
 import { m } from "../../paraglide/messages.js";
+import { Pagination } from 'swiper/modules';
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const features = [
   {
@@ -136,7 +137,6 @@ const stats = [
   });
 </script>
 
-<!-- Scrolling with offset to sections -->
 <script>
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e: Event) {
@@ -195,17 +195,33 @@ const stats = [
   );
 </script>
 
+<script>
+  import Swiper from 'swiper';
+  import { Pagination } from 'swiper/modules';
+
+
+ const swiper = new Swiper(".goals-swiper", {
+    modules: [Pagination],
+    slidesPerView: 1,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    loop: true,
+  });
+
+</script>
+
 <Layout title={"IONKOL | Data-driven Success"}>
   <Navbar />
   <main class="relative">
-    <!-- Slider section -->
     <section
       class="flex justify-center items-center bg-white"
     >
-      <Swiper />
+      <SwiperCustom />
     </section>
 
-    <!-- Featured Solutions section -->
     <section class="pb-24 pt-28 px-4 lg:px-12 animate-appear">
       <h1
         class="text-center text-[#EE7380] text-[62px] font-bold tracking-wide mb-16"
@@ -213,7 +229,7 @@ const stats = [
         {m["index.keyFeatures"]()}
       </h1>
 
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div class="flex flex-row items-center gap-8 p-2">
           <Image
             class="hidden lg:block"
@@ -222,16 +238,16 @@ const stats = [
             width={198}
             height={128}
           />
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col items-center md:items-start gap-6">
             <div class="text-5xl font-semibold flex flex-row gap-2">
               <Image src="/ion.svg" alt="key" width={95} height={50} /><span
                 >{m["index.explore.title"]()}</span
               >
             </div>
-            <p class="text-xl">
+            <p class="text-xl text-center md:text-left">
               {m["index.explore.description"]()}
             </p>
-            <a href="/features" data-link="/features">
+            <a class="hidden md:block" href="/features" data-link="/features">
               <Button
                 text={m["index.explore.button"]()}
                 className="w-[200px]"
@@ -248,13 +264,13 @@ const stats = [
             width={198}
             height={128}
           />
-          <div class="flex flex-col gap-6">
+          <div class="flex flex-col items-center md:items-start gap-6">
             <div class="text-5xl font-semibold flex flex-row gap-2">
               <Image src="/ion.svg" alt="key" width={95} height={50} /><span
                 >{m["index.analyse.title"]()}</span
               >
             </div>
-            <p class="text-xl">
+            <p class="text-xl text-center md:text-left">
               {m["index.analyse.description"]()}
             </p>
             <a href="/features" data-link="/features">
@@ -268,7 +284,6 @@ const stats = [
       </div>
     </section>
 
-    <!-- Achieve Goals section -->
     <section class="py-20 relative bg-white px-4 lg:px-12 animate-appear">
       <div
         class="absolute rotate-180 rounded-[100%] w-full h-screen top-20 left-0 z-100"
@@ -279,10 +294,30 @@ const stats = [
         class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16"
       >
         {m["index.goals.title"]()}
-      </h2>
+      </h2> 
+
+      <div class="goals-swiper block lg:hidden">
+        <div class="swiper-wrapper">
+          {features.map(feature => 
+          (
+             <div class="text-center p-6 swiper-slide">
+              <img
+                src={feature.icon}
+                alt={feature.title}
+                class="w-12 h-12 mx-auto mb-4"
+              />
+              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">
+                {feature.title}
+              </h3>
+              <p class="text-[20px]">{feature.description}</p>
+            </div>
+          ))}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
 
       <div
-        class="max-w-7xl mx-auto animate-appear grid grid-cols-1 lg:grid-cols-2 gap-8"
+        class="hidden lg:grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-2 gap-8"
       >
         {
           features.slice(0, 2).map((feature) => (
@@ -302,7 +337,7 @@ const stats = [
       </div>
 
       <div
-        class="max-w-7xl mx-auto animate-appear grid grid-cols-1 lg:grid-cols-3 gap-8"
+        class="hidden lg:grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-3 gap-8"
       >
         {
           features.slice(2, 6).map((feature) => (
@@ -337,22 +372,24 @@ const stats = [
           {
             stats.map((stat) => (
               <div class="flex flex-col relative lg:flex-row gap-4 lg:gap-12 justify-center lg:justify-normal items-center">
-                <div class="relative">
-                  <span
-                    data-target={stat.number}
-                    class="text-[#EE7380] text-[100px] font-semibold count"
-                  >
-                    {0}
-                  </span>
-                  {stat.suffix && (
-                    <span class="text-[32px] font-bold text-[#EE7380] absolute top-20">
-                      +
+                <div class="flex flex-row items-end lg:items-center lg:gap-12">
+                  <div class="relative">
+                    <span
+                      data-target={stat.number}
+                      class="text-[#EE7380] text-[100px] font-semibold count"
+                    >
+                      {0}
                     </span>
-                  )}
-                </div>
-                <span class="text-[34px] font-semibold text-center lg:text-start w-[190px]">
-                  {stat.title}
-                </span>
+                    {stat.suffix && (
+                      <span class="text-[32px] font-bold text-[#EE7380] absolute top-20">
+                        +
+                      </span>
+                    )}
+                  </div>
+                  <span class="text-[24px] lg:text-[34px] font-semibold text-start w-[290px]">
+                    {stat.title}
+                  </span>
+                </div> 
                 <p class="text-[20px] text-center lg:text-start">
                   <span class="text-[#EE7380]">{stat.highlight + " "} </span>
                   {stat.description}
@@ -373,12 +410,7 @@ const stats = [
         <div class="flex flex-col items-center space-y-14">
           <Switcher />
 
-          <!-- Pricing cards -->
-          <div
-            class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
-          >
-            <PriceCardsData client:load />
-          </div>
+          <PriceCardsData client:load />
           <a href="/pricing" data-link="/pricing">
             <Button text={m["index.pricing.button"]()} />
           </a>

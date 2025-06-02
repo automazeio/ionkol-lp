@@ -1,35 +1,13 @@
 ---
 import { Image } from "astro:assets";
 import { m } from "../../paraglide/messages.js";
+import ImageAnimation from "./ImageAnimation.astro";
 
-const titles = [m["main.explore"](), m["main.analyse"](), "AI", "KOL"];
-const data = {
-  textColor: "text-[#EE7380]",
-  description: "Data-driven success",
-  buttonLabel: "Start Now",
-  circleBackgroundColor: "bg-[#feeff1]",
-  circleTopPosition: "-top-[20%] lg:-top-[200px]",
-  circleContent: `
-        <div class=" scale-75 lg:scale-100 h-[90px] rotate-[7.77deg] px-6 py-3 bg-white rounded-xl shadow flex flex-col justify-center items-center">
-          <div class="flex gap-3 mb-2">
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/instagram-icon.svg" alt="Instagram" width="16" height="16" />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/tiktok-icon.svg" alt="TikTok" width="16" height="16" />
-            </div>
-            <div class="p-2 bg-[#fea598] rounded-full">
-              <img src="/youtube-icon.svg" alt="YouTube" width="16" height="16" />
-            </div>
-          </div>
-          <div class="text-center">Social Media</div>
-        </div>
-    `,
-};
+const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
 ---
 
 <style>
-  .animated-box {
+  .animated-box-text {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -37,7 +15,7 @@ const data = {
     justify-content: center;
   }
 
-  .animated-slides {
+  .animated-slides-text {
     transform: translateY(-25%);
     animation: textFade 3s infinite;
   }
@@ -75,12 +53,17 @@ const data = {
     {m["main.aiPlatform"]()}
   </p>
   <div
-    class={`${data.textColor} text-[75px] flex flex-col mb-4 gap-6 w-screen lg:ml-64 lg:flex-row items-center justify-center font-semibold tracking-[2.6px] lg:text-[130px]`}
+    class={`text-[#EE7380] text-[75px] md:text-[100px] flex flex-col mb-4 gap-6 w-screen lg:ml-64 lg:flex-row items-center justify-center font-semibold tracking-[2.6px] lg:text-[130px]`}
   >
     <Image src="/ion.svg" alt="key" width={240} height={50} />
 
-    <div class="animated-box h-[200px] lg:h-[250px]">
-      <span class="animated-slides w-[300px] lg:min-w-[500px] text-center lg:text-left">{titles[0]}</span>
+    <div class="animated-box-text h-[200px] lg:h-[250px]">
+      <div class="flex flex-row items-center">
+        <span class="animated-slides-text w-[400px] lg:min-w-[500px] text-center lg:text-left">{titles[0]}</span>
+        <!-- <span class="opacity-100 lg:opacity-0 h-24 w-24">
+          <ImageAnimation />
+        </span> -->
+      </div>
     </div>
   </div>
   <p class="font-normal tracking-wide mb-8 text-[42px]">
@@ -99,11 +82,12 @@ const data = {
   import { m } from "../../paraglide/messages";
   const titles = [m["main.explore"](), m["main.analyse"](), "AI", "KOL"];
   let index = 0;
-  setInterval(() => {
-    index = (index + 1) % titles.length;
-    const container = document.querySelector(".animated-slides");
-    const slide = titles[index];
-    if (!container) return;
-    container.innerHTML = slide;
-  }, 3000);
+  const container = document.querySelector(".animated-slides-text");
+  if(container) {
+    setInterval(() => {
+      index = (index + 1) % titles.length;
+      const slide = titles[index];
+      container.innerHTML = slide;
+    }, 3000);
+  }
 </script>

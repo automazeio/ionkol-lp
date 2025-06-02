@@ -1,0 +1,59 @@
+---
+---
+<style>
+  .animated-box {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .animated-slides {
+    transform: translateY(-25%);
+    animation: textFade 3s infinite;
+  }
+
+  @keyframes textFade {
+    0% {
+      opacity: 0;
+      transform: translateY(-25%);
+    }
+    20% {
+      opacity: 0;
+      transform: translateY(-15%);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    70% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(15%);
+    }
+  }
+</style>
+
+<div class="animated-box h-20 lg:h-[450px]">
+    <img class="animated-slides" src="/sliderIcon1.svg" alt="SliderIcon"  />
+</div>
+
+<script>
+  const images = ["/sliderIcon1.svg", "/sliderIcon2.svg"];
+  let index = 0;
+  const container: any = document.querySelector(".animated-slides");
+
+  if (container) {
+    setInterval(() => {
+      index = (index + 1) % images.length;
+      const slide = images[index];
+      if (!container) return;
+      container.src = slide;
+    }, 3000);
+  }
+
+</script>
