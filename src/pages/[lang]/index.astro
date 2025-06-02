@@ -16,10 +16,6 @@ import SwiperCustom from "../../components/slider/Swiper.astro";
 import PriceCardsData from "../../components/react/PriceCards";
 import Subscribe from "../../components/Subscribe.astro";
 import { m } from "../../paraglide/messages.js";
-import { Pagination } from 'swiper/modules';
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const features = [
   {
@@ -199,10 +195,10 @@ const stats = [
   import Swiper from 'swiper';
   import { Pagination } from 'swiper/modules';
 
-
  const swiper = new Swiper(".goals-swiper", {
     modules: [Pagination],
     slidesPerView: 1,
+    direction: "horizontal",
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -296,7 +292,7 @@ const stats = [
         {m["index.goals.title"]()}
       </h2> 
 
-      <div class="goals-swiper block lg:hidden">
+      <!-- <div class="goals-swiper lg:hidden">
         <div class="swiper-wrapper">
           {features.map(feature => 
           (
@@ -314,10 +310,10 @@ const stats = [
           ))}
         </div>
         <div class="swiper-pagination"></div>
-      </div>
+      </div> -->
 
       <div
-        class="hidden lg:grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-2 gap-8"
+        class="grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-2 gap-8"
       >
         {
           features.slice(0, 2).map((feature) => (
@@ -337,7 +333,7 @@ const stats = [
       </div>
 
       <div
-        class="hidden lg:grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-3 gap-8"
+        class="grid max-w-7xl mx-auto animate-appear grid-cols-1 lg:grid-cols-3 gap-8"
       >
         {
           features.slice(2, 6).map((feature) => (
