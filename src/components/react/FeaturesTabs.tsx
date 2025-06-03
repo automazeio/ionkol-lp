@@ -20,10 +20,10 @@ const FeaturesTabs = ({ tabs }: Props) => {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-col md:flex-row gap-4 lg:gap-10 justify-center lg:justify-normal items-center">
+      <div className="flex flex-row gap-4 lg:gap-10 justify-center lg:justify-normal items-center">
         {tabs.map((tab) => (
           <div
-            className={`px-8 w-full text-center md:w-fit md:text-left cursor-pointer py-4 text-xl lg:text-2xl font-semibold border-[#EE7380] ${
+            className={`px-3 md:px-8 w-full text-center md:w-fit md:text-left cursor-pointer py-4 text-sm sm:text-base md:text-2xl font-semibold border-[#EE7380] ${
               currentTab === tab.id && "border-b-2"
             }`}
             onClick={() => setCurrentTab(tab.id)}
@@ -38,7 +38,7 @@ const FeaturesTabs = ({ tabs }: Props) => {
           alt="key"
           width={132}
           height={132}
-          className="hidden md:block"
+          className=""
         />
         <div className="flex flex-col gap-6">
           <span className="text-xl break-words">

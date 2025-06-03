@@ -4,7 +4,7 @@ import { m } from "../paraglide/messages.js";
 ---
 
 <footer
-  class="w-full bg-[#f9f9f9] flex flex-wrap flex-col md:flex-row justify-between px-8 md:px-16 lg:px-24 pt-12 pb-10 md:pb-0"
+  class="relative w-full bg-[#f9f9f9] flex flex-col lg:flex-row justify-between px-8 md:px-16 lg:px-24 pt-12 pb-10 md:pb-0"
   role="contentinfo"
 >
   <div
@@ -15,12 +15,12 @@ import { m } from "../paraglide/messages.js";
     <div class="w-56 border-1 border-red-200 border-t mt-2"></div>
 
     <div class="mt-5">
-      <ul class="text-lg text-left">
-        <li>{m["footer.locations.japan"]()}</li>
-        <li>{m["footer.locations.korea"]()}</li>
-        <li>{m["footer.locations.malaysia"]()}</li>
-        <li>{m["footer.locations.singapore"]()}</li>
-      </ul>
+      <div class="text-lg grid grid-cols-2 md:grid-cols-1 gap-4 md:gap-1 text-center sm:text-left">
+        <span>{m["footer.locations.japan"]()}</span>
+        <span>{m["footer.locations.korea"]()}</span>
+        <span>{m["footer.locations.malaysia"]()}</span>
+        <span>{m["footer.locations.singapore"]()}</span>
+      </div>
     </div>
 
     <div class="hidden md:block mt-5">
@@ -30,16 +30,16 @@ import { m } from "../paraglide/messages.js";
 
   <nav
     aria-label="Footer Navigation"
-    class="flex flex-wrap gap-8 sm:gap-12 justify-center"
+    class="grid grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12 justify-center"
   >
     <div class="flex flex-col h-full relative">
       <div>
         <h3
-          class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
+          class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center lg:text-left"
         >
           {m["footer.services.title"]()}
         </h3>
-        <ul class="flex flex-col text-center sm:text-left">
+        <ul class="flex flex-col text-center lg:text-left">
           <li>
             <a
               href="/features"
@@ -60,25 +60,15 @@ import { m } from "../paraglide/messages.js";
           </li>
         </ul>
       </div>
-
-      <div class="flex flex-row gap-4 absolute w-64 top-[5.5rem] md:top-52 left-0">
-        <a href="/terms" class="text-lg leading-normal tracking-tight" data-link="/terms">
-          {m["footer.legal.privacyPolicy"]()}
-        </a>
-        <span>|</span>
-        <a href="/terms" class="text-lg leading-normal tracking-tight" data-link="/terms">
-          {m["footer.legal.termsOfService"]()}
-        </a>
-      </div>
     </div>
 
     <div>
       <h3
-        class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
+        class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center lg:text-left"
       >
         {m["footer.getStarted.title"]()}
       </h3>
-      <ul class="flex flex-col text-center sm:text-left">
+      <ul class="flex flex-col text-center lg:text-left">
         <li>
           <a
             href="/contactUs"
@@ -102,11 +92,11 @@ import { m } from "../paraglide/messages.js";
 
     <div class="">
       <h3
-        class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center sm:text-left"
+        class="text-[#0d0c22] text-lg font-semibold leading-normal tracking-tight mb-2 text-center lg:text-left"
       >
         {m["footer.whoWeAre.title"]()}
       </h3>
-      <ul class="flex flex-col text-center sm:text-left">
+      <ul class="flex flex-col text-center lg:text-left">
         <li>
           <a
             href="/aboutUs"
@@ -137,6 +127,16 @@ import { m } from "../paraglide/messages.js";
       </ul>
     </div>
   </nav>
+
+  <div class="flex flex-row gap-4 absolute w-64 bottom-0 md:right-16 md:bottom-20 self-center">
+    <a href="/terms" class="text-lg leading-normal tracking-tight" data-link="/terms">
+      {m["footer.legal.privacyPolicy"]()}
+    </a>
+    <span>|</span>
+    <a href="/terms" class="text-lg leading-normal tracking-tight" data-link="/terms">
+      {m["footer.legal.termsOfService"]()}
+    </a>
+  </div>
 </footer>
 
 <script is:inline>
