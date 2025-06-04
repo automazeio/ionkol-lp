@@ -4,8 +4,8 @@ import { m } from "../../paraglide/messages.js";
 
 const ManualWorkTabContent = () => {
   return (
-    <div className="w-full">
-      <div className="grid grid-cols-4 gap-4 text-center items-center text-lg md:text-2xl relative">
+    <div className="w-full px-2">
+      <div className="grid grid-cols-4 gap-4 text-center text-lg md:text-2xl relative">
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[24%] lg:right-[22%] w-[2px] bg-[#EE7380]"></div>
 
@@ -74,7 +74,7 @@ const ManualWorkTabContent = () => {
 
 const AlternativesTabContent = () => {
   return (
-    <div>
+    <div className="px-2 w-full">
       <div className="grid grid-cols-3 lg:grid-cols-4 gap-y-4 gap-x-10 text-center items-center text-lg md:text-2xl relative">
         {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[29%] md:right-[32%] lg:right-[48.5%] w-[2px] bg-[#EE7380]"></div>
@@ -124,13 +124,13 @@ const EvaluatePriceTabs = () => {
       <div className="relative inline-flex w-fit bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
         <button
           onClick={() => setCurrentTab(0)}
-          className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
+          className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
           {m["pricing.evaluate.tabs.manualWork"]()}
         </button>
         <button
           onClick={() => setCurrentTab(1)}
-          className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
+          className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
           {m["pricing.evaluate.tabs.alternatives"]()}
         </button>

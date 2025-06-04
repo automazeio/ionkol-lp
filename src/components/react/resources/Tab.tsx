@@ -40,12 +40,15 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
             posts={data.filter((article) => article.category === "101")}
             title={
               <div className="flex flex-row gap-2">
-                <img
-                  src="/ionkolLogoNewShort.svg"
-                  alt="pricing"
-                  width={188}
-                  height={50}
-                />
+                <div className="w-[125px] h-[45px] lg:w-[192px] lg:h-[58px]">
+                  <img
+                    src="/ionkolLogoNewShort.svg"
+                    alt="pricing"
+                    width={188}
+                    height={50}
+                    className="object-contain w-full h-full"
+                  />
+                </div>
                 <span className="text-[#EE7380]">101</span>
               </div>
             }
@@ -138,7 +141,7 @@ const Tab = ({ postType, setCurrentTab }: Props) => {
           );
         }
 
-        setData(articles);
+        setData([...articles, ...articles, ...articles, ...articles]); // Duplicate data for testing pagination
         setTimeout(() => {
           setIsLoading(false);
         }, 500);

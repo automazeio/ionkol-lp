@@ -50,14 +50,14 @@ const ResourcesTabs = () => {
 
   return (
     <div className="flex flex-col items-center gap-24">
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 bg-transparent rounded-full p-[2px]">
+      <div className="grid grid-cols-4 gap-2 md:gap-6 lg:gap-10 bg-transparent rounded-full p-[2px]">
         {tabs.map((tab) => (
           <button
             key={tab.id}
             onClick={() => {
               setCurrentTab(tab.id);
             }}
-            className={`${currentTab === tab.id ? "text-white bg-[#EE7380]" : "text-[#EE7380] border-[#FFA2AC]"} border-[1px] text-xl font-semibold px-8 py-4 rounded-full transition-colors duration-200`}
+            className={`${currentTab === tab.id ? "text-white bg-[#EE7380]" : "text-[#EE7380] border-[#FFA2AC]"} border-[1px] text-sm md:text-lg lg:text-xl font-semibold px-2 md:px-8 py-1 md:py-4 rounded-full transition-colors duration-200`}
           >
             {tab.title}
           </button>

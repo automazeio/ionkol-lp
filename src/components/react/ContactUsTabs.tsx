@@ -63,9 +63,9 @@ const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full max-w-3xl p-8 space-y-6 bg-[#FFE2E5] border-[#FFA2AC] rounded-[32px] border-[1px]"
+      className="w-full max-w-3xl p-8 space-y-3 lg:space-y-6 bg-[#FFE2E5] border-[#FFA2AC] rounded-[32px] border-[1px]"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-2 gap-3 lg:gap-6">
         {/* First Name */}
         <input
           type="text"
@@ -109,25 +109,29 @@ const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
         />
 
         {/* Phone */}
-        <PhoneInput
-          value={formData.phone}
-          onChange={(value) =>
-            setFormData((prev) => ({ ...prev, phone: value }))
-          }
-          countryCode={countryCode}
-          onCountryCodeChange={setCountryCode}
-          countryCodes={countries}
-        />
+        <div className="col-span-2 lg:col-span-1">
+          <PhoneInput
+            value={formData.phone}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, phone: value }))
+            }
+            countryCode={countryCode}
+            onCountryCodeChange={setCountryCode}
+            countryCodes={countries}
+          />
+        </div>
 
         {/* Country */}
-        <Dropdown
-          options={countryOptions}
-          value={formData.country}
-          onChange={(value) =>
-            setFormData((prev) => ({ ...prev, country: value }))
-          }
-          placeholder={m["contact.form.country"]()}
-        />
+        <div className="col-span-2 lg:col-span-1">
+          <Dropdown
+            options={countryOptions}
+            value={formData.country}
+            onChange={(value) =>
+              setFormData((prev) => ({ ...prev, country: value }))
+            }
+            placeholder={m["contact.form.country"]()}
+          />
+        </div>
       </div>
 
       {/* Email */}
@@ -183,11 +187,7 @@ const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
           onChange={handleInputChange}
         />
         <p className="text-xl text-start">
-          <div className="flex flex-row gap-2">
-            <span className="text-start">
-              {m["contact.form.consent.text"]()}
-            </span>
-          </div>
+          <span className="text-start">{m["contact.form.consent.text"]()}</span>
         </p>
       </div>
 

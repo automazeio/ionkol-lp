@@ -1,3 +1,7 @@
+:root {
+  --swiper-pagination-color: #ee7380;
+}
+
 .animate-appear {
   opacity: 0;
   transform: translateY(10px);

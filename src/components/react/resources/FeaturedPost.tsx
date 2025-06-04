@@ -27,17 +27,19 @@ const FeaturedPost = () => {
     <div className="flex flex-col lg:flex-row gap-16 items-center">
       {data && (
         <>
-          <div className="flex flex-col max-w-[40rem] gap-6">
-            <span className="text-[26px] font-semibold">
+          <div className="flex flex-col items-center lg:items-start max-w-[40rem] gap-6">
+            <span className="text-[42px] text-[#EE7380] font-semibold">
               {m["resources.featured"]()}
             </span>
-            <span className="text-[42px] font-semibold">{data?.title}</span>
-            <span className="text-[34px]">
+            <span className="text-[24px] font-semibold text-center lg:text-left">
+              {data?.title}
+            </span>
+            <span className="text-[34px] text-center lg:text-left">
               {data.description.slice(0, 20)}...
             </span>
             <a
               href={`/resources/${data.slug}`}
-              className="mt-4 text-xl text-[#EE7380]"
+              className="mt-4 hidden lg:block text-xl text-[#EE7380] font-semibold"
             >
               {m["resources.featuredPost.readMore"]()}
             </a>
@@ -49,6 +51,12 @@ const FeaturedPost = () => {
             height={450}
             alt="post"
           />
+          <a
+            href={`/resources/${data.slug}`}
+            className="mt-4 block lg:hidden text-xl text-[#EE7380] font-semibold"
+          >
+            {m["resources.featuredPost.readMore"]()}
+          </a>
         </>
       )}
     </div>
