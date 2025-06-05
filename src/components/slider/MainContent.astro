@@ -59,10 +59,12 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
 
     <div class="animated-box-text h-[200px] lg:h-[250px]">
       <div class="flex flex-row items-center">
-        <span class="animated-slides-text w-fit lg:min-w-[500px] text-center lg:text-left">{titles[0]}</span>
-        <!-- <span class="opacity-100 lg:opacity-0 h-24 w-24">
-          <ImageAnimation />
-        </span> -->
+        <div class="w-fit lg:min-w-[500px]">
+          <div class="w-full flex items-center justify-center">
+            <img class="animated-slides-text" alt="SliderText"  />
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
@@ -79,15 +81,25 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
 </div>
 
 <script>
-  import { m } from "../../paraglide/messages";
-  const titles = [m["main.explore"](), m["main.analyse"](), "AI", "KOL"];
-  let index = 0;
-  const container = document.querySelector(".animated-slides-text");
-  if(container) {
+  const images = ["/Explore.svg", "/Analyse.svg", "/AI.svg", "/Link.svg"];
+  const margins = ["mt-[36px]", "mt-[26px]", "mt-0", "-mt-2"];
+  let index = 0; 
+  const container: any = document.querySelector(".animated-slides-text");
+
+  if (container) {
+    container.src = images[index];
+    container.classList.add(margins[index]);
+
     setInterval(() => {
-      index = (index + 1) % titles.length;
-      const slide = titles[index];
-      container.innerHTML = slide;
+      container.classList.remove(margins[index]);
+
+      index = (index + 1) % images.length; 
+      const slide = images[index];
+      const marginClass = margins[index];
+
+      container.src = slide;
+      container.classList.add(marginClass);
+
     }, 3000);
   }
 </script>
