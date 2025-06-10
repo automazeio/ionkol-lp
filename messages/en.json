@@ -80,7 +80,13 @@
       "monthly": "Monthly",
       "saveUp": "Save up to 25%",
       "perMonth": "Per Month",
-      "billedAnnually": "Billed Annually"
+      "billedAnnually": "Billed Annually",
+      "individuals, small businesses": "Individuals, Small businesses",
+      "small businesses": "Small Businesses",
+      "large businesses": "Large Businesses",
+      "analyse": "Analyse",
+      "analyses": "Analyses",
+      "explores": "Explores"
     }
   },
   "subscribe": {
@@ -399,6 +405,37 @@
       "singapore": "Singapore",
       "unitedStates": "United States",
       "northAmerica": "North America"
+    },
+    "categories": {
+      "art & design": "Art & Design",
+      "automobile & mobility": "Automobile & Mobility",
+      "baby & kids": "Baby & Kids",
+      "beauty & skincare": "Beauty & Skincare",
+      "business & innovation": "Business & Innovation",
+      "celebrities": "Celebrities",
+      "community": "Community",
+      "culture, religion & history": "Culture, Religion & History",
+      "current events": "Current Events",
+      "diy & crafts": "DIY & Crafts",
+      "education": "Education",
+      "entertainment & media": "Entertainment & Media",
+      "family & relationships": "Family & Relationships",
+      "fashion & accessories": "Fashion & Accessories",
+      "film & television": "Film & Television",
+      "finance & investing": "Finance & Investing",
+      "food & beverage": "Food & Beverage",
+      "gaming": "Gaming",
+      "hobby": "Hobby",
+      "home & living": "Home & Living",
+      "it & technology": "IT & Technology",
+      "lifestyle": "Lifestyle",
+      "motivation & inspiration": "Motivation & Inspiration",
+      "music & dance": "Music & Dance",
+      "nature & spirituality": "Nature & Spirituality",
+      "pets": "Pets",
+      "sports & outdoors": "Sports & Outdoors",
+      "travel & tourism": "Travel & Tourism",
+      "healthcare & well-being": "Healthcare & Well-being"
     }
   },
   "contact": {

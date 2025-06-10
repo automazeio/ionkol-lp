@@ -32,7 +32,7 @@ const Accordion = ({
           )}
         </div>
         <svg
-          className={`w-5 h-5 mt-2 text-[#EE7380] ${
+          className={`w-5 min-w-5 h-5 min-h-5 mt-2 text-[#EE7380] ${
             isOpen ? "rotate-180" : ""
           }`}
           fill="none"

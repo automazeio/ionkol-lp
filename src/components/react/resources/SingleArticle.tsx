@@ -33,7 +33,8 @@ const SingleArticle = ({ slug }: Props) => {
           <img
             src={`https://cms.ionkol.com/assets/${data.thumbnail}`}
             alt={data.title}
-            className="w-full h-[20rem] object-cover rounded-lg"
+            height={320}
+            className="w-full rounded-lg"
           />
           <h1 className="text-3xl font-semibold">{data.title}</h1>
           <p className="text-lg">{data.description}</p>

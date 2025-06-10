@@ -3,39 +3,6 @@ import { ChevronDown } from "./icons/ChevronDown";
 import type { Filters } from "./ResourcesTabs";
 import { m } from "../../../paraglide/messages.js";
 
-const interests = [
-  "Art & Design",
-  "Automobile & Mobility",
-  "Baby & Kids",
-  "Beauty & Skincare",
-  "Business & Innovation",
-  "Celebrities",
-  "Community",
-  "Creatives & Creators",
-  "Culture, Religion & History",
-  "Current Events",
-  "DIY & Crafts",
-  "Education",
-  "Entertainment & Media",
-  "Family & Relationships",
-  "Fashion & Accessories",
-  "Film & Television",
-  "Finance & Investing",
-  "Fitness & Well-being",
-  "Food & Beverage",
-  "Gaming",
-  "Hobby",
-  "Home & Living",
-  "IT & Technology",
-  "Lifestyle",
-  "Motivation & Inspiration",
-  "Music & Dance",
-  "Nature & Spirituality",
-  "Pets",
-  "Sports & Outdoors",
-  "Travel & Tourism",
-];
-
 type FilterProps = {
   onFilterChange: (filters: {
     postType: string;
@@ -57,8 +24,6 @@ const CustomSelect = ({
   label: string;
 }) => {
   const [isOpen, setIsOpen] = useState(false);
-
-  console.log("label", label, value);
 
   const selectedOption =
     options.find((opt) => opt.value === value)?.label || label;
@@ -167,10 +132,90 @@ const ResearchFilters = ({ onFilterChange, filters }: FilterProps) => {
     { value: "north-america", label: m["resources.locations.northAmerica"]() },
   ];
 
-  const interestOptions = interests.map((interest) => ({
-    value: interest.toLowerCase(),
-    label: interest,
-  }));
+  const interests = [
+    { value: "art & design", label: m["resources.categories.art & design"]() },
+    {
+      value: "automobile & mobility",
+      label: m["resources.categories.automobile & mobility"](),
+    },
+    { value: "baby & kids", label: m["resources.categories.baby & kids"]() },
+    {
+      value: "beauty & skincare",
+      label: m["resources.categories.beauty & skincare"](),
+    },
+    {
+      value: "business & innovation",
+      label: m["resources.categories.business & innovation"](),
+    },
+    { value: "celebrities", label: m["resources.categories.celebrities"]() },
+    { value: "community", label: m["resources.categories.community"]() },
+    {
+      value: "culture, religion & history",
+      label: m["resources.categories.culture, religion & history"](),
+    },
+    {
+      value: "current events",
+      label: m["resources.categories.current events"](),
+    },
+    { value: "diy & crafts", label: m["resources.categories.diy & crafts"]() },
+    { value: "education", label: m["resources.categories.education"]() },
+    {
+      value: "entertainment & media",
+      label: m["resources.categories.entertainment & media"](),
+    },
+    {
+      value: "family & relationships",
+      label: m["resources.categories.family & relationships"](),
+    },
+    {
+      value: "fashion & accessories",
+      label: m["resources.categories.fashion & accessories"](),
+    },
+    {
+      value: "film & television",
+      label: m["resources.categories.film & television"](),
+    },
+    {
+      value: "finance & investing",
+      label: m["resources.categories.finance & investing"](),
+    },
+    {
+      value: "food & beverage",
+      label: m["resources.categories.food & beverage"](),
+    },
+    { value: "gaming", label: m["resources.categories.gaming"]() },
+    { value: "hobby", label: m["resources.categories.hobby"]() },
+    {
+      value: "home & living",
+      label: m["resources.categories.home & living"](),
+    },
+    {
+      value: "it & technology",
+      label: m["resources.categories.it & technology"](),
+    },
+    { value: "lifestyle", label: m["resources.categories.lifestyle"]() },
+    {
+      value: "motivation & inspiration",
+      label: m["resources.categories.motivation & inspiration"](),
+    },
+    {
+      value: "music & dance",
+      label: m["resources.categories.music & dance"](),
+    },
+    {
+      value: "nature & spirituality",
+      label: m["resources.categories.nature & spirituality"](),
+    },
+    { value: "pets", label: m["resources.categories.pets"]() },
+    {
+      value: "sports & outdoors",
+      label: m["resources.categories.sports & outdoors"](),
+    },
+    {
+      value: "travel & tourism",
+      label: m["resources.categories.travel & tourism"](),
+    },
+  ];
 
   return (
     <div className="flex flex-wrap justify-center gap-16 mb-12">
@@ -189,7 +234,7 @@ const ResearchFilters = ({ onFilterChange, filters }: FilterProps) => {
       <CustomSelect
         value={localFilters.interest}
         onChange={(value) => handleChange("interest", value)}
-        options={interestOptions}
+        options={interests}
         label={m["resources.filters.interest"]()}
       />
     </div>
