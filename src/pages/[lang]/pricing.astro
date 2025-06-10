@@ -99,11 +99,8 @@ import { m } from "../../paraglide/messages.js";
         <div class="flex flex-col items-center space-y-14">
           <Switcher />
 
-          <div
-            class="animate-appear grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-8 w-full"
-          >
-            <PriceCardsData client:load />
-          </div>
+          <PriceCardsData client:load />
+         
           <a href="https://app.ionkol.com/sign-up">
             <Button text={m["pricing.discoverMore"]()} />
           </a>

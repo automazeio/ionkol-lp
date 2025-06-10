@@ -227,6 +227,7 @@
         "timePerMonth": "月あたりの時間",
         "monthlyCost": "月額費用",
         "hourlyRate": "(25 USD / 時間)",
+        "hourlyRateDescription": "25ドル/時間の費用を想定",
         "creatorSearch": "クリエイター検索",
         "dataCompilation": "データ収集",
         "analysis": "分析",

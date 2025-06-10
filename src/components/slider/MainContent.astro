@@ -17,7 +17,7 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
 
   .animated-slides-text {
     transform: translateY(-25%);
-    animation: textFade 3s infinite;
+    animation: textFade 4s infinite;
   }
 
   @keyframes textFade {
@@ -55,13 +55,13 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
   <div
     class={`text-[#EE7380] text-[75px] md:text-[100px] flex flex-col mb-4 gap-6 lg:ml-64 lg:flex-row items-center justify-center font-semibold tracking-[2.6px] lg:text-[130px]`}
   >
-    <Image src="/ion.svg" alt="key" width={240} height={50} />
+    <Image class="max-h-[80px] sm:max-h-full" src="/ion.svg" alt="key" width={240} height={50} />
 
     <div class="animated-box-text h-[200px] lg:h-[250px]">
       <div class="flex flex-row items-center">
         <div class="w-fit lg:min-w-[500px]">
           <div class="w-full flex justify-center lg:justify-normal">
-            <img class="animated-slides-text" alt="SliderText"  />
+            <img class="animated-slides-text max-h-[80px] md:max-h-full" alt="SliderText"  />
           </div>
         </div>
 
@@ -81,7 +81,7 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
 </div>
 
 <script>
-  const images = ["/Explore.svg", "/Analyse.svg", "/AI.svg", "/Link.svg"];
+  const images = ["/Explore.svg", "/Analyse.svg", "/AI.svg", "/Link.svg", "/Kol.svg"];
   const margins = ["mt-[36px]", "mt-[26px]", "mt-0", "-mt-2"];
   let index = 0; 
   const container: any = document.querySelector(".animated-slides-text");
@@ -100,6 +100,6 @@ const titles = [m["main.explore"](), m["main.analyse"](), "AI"];
       container.src = slide;
       container.classList.add(marginClass);
 
-    }, 3000);
+    }, 4000);
   }
 </script>

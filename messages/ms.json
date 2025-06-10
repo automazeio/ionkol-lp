@@ -227,6 +227,7 @@
         "timePerMonth": "Jam Setiap Bulan",
         "monthlyCost": "Kos Bulanan",
         "hourlyRate": "(25 USD / jam)",
+        "hourlyRateDescription": "Kos $25 / jam diandaikan",
         "creatorSearch": "Carian Pempengaruh",
         "dataCompilation": "Pengumpulan Data",
         "analysis": "Analisis",

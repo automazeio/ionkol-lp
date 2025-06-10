@@ -11,7 +11,7 @@
 
   .animated-slides {
     transform: translateY(-25%);
-    animation: textFade 3s infinite;
+    animation: textFade 4s infinite;
   }
 
   @keyframes textFade {
@@ -43,7 +43,7 @@
 </div>
 
 <script>
-  const images = ["/sliderIcon1.svg", "/sliderIcon2.svg", "/sliderIcon3.svg", "/sliderIcon4.svg"];
+  const images = ["/sliderIcon1.svg", "/sliderIcon2.svg", "/sliderIcon3.svg", "/sliderIcon4.svg", ""];
   let index = 0;
   const container: any = document.querySelector(".animated-slides");
 
@@ -52,8 +52,14 @@
       index = (index + 1) % images.length;
       const slide = images[index];
       if (!container) return;
+      if(slide === "") {
+        container.style.display = "none";
+        return;
+      } else {
+        container.style.display = "block";
+      }
       container.src = slide;
-    }, 3000);
+    }, 4000);
   }
 
 </script>

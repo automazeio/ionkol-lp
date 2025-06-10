@@ -4,9 +4,8 @@ import { m } from "../../paraglide/messages.js";
 
 const ManualWorkTabContent = () => {
   return (
-    <div className="w-full px-2">
+    <div className="w-full px-2 flex flex-col items-start gap-4">
       <div className="grid grid-cols-4 gap-4 text-center text-lg md:text-2xl relative">
-        {/* Vertical separator line */}
         <div className="absolute top-0 bottom-0 right-[24%] lg:right-[22%] w-[2px] bg-[#EE7380]"></div>
 
         <div className="font-semibold pb-4">
@@ -17,9 +16,10 @@ const ManualWorkTabContent = () => {
         </div>
         <div className="font-semibold pb-4">
           {m["pricing.evaluate.manualWork.monthlyCost"]()}{" "}
-          <span className="text-xl font-normal">
+          <span className="hidden sm:block text-xl font-normal">
             {m["pricing.evaluate.manualWork.hourlyRate"]()}
           </span>
+          <span className="sm:hidden">*</span>
         </div>
         <div className="flex justify-center pb-4">
           <img
@@ -30,7 +30,6 @@ const ManualWorkTabContent = () => {
           />
         </div>
 
-        {/* Creator Search */}
         <div>{m["pricing.evaluate.manualWork.creatorSearch"]()}</div>
         <div>40</div>
         <div>1,000</div>
@@ -38,7 +37,6 @@ const ManualWorkTabContent = () => {
           {m["pricing.evaluate.manualWork.minutes"]()}
         </div>
 
-        {/* Data Compilation */}
         <div>{m["pricing.evaluate.manualWork.dataCompilation"]()}</div>
         <div>8</div>
         <div>500</div>
@@ -46,7 +44,6 @@ const ManualWorkTabContent = () => {
           {m["pricing.evaluate.manualWork.minutes"]()}
         </div>
 
-        {/* Analysis */}
         <div>{m["pricing.evaluate.manualWork.analysis"]()}</div>
         <div>20</div>
         <div>200</div>
@@ -54,7 +51,6 @@ const ManualWorkTabContent = () => {
           {m["pricing.evaluate.manualWork.minutes"]()}
         </div>
 
-        {/* Total row */}
         <div className="font-semibold pt-4">
           {m["pricing.evaluate.manualWork.total"]()}
         </div>
@@ -68,6 +64,10 @@ const ManualWorkTabContent = () => {
           </span>
         </div>
       </div>
+
+      <span className="text-start sm:hidden">
+        * {m["pricing.evaluate.manualWork.hourlyRateDescription"]()}
+      </span>
     </div>
   );
 };
@@ -121,16 +121,16 @@ const EvaluatePriceTabs = () => {
 
   return (
     <div className="flex flex-col items-center gap-24">
-      <div className="relative inline-flex w-fit bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
+      <div className="relative inline-flex w-full max-w-[400px] bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
         <button
           onClick={() => setCurrentTab(0)}
-          className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
+          className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
           {m["pricing.evaluate.tabs.manualWork"]()}
         </button>
         <button
           onClick={() => setCurrentTab(1)}
-          className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 px-12 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
+          className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} w-1/2 relative text-xl font-semibold z-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
         >
           {m["pricing.evaluate.tabs.alternatives"]()}
         </button>

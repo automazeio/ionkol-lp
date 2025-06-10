@@ -228,6 +228,7 @@
         "timePerMonth": "월간 소요 시간",
         "monthlyCost": "월별 비용",
         "hourlyRate": "(시간당 25 USD)",
+        "hourlyRateDescription": "시간당 25달러 비용 가정",
         "creatorSearch": "인플루언서 탐색",
         "dataCompilation": "데이터 수집",
         "analysis": "분석",

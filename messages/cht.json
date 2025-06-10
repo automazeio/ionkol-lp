@@ -226,6 +226,7 @@
         "timePerMonth": "每月時數",
         "monthlyCost": "每月成本",
         "hourlyRate": "(每小時 25 美元)",
+        "hourlyRateDescription": "假定成本為 $25 / 小時",
         "creatorSearch": "影響者搜尋",
         "dataCompilation": "數據彙編",
         "analysis": "分析",

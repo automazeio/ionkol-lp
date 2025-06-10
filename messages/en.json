@@ -227,6 +227,7 @@
         "timePerMonth": "Hours Per Month",
         "monthlyCost": "Monthly Cost",
         "hourlyRate": "(25 USD / hour)",
+        "hourlyRateDescription": "$25 / hour cost assumed",
         "creatorSearch": "Influencer Search",
         "dataCompilation": "Data Compilation",
         "analysis": "Analysis",
