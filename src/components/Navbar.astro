@@ -18,8 +18,6 @@ const navItems = [
     title: m["navbar.resourceHub"](),
   },
 ];
-const SIGN_IN_URL = "https://app.ionkol.com/sign-in";
-const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
 ---
 
 <header
@@ -31,7 +29,7 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     class="text-center text-[#0d0c22] text-[28px] font-bold tracking-wide"
     data-link="/"
   >
-    <Image src="/ionkolLogoNew.svg" alt="key" width={125} height={40} />
+    <Image src="/ionkolLogoNew.svg" alt="key" width={200} height={60} />
   </a>
 
   <div class="lg:hidden">
@@ -65,10 +63,10 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     </ul>
 
     <LanguageSwitcher client:load />
-    <a href={SIGN_UP_URL}>
+    <a id="sign-up-link">
       <Button text={m["navbar.signUp"]()} type="outline" /></a
     >
-    <a href={SIGN_IN_URL}> <Button text={m["navbar.login"]()} /></a>
+    <a id="sign-in-link"> <Button text={m["navbar.login"]()} /></a>
   </div>
 </header>
 
@@ -95,12 +93,11 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
     </ul>
   </nav>
 
-  <!-- Sign-up and Login buttons for mobile -->
   <div class="flex flex-col gap-4">
-    <a href={SIGN_UP_URL}>
+    <a id="sign-up-link">
       <Button className="w-full" text={m["navbar.signUp"]()} type="outline" />
     </a>
-    <a href={SIGN_IN_URL}>
+    <a id="sign-in-link">
       <Button className="w-full" text={m["navbar.login"]()} />
     </a>
   </div>
@@ -120,6 +117,17 @@ const SIGN_UP_URL = "https://app.ionkol.com/sign-up";
       const basePath = link.getAttribute("data-link");
       link.href = `/${currentLang}${basePath}`;
     });
+
+    const loginLink = document.getElementById("sign-in-link");
+    const signUpLink = document.getElementById("sign-up-link");
+
+    if (loginLink) {
+      loginLink.href = `https://app.ionkol.com/${currentLang}/sign-in`;
+    }
+
+    if (signUpLink) {
+      signUpLink.href = `https://app.ionkol.com/${currentLang}/sign-up`;
+    }
   }
 
   document.addEventListener("DOMContentLoaded", updateNavigationLinks);

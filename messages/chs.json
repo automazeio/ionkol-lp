@@ -80,7 +80,13 @@
       "monthly": "每年",
       "saveUp": "节省高达 25%",
       "perMonth": "每月",
-      "billedAnnually": "按年计费"
+      "billedAnnually": "按年计费",
+      "individuals, small businesses": "个人，小型企业",
+      "small businesses": "小型企业",
+      "large businesses": "大型企业",
+      "analyse": "分析",
+      "analyses": "分析",
+      "explores": "探索"
     }
   },
   "subscribe": {

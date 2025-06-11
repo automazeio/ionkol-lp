@@ -80,7 +80,13 @@
       "title": "구독 계획",
       "button": "자세히 보기",
       "perMonth": "월 이용료",
-      "billedAnnually": "매년 청구됨"
+      "billedAnnually": "매년 청구됨",
+      "individuals, small businesses": "개인 및 소상공인",
+      "small businesses": "중소기업",
+      "large businesses": "대기업 및 마케팅 에이전시",
+      "analyse": "분석",
+      "analyses": "분석",
+      "explores": "탐색"
     }
   },
   "subscribe": {

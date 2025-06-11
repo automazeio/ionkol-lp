@@ -80,7 +80,13 @@
       "monthly": "年払い",
       "saveUp": "最大25%節約",
       "perMonth": "月額",
-      "billedAnnually": "年払い"
+      "billedAnnually": "年払い",
+      "individuals, small businesses": "個人、中小企業",
+      "small businesses": "中小企業",
+      "large businesses": "大企業",
+      "analyse": "分析する",
+      "analyses": "分析",
+      "explores": "探究する"
     }
   },
   "subscribe": {

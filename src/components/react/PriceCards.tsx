@@ -1,7 +1,3 @@
-import { useEffect, useState } from "react";
-import type { PriceCard } from "../../../lib/directus";
-import directus from "../../../lib/directus";
-import { readItems } from "@directus/sdk";
 import { m } from "../../paraglide/messages";
 import { Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,20 +5,60 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 export default function PriceCardsData() {
-  const [data, setData] = useState<PriceCard[]>([]);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const priceCards = await directus.request(readItems("priceCards"));
-        priceCards.sort((a, b) => a.price_monthly - b.price_monthly);
-        setData(priceCards);
-      } catch (error) {
-        console.error("Error fetching price cards:", error);
-      }
-    }
-    fetchData();
-  }, []);
+  const data = [
+    {
+      id: 1,
+      name: "Free",
+      price_yearly: "0",
+      price_monthly: 0,
+      price_monthly_annual: "0",
+      cta_text: "Sign up",
+      description: [
+        `1 ${m["index.pricing.analyse"]()}`,
+        `50 ${m["index.pricing.explores"]()}`,
+      ],
+      subheader: m["index.pricing.individuals, small businesses"](),
+    },
+    {
+      id: 2,
+      name: "Core",
+      price_yearly: "960",
+      price_monthly: 100,
+      price_monthly_annual: "80",
+      cta_text: "Upgrade",
+      description: [
+        `20 ${m["index.pricing.analyses"]()}`,
+        `1,000 ${m["index.pricing.explores"]()}`,
+      ],
+      subheader: m["index.pricing.individuals, small businesses"](),
+    },
+    {
+      id: 3,
+      name: "Plus",
+      price_yearly: "2,100",
+      price_monthly: 220,
+      price_monthly_annual: "175",
+      cta_text: "Upgrade",
+      description: [
+        `50 ${m["index.pricing.analyses"]()}`,
+        `2,500 ${m["index.pricing.explores"]()}`,
+      ],
+      subheader: m["index.pricing.small businesses"](),
+    },
+    {
+      id: 4,
+      name: "Prime",
+      price_yearly: "3,600",
+      price_monthly: 375,
+      price_monthly_annual: "300",
+      cta_text: "Upgrade",
+      description: [
+        `100 ${m["index.pricing.analyses"]()}`,
+        `5,000 ${m["index.pricing.explores"]()}`,
+      ],
+      subheader: m["index.pricing.large businesses"](),
+    },
+  ];
 
   return (
     <div className="max-w-full">
