@@ -2,10 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import TermsAndPolicy from "../../components/react/terms/TermsAndPolicy";
-import { Image } from "astro:assets";
+import PrivacyPolicy from "../../components/react/terms/PrivacyPolicy";
 import "../_index.css";
-import { m } from "../../paraglide/messages.js";
 ---
 
 <script is:inline>
@@ -28,12 +26,11 @@ import { m } from "../../paraglide/messages.js";
   });
 </script>
 
-
-<Layout title="Terms of Service & Privacy Policy">
+<Layout title="Privacy Policy - iON">
   <Navbar />
   <main class="relative">    
     <section class="mt-40 pb-32 px-4 lg:px-12 relative">      
-      <TermsAndPolicy client:load />
+      <PrivacyPolicy client:load />
     </section>
   </main>
 </Layout>
