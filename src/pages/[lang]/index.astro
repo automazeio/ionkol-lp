@@ -68,6 +68,18 @@ const stats = [
   }
 </style>
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VC8FW6LKS4"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-VC8FW6LKS4");
+</script>
+
 <!-- Sections appear animation -->
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
@@ -192,10 +204,10 @@ const stats = [
 </script>
 
 <script>
-  import Swiper from 'swiper';
-  import { Pagination } from 'swiper/modules';
+  import Swiper from "swiper";
+  import { Pagination } from "swiper/modules";
 
- const swiper = new Swiper(".goals-swiper", {
+  const swiper = new Swiper(".goals-swiper", {
     modules: [Pagination],
     slidesPerView: 1,
     direction: "horizontal",
@@ -211,15 +223,12 @@ const stats = [
       },
     },
   });
-
 </script>
 
 <Layout title={"Ionkol | AI-Enabled Marketing Models"}>
   <Navbar />
   <main class="relative">
-    <section
-      class="flex justify-center items-center bg-white"
-    >
+    <section class="flex justify-center items-center bg-white">
       <SwiperCustom />
     </section>
 
@@ -295,30 +304,33 @@ const stats = [
         class="text-center relative text-[#EE7380] text-[62px] font-semibold tracking-wide mb-16"
       >
         {m["index.goals.title"]()}
-      </h2> 
+      </h2>
 
-      <div class="goals-swiper max-w-full overflow-hidden mx-auto px-4 md:hidden">
+      <div
+        class="goals-swiper max-w-full overflow-hidden mx-auto px-4 md:hidden"
+      >
         <div class="swiper-wrapper">
-          {features.map(feature => 
-          (
-             <div class="text-center p-6 swiper-slide w-full">
-              <img
-                src={feature.icon}
-                alt={feature.title}
-                class="w-12 h-12 mx-auto mb-4"
-              />
-              <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">
-                {feature.title}
-              </h3>
-              <p class="text-[20px]">{feature.description}</p>
-            </div>
-          ))}
+          {
+            features.map((feature) => (
+              <div class="text-center p-6 swiper-slide w-full">
+                <img
+                  src={feature.icon}
+                  alt={feature.title}
+                  class="w-12 h-12 mx-auto mb-4"
+                />
+                <h3 class="text-[#0d0c22] text-[34px] font-semibold mb-3">
+                  {feature.title}
+                </h3>
+                <p class="text-[20px]">{feature.description}</p>
+              </div>
+            ))
+          }
         </div>
         <div class="swiper-pagination"></div>
       </div>
 
       <div
-        class="hidden md:grid max-w-7xl mx-auto animate-appear grid-cols-1 md:grid-cols-2  gap-8"
+        class="hidden md:grid max-w-7xl mx-auto animate-appear grid-cols-1 md:grid-cols-2 gap-8"
       >
         {
           features.slice(0, 2).map((feature) => (
@@ -363,10 +375,10 @@ const stats = [
         <p class="text-[62px] text-[#EE7380] gap-8 font-semibold mb-6 relative">
           <span>{m["index.power.title"]()}</span>
         </p>
-        <p
-          class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative"
-        >
-          <span class="pl-[8px] text-left">{m["index.power.description1"]()}</span>
+        <p class="text-[20px] mb-16 max-w-3xl mx-auto text-center relative">
+          <span class="pl-[8px] text-left"
+            >{m["index.power.description1"]()}</span
+          >
         </p>
 
         <div class="space-y-12">
@@ -387,10 +399,12 @@ const stats = [
                       </span>
                     )}
                   </div>
-                  <span class={`text-[24px] lg:text-[34px] font-semibold  ${i === 0 ? "mb-8 lg:mb-0" : "ml-8 mb-7 lg:mb-0"}`}>
+                  <span
+                    class={`text-[24px] lg:text-[34px] font-semibold  ${i === 0 ? "mb-8 lg:mb-0" : "ml-8 mb-7 lg:mb-0"}`}
+                  >
                     {stat.title}
                   </span>
-                </div> 
+                </div>
                 <p class="text-[20px] text-center lg:text-start">
                   <span class="text-[#EE7380]">{stat.highlight + " "} </span>
                   {stat.description}

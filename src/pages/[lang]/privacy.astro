@@ -8,6 +8,18 @@ import { m } from "../../paraglide/messages.js";
 import PrivacyPage from "../../components/react/terms/PrivacyPage.tsx";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J5Z8VRWKX0"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-J5Z8VRWKX0");
+</script>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
@@ -28,11 +40,10 @@ import PrivacyPage from "../../components/react/terms/PrivacyPage.tsx";
   });
 </script>
 
-
 <Layout title="Ionkol | Privacy Policy">
   <Navbar />
-  <main class="relative">    
-    <section class="mt-40 pb-32 px-4 lg:px-12 relative">      
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12 relative">
       <PrivacyPage client:load />
     </section>
   </main>

@@ -13,6 +13,18 @@ import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
 import { m } from "../../paraglide/messages.js";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1GYZ89VNK8"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-1GYZ89VNK8");
+</script>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
@@ -83,7 +95,7 @@ import { m } from "../../paraglide/messages.js";
           <span>{m["pricing.subtitle.part1"]()}</span>
           <span>{m["pricing.subtitle.part2"]()}</span>
         </div>
-        <a href="https://app.ionkol.com/sign-up">
+        <a href="https://app.ionkol.com/signup">
           <Button text={m["pricing.tryReport"]()} className="w-[345px]" />
         </a>
       </div>
@@ -100,8 +112,8 @@ import { m } from "../../paraglide/messages.js";
           <Switcher />
 
           <PriceCardsData client:load />
-         
-          <a href="https://app.ionkol.com/sign-up">
+
+          <a href="https://app.ionkol.com/signup">
             <Button text={m["pricing.discoverMore"]()} />
           </a>
         </div>

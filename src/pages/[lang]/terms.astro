@@ -6,6 +6,18 @@ import "../_index.css";
 import TermsPage from "../../components/react/terms/TermsPage.tsx";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-37DFWNFM8J"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-37DFWNFM8J");
+</script>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
@@ -26,11 +38,10 @@ import TermsPage from "../../components/react/terms/TermsPage.tsx";
   });
 </script>
 
-
 <Layout title="Ionkol | Terms of Service">
   <Navbar />
-  <main class="relative">    
-    <section class="mt-40 pb-32 px-4 lg:px-12 relative">      
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12 relative">
       <TermsPage client:load />
     </section>
   </main>

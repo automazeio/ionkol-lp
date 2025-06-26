@@ -39,14 +39,19 @@ const analyseTabs = [
     options: [
       {
         id: 0,
-        "title": m["features.analyse.tabs.parameters.engagementMetrics.highlight"](),
-        "description": m["features.analyse.tabs.parameters.engagementMetrics.description"](),
-      }, {
+        title:
+          m["features.analyse.tabs.parameters.engagementMetrics.highlight"](),
+        description:
+          m["features.analyse.tabs.parameters.engagementMetrics.description"](),
+      },
+      {
         id: 1,
-        "title": m["features.analyse.tabs.parameters.audienceMetrics.highlight"](),
-        "description": m["features.analyse.tabs.parameters.audienceMetrics.description"](),
-      }
-    ]
+        title:
+          m["features.analyse.tabs.parameters.audienceMetrics.highlight"](),
+        description:
+          m["features.analyse.tabs.parameters.audienceMetrics.description"](),
+      },
+    ],
   },
   {
     id: 1,
@@ -56,18 +61,27 @@ const analyseTabs = [
     options: [
       {
         id: 0,
-        "title": m["features.analyse.tabs.engagement.engagementRate.highlight"](),
-        "description": m["features.analyse.tabs.engagement.engagementRate.description"](),
-      }, {
+        title: m["features.analyse.tabs.engagement.engagementRate.highlight"](),
+        description:
+          m["features.analyse.tabs.engagement.engagementRate.description"](),
+      },
+      {
         id: 1,
-        "title": m["features.analyse.tabs.engagement.reach.highlight"](),
-        "description": m["features.analyse.tabs.engagement.reach.description"](),
-      }, {
+        title: m["features.analyse.tabs.engagement.reach.highlight"](),
+        description: m["features.analyse.tabs.engagement.reach.description"](),
+      },
+      {
         id: 2,
-        "title": m["features.analyse.tabs.engagement.engagementConsistency.highlight"](),
-        "description": m["features.analyse.tabs.engagement.engagementConsistency.description"](),
-      }
-    ]
+        title:
+          m[
+            "features.analyse.tabs.engagement.engagementConsistency.highlight"
+          ](),
+        description:
+          m[
+            "features.analyse.tabs.engagement.engagementConsistency.description"
+          ](),
+      },
+    ],
   },
   {
     id: 2,
@@ -77,21 +91,40 @@ const analyseTabs = [
     options: [
       {
         id: 0,
-        "title": m["features.analyse.tabs.audience.ageGenderDistribution.highlight"](),
-        "description": m["features.analyse.tabs.audience.ageGenderDistribution.description"](),
-      }, {
+        title:
+          m["features.analyse.tabs.audience.ageGenderDistribution.highlight"](),
+        description:
+          m[
+            "features.analyse.tabs.audience.ageGenderDistribution.description"
+          ](),
+      },
+      {
         id: 1,
-        "title": m["features.analyse.tabs.audience.location.highlight"](),
-        "description": m["features.analyse.tabs.audience.location.description"](),
-      }, {
+        title: m["features.analyse.tabs.audience.location.highlight"](),
+        description: m["features.analyse.tabs.audience.location.description"](),
+      },
+      {
         id: 2,
-        "title": m["features.analyse.tabs.audience.interests.highlight"](),
-        "description": m["features.analyse.tabs.audience.interests.description"](),
-      }
-    ]
+        title: m["features.analyse.tabs.audience.interests.highlight"](),
+        description:
+          m["features.analyse.tabs.audience.interests.description"](),
+      },
+    ],
   },
 ];
 ---
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D03F32S0VL"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-D03F32S0VL");
+</script>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
@@ -143,7 +176,7 @@ const analyseTabs = [
             width={125}
             height={125}
           />
-          <a href="https://app.ionkol.com/sign-up">
+          <a href="https://app.ionkol.com/signup">
             <Button text={m["features.startNow"]()} className="w-[188px]" />
           </a>
         </div>
@@ -161,7 +194,9 @@ const analyseTabs = [
       <div
         class="flex flex-col lg:flex-row lg:items-start items-center justify-center w-full gap-20 mt-20"
       >
-        <div class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4">
+        <div
+          class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4"
+        >
           <div class="flex flex-row gap-2">
             <Image src="/ion.svg" alt="features" width={99} height={50} />
             <span class="font-semibold text-5xl"
@@ -172,7 +207,7 @@ const analyseTabs = [
           <p class="text-xl text-center lg:text-left">
             {m["features.explore.description2"]()}
           </p>
-          <a href="https://app.ionkol.com/sign-up">
+          <a href="https://app.ionkol.com/signup">
             <Button text={m["features.startNow"]()} className="w-[188px]" />
           </a>
         </div>
@@ -192,7 +227,9 @@ const analyseTabs = [
       <div
         class="flex flex-col lg:flex-row lg:items-start items-center justify-center w-full gap-20 mt-20"
       >
-        <div class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4">
+        <div
+          class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4"
+        >
           <div class="flex flex-row gap-2">
             <Image src="/ion.svg" alt="features" width={99} height={50} />
             <span class="font-semibold text-5xl"
@@ -204,7 +241,7 @@ const analyseTabs = [
             {m["features.analyse.description"]()}
           </p>
 
-          <a href="https://app.ionkol.com/sign-up">
+          <a href="https://app.ionkol.com/signup">
             <Button text={m["features.startNow"]()} className="w-[188px]" />
           </a>
         </div>

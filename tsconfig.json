@@ -6,6 +6,6 @@
     "jsxImportSource": "react",
     "types": ["astro/client"],
     "moduleResolution": "node",
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+  },
 }

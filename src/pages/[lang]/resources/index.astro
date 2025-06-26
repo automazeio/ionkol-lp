@@ -16,6 +16,18 @@ import { m } from "../../../paraglide/messages.js";
 import FeaturedPost from "../../../components/react/resources/FeaturedPost";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HXSP5T5G2W"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
+
+  gtag("js", new Date());
+  gtag("config", "G-HXSP5T5G2W");
+</script>
+
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
     const observer = new IntersectionObserver(
@@ -86,7 +98,9 @@ import FeaturedPost from "../../../components/react/resources/FeaturedPost";
 
     <section class="pb-32 px-4 lg:px-12">
       <div class="flex flex-col items-center justify-center w-full gap-12">
-        <span class="text-[62px] text-[#EE7380] font-semibold text-center lg:text-left">
+        <span
+          class="text-[62px] text-[#EE7380] font-semibold text-center lg:text-left"
+        >
           {m["resources.faq.title"]()}
         </span>
         <FAQ client:load />

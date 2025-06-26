@@ -6,7 +6,17 @@ import "../_index.css";
 import { m } from "../../paraglide/messages.js";
 ---
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JFP29WGEVY"
+></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(...args: any[]) {
+    window.dataLayer.push(args);
+  }
 
+  gtag("js", new Date());
+  gtag("config", "G-JFP29WGEVY");
+</script>
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
@@ -35,10 +45,10 @@ import { m } from "../../paraglide/messages.js";
       <div class="flex flex-col items-center text-center gap-8">
         <span class="text-[62px] font-semibold">{m["contact.bookDemo"]()}</span>
         <button
-            id="bookDemoButton"
-            class="px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
+          id="bookDemoButton"
+          class="px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
         >
-            {m["contact.bookDemo"]()}
+          {m["contact.bookDemo"]()}
         </button>
       </div>
     </section>
@@ -47,7 +57,7 @@ import { m } from "../../paraglide/messages.js";
 <Footer />
 
 <script is:inline>
-  const DEMO_LINK = "https://cal.com/ionkol"
+  const DEMO_LINK = "https://cal.com/ionkol";
   document.getElementById("bookDemoButton").addEventListener("click", () => {
     window.open(DEMO_LINK);
   });
