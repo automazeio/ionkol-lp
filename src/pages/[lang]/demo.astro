@@ -2,11 +2,11 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import { Image } from "astro:assets";
 import "../_index.css";
 import { m } from "../../paraglide/messages.js";
-import PrivacyPage from "../../components/react/terms/PrivacyPage.tsx";
 ---
+
+
 
 <script is:inline>
   document.addEventListener("DOMContentLoaded", () => {
@@ -28,13 +28,27 @@ import PrivacyPage from "../../components/react/terms/PrivacyPage.tsx";
   });
 </script>
 
-
-<Layout title="Ionkol | Privacy Policy">
+<Layout title="Ionkol | Book a Demo">
   <Navbar />
-  <main class="relative">    
-    <section class="mt-40 pb-32 px-4 lg:px-12 relative">      
-      <PrivacyPage client:load />
+  <main class="relative">
+    <section class="mt-40 pb-32 px-4 lg:px-12">
+      <div class="flex flex-col items-center text-center gap-8">
+        <span class="text-[62px] font-semibold">{m["contact.bookDemo"]()}</span>
+        <button
+            id="bookDemoButton"
+            class="px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
+        >
+            {m["contact.bookDemo"]()}
+        </button>
+      </div>
     </section>
   </main>
 </Layout>
 <Footer />
+
+<script is:inline>
+  const DEMO_LINK = "https://cal.com/ionkol"
+  document.getElementById("bookDemoButton").addEventListener("click", () => {
+    window.open(DEMO_LINK);
+  });
+</script>

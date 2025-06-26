@@ -1,9 +1,7 @@
 import { useState } from "react";
-import Dropdown from "./Dropdown";
-import PhoneInput from "./PhoneInput";
+import Dropdown from "./Dropdown.js";
+import PhoneInput from "./PhoneInput.js";
 import { m } from "../../paraglide/messages.js";
-import { DEMO_LINK } from "../../../lib/constants.js";
-
 type GeneralInquiryFormProps = {
   countries: {
     code: string;
@@ -191,7 +189,6 @@ const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
         </p>
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         className="w-1/2 px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
@@ -202,37 +199,8 @@ const GeneralInquiryForm = ({ countries }: GeneralInquiryFormProps) => {
   );
 };
 
-const ContactUsTabs = ({ countries }: Props) => {
-  const [currentTab, setCurrentTab] = useState<number>(0);
-
-  return (
-    <div className="flex flex-col items-center gap-24">
-      <div className="grid grid-cols-2 bg-transparent border-[#EE7380] border-[1px] rounded-full p-[2px]">
-        <button
-          onClick={() => setCurrentTab(0)}
-          className={`${currentTab === 0 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
-        >
-          {m["contact.tabs.generalInquiry"]()}
-        </button>
-        <button
-          onClick={() => setCurrentTab(1)}
-          className={`${currentTab === 1 ? "text-white bg-[#EE7380]" : "text-[#EE7380]"} relative text-xl font-semibold z-10 px-10 py-4 rounded-full transition-colors duration-200 focus:outline-none`}
-        >
-          {m["contact.tabs.demo"]()}
-        </button>
-      </div>
-      {currentTab === 0 ? (
-        <GeneralInquiryForm countries={countries} />
-      ) : (
-        <button
-          onClick={() => window.open(DEMO_LINK)}
-          className="px-8 py-3 bg-[#EE7380] text-white rounded-full text-xl font-semibold hover:bg-[#d65f6b] transition-colors"
-        >
-          {m["contact.bookDemo"]()}
-        </button>
-      )}
-    </div>
-  );
+const ContactUsForm = ({ countries }: Props) => {
+  return <GeneralInquiryForm countries={countries} />;
 };
 
-export default ContactUsTabs;
+export default ContactUsForm;

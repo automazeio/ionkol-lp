@@ -2,16 +2,9 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
-import Button from "../../components/ui/Button.astro";
-import FeaturesTabs from "../../components/react/FeaturesTabs";
-import { Image } from "astro:assets";
 import "../_index.css";
-import Subscribe from "../../components/Subscribe.astro";
-import Switcher from "../../components/Switcher.astro";
-import PriceCardsData from "../../components/react/PriceCards";
-import EvaluatePriceTabs from "../../components/react/EvaluatePriceTabs";
-import ContactUsTabs from "../../components/react/ContactUsTabs";
 import { m } from "../../paraglide/messages.js";
+import ContactUsForm from "../../components/react/ContactUsForm";
 
 const countryCodes = [
     { code: "+60", flag: "my", name: m["contact.country.malaysia"]() },
@@ -354,7 +347,7 @@ const countryCodes = [
   );
 </script>
 
-<Layout title={m["contact.title"]()}>
+<Layout title="Ionkol | Contact Us">
   <Navbar />
   <main class="relative">
     <section class="mt-40 pb-32 px-4 lg:px-12">
@@ -364,7 +357,7 @@ const countryCodes = [
           <span>{m["contact.subtitle.part1"]()}</span>
         </div>
 
-        <ContactUsTabs countries={countryCodes} client:load />
+        <ContactUsForm countries={countryCodes} client:load />
       </div>
     </section>
   </main>

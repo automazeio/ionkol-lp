@@ -3,7 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
 import "../_index.css";
-import TermsPage from "../../components/react/terms/TermsPage.tsx";
+import TermsKOPage from "../../components/react/terms/TermsKoPage";
 ---
 
 <script is:inline>
@@ -27,11 +27,11 @@ import TermsPage from "../../components/react/terms/TermsPage.tsx";
 </script>
 
 
-<Layout title="Ionkol | Terms of Service">
+<Layout title="Ionkol | Terms of Service (KR)">
   <Navbar />
   <main class="relative">    
     <section class="mt-40 pb-32 px-4 lg:px-12 relative">      
-      <TermsPage client:load />
+      <TermsKOPage client:load />
     </section>
   </main>
 </Layout>
