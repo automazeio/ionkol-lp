@@ -1,5 +1,5 @@
 const AdditionalProvision = () => (
-  <div className="max-w-4xl mx-auto prose prose-lg">
+  <div className="max-w-4xl mx-auto prose prose-lg text-justify">
     <h1 className="text-4xl font-bold mb-8">
       Ionkol 한국 거주자를 위한 개인정보 관련 추가 정보
     </h1>

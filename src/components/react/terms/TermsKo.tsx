@@ -1,5 +1,5 @@
 const TermsKO = () => (
-  <div className="max-w-4xl mx-auto prose prose-lg">
+  <div className="max-w-4xl mx-auto prose prose-lg text-justify">
     <h1 className="text-4xl font-bold mb-8">서비스 약관</h1>
     <p>
       본 서비스 약관 (이하 “약관”)은 https://ionkol.com/ (이하 “사이트”)를 통해

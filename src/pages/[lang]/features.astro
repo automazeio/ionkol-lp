@@ -191,12 +191,8 @@ const analyseTabs = [
         >
       </div>
 
-      <div
-        class="flex flex-col lg:flex-row lg:items-start items-center justify-center w-full gap-20 mt-20"
-      >
-        <div
-          class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4"
-        >
+      <div class="grid grid-cols-1 lg:grid-cols-3 w-full gap-20 mt-20">
+        <div class="flex flex-col items-center lg:items-start gap-6 lg:pt-4">
           <div class="flex flex-row gap-2">
             <Image src="/ion.svg" alt="features" width={99} height={50} />
             <span class="font-semibold text-5xl"
@@ -211,8 +207,9 @@ const analyseTabs = [
             <Button text={m["features.startNow"]()} className="w-[188px]" />
           </a>
         </div>
-
-        <FeaturesTabs client:load tabs={exploreTabs} />
+        <div class="lg:col-span-2">
+          <FeaturesTabs client:load tabs={exploreTabs} />
+        </div>
       </div>
     </section>
 
@@ -224,12 +221,8 @@ const analyseTabs = [
         >
       </div>
 
-      <div
-        class="flex flex-col lg:flex-row lg:items-start items-center justify-center w-full gap-20 mt-20"
-      >
-        <div
-          class="flex flex-col items-center lg:items-start gap-6 max-w-2xl lg:pt-4"
-        >
+      <div class="grid grid-cols-1 lg:grid-cols-3 w-full gap-20 mt-20">
+        <div class="flex flex-col items-center lg:items-start gap-6 lg:pt-4">
           <div class="flex flex-row gap-2">
             <Image src="/ion.svg" alt="features" width={99} height={50} />
             <span class="font-semibold text-5xl"
@@ -245,8 +238,9 @@ const analyseTabs = [
             <Button text={m["features.startNow"]()} className="w-[188px]" />
           </a>
         </div>
-
-        <FeaturesTabs client:load tabs={analyseTabs} />
+        <div class="lg:col-span-2">
+          <FeaturesTabs client:load tabs={analyseTabs} />
+        </div>
       </div>
     </section>
 

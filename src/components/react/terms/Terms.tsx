@@ -1,5 +1,5 @@
 const Terms = () => (
-  <div className="max-w-4xl mx-auto prose prose-lg">
+  <div className="max-w-4xl mx-auto prose prose-lg text-justify">
     <h1 className="text-4xl font-bold mb-8">Terms of Service</h1>
     <p>
       These Terms of Service ("Terms") constitute a legally binding agreement

@@ -111,7 +111,7 @@
     },
     "getStarted": {
       "title": "Get Started",
-      "bookDemo": "Book a demo",
+      "bookDemo": "Book a Demo",
       "contactUs": "Contact us"
     },
     "whoWeAre": {
@@ -212,6 +212,7 @@
     "title": {
       "part1": "See which ION plan works for you"
     },
+    "pricesApplicable": "*Prices shown are only applicable for 2025",
     "subtitle": {
       "part1": "Unlock influencer insights with our flexible plans.",
       "part2": "Choose the perfect option to analyse and optimise your campaigns."
